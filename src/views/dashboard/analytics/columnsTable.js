@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import Avatar from '@components/avatar'
 
 // ** Store & Actions
-import { deleteInvoice } from '../store/actions'
+import { deleteInvoice } from '@src/views/apps/invoice/store/actions'
 import { store } from '@store/storeConfig/store'
 
 // ** Third Party Components
@@ -59,7 +59,7 @@ const renderClient = row => {
 }
 
 // ** Table columns
-export const columns = [
+export const columnsTable = [
   {
     name: 'Nombre',
     minWidth: '300px',
@@ -88,11 +88,18 @@ export const columns = [
     cell: row => '809-220-1111'
   },
   {
+    name: 'Provincia',
+    selector: 'total',
+    sortable: true,
+    minWidth: '200px',
+    cell: row => 'Santo Domingo'
+  },
+  {
     name: 'Municipio',
     selector: 'total',
     sortable: true,
     minWidth: '200px',
-    cell: row => 'Distrito Nacional'
+    cell: row => 'Los Alcarrizos'
   },
   {
     name: 'Rol',
@@ -102,33 +109,14 @@ export const columns = [
     cell: row => 'Reportero'
   },
   {
-    name: 'Reporteros',
-    selector: 'balance',
-    sortable: true,
-    minWidth: '150px',
-    cell: row => '99'
-  },
-  {
     name: 'Acciones',
-    minWidth: '110px',
-    selector: '',
+    minWidth: '50px',
     sortable: false,
     cell: row => (
-      <div className='column-action d-flex align-items-center'>
-        <Send size={17} id={`send-tooltip-${row.id}`} />
-        <UncontrolledTooltip placement='top' target={`send-tooltip-${row.id}`}>
-          Enviar correo
-        </UncontrolledTooltip>
-        <Link to={`/apps/invoice/preview/${row.id}`} id={`pw-tooltip-${row.id}`}>
-          <Eye size={17} className='mx-1' />
-        </Link>
-        <UncontrolledTooltip placement='top' target={`pw-tooltip-${row.id}`}>
-          Detalles
-        </UncontrolledTooltip>
         <UncontrolledDropdown>
-          <DropdownToggle tag='span'>
-            <MoreVertical size={17} className='cursor-pointer' />
-          </DropdownToggle>
+            <DropdownToggle tag='div' className='btn btn-sm'>
+                <MoreVertical size={14} className='cursor-pointer' />
+            </DropdownToggle>
           <DropdownMenu right>
             <DropdownItem tag='a' href='/' className='w-100' onClick={e => e.preventDefault()}>
               <Download size={14} className='mr-50' />
@@ -156,7 +144,6 @@ export const columns = [
             </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
-      </div>
     )
   }
 ]
