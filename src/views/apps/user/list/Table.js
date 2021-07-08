@@ -63,7 +63,7 @@ const CustomHeader = ({ toggleSidebar, handlePerPage, rowsPerPage, handleFilter,
               id='search-invoice'
               className='ml-50 w-100'
               type='text'
-              placeholder='Buscar'
+              placeholder='Buscar...'
               value={searchTerm}
               onChange={e => handleFilter(e.target.value)}
             />

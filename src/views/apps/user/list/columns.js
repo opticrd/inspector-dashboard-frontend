@@ -132,7 +132,7 @@ export const columns = [
             onClick={() => store.dispatch(getUser(row.id))}
           >
             <FileText size={14} className='mr-50' />
-            <span className='align-middle'>Details</span>
+            <span className='align-middle'>Detalles</span>
           </DropdownItem>
           <DropdownItem
             tag={Link}
@@ -141,11 +141,11 @@ export const columns = [
             onClick={() => store.dispatch(getUser(row.id))}
           >
             <Archive size={14} className='mr-50' />
-            <span className='align-middle'>Edit</span>
+            <span className='align-middle'>Editar</span>
           </DropdownItem>
           <DropdownItem className='w-100' onClick={() => store.dispatch(deleteUser(row.id))}>
             <Trash2 size={14} className='mr-50' />
-            <span className='align-middle'>Delete</span>
+            <span className='align-middle'>Borrar</span>
           </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>

@@ -40,7 +40,14 @@ const AvgSessions = props => {
           filter: 'none'
         }
       },
-      colors: ['#ebf0f7', '#ebf0f7', props.primary, '#ebf0f7', '#ebf0f7', '#ebf0f7'],
+      colors: [
+        props.colors.primary.main, 
+        props.colors.danger.main, 
+        props.colors.success.main, 
+        props.colors.success.main, 
+        props.colors.warning.main, 
+        props.colors.warning.main
+      ],
       plotOptions: {
         bar: {
           columnWidth: '45%',
@@ -58,7 +65,7 @@ const AvgSessions = props => {
     series = [
       {
         name: 'Sessions',
-        data: [75, 125, 225, 175, 125, 75, 25]
+        data: [275, 225, 200, 175, 125, 75]
       }
     ]
 
@@ -67,28 +74,27 @@ const AvgSessions = props => {
       <CardBody>
         <Row className='pb-50'>
           <Col
-            sm={{ size: 6, order: 1 }}
+            sm={{ size: 3, order: 1 }}
             xs={{ order: 2 }}
             className='d-flex justify-content-between flex-column mt-lg-0 mt-2'
           >
             <div className='session-info mb-1 mb-lg-0'>
               <h2 className='font-weight-bold mb-25'>{kFormatter(data.sessions)}</h2>
-              <CardText className='font-weight-bold mb-2'>Avg Sessions</CardText>
-              <h5 className='font-medium-2'>
+              <CardText className='mb-2'>Casos nuevos</CardText>
+              <h4 className='font-medium-2'>
                 <span className='text-success mr-50'>{data.growth}</span>
-                <span className='font-weight-normal'>vs last 7 days</span>
-              </h5>
+              </h4>
+              <CardText className='mb-2'>Contra los 7 días pasados</CardText>
             </div>
-            <Button color='primary'>View Details</Button>
           </Col>
           <Col
-            sm={{ size: 6, order: 2 }}
+            sm={{ size: 9, order: 2 }}
             xs={{ order: 1 }}
             className='d-flex justify-content-between flex-column text-right'
           >
             <UncontrolledDropdown className='chart-dropdown'>
               <DropdownToggle color='' className='bg-transparent btn-sm border-0 p-50'>
-                Last 7 days
+                últimos 7 días
               </DropdownToggle>
               <DropdownMenu right>
                 {data.last_days.map(item => (
@@ -98,25 +104,51 @@ const AvgSessions = props => {
                 ))}
               </DropdownMenu>
             </UncontrolledDropdown>
-            <Chart options={options} series={series} type='bar' height={200} />
+            <Chart options={options} series={series} type='bar' height={200} width={350} />
           </Col>
         </Row>
         <hr />
         <Row className='pt-50'>
-          <Col className='mb-2' md='6' sm='12'>
-            <p className='mb-50'>Goal: ${data.goal}</p>
+          <Col className='mb-2' md='4' sm='12'>
+            <div className="d-flex justify-content-between align-items-end">
+              <p className="mb-50">Infraestructura</p>
+              <p className="mb-50">{kFormatter(98766)}</p>
+            </div>
             <Progress className='avg-session-progress mt-25' value='50' />
           </Col>
-          <Col className='mb-2' md='6' sm='12'>
-            <p className='mb-50'>Users: {kFormatter(data.users)}</p>
+          <Col className='mb-2' md='4' sm='12'>
+            <div className="d-flex justify-content-between align-items-end">
+              <p className="mb-50">Servicios Sociales</p>
+              <p className="mb-50">{kFormatter(98766)}</p>
+            </div>
             <Progress className='avg-session-progress progress-bar-warning mt-25' value='60' />
           </Col>
-          <Col md='6' sm='12'>
-            <p className='mb-50'>Retention: {data.retention}%</p>
-            <Progress className='avg-session-progress progress-bar-danger mt-25' value='70' />
+          <Col className='mb-2' md='4' sm='12'>
+            <div className="d-flex justify-content-between align-items-end">
+              <p className="mb-50">Electricidad</p>
+              <p className="mb-50">{kFormatter(98766)}</p>
+            </div>
+            <Progress className='avg-session-progress progress-bar-warning mt-25' value='70' />
           </Col>
-          <Col md='6' sm='12'>
-            <p className='mb-50'>Duration: {data.duration}yr</p>
+          <Col className='mb-2' md='4' sm='12'>
+            <div className="d-flex justify-content-between align-items-end">
+              <p className="mb-50">Salud</p>
+              <p className="mb-50">{kFormatter(98766)}</p>
+            </div>
+            <Progress className='avg-session-progress progress-bar-danger mt-25' value='80' />
+          </Col>
+          <Col className='mb-2' md='4' sm='12'>
+            <div className="d-flex justify-content-between align-items-end">
+              <p className="mb-50">Medio Ambiente</p>
+              <p className="mb-50">{kFormatter(98766)}</p>
+            </div>
+            <Progress className='avg-session-progress progress-bar-success mt-25' value='70' />
+          </Col>
+          <Col className='mb-2' md='4' sm='12'>
+            <div className="d-flex justify-content-between align-items-end">
+              <p className="mb-50">Otros</p>
+              <p className="mb-50">{kFormatter(98766)}</p>
+            </div>
             <Progress className='avg-session-progress progress-bar-success mt-25' value='80' />
           </Col>
         </Row>

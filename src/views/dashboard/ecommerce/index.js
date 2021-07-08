@@ -33,12 +33,12 @@ const EcommerceDashboard = () => {
       <Row className='match-height'>
         <Col lg='4' md='12'>
           <Row className='match-height'>
-            <Col lg='6' md='3' xs='6'>
-              <OrdersBarChart warning={colors.warning.main} />
-            </Col>
-            <Col lg='6' md='3' xs='6'>
-              <ProfitLineChart info={colors.info.main} />
-            </Col>
+              <Col lg='6' md='3' xs='6'>
+                <OrdersBarChart warning={colors.warning.main} />
+              </Col>
+              <Col lg='6' md='3' xs='6'>
+                <ProfitLineChart info={colors.info.main} />
+              </Col>
             <Col lg='12' md='6' xs='12'>
               <Earnings success={colors.success.main} />
             </Col>

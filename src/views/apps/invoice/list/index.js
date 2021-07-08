@@ -25,46 +25,44 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
       <Row>
         <Col lg='6' className='d-flex align-items-center px-0 px-lg-1'>
           <div className='d-flex align-items-center mr-2'>
-            <Label for='rows-per-page'>Show</Label>
+            <Label for='rows-per-page'>Mostrar</Label>
             <CustomInput
               className='form-control ml-50 pr-3'
               type='select'
               id='rows-per-page'
               value={rowsPerPage}
               onChange={handlePerPage}
+              style={{border: 'none'}}
             >
               <option value='10'>10</option>
               <option value='25'>25</option>
               <option value='50'>50</option>
             </CustomInput>
           </div>
-          <Button.Ripple tag={Link} to='/apps/invoice/add' color='primary'>
-            Add Record
-          </Button.Ripple>
         </Col>
         <Col
           lg='6'
           className='actions-right d-flex align-items-center justify-content-lg-end flex-lg-nowrap flex-wrap mt-lg-0 mt-1 pr-lg-1 p-0'
         >
           <div className='d-flex align-items-center'>
-            <Label for='search-invoice'>Search</Label>
+            <Label for='search-invoice'>Buscar</Label>
             <Input
               id='search-invoice'
               className='ml-50 mr-2 w-100'
               type='text'
               value={value}
               onChange={e => handleFilter(e.target.value)}
-              placeholder='Search Invoice'
+              placeholder='Buscar...'
             />
           </div>
-          <Input className='w-auto ' type='select' value={statusValue} onChange={handleStatusValue}>
-            <option value=''>Select Status</option>
-            <option value='downloaded'>Downloaded</option>
-            <option value='draft'>Draft</option>
-            <option value='paid'>Paid</option>
-            <option value='partial payment'>Partial Payment</option>
-            <option value='past due'>Past Due</option>
-            <option value='partial payment'>Partial Payment</option>
+          <Input 
+            className='w-auto pr-4' 
+            type='select' 
+            value={statusValue} 
+            onChange={handleStatusValue}
+            style={{border: 'none'}}
+          >
+            <option value=''>Seleccionar Estado</option>
           </Input>
         </Col>
       </Row>

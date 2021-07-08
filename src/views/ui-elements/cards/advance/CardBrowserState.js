@@ -17,7 +17,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
   const statesArr = [
     {
       avatar: require('@src/assets/images/icons/google-chrome.png').default,
-      title: 'Google Chrome',
+      title: 'Ministerio de Obras Públicas y Comunicaciones',
       value: '54.4%',
       chart: {
         type: 'radialBar',
@@ -62,7 +62,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
     },
     {
       avatar: require('@src/assets/images/icons/mozila-firefox.png').default,
-      title: 'Mozila Firefox',
+      title: 'Alcaldía del Distrito Nacional',
       value: '6.1%',
       chart: {
         type: 'radialBar',
@@ -107,7 +107,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
     },
     {
       avatar: require('@src/assets/images/icons/apple-safari.png').default,
-      title: 'Apple Safari',
+      title: 'Empresa Distribuidora de Electricidad del Este',
       value: '14.6%',
       chart: {
         type: 'radialBar',
@@ -152,7 +152,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
     },
     {
       avatar: require('@src/assets/images/icons/internet-explorer.png').default,
-      title: 'Internet Explorer',
+      title: 'Instituto Nacional de Aguas Potables y Alcantarillados',
       value: '4.2%',
       chart: {
         type: 'radialBar',
@@ -197,7 +197,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
     },
     {
       avatar: require('@src/assets/images/icons/opera.png').default,
-      title: 'Opera Mini',
+      title: 'Ayuntamiento Santo Domingo Este',
       value: '8.4%',
       chart: {
         type: 'radialBar',
@@ -251,7 +251,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
             <h6 className='align-self-center mb-0'>{state.title}</h6>
           </Media>
           <div className='d-flex align-items-center'>
-            <div className='font-weight-bold text-body-heading mr-1'>{state.value}</div>
+            <div className='font-weight-bold text-body-heading mr-1'>9,999</div>
             <Chart
               options={state.chart.options}
               series={state.chart.series}
@@ -269,8 +269,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
     <Card className='card-browser-states'>
       <CardHeader>
         <div>
-          <CardTitle tag='h4'>Browser States</CardTitle>
-          <CardText className='font-small-2'>Counter August 2020</CardText>
+          <CardTitle tag='h4'>Instituciones</CardTitle>
         </div>
         <UncontrolledDropdown className='chart-dropdown'>
           <DropdownToggle color='' className='bg-transparent btn-sm border-0 p-50'>
@@ -278,8 +277,6 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
           </DropdownToggle>
           <DropdownMenu right>
             <DropdownItem className='w-100'>Last 28 Days</DropdownItem>
-            <DropdownItem className='w-100'>Last Month</DropdownItem>
-            <DropdownItem className='w-100'>Last Year</DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
       </CardHeader>

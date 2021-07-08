@@ -1,26 +1,27 @@
 // ** Reactstrap
 import { Card, CardHeader, CardTitle, CardText, Table, CustomInput } from 'reactstrap'
+import { allRolSelect } from '../../../../constants/Rol/rol'
 
 const PermissionsTable = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Permissions</CardTitle>
+        <CardTitle tag='h4'>Permisos</CardTitle>
       </CardHeader>
-      <CardText className='ml-2'>Permission according to roles</CardText>
+      <CardText className='ml-2'>Permisos de Acuerdo al Rol</CardText>
       <Table striped borderless responsive>
         <thead className='thead-light'>
           <tr>
-            <th>Module</th>
-            <th>Read</th>
-            <th>Write</th>
-            <th>Create</th>
-            <th>Delete</th>
+            <th>MÓDULO</th>
+            <th>LEER</th>
+            <th>ESCRIBIR</th>
+            <th>CREAR</th>
+            <th>BORRAR</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Admin</td>
+            <td>{allRolSelect.Admin}</td>
             <td>
               <CustomInput type='checkbox' id='admin-1' label='' defaultChecked disabled />
             </td>
@@ -35,7 +36,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>Staff</td>
+            <td>{allRolSelect.Presidente}</td>
             <td>
               <CustomInput type='checkbox' id='staff-1' label='' disabled />
             </td>
@@ -50,7 +51,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>Author</td>
+            <td>{allRolSelect.Institucion}</td>
             <td>
               <CustomInput type='checkbox' id='author-1' label='' defaultChecked disabled />
             </td>
@@ -65,7 +66,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>Contributor</td>
+            <td>{allRolSelect.Reportero}</td>
             <td>
               <CustomInput type='checkbox' id='contributor-1' label='' disabled />
             </td>
@@ -80,7 +81,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>User</td>
+            <td>{allRolSelect.Ciudadano}</td>
             <td>
               <CustomInput type='checkbox' id='user-1' label='' disabled />
             </td>

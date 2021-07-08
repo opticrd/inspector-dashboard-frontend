@@ -1,9 +1,9 @@
 @import '../../../base/bootstrap-extended/include';
 @import '../../../base/components/include';
 
-// .__rdt_custom_sort_icon__ svg {
-//   opacity: 1 !important;
-// }
+.__rdt_custom_sort_icon__ svg {
+  opacity: 1 !important;
+}
 
 .react-dataTable {
   border-radius: 0;

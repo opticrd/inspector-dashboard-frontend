@@ -8,6 +8,9 @@ import Avatar from '@components/avatar'
 import { Lock, Edit, Trash2 } from 'react-feather'
 import { Media, Row, Col, Button, Form, Input, Label, FormGroup, Table, CustomInput } from 'reactstrap'
 
+//Roles
+import { allRolSelect, allRol } from '../../../../constants/Rol/rol'
+
 const UserAccountTab = ({ selectedUser }) => {
   // ** States
   const [img, setImg] = useState(null)
@@ -81,14 +84,14 @@ const UserAccountTab = ({ selectedUser }) => {
             <h4>{selectedUser.fullName} </h4>
             <div className='d-flex flex-wrap mt-1 px-0'>
               <Button.Ripple id='change-img' tag={Label} className='mr-75 mb-0' color='primary'>
-                <span className='d-none d-sm-block'>Change</span>
+                <span className='d-none d-sm-block'>Cambiar</span>
                 <span className='d-block d-sm-none'>
                   <Edit size={14} />
                 </span>
                 <input type='file' hidden id='change-img' onChange={onChange} accept='image/*' />
               </Button.Ripple>
-              <Button.Ripple color='secondary' outline>
-                <span className='d-none d-sm-block'>Remove</span>
+              <Button.Ripple color='primary' outline>
+                <span className='d-none d-sm-block'>Remover</span>
                 <span className='d-block d-sm-none'>
                   <Trash2 size={14} />
                 </span>
@@ -102,25 +105,19 @@ const UserAccountTab = ({ selectedUser }) => {
           <Row>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='username'>Username</Label>
-                <Input type='text' id='username' placeholder='Username' defaultValue={userData && userData.username} />
+                <Label for='username'>Cédula de Identidad</Label>
+                <Input type='text' id='username' placeholder='Cédula de Identidad' defaultValue='001-0030000-0' />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='name'>Name</Label>
-                <Input type='text' id='name' placeholder='Name' defaultValue={userData && userData.fullName} />
+                <Label for='name'>Nombre Completo</Label>
+                <Input type='text' id='name' placeholder='Nombre Completo' defaultValue={userData && userData.fullName} />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='email'>Email</Label>
-                <Input type='text' id='email' placeholder='Email' defaultValue={userData && userData.email} />
-              </FormGroup>
-            </Col>
-            <Col md='4' sm='12'>
-              <FormGroup>
-                <Label for='status'>Status</Label>
+                <Label for='status'>Estado</Label>
                 <Input type='select' name='status' id='status' defaultValue={userData && userData.status}>
                   <option value='pending'>Pending</option>
                   <option value='active'>Active</option>
@@ -130,46 +127,83 @@ const UserAccountTab = ({ selectedUser }) => {
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='role'>Role</Label>
+                <Label for='role'>Rol</Label>
                 <Input type='select' name='role' id='role' defaultValue={userData && userData.role}>
-                  <option value='admin'>Admin</option>
-                  <option value='author'>Author</option>
-                  <option value='editor'>Editor</option>
-                  <option value='maintainer'>Maintainer</option>
-                  <option value='subscriber'>Subscriber</option>
+                  {allRol.map((allRol) => (
+                    <option value={allRol}>{allRol}</option>
+                  ))}
                 </Input>
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='company'>Company</Label>
+                <Label for='email'>Teléfono</Label>
+                <Input type='text' id='email' placeholder='Teléfono' defaultValue='809-220-1111' />
+              </FormGroup>
+            </Col>
+            <Col md='4' sm='12'>
+              <FormGroup>
+                <Label for='company'>Correo Electrónico</Label>
                 <Input
                   type='text'
                   id='company'
-                  defaultValue={userData && userData.company}
-                  placeholder='WinDon Technologies Pvt Ltd'
+                  defaultValue='johndoe@email.com'
+                  placeholder='Correo Electrónico'
                 />
               </FormGroup>
             </Col>
+            <Col md='4' sm='12'>
+              <FormGroup>
+                <Label for='company'>Provincia</Label>
+                <Input
+                  type='text'
+                  id='company'
+                  defaultValue='Santo Domingo'
+                  placeholder='Provincia'
+                />
+              </FormGroup>
+            </Col>  
+            <Col md='4' sm='12'>
+              <FormGroup>
+                <Label for='company'>Municipio</Label>
+                <Input
+                  type='text'
+                  id='company'
+                  defaultValue='Distrito Nacional'
+                  placeholder='Municipio'
+                />
+              </FormGroup>
+            </Col>  
+            <Col md='4' sm='12'>
+              <FormGroup>
+                <Label for='company'>Sector</Label>
+                <Input
+                  type='text'
+                  id='company'
+                  defaultValue='El millon'
+                  placeholder='Sector'
+                />
+              </FormGroup>
+            </Col>  
             <Col sm='12'>
               <div className='permissions border mt-1'>
                 <h6 className='py-1 mx-1 mb-0 font-medium-2'>
                   <Lock size={18} className='mr-25' />
-                  <span className='align-middle'>Permissions</span>
+                  <span className='align-middle'>Permisos</span>
                 </h6>
                 <Table borderless striped responsive>
                   <thead className='thead-light'>
                     <tr>
-                      <th>Module</th>
-                      <th>Read</th>
-                      <th>Write</th>
-                      <th>Create</th>
-                      <th>Delete</th>
+                      <th>MÓDULO</th>
+                      <th>LEER</th>
+                      <th>ESCRIBIR</th>
+                      <th>CREAR</th>
+                      <th>BORRAR</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Admin</td>
+                      <td>{allRolSelect.Admin}</td>
                       <td>
                         <CustomInput type='checkbox' id='admin-1' label='' defaultChecked />
                       </td>
@@ -184,7 +218,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>Staff</td>
+                      <td>{allRolSelect.Presidente}</td>
                       <td>
                         <CustomInput type='checkbox' id='staff-1' label='' />
                       </td>
@@ -199,7 +233,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>Author</td>
+                      <td>{allRolSelect.Institucion}</td>
                       <td>
                         <CustomInput type='checkbox' id='author-1' label='' defaultChecked />
                       </td>
@@ -214,7 +248,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>Contributor</td>
+                      <td>{allRolSelect.Reportero}</td>
                       <td>
                         <CustomInput type='checkbox' id='contributor-1' label='' />
                       </td>
@@ -229,7 +263,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>User</td>
+                      <td>{allRolSelect.Ciudadano}</td>
                       <td>
                         <CustomInput type='checkbox' id='user-1' label='' />
                       </td>
@@ -249,10 +283,10 @@ const UserAccountTab = ({ selectedUser }) => {
             </Col>
             <Col className='d-flex flex-sm-row flex-column mt-2' sm='12'>
               <Button.Ripple className='mb-1 mb-sm-0 mr-0 mr-sm-1' type='submit' color='primary'>
-                Save Changes
+                Guardar Cambios
               </Button.Ripple>
-              <Button.Ripple color='secondary' outline>
-                Reset
+              <Button.Ripple color='primary' outline>
+                Limpiar
               </Button.Ripple>
             </Col>
           </Row>

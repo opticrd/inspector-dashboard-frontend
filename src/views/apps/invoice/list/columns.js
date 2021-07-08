@@ -61,97 +61,71 @@ const renderClient = row => {
 // ** Table columns
 export const columns = [
   {
-    name: '#',
-    minWidth: '107px',
-    selector: 'id',
-    cell: row => <Link to={`/apps/invoice/preview/${row.id}`}>{`#${row.id}`}</Link>
-  },
-  {
-    name: <TrendingUp size={14} />,
-    minWidth: '102px',
-    selector: 'invoiceStatus',
-    sortable: true,
-    cell: row => {
-      const color = invoiceStatusObj[row.invoiceStatus] ? invoiceStatusObj[row.invoiceStatus].color : 'primary',
-        Icon = invoiceStatusObj[row.invoiceStatus] ? invoiceStatusObj[row.invoiceStatus].icon : Edit
-      return (
-        <Fragment>
-          <Avatar color={color} icon={<Icon size={14} />} id={`av-tooltip-${row.id}`} />
-          <UncontrolledTooltip placement='top' target={`av-tooltip-${row.id}`}>
-            <span className='font-weight-bold'>{row.invoiceStatus}</span>
-            <br />
-            <span className='font-weight-bold'>Balance:</span> {row.balance}
-            <br />
-            <span className='font-weight-bold'>Due Date:</span> {row.dueDate}
-          </UncontrolledTooltip>
-        </Fragment>
-      )
-    }
-  },
-  {
-    name: 'Client',
-    minWidth: '350px',
+    name: 'Nombre',
+    minWidth: '300px',
     selector: 'client',
     sortable: true,
     cell: row => {
+      console.log(row)
+
       const name = row.client ? row.client.name : 'John Doe',
         email = row.client ? row.client.companyEmail : 'johnDoe@email.com'
+
       return (
         <div className='d-flex justify-content-left align-items-center'>
           {renderClient(row)}
           <div className='d-flex flex-column'>
             <h6 className='user-name text-truncate mb-0'>{name}</h6>
-            <small className='text-truncate text-muted mb-0'>{email}</small>
+            <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>001-0001110-1</small>
           </div>
         </div>
       )
     }
   },
   {
-    name: 'Total',
-    selector: 'total',
-    sortable: true,
+    name: 'Teléfono',
     minWidth: '150px',
-    cell: row => <span>${row.total || 0}</span>
+    selector: 'cliente',
+    sortable: true,
+    cell: row => '809-220-1111'
   },
   {
-    name: 'Issued Date',
+    name: 'Municipio',
+    selector: 'total',
+    sortable: true,
+    minWidth: '200px',
+    cell: row => 'Distrito Nacional'
+  },
+  {
+    name: 'Rol',
     selector: 'dueDate',
     sortable: true,
     minWidth: '200px',
-    cell: row => row.dueDate
+    cell: row => 'Reportero'
   },
   {
-    name: 'Balance',
+    name: 'Reporteros',
     selector: 'balance',
     sortable: true,
-    minWidth: '164px',
-    cell: row => {
-      return row.balance !== 0 ? (
-        <span>{row.balance}</span>
-      ) : (
-        <Badge color='light-success' pill>
-          Paid
-        </Badge>
-      )
-    }
+    minWidth: '150px',
+    cell: row => '99'
   },
   {
-    name: 'Action',
+    name: 'Acciones',
     minWidth: '110px',
     selector: '',
-    sortable: true,
+    sortable: false,
     cell: row => (
       <div className='column-action d-flex align-items-center'>
         <Send size={17} id={`send-tooltip-${row.id}`} />
         <UncontrolledTooltip placement='top' target={`send-tooltip-${row.id}`}>
-          Send Mail
+          Enviar correo
         </UncontrolledTooltip>
         <Link to={`/apps/invoice/preview/${row.id}`} id={`pw-tooltip-${row.id}`}>
           <Eye size={17} className='mx-1' />
         </Link>
         <UncontrolledTooltip placement='top' target={`pw-tooltip-${row.id}`}>
-          Preview Invoice
+          Detalles
         </UncontrolledTooltip>
         <UncontrolledDropdown>
           <DropdownToggle tag='span'>
@@ -160,11 +134,11 @@ export const columns = [
           <DropdownMenu right>
             <DropdownItem tag='a' href='/' className='w-100' onClick={e => e.preventDefault()}>
               <Download size={14} className='mr-50' />
-              <span className='align-middle'>Download</span>
+              <span className='align-middle'>Descargar</span>
             </DropdownItem>
             <DropdownItem tag={Link} to={`/apps/invoice/edit/${row.id}`} className='w-100'>
               <Edit size={14} className='mr-50' />
-              <span className='align-middle'>Edit</span>
+              <span className='align-middle'>Editar</span>
             </DropdownItem>
             <DropdownItem
               tag='a'
@@ -176,11 +150,11 @@ export const columns = [
               }}
             >
               <Trash size={14} className='mr-50' />
-              <span className='align-middle'>Delete</span>
+              <span className='align-middle'>Borrar</span>
             </DropdownItem>
             <DropdownItem tag='a' href='/' className='w-100' onClick={e => e.preventDefault()}>
               <Copy size={14} className='mr-50' />
-              <span className='align-middle'>Duplicate</span>
+              <span className='align-middle'>Duplicar</span>
             </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
