@@ -41,7 +41,7 @@ const Earnings = ({ success }) => {
             total: {
               show: true,
               offsetY: 15,
-              label: 'App',
+              label: 'Casos',
               formatter(w) {
                 return '53%'
               }
@@ -91,12 +91,12 @@ const Earnings = ({ success }) => {
       <CardBody>
         <Row>
           <Col xs='6'>
-            <CardTitle className='mb-1'>Earnings</CardTitle>
-            <div className='font-small-2'>This Month</div>
-            <h5 className='mb-1'>$4055.56</h5>
+            <CardTitle className='mb-1'>Casos Completados</CardTitle>
+            <div className='font-small-2'>Este mes</div>
+            <h5 className='mb-1'>4055.56</h5>
             <CardText className='text-muted font-small-2'>
               <span className='font-weight-bolder'>68.2%</span>
-              <span> more earnings than last month.</span>
+              <span> más que el mes anterior</span>
             </CardText>
           </Col>
           <Col xs='6'>

@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 // ** User Edit Components
-import SocialTab from './Social'
 import AccountTab from './Account'
 import InfoTab from './Information'
 
@@ -17,6 +16,9 @@ import { Card, CardBody, Row, Col, Nav, NavItem, NavLink, TabContent, TabPane, A
 
 // ** Styles
 import '@styles/react/apps/app-users.scss'
+
+// components
+import { UserNotFound } from '../../../../@core/components/alert'
 
 const UserEdit = () => {
   // ** States & Vars
@@ -51,12 +53,6 @@ const UserEdit = () => {
                   <span className='align-middle d-none d-sm-block'>Información</span>
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink active={activeTab === '3'} onClick={() => toggle('3')}>
-                  <Share2 size={14} />
-                  <span className='align-middle d-none d-sm-block'>Social</span>
-                </NavLink>
-              </NavItem>
             </Nav>
             <TabContent activeTab={activeTab}>
               <TabPane tabId='1'>
@@ -65,21 +61,11 @@ const UserEdit = () => {
               <TabPane tabId='2'>
                 <InfoTab />
               </TabPane>
-              <TabPane tabId='3'>
-                <SocialTab />
-              </TabPane>
             </TabContent>
           </CardBody>
         </Card>
       </Col>
     </Row>
-  ) : (
-    <Alert color='danger'>
-      <h4 className='alert-heading'>Usuario no encontrado</h4>
-      <div className='alert-body'>
-        El usuario con id: {id} no existe. Lista de verificación de todos los usuarios: <Link to='/apps/user/list'>Lista de usuarios</Link>
-      </div>
-    </Alert>
-  )
+  ) : <UserNotFound id={id} />
 }
 export default UserEdit

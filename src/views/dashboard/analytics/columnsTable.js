@@ -1,49 +1,30 @@
-// ** React Imports
-import { Fragment } from 'react'
-
 import { Link } from 'react-router-dom'
 
 // ** Custom Components
 import Avatar from '@components/avatar'
 
 // ** Store & Actions
-import { deleteInvoice } from '../store/actions'
+import { deleteInvoice } from '@src/views/apps/invoice/store/actions'
 import { store } from '@store/storeConfig/store'
 
 // ** Third Party Components
 import {
-  Badge,
   UncontrolledDropdown,
   DropdownMenu,
   DropdownToggle,
-  DropdownItem,
-  UncontrolledTooltip
+  DropdownItem
 } from 'reactstrap'
+
 import {
-  Eye,
-  TrendingUp,
-  Send,
   MoreVertical,
   Download,
   Edit,
   Trash,
-  Copy,
-  CheckCircle,
-  Save,
-  ArrowDownCircle,
-  Info,
-  PieChart
+  Copy
 } from 'react-feather'
 
-// ** Vars
-const invoiceStatusObj = {
-  Sent: { color: 'light-secondary', icon: Send },
-  Paid: { color: 'light-success', icon: CheckCircle },
-  Draft: { color: 'light-primary', icon: Save },
-  Downloaded: { color: 'light-info', icon: ArrowDownCircle },
-  'Past Due': { color: 'light-danger', icon: Info },
-  'Partial Payment': { color: 'light-warning', icon: PieChart }
-}
+import { iconRoleTable } from '../../../@core/components/table/iconRoleTable'
+
 
 // ** renders client column
 const renderClient = row => {
@@ -59,15 +40,14 @@ const renderClient = row => {
 }
 
 // ** Table columns
-export const columns = [
+export const columnsTable = [
   {
     name: 'Nombre',
     minWidth: '300px',
     selector: 'client',
     sortable: true,
     cell: row => {
-      const name = row.client ? row.client.name : 'John Doe',
-        email = row.client ? row.client.companyEmail : 'johnDoe@email.com'
+      const name = row.client ? row.client.name : 'John Doe'
 
       return (
         <div className='d-flex justify-content-left align-items-center'>
@@ -88,47 +68,35 @@ export const columns = [
     cell: row => '809-220-1111'
   },
   {
+    name: 'Provincia',
+    selector: 'total',
+    sortable: true,
+    minWidth: '200px',
+    cell: row => 'Santo Domingo'
+  },
+  {
     name: 'Municipio',
     selector: 'total',
     sortable: true,
     minWidth: '200px',
-    cell: row => 'Distrito Nacional'
+    cell: row => 'Los Alcarrizos'
   },
   {
     name: 'Rol',
-    selector: 'dueDate',
+    selector: 'role',
     sortable: true,
     minWidth: '200px',
-    cell: row => 'Reportero'
-  },
-  {
-    name: 'Reporteros',
-    selector: 'balance',
-    sortable: true,
-    minWidth: '150px',
-    cell: row => '99'
+    cell: row => iconRoleTable(row)
   },
   {
     name: 'Acciones',
-    minWidth: '110px',
-    selector: '',
+    minWidth: '50px',
     sortable: false,
     cell: row => (
-      <div className='column-action d-flex align-items-center'>
-        <Send size={17} id={`send-tooltip-${row.id}`} />
-        <UncontrolledTooltip placement='top' target={`send-tooltip-${row.id}`}>
-          Enviar correo
-        </UncontrolledTooltip>
-        <Link to={`/apps/invoice/preview/${row.id}`} id={`pw-tooltip-${row.id}`}>
-          <Eye size={17} className='mx-1' />
-        </Link>
-        <UncontrolledTooltip placement='top' target={`pw-tooltip-${row.id}`}>
-          Detalles
-        </UncontrolledTooltip>
         <UncontrolledDropdown>
-          <DropdownToggle tag='span'>
-            <MoreVertical size={17} className='cursor-pointer' />
-          </DropdownToggle>
+            <DropdownToggle tag='div' className='btn btn-sm'>
+                <MoreVertical size={14} className='cursor-pointer' />
+            </DropdownToggle>
           <DropdownMenu right>
             <DropdownItem tag='a' href='/' className='w-100' onClick={e => e.preventDefault()}>
               <Download size={14} className='mr-50' />
@@ -156,7 +124,6 @@ export const columns = [
             </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
-      </div>
     )
   }
 ]

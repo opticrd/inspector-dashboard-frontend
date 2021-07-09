@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 // ** Third Party Components
 import classnames from 'classnames'
-import Cleave from 'cleave.js/react'
 import Flatpickr from 'react-flatpickr'
 import { User, MapPin } from 'react-feather'
 import 'cleave.js/dist/addons/cleave-phone.us'
@@ -21,6 +20,7 @@ const UserInfoTab = () => {
   const { register, errors, handleSubmit, control, setValue, trigger } = useForm({
     defaultValues: { gender: 'gender-female', dob: null }
   })
+
   return (
     <Form
       onSubmit={handleSubmit(data => {
@@ -32,21 +32,51 @@ const UserInfoTab = () => {
         <Col sm='12'>
           <h4 className='mb-1'>
             <User size={20} className='mr-50' />
-            <span className='align-middle'>Personal Information</span>
+            <span className='align-middle'>Información Personal</span>
           </h4>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
             <Label className='d-block' for='dob'>
-              Date of birth
+              Cédula de Identidad
             </Label>
+            <Input
+              type='text'
+              id='state'
+              defaultValue='001-0000000-0'
+              placeholder='Cédula de Identidad'
+            />
+          </FormGroup>
+        </Col>
+        <Col lg='4' md='6'>
+          <FormGroup>
+            <Label for='mobileNumber'>Nombre Completo</Label>
+            <Input
+              type='text'
+              id='state'
+              defaultValue='John Doe'
+              placeholder='Nombre Completo'
+            />
+          </FormGroup>
+        </Col>
+        <Col lg='4' md='6'>
+          <FormGroup>
+            <Label for='nacionalidad'>Nacionalidad</Label>
+            <Input type='select' name='nacionalidad' id='nacionalidad' defaultValue='Dominicana'>
+              <option value='Dominicana'>Dominicana</option>
+            </Input>
+          </FormGroup>
+        </Col>
+        <Col lg='4' md='6'>
+          <FormGroup>
+            <Label for='languages'>Fecha de Nacimiento</Label>
             <Controller
               id='dob'
               name='dob'
               as={Flatpickr}
               control={control}
-              placeholder='YYYY-MM-DD'
-              options={{ dateFormat: 'Y-m-d' }}
+              placeholder='DD-MM-YYYY'
+              options={{ dateFormat: 'd-m-y' }}
               className={classnames('form-control', {
                 'is-invalid': errors.dob
               })}
@@ -55,58 +85,26 @@ const UserInfoTab = () => {
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='mobileNumber'>Mobile</Label>
-            <Controller
-              as={Cleave}
-              control={control}
-              id='mobileNumber'
-              name='mobileNumber'
-              defaultValue='+6595895857'
-              placeholder='1 234 567 8900'
-              options={{ phone: true, phoneRegionCode: 'US' }}
-              className={classnames('form-control', {
-                'is-invalid': data !== null && (data.mobileNumber === undefined || data.mobileNumber === null)
-              })}
-            />
+            <Label for='nacionalidad'>Teléfono Móvil</Label>
+            <Input type='select' name='nacionalidad' id='nacionalidad' defaultValue='809-220-1111'>
+              <option value='809-220-1111'>809-220-1111</option>
+            </Input>
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='website'>Website</Label>
+            <Label for='mobileNumber'>Correo Electrónico</Label>
             <Input
-              type='url'
-              id='website'
-              name='website'
-              placeholder='https://google.com'
-              defaultValue='https://rowboat.com/insititious/Angelo'
+              type='email'
+              id='state'
+              defaultValue='johndoe@email.com'
+              placeholder='Correo Electrónico'
             />
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='languages'>Languages</Label>
-            <Controller
-              as={Input}
-              type='select'
-              name='status'
-              id='languages'
-              control={control}
-              defaultValue='English'
-              invalid={data !== null && (data.status === undefined || data.status === null)}
-            >
-              <option value='English'>English</option>
-              <option value='Spanish'>Spanish</option>
-              <option value='French'>French</option>
-              <option value='Russian'>Russian</option>
-              <option value='German'>German</option>
-              <option value='Arabic'>Arabic</option>
-              <option value='Sanskrit'>Sanskrit</option>
-            </Controller>
-          </FormGroup>
-        </Col>
-        <Col lg='4' md='6'>
-          <FormGroup>
-            <label className='d-block mb-1'>Gender</label>
+            <label className='d-block mb-1'>Género</label>
             <FormGroup>
               <Controller
                 name='gender'
@@ -116,12 +114,12 @@ const UserInfoTab = () => {
                     <CustomInput
                       inline
                       type='radio'
-                      label='Male'
-                      value='Male'
+                      label='Masculino'
+                      value='Masculino'
                       id='gender-male'
                       name={props.name}
                       invalid={data !== null && (data.gender === undefined || data.gender === null)}
-                      onChange={() => setValue('gender', 'male')}
+                      onChange={() => setValue('gender', 'Masculino')}
                     />
                   )
                 }}
@@ -134,13 +132,31 @@ const UserInfoTab = () => {
                     <CustomInput
                       inline
                       type='radio'
-                      label='Female'
-                      value='Female'
+                      label='Femenino'
+                      value='Femenino'
                       id='gender-female'
                       name={props.name}
                       defaultChecked
                       invalid={data !== null && (data.gender === undefined || data.gender === null)}
-                      onChange={() => setValue('gender', 'female')}
+                      onChange={() => setValue('gender', 'Femenino')}
+                    />
+                  )
+                }}
+              />
+              <Controller
+                name='gender'
+                control={control}
+                render={props => {
+                  return (
+                    <CustomInput
+                      inline
+                      type='radio'
+                      label='Otro'
+                      value='Otro'
+                      id='gender-other'
+                      name={props.name}
+                      invalid={data !== null && (data.gender === undefined || data.gender === null)}
+                      onChange={() => setValue('gender', 'Otro')}
                     />
                   )
                 }}
@@ -150,15 +166,15 @@ const UserInfoTab = () => {
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <label className='d-block mb-1'>Contact Options</label>
+            <label className='d-block mb-1'>Opciones de Contacto</label>
             <FormGroup>
               <CustomInput
                 inline
                 type='checkbox'
                 name='terms'
                 id='emailTerms'
-                value='Email'
-                label='Email'
+                value='Correo'
+                label='Correo'
                 defaultChecked
               />
               <CustomInput
@@ -166,11 +182,18 @@ const UserInfoTab = () => {
                 type='checkbox'
                 name='terms'
                 id='msgTerms'
-                value='Messages'
-                label='Messages'
+                value='Mensajes'
+                label='Mensajes'
                 defaultChecked
               />
-              <CustomInput inline type='checkbox' name='terms' id='phoneTerms' value='Phone' label='Phone' />
+              <CustomInput 
+                inline 
+                type='checkbox' 
+                name='terms' 
+                id='phoneTerms' 
+                value='Teléfono' 
+                label='Teléfono' 
+              />
             </FormGroup>
           </FormGroup>
         </Col>
@@ -179,78 +202,79 @@ const UserInfoTab = () => {
         <Col sm='12'>
           <h4 className='mb-1 mt-2'>
             <MapPin size={20} className='mr-50' />
-            <span className='align-middle'>Address</span>
+            <span className='align-middle'>Dirección</span>
           </h4>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='address-1'>Address Line 1</Label>
+            <Label for='address-1'>Dirección Línea 1</Label>
             <Input
-              id='address-1'
-              name='address1'
-              defaultValue='A-65, Belvedere Streets'
-              innerRef={register({ required: true })}
-              className={classnames({
-                'is-invalid': errors.address1
-              })}
+              type='text'
+              id='state'
+              defaultValue='A-65 Belvedere Streets'
+              placeholder='Dirección Línea 1'
             />
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='address-2'>Address Line 2</Label>
-            <Input placeholder='A-65, Belvedere Streets' id='address-2' name='address-2' />
+            <Label for='address-2'>Dirección Línea 2</Label>
+            <Input 
+              placeholder='Dirección Línea 2'
+              id='address-2' 
+              name='address-2' 
+            />
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='postcode'>Postcode</Label>
+            <Label for='postcode'>Código Postal</Label>
             <Input
               id='postcode'
               name='postcode'
               placeholder='597626'
-              innerRef={register({ required: true })}
-              invalid={errors.postcode && true}
             />
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='city'>City</Label>
-            <Input defaultValue='Manhattan' placeholder='Manhattan' id='city' name='city' />
+            <Label for='city'>Provincia</Label>
+            <Input 
+              defaultValue='Manhattan' 
+              placeholder='Manhattan' 
+              id='city' 
+              name='city' 
+            />
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='state'>State</Label>
+            <Label for='state'>Municipio</Label>
             <Input
               defaultValue='New York'
-              placeholder='New York'
+              placeholder='Municipio'
               id='state'
               name='state'
-              innerRef={register({ required: true })}
-              invalid={errors.state && true}
             />
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>
           <FormGroup>
-            <Label for='country'>Country</Label>
+            <Label for='country'>Sector</Label>
             <Input
-              placeholder='United States'
+              defaultValue='El millon'
+              placeholder='Sector'
               id='country'
               name='country'
-              innerRef={register({ required: true })}
-              invalid={errors.country && true}
             />
           </FormGroup>
         </Col>
         <Col className='d-flex flex-sm-row flex-column mt-2'>
           <Button type='submit' color='primary' className='mb-1 mb-sm-0 mr-0 mr-sm-1'>
-            Save Changes
+            Guardar Cambios
           </Button>
-          <Button type='reset' color='secondary' outline>
-            Reset
+          <Button type='reset' color='primary' outline>
+            Limpiar
           </Button>
         </Col>
       </Row>

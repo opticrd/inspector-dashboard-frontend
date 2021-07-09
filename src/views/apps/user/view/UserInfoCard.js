@@ -6,7 +6,7 @@ import Avatar from '@components/avatar'
 
 // ** Third Party Components
 import { Card, CardBody, CardText, Button, Row, Col } from 'reactstrap'
-import { DollarSign, TrendingUp, User, Check, Star, Flag, Phone } from 'react-feather'
+import { DollarSign, TrendingUp, User, Check, Star, Globe, Phone } from 'react-feather'
 
 const UserInfoCard = ({ selectedUser }) => {
   // ** render user img
@@ -55,10 +55,10 @@ const UserInfoCard = ({ selectedUser }) => {
                   </div>
                   <div className='d-flex flex-wrap align-items-center'>
                     <Button.Ripple tag={Link} to={`/apps/user/edit/${selectedUser.id}`} color='primary'>
-                      Edit
+                      Editar
                     </Button.Ripple>
-                    <Button.Ripple className='ml-1' color='danger' outline>
-                      Delete
+                    <Button.Ripple className='ml-1' color='primary' outline>
+                      Borrar
                     </Button.Ripple>
                   </div>
                 </div>
@@ -67,20 +67,20 @@ const UserInfoCard = ({ selectedUser }) => {
             <div className='d-flex align-items-center user-total-numbers'>
               <div className='d-flex align-items-center mr-2'>
                 <div className='color-box bg-light-primary'>
-                  <DollarSign className='text-primary' />
+                  <TrendingUp className='text-primary' />
                 </div>
                 <div className='ml-1'>
                   <h5 className='mb-0'>23.3k</h5>
-                  <small>Monthly Sales</small>
+                  <small>Total de Casos</small>
                 </div>
               </div>
               <div className='d-flex align-items-center'>
                 <div className='color-box bg-light-success'>
-                  <TrendingUp className='text-success' />
+                  <DollarSign className='text-succes' />
                 </div>
                 <div className='ml-1'>
-                  <h5 className='mb-0'>$99.87K</h5>
-                  <small>Annual Profit</small>
+                  <h5 className='mb-0'>99.87K</h5>
+                  <small>Casos Cerrados</small>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ const UserInfoCard = ({ selectedUser }) => {
                 <div className='user-info-title'>
                   <User className='mr-1' size={14} />
                   <CardText tag='span' className='user-info-title font-weight-bold mb-0'>
-                    Username
+                    Usuario
                   </CardText>
                 </div>
                 <CardText className='mb-0'>
@@ -102,7 +102,7 @@ const UserInfoCard = ({ selectedUser }) => {
                 <div className='user-info-title'>
                   <Check className='mr-1' size={14} />
                   <CardText tag='span' className='user-info-title font-weight-bold mb-0'>
-                    Status
+                    Estado
                   </CardText>
                 </div>
                 <CardText className='text-capitalize mb-0'>
@@ -113,18 +113,18 @@ const UserInfoCard = ({ selectedUser }) => {
                 <div className='user-info-title'>
                   <Star className='mr-1' size={14} />
                   <CardText tag='span' className='user-info-title font-weight-bold mb-0'>
-                    Role
+                    Rol
                   </CardText>
                 </div>
                 <CardText className='text-capitalize mb-0'>
-                  {selectedUser !== null ? selectedUser.role : 'Admin'}
+                  Reportero Provincial
                 </CardText>
               </div>
               <div className='d-flex flex-wrap align-items-center my-50'>
                 <div className='user-info-title'>
-                  <Flag className='mr-1' size={14} />
+                  <Globe className='mr-1' size={14} />
                   <CardText tag='span' className='user-info-title font-weight-bold mb-0'>
-                    Country
+                    Provincia
                   </CardText>
                 </div>
                 <CardText className='mb-0'>{selectedUser !== null ? selectedUser.country : 'England'}</CardText>
@@ -133,7 +133,7 @@ const UserInfoCard = ({ selectedUser }) => {
                 <div className='user-info-title'>
                   <Phone className='mr-1' size={14} />
                   <CardText tag='span' className='user-info-title font-weight-bold mb-0'>
-                    Contact
+                    Contacto
                   </CardText>
                 </div>
                 <CardText className='mb-0'>{selectedUser !== null ? selectedUser.contact : '(123) 456-7890'}</CardText>

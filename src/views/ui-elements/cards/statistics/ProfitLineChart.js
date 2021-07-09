@@ -97,7 +97,7 @@ const ProfitLineChart = ({ info }) => {
       height={70}
       type='line'
       options={options}
-      title={data.title}
+      title='Casos por Mes'
       stats={data.statistics}
       series={data.series}
     />

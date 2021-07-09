@@ -1,9 +1,5 @@
 // ** React Imports
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-
-// ** Table Columns
-import { columns } from './columns'
 
 // ** Third Party Components
 import ReactPaginate from 'react-paginate'
@@ -12,14 +8,14 @@ import DataTable from 'react-data-table-component'
 import { Button, Label, Input, CustomInput, Row, Col, Card } from 'reactstrap'
 
 // ** Store & Actions
-import { getData } from '../store/actions'
+import { getData } from '@src/views/apps/invoice/store/actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 // ** Styles
 import '@styles/react/apps/app-invoice.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
-const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage }) => {
+const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage, showSelectStatus, showButtonAdd }) => {
   return (
     <div className='invoice-list-table-header w-100 py-2'>
       <Row>
@@ -52,25 +48,32 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
               type='text'
               value={value}
               onChange={e => handleFilter(e.target.value)}
-              placeholder='Buscar...'
+              placeholder='Escribe...'
             />
           </div>
-          <Input 
-            className='w-auto pr-4' 
-            type='select' 
-            value={statusValue} 
-            onChange={handleStatusValue}
-            style={{border: 'none'}}
-          >
-            <option value=''>Seleccionar Estado</option>
-          </Input>
+            {showSelectStatus &&
+                <Input 
+                    className='w-auto pr-4' 
+                    type='select' 
+                    value={statusValue} 
+                    onChange={handleStatusValue}
+                    style={{border: 'none'}}
+                >
+                    <option value=''>Seleccionar Estado</option>
+                </Input>
+            }
+            {showButtonAdd &&
+                <Button.Ripple color='primary' onClick={() => console.log('Some action')}>
+                    Añadir Nuevo Usuario
+                </Button.Ripple>
+            }
         </Col>
       </Row>
     </div>
   )
 }
 
-const InvoiceList = () => {
+const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, showButtonAdd = false }) => {
   const dispatch = useDispatch()
   const store = useSelector(state => state.invoice)
 
@@ -182,8 +185,6 @@ const InvoiceList = () => {
     }
   }
 
-  console.log('dataTable', dataToRender())
-
   return (
     <div className='invoice-list-wrapper'>
       <Card>
@@ -193,7 +194,7 @@ const InvoiceList = () => {
             pagination
             paginationServer
             subHeader={true}
-            columns={columns}
+            columns={columnsTable}
             responsive={true}
             sortIcon={<ChevronDown />}
             className='react-dataTable'
@@ -209,6 +210,8 @@ const InvoiceList = () => {
                 handleFilter={handleFilter}
                 handlePerPage={handlePerPage}
                 handleStatusValue={handleStatusValue}
+                showSelectStatus={showSelectStatus}
+                showButtonAdd={showButtonAdd}
               />
             }
           />
@@ -218,4 +221,4 @@ const InvoiceList = () => {
   )
 }
 
-export default InvoiceList
+export default DataTableList

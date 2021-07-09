@@ -22,6 +22,7 @@ import { Card, CardHeader, CardTitle, CardBody, Input, Row, Col, Label, CustomIn
 // ** Styles
 import '@styles/react/libs/react-select/_react-select.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
+import DataTableList from '../../../../@core/components/table'
 
 // ** Table Header
 const CustomHeader = ({ toggleSidebar, handlePerPage, rowsPerPage, handleFilter, searchTerm }) => {
@@ -63,7 +64,7 @@ const CustomHeader = ({ toggleSidebar, handlePerPage, rowsPerPage, handleFilter,
               id='search-invoice'
               className='ml-50 w-100'
               type='text'
-              placeholder='Buscar'
+              placeholder='Escribe...'
               value={searchTerm}
               onChange={e => handleFilter(e.target.value)}
             />
@@ -307,7 +308,13 @@ const UsersList = () => {
       </Card>
 
       <Card>
-        <DataTable
+        <DataTableList 
+          columnsTable={columns}
+          dataTable={dataToRender()}
+          showButtonAdd={true}
+        />
+
+        {/* <DataTable
           noHeader
           pagination
           subHeader
@@ -325,9 +332,9 @@ const UsersList = () => {
               rowsPerPage={rowsPerPage}
               searchTerm={searchTerm}
               handleFilter={handleFilter}
-            />
+            /> 
           }
-        />
+        /> */}
       </Card>
 
       <Sidebar open={sidebarOpen} toggleSidebar={toggleSidebar} />
