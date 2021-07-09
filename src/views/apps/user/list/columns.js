@@ -10,7 +10,9 @@ import { store } from '@store/storeConfig/store'
 
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
-import { Slack, User, Settings, Database, Edit2, MoreVertical, FileText, Trash2, Archive } from 'react-feather'
+import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
+
+import { iconRoleTable } from '../../../../@core/components/table/iconRoleTable'
 
 // ** Renders Client Columns
 const renderClient = row => {
@@ -23,47 +25,6 @@ const renderClient = row => {
   } else {
     return <Avatar color={color || 'primary'} className='mr-1' content={row.fullName || 'John Doe'} initials />
   }
-}
-
-// ** Renders Role Columns
-const renderRole = row => {
-  const roleObj = {
-    subscriber: {
-      class: 'text-primary',
-      icon: User
-    },
-    maintainer: {
-      class: 'text-success',
-      icon: Database
-    },
-    editor: {
-      class: 'text-info',
-      icon: Edit2
-    },
-    author: {
-      class: 'text-warning',
-      icon: Settings
-    },
-    admin: {
-      class: 'text-danger',
-      icon: Slack
-    }
-  }
-
-  const Icon = roleObj[row.role] ? roleObj[row.role].icon : Edit2
-
-  return (
-    <span className='text-truncate text-capitalize align-middle'>
-      <Icon size={18} className={`${roleObj[row.role] ? roleObj[row.role].class : ''} mr-50`} />
-      {row.role}
-    </span>
-  )
-}
-
-const statusObj = {
-  pending: 'light-warning',
-  active: 'light-success',
-  inactive: 'light-secondary'
 }
 
 export const columns = [
@@ -114,7 +75,7 @@ export const columns = [
     minWidth: '172px',
     selector: 'role',
     sortable: true,
-    cell: row => renderRole(row)
+    cell: row => iconRoleTable(row)
   },
   {
     name: 'Acciones',

@@ -1,6 +1,3 @@
-// ** React Imports
-import { Fragment } from 'react'
-
 import { Link } from 'react-router-dom'
 
 // ** Custom Components
@@ -12,38 +9,22 @@ import { store } from '@store/storeConfig/store'
 
 // ** Third Party Components
 import {
-  Badge,
   UncontrolledDropdown,
   DropdownMenu,
   DropdownToggle,
-  DropdownItem,
-  UncontrolledTooltip
+  DropdownItem
 } from 'reactstrap'
+
 import {
-  Eye,
-  TrendingUp,
-  Send,
   MoreVertical,
   Download,
   Edit,
   Trash,
-  Copy,
-  CheckCircle,
-  Save,
-  ArrowDownCircle,
-  Info,
-  PieChart
+  Copy
 } from 'react-feather'
 
-// ** Vars
-const invoiceStatusObj = {
-  Sent: { color: 'light-secondary', icon: Send },
-  Paid: { color: 'light-success', icon: CheckCircle },
-  Draft: { color: 'light-primary', icon: Save },
-  Downloaded: { color: 'light-info', icon: ArrowDownCircle },
-  'Past Due': { color: 'light-danger', icon: Info },
-  'Partial Payment': { color: 'light-warning', icon: PieChart }
-}
+import { iconRoleTable } from '../../../@core/components/table/iconRoleTable'
+
 
 // ** renders client column
 const renderClient = row => {
@@ -66,8 +47,7 @@ export const columnsTable = [
     selector: 'client',
     sortable: true,
     cell: row => {
-      const name = row.client ? row.client.name : 'John Doe',
-        email = row.client ? row.client.companyEmail : 'johnDoe@email.com'
+      const name = row.client ? row.client.name : 'John Doe'
 
       return (
         <div className='d-flex justify-content-left align-items-center'>
@@ -103,10 +83,10 @@ export const columnsTable = [
   },
   {
     name: 'Rol',
-    selector: 'dueDate',
+    selector: 'role',
     sortable: true,
     minWidth: '200px',
-    cell: row => 'Reportero'
+    cell: row => iconRoleTable(row)
   },
   {
     name: 'Acciones',

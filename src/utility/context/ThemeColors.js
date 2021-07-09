@@ -17,8 +17,8 @@ const ThemeContext = ({ children }) => {
       //** Colors obj
       const obj = {
         primary: {
-          light: getHex('--primary').concat('1a'),
-          main: getHex('--primary')
+          light: '#0443861a',
+          main: '#044386'
         },
         secondary: {
           light: getHex('--secondary').concat('1a'),

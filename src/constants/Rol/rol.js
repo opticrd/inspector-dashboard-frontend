@@ -4,18 +4,33 @@ export const Institucion = 'Institución'
 export const Reportero = 'Reportero'
 export const Ciudadano = 'Ciudadano'
 
-export const allRol = [
-    'Admin',
-    'Presidente',
-    'Institución',
-    'Reportero',
-    'Ciudadano'
+export const rolArray = [
+    Admin,
+    Presidente,
+    Institucion,
+    Reportero,
+    Ciudadano
 ]
 
-export const allRolSelect = {
-    Admin: 'Admin',
-    Presidente: 'Presidente',
-    Institucion: 'Institución',
-    Reportero: 'Reportero',
-    Ciudadano: 'Ciudadano'
+export const rolObj = {
+    admin: {
+        name: Admin,
+        icon: null
+    },
+    presidente: {
+        name: Presidente,
+        icon: null
+    },
+    institucion: {
+        name: Institucion,
+        icon: null
+    },
+    reportero: {
+        name: Reportero,
+        icon: null
+    },
+    ciudadano: {
+        name: Ciudadano,
+        icon: null
+    }
 }

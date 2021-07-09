@@ -1,11 +1,6 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import { Users } from 'react-feather'
 import StatsWithAreaChart from '@components/widgets/stats/StatsWithAreaChart'
 
 const SubscribersGained = ({ kFormatter, dataInfoChart }) => {
-
-  console.log(dataInfoChart)
 
   const options = {
     chart: {

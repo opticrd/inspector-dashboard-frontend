@@ -9,7 +9,7 @@ import { Lock, Edit, Trash2 } from 'react-feather'
 import { Media, Row, Col, Button, Form, Input, Label, FormGroup, Table, CustomInput } from 'reactstrap'
 
 //Roles
-import { allRolSelect, allRol } from '../../../../constants/Rol/rol'
+import { rolObj, rolArray } from '../../../../constants/Rol/rol'
 
 const UserAccountTab = ({ selectedUser }) => {
   // ** States
@@ -129,8 +129,8 @@ const UserAccountTab = ({ selectedUser }) => {
               <FormGroup>
                 <Label for='role'>Rol</Label>
                 <Input type='select' name='role' id='role' defaultValue={userData && userData.role}>
-                  {allRol.map((allRol) => (
-                    <option value={allRol}>{allRol}</option>
+                  {rolArray.map((rolArray) => (
+                    <option value={rolArray}>{rolArray}</option>
                   ))}
                 </Input>
               </FormGroup>
@@ -203,7 +203,7 @@ const UserAccountTab = ({ selectedUser }) => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>{allRolSelect.Admin}</td>
+                      <td>{rolObj.admin.name}</td>
                       <td>
                         <CustomInput type='checkbox' id='admin-1' label='' defaultChecked />
                       </td>
@@ -218,7 +218,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>{allRolSelect.Presidente}</td>
+                      <td>{rolObj.presidente.name}</td>
                       <td>
                         <CustomInput type='checkbox' id='staff-1' label='' />
                       </td>
@@ -233,7 +233,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>{allRolSelect.Institucion}</td>
+                      <td>{rolObj.institucion.name}</td>
                       <td>
                         <CustomInput type='checkbox' id='author-1' label='' defaultChecked />
                       </td>
@@ -248,7 +248,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>{allRolSelect.Reportero}</td>
+                      <td>{rolObj.reportero.name}</td>
                       <td>
                         <CustomInput type='checkbox' id='contributor-1' label='' />
                       </td>
@@ -263,7 +263,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>{allRolSelect.Ciudadano}</td>
+                      <td>{rolObj.ciudadano.name}</td>
                       <td>
                         <CustomInput type='checkbox' id='user-1' label='' />
                       </td>

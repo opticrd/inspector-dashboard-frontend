@@ -7,7 +7,6 @@ import {
   CardText,
   Row,
   Col,
-  Button,
   UncontrolledDropdown,
   DropdownMenu,
   DropdownItem,
@@ -42,11 +41,11 @@ const AvgSessions = props => {
       },
       colors: [
         props.colors.primary.main, 
+        props.colors.info.main, 
+        props.colors.warning.main, 
         props.colors.danger.main, 
         props.colors.success.main, 
-        props.colors.success.main, 
-        props.colors.warning.main, 
-        props.colors.warning.main
+        props.colors.secondary.main
       ],
       plotOptions: {
         bar: {
@@ -65,7 +64,7 @@ const AvgSessions = props => {
     series = [
       {
         name: 'Sessions',
-        data: [275, 225, 200, 175, 125, 75]
+        data: [275, 335, 200, 175, 350, 100]
       }
     ]
 
@@ -94,7 +93,7 @@ const AvgSessions = props => {
           >
             <UncontrolledDropdown className='chart-dropdown'>
               <DropdownToggle color='' className='bg-transparent btn-sm border-0 p-50'>
-                últimos 7 días
+                Últimos 7 días
               </DropdownToggle>
               <DropdownMenu right>
                 {data.last_days.map(item => (
@@ -121,7 +120,7 @@ const AvgSessions = props => {
               <p className="mb-50">Servicios Sociales</p>
               <p className="mb-50">{kFormatter(98766)}</p>
             </div>
-            <Progress className='avg-session-progress progress-bar-warning mt-25' value='60' />
+            <Progress className='avg-session-progress progress-bar-info mt-25' value='60' />
           </Col>
           <Col className='mb-2' md='4' sm='12'>
             <div className="d-flex justify-content-between align-items-end">
@@ -149,7 +148,7 @@ const AvgSessions = props => {
               <p className="mb-50">Otros</p>
               <p className="mb-50">{kFormatter(98766)}</p>
             </div>
-            <Progress className='avg-session-progress progress-bar-success mt-25' value='80' />
+            <Progress className='avg-session-progress progress-bar-secondary mt-25' value='80' />
           </Col>
         </Row>
       </CardBody>

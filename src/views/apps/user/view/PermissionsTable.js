@@ -1,6 +1,6 @@
 // ** Reactstrap
 import { Card, CardHeader, CardTitle, CardText, Table, CustomInput } from 'reactstrap'
-import { allRolSelect } from '../../../../constants/Rol/rol'
+import { rolObj } from '../../../../constants/Rol/rol'
 
 const PermissionsTable = () => {
   return (
@@ -21,7 +21,7 @@ const PermissionsTable = () => {
         </thead>
         <tbody>
           <tr>
-            <td>{allRolSelect.Admin}</td>
+            <td>{rolObj.admin.name}</td>
             <td>
               <CustomInput type='checkbox' id='admin-1' label='' defaultChecked disabled />
             </td>
@@ -36,7 +36,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>{allRolSelect.Presidente}</td>
+            <td>{rolObj.presidente.name}</td>
             <td>
               <CustomInput type='checkbox' id='staff-1' label='' disabled />
             </td>
@@ -51,7 +51,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>{allRolSelect.Institucion}</td>
+            <td>{rolObj.institucion.name}</td>
             <td>
               <CustomInput type='checkbox' id='author-1' label='' defaultChecked disabled />
             </td>
@@ -66,7 +66,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>{allRolSelect.Reportero}</td>
+            <td>{rolObj.reportero.name}</td>
             <td>
               <CustomInput type='checkbox' id='contributor-1' label='' disabled />
             </td>
@@ -81,7 +81,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>{allRolSelect.Ciudadano}</td>
+            <td>{rolObj.ciudadano.name}</td>
             <td>
               <CustomInput type='checkbox' id='user-1' label='' disabled />
             </td>

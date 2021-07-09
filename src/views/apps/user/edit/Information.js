@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 // ** Third Party Components
 import classnames from 'classnames'
-import Cleave from 'cleave.js/react'
 import Flatpickr from 'react-flatpickr'
 import { User, MapPin } from 'react-feather'
 import 'cleave.js/dist/addons/cleave-phone.us'

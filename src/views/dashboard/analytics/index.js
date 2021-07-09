@@ -1,19 +1,8 @@
 import { useContext } from 'react'
-import { List, Users } from 'react-feather'
 import { kFormatter } from '@utils'
-import Avatar from '@components/avatar'
-import Timeline from '@components/timeline'
-import AvatarGroup from '@components/avatar-group'
-import jsonImg from '@src/assets/images/icons/json.png'
-import InvoiceList from '@src/views/apps/invoice/list'
-import ceo from '@src/assets/images/portrait/small/avatar-s-9.jpg'
 import { ThemeColors } from '@src/utility/context/ThemeColors'
-import Sales from '@src/views/ui-elements/cards/analytics/Sales'
 import AvgSessions from '@src/views/ui-elements/cards/analytics/AvgSessions'
-import CardAppDesign from '@src/views/ui-elements/cards/advance/CardAppDesign'
-import SupportTracker from '@src/views/ui-elements/cards/analytics/SupportTracker'
-import { Row, Col, Card, CardHeader, CardTitle, CardBody, Media } from 'reactstrap'
-import OrdersReceived from '@src/views/ui-elements/cards/statistics/OrdersReceived'
+import { Row, Col } from 'reactstrap'
 import SubscribersGained from '@src/views/ui-elements/cards/statistics/SubscribersGained'
 import OrdersBarChart from '@src/views/ui-elements/cards/statistics/OrdersBarChart'
 import ProfitLineChart from '@src/views/ui-elements/cards/statistics/ProfitLineChart'
@@ -25,52 +14,42 @@ import GoalOverview from '@src/views/ui-elements/cards/analytics/GoalOverview'
 import DataTableList from '@components/table'
 
 import { columnsTable } from './columnsTable'
+import { dataInfoChart } from './dataInfoChart'
 
 import '@styles/react/libs/charts/apex-charts.scss'
 
 const AnalyticsDashboard = () => {
+
   const { colors } = useContext(ThemeColors)
 
-  const dataInfoChart = [
-      {
-        icon: <Users size={21} />,
-        color: 'danger',
-        colorHEX: colors.danger.main,
-        quantity: 9876,
-        title: 'Total de Casos',
-        data: [28, 40, 36, 52, 38, 60, 55]
-      },
-      {
-        icon: <Users size={21} />,
-        color: 'warning',
-        colorHEX: colors.warning.main,
-        quantity: 9876,
-        title: 'Casos Abiertos',
-        data: [28, 40, 36, 52, 38, 60, 55]
-      },
-      {
-        icon: <Users size={21} />,
-        color: 'secondary',
-        colorHEX: colors.secondary.main,
-        quantity: 9876,
-        title: 'Casos Finalizados',
-        data: [28, 40, 36, 52, 38, 60, 55]
-      },
-      {
-        icon: <Users size={21} />,
-        color: 'primary',
-        colorHEX: colors.primary.main,
-        quantity: 9876,
-        title: 'Reporteros Activos',
-        data: [28, 40, 36, 52, 38, 60, 55]
-      }
-    ]
+  const infoChart = dataInfoChart()
 
+    // ** Table data to render
+  const dataToRender = () => {
+    const filters = {
+      role: currentRole.value,
+      currentPlan: currentPlan.value,
+      status: currentStatus.value,
+      q: searchTerm
+    }
+
+    const isFiltered = Object.keys(filters).some(function (k) {
+      return filters[k].length > 0
+    })
+
+    if (store.data.length > 0) {
+      return store.data
+    } else if (store.data.length === 0 && isFiltered) {
+      return []
+    } else {
+      return store.allData.slice(0, rowsPerPage)
+    }
+  }
 
   return (
     <div id='dashboard-analytics'>
       <Row className='match-height'>
-        {dataInfoChart.map((dataInfoChart, index) => (
+        {infoChart.map((dataInfoChart, index) => (
           <Col lg='3' sm='6' key={index}>
             <SubscribersGained kFormatter={kFormatter} dataInfoChart={dataInfoChart} />
           </Col>
@@ -78,6 +57,7 @@ const AnalyticsDashboard = () => {
         
         <Col lg='4' md='12'>
           <Row className='match-height'>
+            
             <Col lg='6' md='6' xs='6'>
               <OrdersBarChart warning={colors.warning.main} />
             </Col>
@@ -87,8 +67,10 @@ const AnalyticsDashboard = () => {
             <Col lg='12' md='6' xs='12'>
               <Earnings success={colors.success.main} />
             </Col>
+
           </Row>
         </Col>
+
         <Col lg='4' md='6' xs='12'>
           <GoalOverview success={colors.success.main} />
         </Col>
@@ -107,6 +89,7 @@ const AnalyticsDashboard = () => {
             showButtonAdd={true}
           />
         </Col>
+
       </Row>
     </div>
   )

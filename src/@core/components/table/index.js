@@ -1,6 +1,5 @@
 // ** React Imports
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 
 // ** Third Party Components
 import ReactPaginate from 'react-paginate'
@@ -74,7 +73,7 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
   )
 }
 
-const DataTableList = ({ columnsTable, showSelectStatus = false, showButtonAdd = false }) => {
+const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, showButtonAdd = false }) => {
   const dispatch = useDispatch()
   const store = useSelector(state => state.invoice)
 
@@ -185,8 +184,6 @@ const DataTableList = ({ columnsTable, showSelectStatus = false, showButtonAdd =
       return store.allData.slice(0, rowsPerPage)
     }
   }
-
-  console.log('dataTable', dataToRender())
 
   return (
     <div className='invoice-list-wrapper'>

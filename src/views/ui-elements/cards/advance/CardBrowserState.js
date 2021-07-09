@@ -5,7 +5,6 @@ import {
   CardHeader,
   CardTitle,
   CardBody,
-  CardText,
   Media,
   UncontrolledDropdown,
   DropdownMenu,
@@ -243,8 +242,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
   ]
 
   const renderStates = () => {
-    return statesArr.map(state => {
-      return (
+    return statesArr.map(state => (
         <div key={state.title} className='browser-states'>
           <Media>
             <img className='rounded mr-1' src={state.avatar} height='30' alt={state.title} />
@@ -262,12 +260,12 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
           </div>
         </div>
       )
-    })
+    )
   }
 
   return (
     <Card className='card-browser-states'>
-      <CardHeader>
+      <CardHeader className="pb-0">
         <div>
           <CardTitle tag='h4'>Instituciones</CardTitle>
         </div>
