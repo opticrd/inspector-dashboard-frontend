@@ -1,7 +1,6 @@
 import { useState, useContext, Fragment } from 'react'
 import classnames from 'classnames'
 import Avatar from '@components/avatar'
-import { useSkin } from '@hooks/useSkin'
 import useJwt from '@src/auth/jwt/useJwt'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
@@ -25,7 +24,7 @@ import {
   Button
 } from 'reactstrap'
 
-import Logo from '@src/assets/images/logo/logo.png'
+import LogoAuth from '../../../@core/components/logo-auth'
 
 import '@styles/base/pages/page-auth.scss'
 
@@ -44,7 +43,6 @@ const ToastContent = ({ name, role }) => (
 )
 
 const Login = props => {
-  const [skin, setSkin] = useSkin()
   const ability = useContext(AbilityContext)
   const dispatch = useDispatch()
   const history = useHistory()
@@ -52,9 +50,7 @@ const Login = props => {
   const [password, setPassword] = useState('admin')
 
   const { register, errors, handleSubmit } = useForm()
-  const illustration = skin === 'dark' ? 'login-v2-dark.svg' : 'login-v2.svg',
-    source = require(`@src/assets/images/pages/${illustration}`).default
-
+ 
   const onSubmit = data => {
     if (isObjEmpty(errors)) {
       useJwt
@@ -78,9 +74,7 @@ const Login = props => {
       <div className='auth-inner py-2'>
         <Card className='mb-0'>
           <CardBody>
-            <div className="d-flex justify-content-center mt-2 mb-4">
-              <img src={Logo} width={250} alt="Logo" />
-            </div>
+            <LogoAuth />
             <CardTitle tag='h4' className='mb-1'>
               Bienvenido al Reportero de la Gestión Gubernamental
             </CardTitle>
@@ -109,7 +103,7 @@ const Login = props => {
                   <Label className='form-label' for='login-password'>
                     Contraseña
                   </Label>
-                  <Link to='/forgot-password'>
+                  <Link to='/pages/forgot-password-v1'>
                     <small>¿Olvidaste tu Contraseña?</small>
                   </Link>
                 </div>
