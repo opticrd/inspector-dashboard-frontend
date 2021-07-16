@@ -49,7 +49,10 @@ const PagesRoutes = [
   {
     path: '/pages/forgot-password-v1',
     component: lazy(() => import('../../views/pages/authentication/ForgotPasswordV1')),
-    layout: 'BlankLayout'
+    layout: 'BlankLayout',
+    meta: {
+      authRoute: true
+    }
   },
   {
     path: '/pages/forgot-password-v2',
