@@ -1,5 +1,4 @@
 // ** Custom Components
-import Avatar from '@components/avatar'
 import Timeline from '@components/timeline'
 
 // ** Images
@@ -7,6 +6,7 @@ import pdf from '@src/assets/images/icons/file-icons/pdf.png'
 
 // ** Third Party Components
 import { Card, CardHeader, CardTitle, CardBody, Media } from 'reactstrap'
+import { List } from 'react-feather'
 
 // ** Timeline Data
 const data = [
@@ -45,7 +45,8 @@ const UserTimeline = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4' className='mb-2'>
+        <CardTitle tag='h4' className="mb-1">
+          <List className="mr-1" />
           Línea de Tiempo
         </CardTitle>
       </CardHeader>
