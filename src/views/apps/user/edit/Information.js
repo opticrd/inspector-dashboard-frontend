@@ -9,6 +9,8 @@ import 'cleave.js/dist/addons/cleave-phone.us'
 import { useForm, Controller } from 'react-hook-form'
 import { Row, Col, Button, Label, FormGroup, Input, CustomInput, Form } from 'reactstrap'
 
+import { rolArray } from '../../../../constants/Rol/rol'
+
 // ** Styles
 import '@styles/react/libs/flatpickr/flatpickr.scss'
 
@@ -59,11 +61,13 @@ const UserInfoTab = () => {
             />
           </FormGroup>
         </Col>
-        <Col lg='4' md='6'>
+        <Col lg='4' md='6' sm='12'>
           <FormGroup>
-            <Label for='nacionalidad'>Nacionalidad</Label>
-            <Input type='select' name='nacionalidad' id='nacionalidad' defaultValue='Dominicana'>
-              <option value='Dominicana'>Dominicana</option>
+            <Label for='role'>Rol</Label>
+            <Input type='select' name='role' id='role' defaultValue="Admin">
+              {rolArray.map(rolArray => (
+                <option value={rolArray}>{rolArray}</option>
+              ))}
             </Input>
           </FormGroup>
         </Col>
@@ -86,9 +90,12 @@ const UserInfoTab = () => {
         <Col lg='4' md='6'>
           <FormGroup>
             <Label for='nacionalidad'>Teléfono Móvil</Label>
-            <Input type='select' name='nacionalidad' id='nacionalidad' defaultValue='809-220-1111'>
-              <option value='809-220-1111'>809-220-1111</option>
-            </Input>
+            <Input 
+              type='text' 
+              name='nacionalidad' 
+              id='nacionalidad' 
+              defaultValue='809-220-1111' 
+            />
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>
@@ -100,6 +107,14 @@ const UserInfoTab = () => {
               defaultValue='johndoe@email.com'
               placeholder='Correo Electrónico'
             />
+          </FormGroup>
+        </Col>
+        <Col lg='4' md='6'>
+          <FormGroup>
+            <Label for='nacionalidad'>Nacionalidad</Label>
+            <Input type='select' name='nacionalidad' id='nacionalidad' defaultValue='Dominicana'>
+              <option value='Dominicana'>Dominicana</option>
+            </Input>
           </FormGroup>
         </Col>
         <Col lg='4' md='6'>

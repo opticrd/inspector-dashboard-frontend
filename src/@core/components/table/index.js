@@ -1,5 +1,6 @@
 // ** React Imports
 import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 // ** Third Party Components
 import ReactPaginate from 'react-paginate'
@@ -16,6 +17,9 @@ import '@styles/react/apps/app-invoice.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
 const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage, showSelectStatus, showButtonAdd }) => {
+
+  const history = useHistory()
+
   return (
     <div className='invoice-list-table-header w-100 py-2'>
       <Row>
@@ -63,7 +67,7 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
                 </Input>
             }
             {showButtonAdd &&
-                <Button.Ripple color='primary' onClick={() => console.log('Some action')}>
+                <Button.Ripple color='primary' onClick={() => history.push('/apps/user/create')}>
                     Añadir Nuevo Usuario
                 </Button.Ripple>
             }

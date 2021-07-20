@@ -13,7 +13,7 @@ const data = [
   {
     title: 'Creó Caso: Reparación Calle',
     content: 'Luis F Thomen #1442, El Millón',
-    meta: '12 min ago',
+    meta: '12 min atrás',
     customContent: (
       <Media className='align-items-center'>
         <img className='mr-1' src={pdf} alt='pdf' height='23' />
@@ -24,7 +24,7 @@ const data = [
   {
     title: 'Creó Caso: Reparación Calle',
     content: 'Luis F Thomen #1442, El Millón',
-    meta: '45 min ago',
+    meta: '45 min atrás',
     color: 'warning',
     customContent: (
       <Media className='align-items-center'>
@@ -36,7 +36,7 @@ const data = [
   {
     title: 'Creó Caso: Reparación Calle',
     content: 'Luis F Thomen #1442, El Millón',
-    meta: '2 days ago',
+    meta: '2 dias atrás',
     color: 'info'
   }
 ]
