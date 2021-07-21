@@ -4,7 +4,7 @@
 const themeConfig = {
   app: {
     appName: 'ogticrd',
-    appLogoImage: require('@src/assets/images/logo/logo.png').default
+    appLogoImage: require('@src/assets/images/logo/icon.png').default
   },
   layout: {
     isRTL: false,

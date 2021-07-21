@@ -153,8 +153,8 @@ const AppRoutes = [
     component: lazy(() => import('../../views/apps/user/create'))
   },
   {
-    path: '/apps/user/reporteros',
-    component: lazy(() => import('../../views/apps/user/reporteros'))
+    path: '/apps/user/reportero',
+    component: lazy(() => import('../../views/apps/user/reportero'))
   },
   {
     path: '/apps/user/instituciones',

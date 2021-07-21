@@ -16,16 +16,16 @@ import CardGrid from '../../../../@core/components/card-grid'
 import '@styles/react/libs/react-select/_react-select.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
-const Reporteros = () => {
+const Reportero = () => {
 
   return (
     <DataTableList 
         columnsTable={columns}
         dataTable={null}
-        dataTableTitle='Reporteros'
+        dataTableTitle='Reportero'
         showButtonAdd={true}
     />
   )
 }
 
-export default Reporteros
+export default Reportero

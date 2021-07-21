@@ -116,10 +116,10 @@ export default [
             navLink: '/apps/user/edit'
           },
           {
-            id: 'reporteros',
-            title: 'Reporteros',
+            id: 'reportero',
+            title: 'Reportero',
             icon: <Circle />,
-            navLink: '/apps/user/reporteros'
+            navLink: '/apps/user/reportero'
           },
           {
             id: 'instituciones',

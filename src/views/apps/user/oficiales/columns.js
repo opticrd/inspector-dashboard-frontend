@@ -47,7 +47,7 @@ export const columns = [
   },
   {
     name: 'Institución',
-    minWidth: '250px',
+    minWidth: '320px',
     selector: 'institución',
     sortable: true,
     cell: row => (
@@ -57,9 +57,9 @@ export const columns = [
             to={`/apps/user/view/${row.id}`}
             className='user-name text-truncate mb-0'
           >
-            <span className='font-weight-bold'>MAP</span>
+            <span className='font-weight-bold'>MOPC</span>
           </Link>
-          <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>Ministerio De Administración Pública</small>
+          <small className='text-muted mb-0' style={{marginTop: '4px'}}>Ministerio de Obras Públicas y Comunicaciones</small>
         </div>
       </div>
     )
