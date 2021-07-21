@@ -20,27 +20,26 @@ const renderClient = row => {
   if (row?.avatar?.length) {
     return <Avatar className='mr-1' img={row.avatar} width='32' height='32' />
   } else {
-    return <Avatar color={color || 'primary'} className='mr-1' content={row.fullName || 'John Doe'} initials />
+    return <Avatar color={color || 'primary'} className='mr-1' content={row.fullName || 'M A P'} initials />
   }
 }
 
 export const columns = [
   {
-    name: 'Nombre',
-    minWidth: '320px',
-    selector: 'fullName',
+    name: 'Institución',
+    minWidth: '360px',
+    selector: 'institucion',
     sortable: true,
     cell: row => (
       <div className='d-flex justify-content-left align-items-center'>
-        {renderClient(row)}
         <div className='d-flex flex-column'>
           <Link
             to={`/apps/user/view/${row.id}`}
             className='user-name text-truncate mb-0'
           >
-            <span className='font-weight-bold'>{row.fullName ? row.fullName : 'John Doe'}</span>
+            <span className='font-weight-bold'>MOPC</span>
           </Link>
-          <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>001-0001110-1</small>
+          <small className='text-muted mb-0' style={{marginTop: '4px'}}>Ministerio de Obras Públicas y Comunicaciones</small>
         </div>
       </div>
     )
@@ -70,11 +69,11 @@ export const columns = [
     cell: row => 'Los Alcarrizos'
   },
   {
-    name: 'Rol',
+    name: 'DIRECCIÓN',
     minWidth: '172px',
-    selector: 'rol',
+    selector: 'direccion',
     sortable: true,
-    cell: row => iconRoleTable(row.rol)
+    cell: row => '27 de Febrero #419'
   },
   {
     name: 'Acciones',

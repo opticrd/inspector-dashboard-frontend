@@ -1,15 +1,17 @@
 import { useContext } from 'react'
 import { kFormatter } from '@utils'
 import { ThemeColors } from '@src/utility/context/ThemeColors'
-import AvgSessions from '@src/views/ui-elements/cards/analytics/AvgSessions'
+
 import { Row, Col } from 'reactstrap'
-import SubscribersGained from '@src/views/ui-elements/cards/statistics/SubscribersGained'
-import OrdersBarChart from '@src/views/ui-elements/cards/statistics/OrdersBarChart'
-import ProfitLineChart from '@src/views/ui-elements/cards/statistics/ProfitLineChart'
-import CardTransactions from '@src/views/ui-elements/cards/advance/CardTransactions'
-import CardBrowserStates from '@src/views/ui-elements/cards/advance/CardBrowserState'
-import Earnings from '@src/views/ui-elements/cards/analytics/Earnings'
-import GoalOverview from '@src/views/ui-elements/cards/analytics/GoalOverview'
+
+import SubscribersGained from './SubscribersGained'
+import OrdersBarChart from './OrdersBarChart'
+import ProfitLineChart from './ProfitLineChart'
+import CardTransactions from './CardTransactions'
+import CardBrowserStates from './CardBrowserState'
+import Earnings from './Earnings'
+import GoalOverview from './GoalOverview'
+import AvgSessions from './AvgSessions'
 
 import DataTableList from '@components/table'
 

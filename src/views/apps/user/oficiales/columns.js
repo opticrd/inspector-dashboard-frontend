@@ -46,8 +46,27 @@ export const columns = [
     )
   },
   {
+    name: 'Institución',
+    minWidth: '320px',
+    selector: 'institución',
+    sortable: true,
+    cell: row => (
+      <div className='d-flex justify-content-left align-items-center'>
+        <div className='d-flex flex-column'>
+          <Link
+            to={`/apps/user/view/${row.id}`}
+            className='user-name text-truncate mb-0'
+          >
+            <span className='font-weight-bold'>MOPC</span>
+          </Link>
+          <small className='text-muted mb-0' style={{marginTop: '4px'}}>Ministerio de Obras Públicas y Comunicaciones</small>
+        </div>
+      </div>
+    )
+  },
+  {
     name: 'Teléfono',
-    minWidth: '160px',
+    minWidth: '110px',
     selector: 'telephone',
     sortable: true,
     // cell: row => row.telephone

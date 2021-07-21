@@ -1,11 +1,12 @@
 // ** React Imports
 import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 // ** Third Party Components
 import ReactPaginate from 'react-paginate'
 import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
-import { Button, Label, Input, CustomInput, Row, Col, Card } from 'reactstrap'
+import { Button, Label, Input, CustomInput, Row, Col, Card, CardHeader, CardTitle } from 'reactstrap'
 
 // ** Store & Actions
 import { getData } from '@src/views/apps/invoice/store/actions'
@@ -16,6 +17,9 @@ import '@styles/react/apps/app-invoice.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
 const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage, showSelectStatus, showButtonAdd }) => {
+
+  const history = useHistory()
+
   return (
     <div className='invoice-list-table-header w-100 py-2'>
       <Row>
@@ -63,7 +67,7 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
                 </Input>
             }
             {showButtonAdd &&
-                <Button.Ripple color='primary' onClick={() => console.log('Some action')}>
+                <Button.Ripple color='primary' onClick={() => history.push('/apps/user/create')}>
                     Añadir Nuevo Usuario
                 </Button.Ripple>
             }
@@ -73,7 +77,8 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
   )
 }
 
-const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, showButtonAdd = false }) => {
+const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, showButtonAdd = false, dataTableTitle = "" }) => {
+
   const dispatch = useDispatch()
   const store = useSelector(state => state.invoice)
 
@@ -188,6 +193,11 @@ const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, show
   return (
     <div className='invoice-list-wrapper'>
       <Card>
+        {dataTableTitle &&
+          <CardHeader>
+            <CardTitle tag='h4'>{dataTableTitle}</CardTitle>
+          </CardHeader>
+        }
         <div className='invoice-list-dataTable'>
           <DataTable
             noHeader
@@ -202,6 +212,7 @@ const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, show
             paginationDefaultPage={currentPage}
             paginationComponent={CustomPagination}
             data={dataToRender()}
+            noDataComponent='No hay registros para mostrar'
             subHeaderComponent={
               <CustomHeader
                 value={value}

@@ -1,12 +1,17 @@
 // ** Reactstrap
 import { Card, CardHeader, CardTitle, CardText, Table, CustomInput } from 'reactstrap'
+import { Lock } from 'react-feather'
+
 import { rolObj } from '../../../../constants/Rol/rol'
 
 const PermissionsTable = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Permisos</CardTitle>
+        <CardTitle tag='h4'>
+          <Lock className="mr-1" />
+          Permisos
+        </CardTitle>
       </CardHeader>
       <CardText className='ml-2'>Permisos de Acuerdo al Rol</CardText>
       <Table striped borderless responsive>

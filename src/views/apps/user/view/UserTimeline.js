@@ -1,5 +1,4 @@
 // ** Custom Components
-import Avatar from '@components/avatar'
 import Timeline from '@components/timeline'
 
 // ** Images
@@ -7,13 +6,14 @@ import pdf from '@src/assets/images/icons/file-icons/pdf.png'
 
 // ** Third Party Components
 import { Card, CardHeader, CardTitle, CardBody, Media } from 'reactstrap'
+import { List } from 'react-feather'
 
 // ** Timeline Data
 const data = [
   {
     title: 'Creó Caso: Reparación Calle',
     content: 'Luis F Thomen #1442, El Millón',
-    meta: '12 min ago',
+    meta: '12 min atrás',
     customContent: (
       <Media className='align-items-center'>
         <img className='mr-1' src={pdf} alt='pdf' height='23' />
@@ -24,7 +24,7 @@ const data = [
   {
     title: 'Creó Caso: Reparación Calle',
     content: 'Luis F Thomen #1442, El Millón',
-    meta: '45 min ago',
+    meta: '45 min atrás',
     color: 'warning',
     customContent: (
       <Media className='align-items-center'>
@@ -36,7 +36,7 @@ const data = [
   {
     title: 'Creó Caso: Reparación Calle',
     content: 'Luis F Thomen #1442, El Millón',
-    meta: '2 days ago',
+    meta: '2 dias atrás',
     color: 'info'
   }
 ]
@@ -45,7 +45,8 @@ const UserTimeline = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4' className='mb-2'>
+        <CardTitle tag='h4' className="mb-1">
+          <List className="mr-1" />
           Línea de Tiempo
         </CardTitle>
       </CardHeader>

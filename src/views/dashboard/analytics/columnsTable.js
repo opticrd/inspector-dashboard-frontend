@@ -32,10 +32,10 @@ const renderClient = row => {
     states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
     color = states[stateNum]
 
-  if (row.avatar.length) {
+  if (row?.avatar?.length) {
     return <Avatar className='mr-50' img={row.avatar} width='32' height='32' />
   } else {
-    return <Avatar color={color} className='mr-50' content={row.client ? row.client.name : 'John Doe'} initials />
+    return <Avatar color={color} className='mr-50' content={row.fullName ? row.fullName : 'John Doe'} initials />
   }
 }
 
@@ -44,10 +44,10 @@ export const columnsTable = [
   {
     name: 'Nombre',
     minWidth: '300px',
-    selector: 'client',
+    selector: 'fullName',
     sortable: true,
     cell: row => {
-      const name = row.client ? row.client.name : 'John Doe'
+      const name = row.fullName ? row.fullName : 'John Doe'
 
       return (
         <div className='d-flex justify-content-left align-items-center'>
@@ -63,30 +63,33 @@ export const columnsTable = [
   {
     name: 'Teléfono',
     minWidth: '150px',
-    selector: 'cliente',
+    selector: 'telephone',
     sortable: true,
+    // cell: row => row.telephone
     cell: row => '809-220-1111'
   },
   {
     name: 'Provincia',
-    selector: 'total',
+    selector: 'provincia',
     sortable: true,
     minWidth: '200px',
+    // cell: row => row.provincia
     cell: row => 'Santo Domingo'
   },
   {
     name: 'Municipio',
-    selector: 'total',
+    selector: 'municipio',
     sortable: true,
     minWidth: '200px',
+    // cell: row => row.municipio
     cell: row => 'Los Alcarrizos'
   },
   {
     name: 'Rol',
-    selector: 'role',
+    selector: 'rol',
     sortable: true,
-    minWidth: '200px',
-    cell: row => iconRoleTable(row)
+    minWidth: '125',
+    cell: row => iconRoleTable(row.rol)
   },
   {
     name: 'Acciones',

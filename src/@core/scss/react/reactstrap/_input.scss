@@ -1,6 +1,11 @@
 // Component Input
 // ========================================================================
 
+label {
+  color: #5E5873;
+  font-weight: 400;
+}
+
 .form-control {
   border-radius: 6px;
   font-size: 12px;
@@ -9,7 +14,8 @@
 }
 
 .form-control[readonly] {
-  opacity: 0.5;
+  opacity: .8;
+  color: #606060;
 }
 
 select.form-control[multiple] {
