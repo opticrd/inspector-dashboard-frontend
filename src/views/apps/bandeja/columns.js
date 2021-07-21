@@ -4,14 +4,10 @@ import { Link } from 'react-router-dom'
 // ** Custom Components
 import Avatar from '@components/avatar'
 
-
 // ** Third Party Components
-import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
+import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Badge } from 'reactstrap'
 import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
 
-import { iconRoleTable } from '../../../../@core/components/table/iconRoleTable'
-
-// ** Renders Client Columns
 const renderClient = row => {
   const stateNum = Math.floor(Math.random() * 6),
     states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
@@ -26,9 +22,37 @@ const renderClient = row => {
 
 export const columns = [
   {
-    name: 'Nombre',
-    minWidth: '320px',
+    name: 'TÍTULO',
+    minWidth: '220px',
     selector: 'fullName',
+    sortable: true,
+    cell: row => 'Reparación de calle'
+  },
+  {
+    name: 'ESTADO',
+    minWidth: '100px',
+    selector: 'telephone',
+    sortable: true,
+    cell: row => 'En progreso'
+  },
+  {
+    name: 'DIRECCIÓN',
+    minWidth: '200px',
+    selector: 'provincia',
+    sortable: true,
+    cell: row => '27 de Febrero #419'
+  },
+  {
+    name: 'FECHA SLA',
+    minWidth: '150px',
+    selector: 'municipio',
+    sortable: true,
+    cell: row => '31/12/2020'
+  },
+  {
+    name: 'REPORTERO',
+    minWidth: '250px',
+    selector: 'rol',
     sortable: true,
     cell: row => (
       <div className='d-flex justify-content-left align-items-center'>
@@ -46,35 +70,32 @@ export const columns = [
     )
   },
   {
-    name: 'Teléfono',
-    minWidth: '160px',
-    selector: 'telephone',
+    name: 'INSTITUCIÓN',
+    minWidth: '250px',
+    selector: 'rol',
     sortable: true,
-    // cell: row => row.telephone
-    cell: row => '809-220-1111'
+    cell: row => (
+      <div className='d-flex justify-content-left align-items-center'>
+        <div className='d-flex flex-column'>
+          <Link
+            to={`/apps/user/view/${row.id}`}
+            className='user-name text-truncate mb-0'
+          >
+            <span className='font-weight-bold'>MAP</span>
+          </Link>
+          <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>Ministerio De Administración Pública</small>
+        </div>
+      </div>
+    )
   },
   {
-    name: 'Provincia',
-    minWidth: '235px',
-    selector: 'provincia',
-    sortable: true,
-    // cell: row => row.provincia
-    cell: row => 'Santo Domingo'
-  },
-  {
-    name: 'Municipio',
-    minWidth: '235px',
-    selector: 'municipio',
-    sortable: true,
-    // cell: row => row.municipio
-    cell: row => 'Los Alcarrizos'
-  },
-  {
-    name: 'Rol',
+    name: 'PRIORIDAD',
     minWidth: '172px',
     selector: 'rol',
     sortable: true,
-    cell: row => iconRoleTable(row.rol)
+    cell: row => (
+      <Badge color='light-danger'>Alta</Badge>
+    )
   },
   {
     name: 'Acciones',

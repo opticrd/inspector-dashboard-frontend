@@ -114,6 +114,24 @@ export default [
             title: 'Edit',
             icon: <Circle />,
             navLink: '/apps/user/edit'
+          },
+          {
+            id: 'reporteros',
+            title: 'Reporteros',
+            icon: <Circle />,
+            navLink: '/apps/user/reporteros'
+          },
+          {
+            id: 'instituciones',
+            title: 'Instituciones',
+            icon: <Circle />,
+            navLink: '/apps/user/instituciones'
+          },
+          {
+            id: 'oficiales',
+            title: 'Oficiales',
+            icon: <Circle />,
+            navLink: '/apps/user/oficiales'
           }
         ]
       }

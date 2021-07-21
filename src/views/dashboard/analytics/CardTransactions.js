@@ -8,44 +8,42 @@ const CardTransactions = () => {
       title: 'San Francisco de Macorís',
       color: 'light-primary',
       subtitle: 'Encargado Provincial',
-      amount: '- 74',
-      Icon: Icon['Pocket'],
-      down: true
+      amount: '541',
+      Icon: Icon['Pocket']
     },
     {
       title: 'Santiago Rodríguez',
       color: 'light-success',
       subtitle: 'Encargado Provincial',
-      amount: '+ 480',
+      amount: '511',
       Icon: Icon['Check']
     },
     {
       title: 'San Francisco de Macorís',
       color: 'light-danger',
       subtitle: 'Encargado Provincial',
-      amount: '+ 590',
+      amount: '433',
       Icon: Icon['DollarSign']
     },
     {
       title: 'Santiago Rodríguez',
       color: 'light-warning',
       subtitle: 'Encargado Provincial',
-      amount: '- 12',
-      Icon: Icon['CreditCard'],
-      down: true
+      amount: '432',
+      Icon: Icon['CreditCard']
     },
     {
       title: 'San Francisco de Macorís',
       color: 'light-info',
       subtitle: 'Encargado Provincial',
-      amount: '+ 98',
+      amount: '365',
       Icon: Icon['TrendingUp']
     },
     {
       title: 'San Francisco de Macorís',
       color: 'light-danger',
       subtitle: 'Encargado Provincial',
-      amount: '+ 700',
+      amount: '255',
       Icon: Icon['DollarSign']
     }
   ]

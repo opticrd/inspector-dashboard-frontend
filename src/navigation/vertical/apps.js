@@ -91,6 +91,12 @@ export default [
     ]
   },
   {
+    id: 'bandeja',
+    title: 'Bandeja',
+    icon: <Mail size={20} />,
+    navLink: '/apps/bandeja'
+  },
+  {
     id: 'users',
     title: 'User',
     icon: <User size={20} />,
@@ -112,6 +118,30 @@ export default [
         title: 'Edit',
         icon: <Circle size={12} />,
         navLink: '/apps/user/edit'
+      },
+      {
+        id: 'create',
+        title: 'Crear',
+        icon: <Circle size={12} />,
+        navLink: '/apps/user/create'
+      },
+      {
+        id: 'reporteros',
+        title: 'Reporteros',
+        icon: <Circle size={12} />,
+        navLink: '/apps/user/reporteros'
+      },
+      {
+        id: 'instituciones',
+        title: 'Instituciones',
+        icon: <Circle size={12} />,
+        navLink: '/apps/user/instituciones'
+      },
+      {
+        id: 'oficiales',
+        title: 'Oficiales',
+        icon: <Circle size={12} />,
+        navLink: '/apps/user/oficiales'
       }
     ]
   }

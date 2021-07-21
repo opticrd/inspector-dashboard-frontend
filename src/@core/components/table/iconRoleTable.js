@@ -1,40 +1,14 @@
-import { Slack, User, Settings, Database, Edit2 } from 'react-feather'
+import { Edit2 } from 'react-feather'
+import { rolObj } from '../../../constants/Rol/rol'
 
+export const iconRoleTable = rol => {
 
-// ** Renders Role Columns
-export const iconRoleTable = row => {
+  const Icon = rolObj[rol] ? rolObj[rol].icon : Edit2
 
-    console.log(row)
-
-    const roleObj = {
-      subscriber: {
-        class: 'text-primary',
-        icon: User
-      },
-      maintainer: {
-        class: 'text-success',
-        icon: Database
-      },
-      editor: {
-        class: 'text-info',
-        icon: Edit2
-      },
-      author: {
-        class: 'text-warning',
-        icon: Settings
-      },
-      admin: {
-        class: 'text-danger',
-        icon: Slack
-      }
-    }
-  
-    const Icon = roleObj[row.role] ? roleObj[row.role].icon : Edit2
-  
-    return (
-        <span className='text-truncate text-capitalize align-middle'>
-            <Icon size={18} className={`${roleObj[row.role] && roleObj[row.role].class } mr-50`} />
-            {row.role ? row.role : 'No Definido'}
-        </span>
-    )
-  }
+  return (
+    <span className='text-truncate text-capitalize align-middle'>
+      <Icon size={18} className={`${rolObj[rol] && rolObj[rol].classText } mr-50`} />
+      {rol ? rol : 'No Definido'}
+    </span>
+  )
+}

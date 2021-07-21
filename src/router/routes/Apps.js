@@ -140,12 +140,29 @@ const AppRoutes = [
     component: lazy(() => import('../../views/apps/ecommerce/checkout'))
   },
   {
+    path: '/apps/bandeja',
+    exact: true,
+    component: lazy(() => import('../../views/apps/bandeja'))
+  },
+  {
     path: '/apps/user/list',
     component: lazy(() => import('../../views/apps/user/list'))
   },
   {
     path: '/apps/user/create',
     component: lazy(() => import('../../views/apps/user/create'))
+  },
+  {
+    path: '/apps/user/reporteros',
+    component: lazy(() => import('../../views/apps/user/reporteros'))
+  },
+  {
+    path: '/apps/user/instituciones',
+    component: lazy(() => import('../../views/apps/user/instituciones'))
+  },
+  {
+    path: '/apps/user/oficiales',
+    component: lazy(() => import('../../views/apps/user/oficiales'))
   },
   {
     path: '/apps/user/edit',

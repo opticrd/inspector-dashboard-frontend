@@ -1,3 +1,5 @@
+import { Slack, User, Settings, Database, Edit2 } from 'react-feather'
+
 export const Admin = 'Admin'
 export const Presidente = 'Presidente'
 export const Institucion = 'Institución'
@@ -15,22 +17,27 @@ export const rolArray = [
 export const rolObj = {
     admin: {
         name: Admin,
-        icon: null
+        icon: User,
+        classText: 'text-primary'
     },
     presidente: {
         name: Presidente,
-        icon: null
+        icon: Slack,
+        classText: 'text-primary'
     },
     institucion: {
         name: Institucion,
-        icon: null
+        icon: Database,
+        classText: 'text-primary'
     },
     reportero: {
         name: Reportero,
-        icon: null
+        icon: Settings,
+        classText: 'text-warning'
     },
     ciudadano: {
         name: Ciudadano,
-        icon: null
+        icon: Edit2,
+        classText: 'text-primary'
     }
 }

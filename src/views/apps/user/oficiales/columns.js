@@ -46,8 +46,27 @@ export const columns = [
     )
   },
   {
+    name: 'Institución',
+    minWidth: '250px',
+    selector: 'institución',
+    sortable: true,
+    cell: row => (
+      <div className='d-flex justify-content-left align-items-center'>
+        <div className='d-flex flex-column'>
+          <Link
+            to={`/apps/user/view/${row.id}`}
+            className='user-name text-truncate mb-0'
+          >
+            <span className='font-weight-bold'>MAP</span>
+          </Link>
+          <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>Ministerio De Administración Pública</small>
+        </div>
+      </div>
+    )
+  },
+  {
     name: 'Teléfono',
-    minWidth: '160px',
+    minWidth: '110px',
     selector: 'telephone',
     sortable: true,
     // cell: row => row.telephone

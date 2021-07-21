@@ -15,7 +15,7 @@ import {
 const CardBrowserState = ({ colors, trackBgColor }) => {
   const statesArr = [
     {
-      avatar: require('@src/assets/images/icons/google-chrome.png').default,
+      avatar: require('@src/assets/images/icons/1.png').default,
       title: 'Ministerio de Obras Públicas y Comunicaciones',
       value: '54.4%',
       chart: {
@@ -60,7 +60,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/icons/mozila-firefox.png').default,
+      avatar: require('@src/assets/images/icons/2.png').default,
       title: 'Alcaldía del Distrito Nacional',
       value: '6.1%',
       chart: {
@@ -105,7 +105,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/icons/apple-safari.png').default,
+      avatar: require('@src/assets/images/icons/3.png').default,
       title: 'Empresa Distribuidora de Electricidad del Este',
       value: '14.6%',
       chart: {
@@ -150,7 +150,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/icons/internet-explorer.png').default,
+      avatar: require('@src/assets/images/icons/4.png').default,
       title: 'Instituto Nacional de Aguas Potables y Alcantarillados',
       value: '4.2%',
       chart: {
@@ -195,7 +195,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/icons/opera.png').default,
+      avatar: require('@src/assets/images/icons/5.png').default,
       title: 'Ayuntamiento Santo Domingo Este',
       value: '8.4%',
       chart: {
