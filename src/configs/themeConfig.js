@@ -3,7 +3,7 @@
 //Template config options
 const themeConfig = {
   app: {
-    appName: 'ogticrd',
+    appName: 'Reportero',
     appLogoImage: require('@src/assets/images/logo/icon.png').default
   },
   layout: {

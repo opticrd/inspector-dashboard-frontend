@@ -107,24 +107,24 @@ export default [
         icon: <Circle size={12} />,
         navLink: '/apps/user/list'
       },
-      {
-        id: 'view',
-        title: 'Ver',
-        icon: <Circle size={12} />,
-        navLink: '/apps/user/view'
-      },
-      {
-        id: 'edit',
-        title: 'Editar',
-        icon: <Circle size={12} />,
-        navLink: '/apps/user/edit'
-      },
-      {
-        id: 'create',
-        title: 'Crear',
-        icon: <Circle size={12} />,
-        navLink: '/apps/user/create'
-      },
+      // {
+      //   id: 'view',
+      //   title: 'Ver',
+      //   icon: <Circle size={12} />,
+      //   navLink: '/apps/user/view'
+      // },
+      // {
+      //   id: 'edit',
+      //   title: 'Editar',
+      //   icon: <Circle size={12} />,
+      //   navLink: '/apps/user/edit'
+      // },
+      // {
+      //   id: 'create',
+      //   title: 'Crear',
+      //   icon: <Circle size={12} />,
+      //   navLink: '/apps/user/create'
+      // },
       {
         id: 'reportero',
         title: 'Reportero',

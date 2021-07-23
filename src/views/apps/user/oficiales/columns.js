@@ -54,7 +54,7 @@ export const columns = [
       <div className='d-flex justify-content-left align-items-center'>
         <div className='d-flex flex-column'>
           <Link
-            to={`/apps/user/view/${row.id}`}
+            to={`/apps/user/instituciones/${row.id}`}
             className='user-name text-truncate mb-0'
           >
             <span className='font-weight-bold'>MOPC</span>
