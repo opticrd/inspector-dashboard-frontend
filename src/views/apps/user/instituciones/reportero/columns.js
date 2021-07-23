@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 
 // ** Custom Components
 import Avatar from '@components/avatar'
-import { StatusTickets } from '@components/status'
 
 // ** Third Party Components
-import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Badge } from 'reactstrap'
+import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
 
+import { iconRoleTable } from '../../../../../@core/components/table/iconRoleTable'
+
+// ** Renders Client Columns
 const renderClient = row => {
   const stateNum = Math.floor(Math.random() * 6),
     states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
@@ -23,44 +25,16 @@ const renderClient = row => {
 
 export const columns = [
   {
-    name: 'TÍTULO',
-    minWidth: '220px',
+    name: 'Nombre',
+    minWidth: '320px',
     selector: 'fullName',
-    sortable: true,
-    cell: row => 'Reparación de calle'
-  },
-  {
-    name: 'ESTADO',
-    minWidth: '160px',
-    selector: 'telephone',
-    sortable: true,
-    cell: row => StatusTickets('En progreso')
-  },
-  {
-    name: 'DIRECCIÓN',
-    minWidth: '200px',
-    selector: 'provincia',
-    sortable: true,
-    cell: row => '27 de Febrero #419'
-  },
-  {
-    name: 'FECHA SLA',
-    minWidth: '150px',
-    selector: 'municipio',
-    sortable: true,
-    cell: row => '31/12/2020'
-  },
-  {
-    name: 'REPORTERO',
-    minWidth: '250px',
-    selector: 'rol',
     sortable: true,
     cell: row => (
       <div className='d-flex justify-content-left align-items-center'>
         {renderClient(row)}
         <div className='d-flex flex-column'>
           <Link
-            to={`/apps/user/instituciones/${row.id}`}
+            to={`/apps/user/view/${row.id}`}
             className='user-name text-truncate mb-0'
           >
             <span className='font-weight-bold'>{row.fullName ? row.fullName : 'John Doe'}</span>
@@ -71,32 +45,35 @@ export const columns = [
     )
   },
   {
-    name: 'INSTITUCIÓN',
-    minWidth: '320px',
-    selector: 'rol',
+    name: 'Teléfono',
+    minWidth: '160px',
+    selector: 'telephone',
     sortable: true,
-    cell: row => (
-      <div className='d-flex justify-content-left align-items-center'>
-        <div className='d-flex flex-column'>
-          <Link
-            to={`/apps/user/view/${row.id}`}
-            className='user-name text-truncate mb-0'
-          >
-            <span className='font-weight-bold'>MOPC</span>
-          </Link>
-          <small className='text-muted mb-0' style={{marginTop: '4px'}}>Ministerio de Obras Públicas y Comunicaciones</small>
-        </div>
-      </div>
-    )
+    // cell: row => row.telephone
+    cell: row => '809-220-1111'
   },
   {
-    name: 'PRIORIDAD',
+    name: 'Provincia',
+    minWidth: '235px',
+    selector: 'provincia',
+    sortable: true,
+    // cell: row => row.provincia
+    cell: row => 'Santo Domingo'
+  },
+  {
+    name: 'Municipio',
+    minWidth: '235px',
+    selector: 'municipio',
+    sortable: true,
+    // cell: row => row.municipio
+    cell: row => 'Los Alcarrizos'
+  },
+  {
+    name: 'Rol',
     minWidth: '172px',
     selector: 'rol',
     sortable: true,
-    cell: row => (
-      <Badge color='light-danger'>Alta</Badge>
-    )
+    cell: row => iconRoleTable(row.rol)
   },
   {
     name: 'Acciones',

@@ -158,7 +158,15 @@ const AppRoutes = [
   },
   {
     path: '/apps/user/instituciones',
-    component: lazy(() => import('../../views/apps/user/instituciones'))
+    component: lazy(() => import('../../views/apps/user/instituciones/list')),
+    exact: true
+  },
+  {
+    path: '/apps/user/instituciones/:id',
+    component: lazy(() => import('../../views/apps/user/instituciones/reportero')),
+    meta: {
+      navLink: '/apps/user/instituciones'
+    }
   },
   {
     path: '/apps/user/oficiales',
