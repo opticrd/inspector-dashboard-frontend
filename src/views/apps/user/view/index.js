@@ -30,7 +30,8 @@ const UserView = props => {
 
   // ** Get suer on mount
   useEffect(() => {
-    dispatch(getUser(parseInt(id)))
+    // dispatch(getUser(parseInt(id)))
+    dispatch(getUser(parseInt(1)))
   }, [dispatch])
 
   return store.selectedUser !== null && store.selectedUser !== undefined ? (

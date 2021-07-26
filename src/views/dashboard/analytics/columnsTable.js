@@ -53,7 +53,12 @@ export const columnsTable = [
         <div className='d-flex justify-content-left align-items-center'>
           {renderClient(row)}
           <div className='d-flex flex-column'>
-            <h6 className='user-name text-truncate mb-0'>{name}</h6>
+            <Link
+              to={`/apps/user/view/${row.id}`}
+              className='user-name text-truncate mb-0'
+            >
+              <span className='font-weight-bold'>{row.fullName ? row.fullName : 'John Doe'}</span>
+            </Link>
             <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>001-0001110-1</small>
           </div>
         </div>

@@ -9,7 +9,7 @@ import Avatar from '@components/avatar'
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
 
-import { iconRoleTable } from '../../../../@core/components/table/iconRoleTable'
+import { iconRoleTable } from '../../../../../@core/components/table/iconRoleTable'
 
 // ** Renders Client Columns
 const renderClient = row => {
@@ -34,7 +34,7 @@ export const columns = [
       <div className='d-flex justify-content-left align-items-center'>
         <div className='d-flex flex-column'>
           <Link
-            to={`/apps/user/view/${row.id}`}
+            to={`/apps/user/instituciones/${row.id}`}
             className='user-name text-truncate mb-0'
           >
             <span className='font-weight-bold'>MOPC</span>
@@ -86,7 +86,7 @@ export const columns = [
         <DropdownMenu right>
           <DropdownItem
             tag={Link}
-            to={`/apps/user/view/${row.id}`}
+            to={`/apps/user/instituciones/${row.id}`}
             className='w-100'
           >
             <FileText size={14} className='mr-50' />
@@ -94,7 +94,7 @@ export const columns = [
           </DropdownItem>
           <DropdownItem
             tag={Link}
-            to={`/apps/user/edit/${row.id}`}
+            to={`/apps/user/instituciones/${row.id}`}
             className='w-100'
           >
             <Archive size={14} className='mr-50' />

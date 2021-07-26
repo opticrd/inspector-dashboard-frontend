@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom'
 // ** Custom Components
 import Avatar from '@components/avatar'
 
-
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
 
-import { iconRoleTable } from '../../../../@core/components/table/iconRoleTable'
+import { iconRoleTable } from '../../../../../@core/components/table/iconRoleTable'
 
 // ** Renders Client Columns
 const renderClient = row => {
@@ -46,27 +45,8 @@ export const columns = [
     )
   },
   {
-    name: 'Institución',
-    minWidth: '320px',
-    selector: 'institución',
-    sortable: true,
-    cell: row => (
-      <div className='d-flex justify-content-left align-items-center'>
-        <div className='d-flex flex-column'>
-          <Link
-            to={`/apps/user/instituciones/${row.id}`}
-            className='user-name text-truncate mb-0'
-          >
-            <span className='font-weight-bold'>MOPC</span>
-          </Link>
-          <small className='text-muted mb-0' style={{marginTop: '4px'}}>Ministerio de Obras Públicas y Comunicaciones</small>
-        </div>
-      </div>
-    )
-  },
-  {
     name: 'Teléfono',
-    minWidth: '110px',
+    minWidth: '160px',
     selector: 'telephone',
     sortable: true,
     // cell: row => row.telephone

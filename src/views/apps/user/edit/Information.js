@@ -158,24 +158,6 @@ const UserInfoTab = () => {
                   )
                 }}
               />
-              <Controller
-                name='gender'
-                control={control}
-                render={props => {
-                  return (
-                    <CustomInput
-                      inline
-                      type='radio'
-                      label='Otro'
-                      value='Otro'
-                      id='gender-other'
-                      name={props.name}
-                      invalid={data !== null && (data.gender === undefined || data.gender === null)}
-                      onChange={() => setValue('gender', 'Otro')}
-                    />
-                  )
-                }}
-              />
             </FormGroup>
           </FormGroup>
         </Col>
@@ -286,7 +268,7 @@ const UserInfoTab = () => {
         </Col>
         <Col className='d-flex flex-sm-row flex-column mt-2'>
           <Button type='submit' color='primary' className='mb-1 mb-sm-0 mr-0 mr-sm-1'>
-            Guardar Cambios
+            Guardar
           </Button>
           <Button type='reset' color='primary' outline>
             Limpiar

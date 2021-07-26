@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 // ** Custom Components
 import Avatar from '@components/avatar'
+import { StatusTickets } from '@components/status'
 
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Badge } from 'reactstrap'
@@ -30,10 +31,10 @@ export const columns = [
   },
   {
     name: 'ESTADO',
-    minWidth: '100px',
+    minWidth: '160px',
     selector: 'telephone',
     sortable: true,
-    cell: row => 'En progreso'
+    cell: row => StatusTickets('En progreso')
   },
   {
     name: 'DIRECCIÓN',
@@ -71,19 +72,19 @@ export const columns = [
   },
   {
     name: 'INSTITUCIÓN',
-    minWidth: '250px',
+    minWidth: '320px',
     selector: 'rol',
     sortable: true,
     cell: row => (
       <div className='d-flex justify-content-left align-items-center'>
         <div className='d-flex flex-column'>
           <Link
-            to={`/apps/user/view/${row.id}`}
+            to={`/apps/user/instituciones/${row.id}`}
             className='user-name text-truncate mb-0'
           >
-            <span className='font-weight-bold'>MAP</span>
+            <span className='font-weight-bold'>MOPC</span>
           </Link>
-          <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>Ministerio De Administración Pública</small>
+          <small className='text-muted mb-0' style={{marginTop: '4px'}}>Ministerio de Obras Públicas y Comunicaciones</small>
         </div>
       </div>
     )

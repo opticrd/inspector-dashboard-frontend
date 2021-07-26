@@ -68,6 +68,10 @@ $auth-1-inner-max-width: 400px !default;
     max-width: $auth-1-inner-max-width;
   }
 
+  .auth-inner-two {
+    max-width: 550px !important;
+  }
+
   .brand-logo {
     display: flex;
     justify-content: center;
