@@ -9,7 +9,7 @@ import Avatar from '@components/avatar'
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
 
-import { iconRoleTable } from '../../../../@core/components/table/iconRoleTable'
+import { iconRoleTable } from '../../../../@core/components/table/commonColumns'
 
 // ** Renders Client Columns
 const renderClient = row => {

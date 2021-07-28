@@ -16,7 +16,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import '@styles/react/apps/app-invoice.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
-const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage, showSelectStatus, showButtonAdd }) => {
+const CustomHeader = ({ 
+  handleFilter, 
+  value, 
+  handleStatusValue, 
+  statusValue, 
+  handlePerPage, 
+  rowsPerPage, 
+  showSelectStatus, 
+  showButtonAdd,
+  showButtonAddInstitution
+}) => {
 
   const history = useHistory()
 
@@ -67,9 +77,20 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
                 </Input>
             }
             {showButtonAdd &&
-                <Button.Ripple color='primary' onClick={() => history.push('/apps/user/create')}>
-                    Añadir Nuevo Usuario
-                </Button.Ripple>
+              <Button.Ripple 
+                color='primary' 
+                onClick={() => history.push('/apps/user/create')}
+              >
+                Añadir Nuevo Usuario
+              </Button.Ripple>
+            }
+            {showButtonAddInstitution &&
+              <Button.Ripple 
+                color='primary' 
+                onClick={() => history.push('/apps/user/instituciones/crear')}
+              >
+                Añadir Nueva Institución
+              </Button.Ripple>
             }
         </Col>
       </Row>
@@ -77,7 +98,14 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
   )
 }
 
-const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, showButtonAdd = false, dataTableTitle = "" }) => {
+const DataTableList = ({ 
+  columnsTable, 
+  dataTable, 
+  showSelectStatus = false, 
+  showButtonAdd = false, 
+  showButtonAddInstitution = false, 
+  dataTableTitle = "" 
+}) => {
 
   const dispatch = useDispatch()
   const store = useSelector(state => state.invoice)
@@ -223,6 +251,7 @@ const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, show
                 handleStatusValue={handleStatusValue}
                 showSelectStatus={showSelectStatus}
                 showButtonAdd={showButtonAdd}
+                showButtonAddInstitution={showButtonAddInstitution}
               />
             }
           />

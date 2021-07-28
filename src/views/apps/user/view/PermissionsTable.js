@@ -41,7 +41,7 @@ const PermissionsTable = () => {
             </td>
           </tr>
           <tr>
-            <td>{rolObj.presidente.name}</td>
+            <td>{rolObj.presidencial.name}</td>
             <td>
               <CustomInput type='checkbox' id='staff-1' label='' disabled />
             </td>

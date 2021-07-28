@@ -4,22 +4,11 @@ import { Link } from 'react-router-dom'
 // ** Custom Components
 import Avatar from '@components/avatar'
 import { StatusTickets } from '@components/status'
+import { rowClient, rowInstitution } from '../../../@core/components/table/commonColumns'
 
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Badge } from 'reactstrap'
 import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
-
-const renderClient = row => {
-  const stateNum = Math.floor(Math.random() * 6),
-    states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
-    color = states[stateNum]
-
-  if (row?.avatar?.length) {
-    return <Avatar className='mr-1' img={row.avatar} width='32' height='32' />
-  } else {
-    return <Avatar color={color || 'primary'} className='mr-1' content={row.fullName || 'John Doe'} initials />
-  }
-}
 
 export const columns = [
   {
@@ -55,39 +44,21 @@ export const columns = [
     minWidth: '250px',
     selector: 'rol',
     sortable: true,
-    cell: row => (
-      <div className='d-flex justify-content-left align-items-center'>
-        {renderClient(row)}
-        <div className='d-flex flex-column'>
-          <Link
-            to={`/apps/user/view/${row.id}`}
-            className='user-name text-truncate mb-0'
-          >
-            <span className='font-weight-bold'>{row.fullName ? row.fullName : 'John Doe'}</span>
-          </Link>
-          <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>001-0001110-1</small>
-        </div>
-      </div>
-    )
+    cell: row => rowClient(row)
   },
   {
     name: 'INSTITUCIÓN',
     minWidth: '320px',
     selector: 'rol',
     sortable: true,
-    cell: row => (
-      <div className='d-flex justify-content-left align-items-center'>
-        <div className='d-flex flex-column'>
-          <Link
-            to={`/apps/user/instituciones/${row.id}`}
-            className='user-name text-truncate mb-0'
-          >
-            <span className='font-weight-bold'>MOPC</span>
-          </Link>
-          <small className='text-muted mb-0' style={{marginTop: '4px'}}>Ministerio de Obras Públicas y Comunicaciones</small>
-        </div>
-      </div>
-    )
+    cell: row => rowInstitution(row)
+  },
+  {
+    name: 'Oficial',
+    minWidth: '250px',
+    selector: 'rol',
+    sortable: true,
+    cell: row => rowClient(row)
   },
   {
     name: 'PRIORIDAD',

@@ -150,7 +150,11 @@ const AppRoutes = [
   },
   {
     path: '/apps/user/create',
-    component: lazy(() => import('../../views/apps/user/create'))
+    component: lazy(() => import('../../views/apps/user/create')),
+    exact: true,
+    meta: {
+      navLink: '/apps/user/list'
+    }
   },
   {
     path: '/apps/user/reportero',
@@ -162,8 +166,17 @@ const AppRoutes = [
     exact: true
   },
   {
+    path: '/apps/user/instituciones/crear',
+    component: lazy(() => import('../../views/apps/user/instituciones/create')),
+    exact: true,
+    meta: {
+      navLink: '/apps/user/instituciones'
+    }
+  },
+  {
     path: '/apps/user/instituciones/:id',
-    component: lazy(() => import('../../views/apps/user/instituciones/reportero')),
+    component: lazy(() => import('../../views/apps/user/instituciones/details')),
+    exact: true,
     meta: {
       navLink: '/apps/user/instituciones'
     }

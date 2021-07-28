@@ -90,12 +90,12 @@ export default [
   //     }
   //   ]
   // },
-  {
-    id: 'bandeja',
-    title: 'Bandeja',
-    icon: <Mail size={20} />,
-    navLink: '/apps/bandeja'
-  },
+  // {
+  //   id: 'bandeja',
+  //   title: 'Bandeja',
+  //   icon: <Mail size={20} />,
+  //   navLink: '/apps/bandeja'
+  // },
   {
     id: 'users',
     title: 'Usuario',

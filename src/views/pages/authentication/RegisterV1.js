@@ -91,7 +91,7 @@ const RegisterV1 = () => {
                   <FormGroup>
                     <Label for='Provincia'>Provincia</Label>
                     <Input type='select' name='Provincia' id='Provincia'>
-                    <option value=''>Seleccione</option>
+                      <option value=''>Seleccione</option>
                     </Input>
                   </FormGroup>
                 </Col>
@@ -99,7 +99,7 @@ const RegisterV1 = () => {
                   <FormGroup>
                     <Label for='Municipio'>Municipio</Label>
                     <Input type='select' name='Municipio' id='Municipio'>
-                    <option value=''>Seleccione</option>
+                      <option value=''>Seleccione</option>
                     </Input>
                   </FormGroup>
                 </Col>
@@ -107,7 +107,7 @@ const RegisterV1 = () => {
                   <FormGroup>
                     <Label for='DistritoMunicipal'>Distrito Municipal</Label>
                     <Input type='select' name='DistritoMunicipal' id='DistritoMunicipal'>
-                    <option value=''>Seleccione</option>
+                      <option value=''>Seleccione</option>
                     </Input>
                   </FormGroup>
                 </Col>
@@ -115,7 +115,7 @@ const RegisterV1 = () => {
                   <FormGroup>
                     <Label for='Sección'>Sección</Label>
                     <Input type='select' name='Sección' id='Sección'>
-                    <option value=''>Seleccione</option>
+                      <option value=''>Seleccione</option>
                     </Input>
                   </FormGroup>
                 </Col>
@@ -123,7 +123,7 @@ const RegisterV1 = () => {
                   <FormGroup>
                     <Label for='BarrioParaje'>Barrio/Paraje</Label>
                     <Input type='select' name='BarrioParaje' id='BarrioParaje'>
-                    <option value=''>Seleccione</option>
+                      <option value=''>Seleccione</option>
                     </Input>
                   </FormGroup>
                 </Col>
@@ -131,7 +131,7 @@ const RegisterV1 = () => {
                   <FormGroup>
                     <Label for='SubBarrio'>Sub Barrio</Label>
                     <Input type='select' name='SubBarrio' id='SubBarrio'>
-                    <option value=''>Seleccione</option>
+                      <option value=''>Seleccione</option>
                     </Input>
                   </FormGroup>
                 </Col>

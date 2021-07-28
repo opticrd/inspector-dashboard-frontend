@@ -40,39 +40,15 @@ const UserAccountTab = ({ selectedUser }) => {
 
   // ** Renders User
   const renderUserAvatar = () => {
-    if (img === null) {
-      const stateNum = Math.floor(Math.random() * 6),
-        states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
-        color = states[stateNum]
-      return (
-        <Avatar
-          initials
-          color={color}
-          className='rounded mr-2 my-25'
-          content={selectedUser.fullName}
-          contentStyles={{
-            borderRadius: 0,
-            fontSize: 'calc(36px)',
-            width: '100%',
-            height: '100%'
-          }}
-          style={{
-            height: '90px',
-            width: '90px'
-          }}
-        />
-      )
-    } else {
-      return (
-        <img
-          className='user-avatar rounded mr-2 my-25 cursor-pointer'
-          src={img}
-          alt='user profile avatar'
-          height='90'
-          width='90'
-        />
-      )
-    }
+    return (
+      <img
+        className='user-avatar rounded mr-2 my-25 cursor-pointer'
+        src={img}
+        alt='user profile avatar'
+        height='90'
+        width='90'
+      />
+    )
   }
 
   return (
@@ -222,7 +198,7 @@ const UserAccountTab = ({ selectedUser }) => {
                       </td>
                     </tr>
                     <tr>
-                      <td>{rolObj.presidente.name}</td>
+                      <td>{rolObj.presidencial.name}</td>
                       <td>
                         <CustomInput type='checkbox' id='staff-1' label='' disabled />
                       </td>

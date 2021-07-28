@@ -1,14 +1,14 @@
 import { Slack, User, Settings, Database, Edit2 } from 'react-feather'
 
 export const Admin = 'Admin'
-export const Presidente = 'Presidente'
+export const Presidencial = 'Presidencial'
 export const Institucion = 'Institución'
 export const Reportero = 'Reportero'
 export const Ciudadano = 'Ciudadano'
 
 export const rolArray = [
     Admin,
-    Presidente,
+    Presidencial,
     Institucion,
     Reportero,
     Ciudadano
@@ -20,8 +20,8 @@ export const rolObj = {
         icon: User,
         classText: 'text-primary'
     },
-    presidente: {
-        name: Presidente,
+    presidencial: {
+        name: Presidencial,
         icon: Slack,
         classText: 'text-primary'
     },
