@@ -9,7 +9,7 @@ import Avatar from '@components/avatar'
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
 
-import { iconRoleTable } from '../../../../../@core/components/table/commonColumns'
+import { rowInstitution } from '../../../../../@core/components/table/commonColumns'
 
 // ** Renders Client Columns
 const renderClient = row => {
@@ -30,19 +30,7 @@ export const columns = [
     minWidth: '360px',
     selector: 'institucion',
     sortable: true,
-    cell: row => (
-      <div className='d-flex justify-content-left align-items-center'>
-        <div className='d-flex flex-column'>
-          <Link
-            to={`/apps/user/instituciones/${row.id}`}
-            className='user-name text-truncate mb-0'
-          >
-            <span className='font-weight-bold'>MOPC</span>
-          </Link>
-          <small className='text-muted mb-0' style={{marginTop: '4px'}}>Ministerio de Obras Públicas y Comunicaciones</small>
-        </div>
-      </div>
-    )
+    cell: row => rowInstitution(row)
   },
   {
     name: 'Teléfono',

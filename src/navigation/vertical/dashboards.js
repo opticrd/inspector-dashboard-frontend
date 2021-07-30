@@ -1,4 +1,5 @@
 import { Home, Circle } from 'react-feather'
+import Url from '../../constants/Url'
 
 export default [
   {
@@ -10,13 +11,13 @@ export default [
         id: 'reports',
         title: 'Reportes',
         icon: <Circle size={12} />,
-        navLink: '/dashboard/analytics'
+        navLink: Url.dashboardReport
       },
       {
         id: 'bandeja',
         title: 'Bandeja',
         icon: <Circle size={12} />,
-        navLink: '/apps/bandeja'
+        navLink: Url.dashboardInbox
       }
     ]
   }

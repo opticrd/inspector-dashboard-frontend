@@ -6,11 +6,14 @@ import { useHistory } from 'react-router-dom'
 import ReactPaginate from 'react-paginate'
 import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
-import { Button, Label, Input, CustomInput, Row, Col, Card, CardHeader, CardTitle } from 'reactstrap'
+import { Label, Input, CustomInput, Row, Col, Card, CardHeader, CardTitle } from 'reactstrap'
 
 // ** Store & Actions
 import { getData } from '@src/views/apps/invoice/store/actions'
 import { useDispatch, useSelector } from 'react-redux'
+
+import { ButtonRipple } from '../button'
+import Url from '../../../constants/Url'
 
 // ** Styles
 import '@styles/react/apps/app-invoice.scss'
@@ -25,7 +28,8 @@ const CustomHeader = ({
   rowsPerPage, 
   showSelectStatus, 
   showButtonAdd,
-  showButtonAddInstitution
+  showButtonAddInstitution,
+  componentButton
 }) => {
 
   const history = useHistory()
@@ -77,20 +81,19 @@ const CustomHeader = ({
                 </Input>
             }
             {showButtonAdd &&
-              <Button.Ripple 
-                color='primary' 
-                onClick={() => history.push('/apps/user/create')}
-              >
-                Añadir Nuevo Usuario
-              </Button.Ripple>
+              <ButtonRipple 
+                onClick={() => history.push(Url.userCreate)}
+                label= 'Añadir Nuevo Usuario'
+              />
             }
             {showButtonAddInstitution &&
-              <Button.Ripple 
-                color='primary' 
-                onClick={() => history.push('/apps/user/instituciones/crear')}
-              >
-                Añadir Nueva Institución
-              </Button.Ripple>
+              <ButtonRipple 
+                onClick= {() => history.push(Url.institutionCreate)}
+                label= 'Añadir Nueva Institución'
+              />
+            }
+            {componentButton &&
+              componentButton
             }
         </Col>
       </Row>
@@ -104,7 +107,8 @@ const DataTableList = ({
   showSelectStatus = false, 
   showButtonAdd = false, 
   showButtonAddInstitution = false, 
-  dataTableTitle = "" 
+  dataTableTitle = "",
+  componentButton = false
 }) => {
 
   const dispatch = useDispatch()
@@ -252,6 +256,7 @@ const DataTableList = ({
                 showSelectStatus={showSelectStatus}
                 showButtonAdd={showButtonAdd}
                 showButtonAddInstitution={showButtonAddInstitution}
+                componentButton={componentButton}
               />
             }
           />

@@ -1,15 +1,14 @@
 // ** React Imports
 import { useState, useEffect } from 'react'
 
-// ** Custom Components
-import Avatar from '@components/avatar'
-
 // ** Third Party Components
 import { Lock, Edit, Trash2 } from 'react-feather'
 import { Media, Row, Col, Button, Form, Input, Label, FormGroup, Table, CustomInput } from 'reactstrap'
 
+import Avatar from '@components/avatar'
+
 //Roles
-import { rolObj, rolArray } from '../../../../constants/Rol/rol'
+import { rolObj } from '../../../../constants/Rol/rol'
 
 const UserAccountTab = ({ selectedUser }) => {
   // ** States
@@ -30,7 +29,7 @@ const UserAccountTab = ({ selectedUser }) => {
   useEffect(() => {
     if (selectedUser !== null || (selectedUser !== null && userData !== null && selectedUser.id !== userData.id)) {
       setUserData(selectedUser)
-      if (selectedUser.avatar.length) {
+      if (selectedUser?.avatar?.length) {
         return setImg(selectedUser.avatar)
       } else {
         return setImg(null)
@@ -38,17 +37,40 @@ const UserAccountTab = ({ selectedUser }) => {
     }
   }, [selectedUser])
 
-  // ** Renders User
   const renderUserAvatar = () => {
-    return (
-      <img
-        className='user-avatar rounded mr-2 my-25 cursor-pointer'
-        src={img}
-        alt='user profile avatar'
-        height='90'
-        width='90'
-      />
-    )
+    if (img === null) {
+      const stateNum = Math.floor(Math.random() * 6),
+        states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
+        color = states[stateNum]
+      return (
+        <Avatar
+          initials
+          color={color}
+          className='rounded mr-2 my-25'
+          content={selectedUser.fullName}
+          contentStyles={{
+            borderRadius: 0,
+            fontSize: 'calc(36px)',
+            width: '100%',
+            height: '100%'
+          }}
+          style={{
+            height: '90px',
+            width: '90px'
+          }}
+        />
+      )
+    } else {
+      return (
+        <img
+          className='user-avatar rounded mr-2 my-25 cursor-pointer'
+          src={img}
+          alt='user profile avatar'
+          height='90'
+          width='90'
+        />
+      )
+    }
   }
 
   return (
@@ -81,86 +103,70 @@ const UserAccountTab = ({ selectedUser }) => {
           <Row>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='username'>Cédula de Identidad</Label>
-                <Input type='text' id='username' placeholder='Cédula de Identidad' defaultValue='001-0030000-0' readOnly />
+                <Label>Cédula de Identidad</Label>
+                <Input type='text' placeholder='Cédula de Identidad' defaultValue='001-0030000-0' readOnly />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='name'>Nombre Completo</Label>
-                <Input type='text' id='name' placeholder='Nombre Completo' defaultValue={userData && userData.fullName} readOnly />
+                <Label>Nombre Completo</Label>
+                <Input type='text' placeholder='Nombre Completo' defaultValue={userData && userData.fullName} readOnly />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='status'>Estado</Label>
-                <Input type='select' name='status' id='status' defaultValue={userData && userData.status} readOnly>
-                  <option value='pending'>Pending</option>
-                  <option value='active'>Active</option>
-                  <option value='inactive'>Inactive</option>
-                </Input>
+                <Label>Estado</Label>
+                <Input type='text' defaultValue={userData && userData.status} readOnly />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='role'>Rol</Label>
-                <Input type='select' name='role' id='role' defaultValue={userData && userData.role} readOnly>
-                  {rolArray.map((rolArray) => (
-                    <option value={rolArray}>{rolArray}</option>
-                  ))}
-                </Input>
+                <Label>Rol</Label>
+                <Input type='text' defaultValue={userData && userData.role} readOnly />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='email'>Teléfono</Label>
-                <Input type='text' id='email' placeholder='Teléfono' defaultValue='809-220-1111' readOnly />
+                <Label>Teléfono</Label>
+                <Input type='text' defaultValue='809-220-1111' readOnly />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='company'>Correo Electrónico</Label>
+                <Label>Correo Electrónico</Label>
                 <Input
                   type='text'
-                  id='company'
                   defaultValue='johndoe@email.com'
-                  placeholder='Correo Electrónico'
                   readOnly
                 />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='company'>Provincia</Label>
+                <Label>Provincia</Label>
                 <Input
                   type='text'
-                  id='company'
                   defaultValue='Santo Domingo'
-                  placeholder='Provincia'
                   readOnly
                 />
               </FormGroup>
             </Col>  
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='company'>Municipio</Label>
+                <Label>Municipio</Label>
                 <Input
                   type='text'
-                  id='company'
                   defaultValue='Distrito Nacional'
-                  placeholder='Municipio'
                   readOnly
                 />
               </FormGroup>
             </Col>  
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label for='company'>Sector</Label>
+                <Label>Sector</Label>
                 <Input
                   type='text'
-                  id='company'
                   defaultValue='El millon'
-                  placeholder='Sector'
                   readOnly
                 />
               </FormGroup>

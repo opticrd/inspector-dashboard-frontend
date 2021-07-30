@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 import { Edit2 } from 'react-feather'
 import { rolObj } from '../../../constants/Rol/rol'
+import Url from '../../../constants/Url'
 
 import Avatar from '@components/avatar'
 
@@ -22,7 +23,7 @@ export const rowClient = row => (
         {renderClient(row)}
         <div className='d-flex flex-column'>
             <Link
-                to={`/apps/user/view/${row.id}`}
+                to={`${Url.user}/${row.id}`}
                 className='user-name text-truncate mb-0'
             >
                 <span className='font-weight-bold'>{row.fullName ? row.fullName : 'John Doe'}</span>
@@ -36,7 +37,7 @@ export const rowInstitution = row => (
     <div className='d-flex justify-content-left align-items-center'>
         <div className='d-flex flex-column'>
             <Link
-                to={`/apps/user/instituciones/${row.id}`}
+                to={`${Url.institution}/${row.id}`}
                 className='user-name text-truncate mb-0'
             >
                 <span className='font-weight-bold'>MOPC</span>
