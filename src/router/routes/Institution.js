@@ -17,11 +17,18 @@ const InstitutionRoutes = [
     },
     {
         path: `${Url.institution}/:id`,
-        component: lazy(() => import('../../views/apps/user/instituciones/details')),
+        component: lazy(() => import('../../views/apps/user/instituciones/details/view')),
         exact: true,
         meta: {
             navLink: Url.institution
         }
+    },
+    {
+        // temporal route
+        path: '/temporal',
+        component: lazy(() => import('../../views/apps/user/instituciones/details/view')),
+        exact: true
+       
     }
 ]
 

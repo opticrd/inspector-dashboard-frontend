@@ -58,6 +58,11 @@ const AppRoutes = [
     meta: {
       navLink: Url.user
     }
+  },
+  {
+    // temporal route
+    path: '/apps/invoice/preview',
+    component: lazy(() => import('../../views/apps/invoice/preview'))
   }
 ]
 
