@@ -4,13 +4,16 @@ import { useState } from 'react'
 // ** Third Party Components
 import classnames from 'classnames'
 import Flatpickr from 'react-flatpickr'
-import { User, MapPin } from 'react-feather'
+import { User, Edit, Trash2 } from 'react-feather'
 import 'cleave.js/dist/addons/cleave-phone.us'
 import { useForm, Controller } from 'react-hook-form'
-import { Row, Col, Button, Label, FormGroup, Input, CustomInput, Form } from 'reactstrap'
+import { Media, Row, Col, Button, Label, FormGroup, Input, CustomInput, Form } from 'reactstrap'
 
-import { rolArray } from '../../../../constants/Rol/rol'
-import CardGrid from '../../../../@core/components/card-grid'
+import Avatar from '../../../../../@core/components/avatar'
+import { rolArray } from '../../../../../constants/Rol/rol'
+import CardGrid from '../../../../../@core/components/card-grid'
+import { IconInstitution } from '../../../../../@core/components/icons'
+
 
 // ** Styles
 import '@styles/react/libs/flatpickr/flatpickr.scss'
@@ -18,15 +21,52 @@ import '@styles/react/libs/flatpickr/flatpickr.scss'
 const UserCreate = () => {
   // ** State
   const [data, setData] = useState(null)
+  const [img, setImg] = useState(null)
 
   // ** React hook form vars
   const { register, errors, handleSubmit, control, setValue, trigger } = useForm({
     defaultValues: { gender: 'gender-female', dob: null }
   })
 
+  const renderUserAvatar = () => {
+    if (img === null) {
+      const stateNum = Math.floor(Math.random() * 6),
+        states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
+        color = states[stateNum]
+      return (
+        <Avatar
+          initials
+          color={color}
+          className='rounded mr-2 my-25'
+          content='Subir Logotipo'
+          contentStyles={{
+            borderRadius: 0,
+            fontSize: 'calc(36px)',
+            width: '100%',
+            height: '100%'
+          }}
+          style={{
+            height: '90px',
+            width: '90px'
+          }}
+        />
+      )
+    } else {
+      return (
+        <img
+          className='user-avatar rounded mr-2 my-25 cursor-pointer'
+          src={img}
+          alt='user profile avatar'
+          height='90'
+          width='90'
+        />
+      )
+    }
+  }
+
   return (
-    <CardGrid 
-        cardHeaderTitle='Añadir Nuevo Usuario'
+    <CardGrid
+        cardHeaderTitle='Añadir Nueva Institución'
     >
         <Form
             onSubmit={handleSubmit(data => {
@@ -37,8 +77,96 @@ const UserCreate = () => {
             <Row className='mt-1'>
                 <Col sm='12'>
                 <h4 className='mb-1'>
+                    <IconInstitution size={20} className='mr-50' />
+                    <span className='align-middle'>Información</span>
+                </h4>
+                </Col>
+                <Col sm='12'>
+                    <Media className='mb-2'>
+                    {renderUserAvatar()}
+                    <Media className='mt-50' body>
+                        <Label>Subir el Logotipo</Label>
+                        <div className='d-flex flex-wrap mt-1 px-0'>
+                        <Button.Ripple id='change-img' tag={Label} className='mr-75 mb-0' color='primary'>
+                            <span className='d-none d-sm-block'>Cargar</span>
+                            <span className='d-block d-sm-none'>
+                            <Edit size={14} />
+                            </span>
+                            <input type='file' hidden id='change-img' accept='image/*' />
+                        </Button.Ripple>
+                        <Button.Ripple color='primary' outline>
+                            <span className='d-none d-sm-block'>Remover</span>
+                            <span className='d-block d-sm-none'>
+                            <Trash2 size={14} />
+                            </span>
+                        </Button.Ripple>
+                        </div>
+                    </Media>
+                    </Media>
+                </Col>
+                <Col lg='4' md='6'>
+                <FormGroup>
+                    <Label className='d-block' for='nombreInst'>
+                        Nombre de la Institución
+                    </Label>
+                    <Input
+                        type='text'
+                        id='nombreInst'
+                        defaultValue='Ministerio de Obras Públicas y Comunicaciones'
+                        placeholder='Nombre de la Institución'
+                    />
+                </FormGroup>
+                </Col>
+                <Col lg='4' md='6'>
+                <FormGroup>
+                    <Label for='Acrónimo'>Acrónimo</Label>
+                    <Input
+                        type='text'
+                        id='Acrónimo'
+                        defaultValue='MOPC'
+                        placeholder='Acrónimo'
+                    />
+                </FormGroup>
+                </Col>
+                <Col lg='4' md='6' sm='12'>
+                <FormGroup>
+                    <Label for='Telefono'>Teléfono</Label>
+                    <Input 
+                        type='text' 
+                        name='Telefono' 
+                        id='Telefono' 
+                        defaultValue='809-220-1111' 
+                    />
+                </FormGroup>
+                </Col>
+                <Col lg='4' md='6'>
+                <FormGroup>
+                    <Label for='email'>Correo Electrónico</Label>
+                    <Input
+                        type='email'
+                        id='email'
+                        defaultValue='johndoe@email.com'
+                        placeholder='Correo Electrónico'
+                    />
+                </FormGroup>
+                </Col>
+                <Col lg='4' md='6' sm='12'>
+                <FormGroup>
+                    <Label for='web'>Sitio Web</Label>
+                    <Input 
+                        type='text' 
+                        name='web' 
+                        id='web' 
+                        defaultValue='www.ejemplo.com' 
+                    />
+                </FormGroup>
+                </Col>
+            </Row>
+            <Row>
+                <Col sm='12'>
+                <h4 className='mb-1 mt-2'>
                     <User size={20} className='mr-50' />
-                    <span className='align-middle'>Información Personal</span>
+                    <span className='align-middle'>Encargado</span>
                 </h4>
                 </Col>
                 <Col lg='4' md='6'>
@@ -194,62 +322,6 @@ const UserCreate = () => {
                         label='Teléfono' 
                     />
                     </FormGroup>
-                </FormGroup>
-                </Col>
-            </Row>
-            <Row>
-                <Col sm='12'>
-                <h4 className='mb-1 mt-2'>
-                    <MapPin size={20} className='mr-50' />
-                    <span className='align-middle'>Su Zona de Trabajo</span>
-                </h4>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='Provincia'>Provincia</Label>
-                    <Input type='select' name='Provincia' id='Provincia'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='Municipio'>Municipio</Label>
-                    <Input type='select' name='Municipio' id='Municipio'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='DistritoMunicipal'>Distrito Municipal</Label>
-                    <Input type='select' name='DistritoMunicipal' id='DistritoMunicipal'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='Sección'>Sección</Label>
-                    <Input type='select' name='Sección' id='Sección'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='BarrioParaje'>Barrio/Paraje</Label>
-                    <Input type='select' name='BarrioParaje' id='BarrioParaje'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='SubBarrio'>Sub Barrio</Label>
-                    <Input type='select' name='SubBarrio' id='SubBarrio'>
-                        <option value=''>Seleccione</option>
-                    </Input>
                 </FormGroup>
                 </Col>
                 <Col className='d-flex flex-sm-row flex-column mt-2'>

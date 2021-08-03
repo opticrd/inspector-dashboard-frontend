@@ -42,7 +42,7 @@ const LoginV1 = ({history}) => {
               <FormGroup>
                 <CustomInput type='checkbox' className='custom-control-Primary' id='remember-me' label='Recuerdame' />
               </FormGroup>
-              <Button.Ripple color='primary' block onClick={() => history.push('dashboard/analytics')} >
+              <Button.Ripple color='primary' block onClick={() => history.push('/')} >
                 Login
               </Button.Ripple>
             </Form>

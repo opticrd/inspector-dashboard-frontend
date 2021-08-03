@@ -1,16 +1,15 @@
 // ** React Imports
 import { useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 // ** Store & Actions
 import { getUser } from '../store/action'
 import { useSelector, useDispatch } from 'react-redux'
 
 // ** Reactstrap
-import { Row, Col, Alert } from 'reactstrap'
+import { Row, Col } from 'reactstrap'
 
 // ** User View Components
-import PlanCard from './PlanCard'
 import UserInfoCard from './UserInfoCard'
 import UserTimeline from './UserTimeline'
 import InvoiceList from '../../invoice/list'
@@ -40,9 +39,6 @@ const UserView = props => {
         <Col xl='12' lg='12' md='12'>
           <UserInfoCard selectedUser={store.selectedUser} />
         </Col>
-        {/* <Col xl='3' lg='4' md='5'>
-          <PlanCard selectedUser={store.selectedUser} />
-        </Col> */}
       </Row>
       <Row>
         <Col md='6'>

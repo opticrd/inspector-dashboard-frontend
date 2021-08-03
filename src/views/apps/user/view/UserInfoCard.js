@@ -7,6 +7,7 @@ import Avatar from '@components/avatar'
 // ** Third Party Components
 import { Card, CardBody, CardText, Button, Row, Col } from 'reactstrap'
 import { DollarSign, TrendingUp, User, Check, Star, Globe, Phone } from 'react-feather'
+import Url from '../../../../constants/Url'
 
 const UserInfoCard = ({ selectedUser }) => {
   // ** render user img
@@ -54,7 +55,7 @@ const UserInfoCard = ({ selectedUser }) => {
                     </CardText>
                   </div>
                   <div className='d-flex flex-wrap align-items-center'>
-                    <Button.Ripple tag={Link} to={`/apps/user/edit/${selectedUser.id}`} color='primary'>
+                    <Button.Ripple tag={Link} to={`${Url.userEdit}/${selectedUser.id}`} color='primary'>
                       Editar
                     </Button.Ripple>
                     <Button.Ripple className='ml-1' color='primary' outline>

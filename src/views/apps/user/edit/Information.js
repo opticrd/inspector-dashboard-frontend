@@ -65,8 +65,8 @@ const UserInfoTab = () => {
           <FormGroup>
             <Label for='role'>Rol</Label>
             <Input type='select' name='role' id='role' defaultValue="Admin">
-              {rolArray.map(rolArray => (
-                <option value={rolArray}>{rolArray}</option>
+              {rolArray.map((rolArray, index) => (
+                <option value={rolArray} key={index}>{rolArray}</option>
               ))}
             </Input>
           </FormGroup>

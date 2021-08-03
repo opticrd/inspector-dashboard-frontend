@@ -6,17 +6,31 @@ import { useHistory } from 'react-router-dom'
 import ReactPaginate from 'react-paginate'
 import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
-import { Button, Label, Input, CustomInput, Row, Col, Card, CardHeader, CardTitle } from 'reactstrap'
+import { Label, Input, CustomInput, Row, Col, Card, CardHeader, CardTitle } from 'reactstrap'
 
 // ** Store & Actions
 import { getData } from '@src/views/apps/invoice/store/actions'
 import { useDispatch, useSelector } from 'react-redux'
 
+import { ButtonRipple } from '../button'
+import Url from '../../../constants/Url'
+
 // ** Styles
 import '@styles/react/apps/app-invoice.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
-const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, handlePerPage, rowsPerPage, showSelectStatus, showButtonAdd }) => {
+const CustomHeader = ({ 
+  handleFilter, 
+  value, 
+  handleStatusValue, 
+  statusValue, 
+  handlePerPage, 
+  rowsPerPage, 
+  showSelectStatus, 
+  showButtonAdd,
+  showButtonAddInstitution,
+  componentButton
+}) => {
 
   const history = useHistory()
 
@@ -67,9 +81,19 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
                 </Input>
             }
             {showButtonAdd &&
-                <Button.Ripple color='primary' onClick={() => history.push('/apps/user/create')}>
-                    Añadir Nuevo Usuario
-                </Button.Ripple>
+              <ButtonRipple 
+                onClick={() => history.push(Url.userCreate)}
+                label= 'Añadir Nuevo Usuario'
+              />
+            }
+            {showButtonAddInstitution &&
+              <ButtonRipple 
+                onClick= {() => history.push(Url.institutionCreate)}
+                label= 'Añadir Nueva Institución'
+              />
+            }
+            {componentButton &&
+              componentButton
             }
         </Col>
       </Row>
@@ -77,7 +101,15 @@ const CustomHeader = ({ handleFilter, value, handleStatusValue, statusValue, han
   )
 }
 
-const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, showButtonAdd = false, dataTableTitle = "" }) => {
+const DataTableList = ({ 
+  columnsTable, 
+  dataTable, 
+  showSelectStatus = false, 
+  showButtonAdd = false, 
+  showButtonAddInstitution = false, 
+  dataTableTitle = "",
+  componentButton = false
+}) => {
 
   const dispatch = useDispatch()
   const store = useSelector(state => state.invoice)
@@ -223,6 +255,8 @@ const DataTableList = ({ columnsTable, dataTable, showSelectStatus = false, show
                 handleStatusValue={handleStatusValue}
                 showSelectStatus={showSelectStatus}
                 showButtonAdd={showButtonAdd}
+                showButtonAddInstitution={showButtonAddInstitution}
+                componentButton={componentButton}
               />
             }
           />

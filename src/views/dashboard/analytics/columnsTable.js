@@ -23,7 +23,7 @@ import {
   Copy
 } from 'react-feather'
 
-import { iconRoleTable } from '../../../@core/components/table/iconRoleTable'
+import { iconRoleTable, rowClient } from '../../../@core/components/table/commonColumns'
 
 
 // ** renders client column
@@ -46,24 +46,7 @@ export const columnsTable = [
     minWidth: '300px',
     selector: 'fullName',
     sortable: true,
-    cell: row => {
-      const name = row.fullName ? row.fullName : 'John Doe'
-
-      return (
-        <div className='d-flex justify-content-left align-items-center'>
-          {renderClient(row)}
-          <div className='d-flex flex-column'>
-            <Link
-              to={`/apps/user/view/${row.id}`}
-              className='user-name text-truncate mb-0'
-            >
-              <span className='font-weight-bold'>{row.fullName ? row.fullName : 'John Doe'}</span>
-            </Link>
-            <small className='text-truncate text-muted mb-0' style={{marginTop: '4px'}}>001-0001110-1</small>
-          </div>
-        </div>
-      )
-    }
+    cell: row => rowClient(row)
   },
   {
     name: 'Teléfono',
