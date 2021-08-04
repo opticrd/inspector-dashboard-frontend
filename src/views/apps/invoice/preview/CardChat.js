@@ -2,12 +2,11 @@ import classnames from 'classnames'
 import Avatar from '@components/avatar'
 import { useState, useEffect } from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { MoreVertical, Send, Image } from 'react-feather'
-import { Card, CardHeader, Form, Label, InputGroup, InputGroupAddon, Input, InputGroupText, Button } from 'reactstrap'
-
-import profilePic from '@src/assets/images/portrait/small/avatar-s-11.jpg'
+import { Send, FileText} from 'react-feather'
+import { Card, CardHeader, Form, InputGroup, Input, Button} from 'reactstrap'
 
 import '@styles/base/pages/app-chat-list.scss'
+
 
 const data = {
   chat: {
@@ -47,7 +46,8 @@ const data = {
     id: 1,
     fullName: 'Felecia Rower',
     avatar: require('@src/assets/images/portrait/small/avatar-s-20.jpg').default,
-    status: 'away'
+    status: 'away',
+    rol: 'Reportero - Oficial'
   }
 }
 
@@ -100,17 +100,28 @@ const CardChat = () => {
         <div
           key={index}
           className={classnames('chat', {
-            'chat-left': item.senderId !== 11
+            'chat-left ': item.senderId !== 11
           })}
         >
-          <div className='chat-avatar'>
-            <Avatar
-              className='box-shadow-1 cursor-pointer'
-              img={item.senderId === 11 ? profilePic : chatData.contact.avatar}
-            />
+          <div className='chat-avatar header-profile-sidebar adove'>
+                 {
+                   item.senderId !== 11 &&
+                   <>
+                   <Avatar
+                   className=' cursor-pointer'
+                   img={item.senderId !== 11 && chatData.contact.avatar}
+                    />
+                    <span className='font-weight-bolder align-text-top'>{item.senderId !== 11 && chatData.contact.rol}</span>.
+                    <span className='user-post'> {item.senderId !== 11 && chatData.contact.fullName}</span>
+                    </>
+                 }  
+               
           </div>
-
-          <div className='chat-body'>
+            
+          <div className={classnames('chat-body', {
+            'chat-body below mt-3': item.senderId !== 11
+          })}
+>
             {item.messages.map(chat => (
               <div key={chat.msg} className='chat-content'>
                 <p>{chat.msg}</p>
@@ -153,10 +164,9 @@ const CardChat = () => {
     <Card className='chat-widget'>
       <CardHeader>
         <div className='d-flex align-items-center'>
-          <Avatar status='online' className='mr-2' img={chatData.contact.avatar} imgHeight='34' imgWidth='34' />
-          <h5 className='mb-0'>Carrie Hawkins</h5>
+          <FileText/>
+          <h5 className='mb-0 ml-1'>Informacion del reporte</h5>
         </div>
-        <MoreVertical size={18} className='cursor-pointer' />
       </CardHeader>
       <div className='chat-app-window'>
         <PerfectScrollbar
@@ -168,24 +178,16 @@ const CardChat = () => {
         </PerfectScrollbar>
         <Form className='chat-app-form' onSubmit={e => handleSendMsg(e)}>
           <InputGroup className='input-group-merge mr-1 form-send-message'>
-            <InputGroupAddon addonType='prepend'>
-              <InputGroupText>
-                <Label className='attachment-icon mb-0' for='attach-doc'>
-                  <Image className='cursor-pointer text-secondary' size={14} />
-                  <input type='file' id='attach-doc' hidden />
-                </Label>
-              </InputGroupText>
-            </InputGroupAddon>
             <Input
               value={msg}
               className='border-0'
               onChange={e => setMsg(e.target.value)}
-              placeholder='Type your message'
+              placeholder='Escribir mensaje...'
             />
           </InputGroup>
           <Button className='send' color='primary'>
             <Send size={14} className='d-lg-none' />
-            <span className='d-none d-lg-block'>Send</span>
+            <span className='d-none d-lg-block'>Enviar</span>
           </Button>
         </Form>
       </div>
