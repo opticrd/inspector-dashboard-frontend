@@ -58,7 +58,7 @@ const SubscribersGained = ({ kFormatter, dataInfoChart }) => {
       color={dataInfoChart.color}
       stats={kFormatter(dataInfoChart.quantity)}
       statTitle={dataInfoChart.title}
-      series={[{name: dataInfoChart.title, data: dataInfoChart.data}]}
+      series={[{name: dataInfoChart.title, data: null}]}
       options={options}
       type='area'
     />

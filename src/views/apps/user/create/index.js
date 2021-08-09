@@ -48,48 +48,43 @@ const UserCreate = () => {
                     </Label>
                     <Input
                         type='text'
-                        id='state'
+                        id='statee'
                         defaultValue='001-0000000-0'
                         placeholder='Cédula de Identidad'
                     />
                 </FormGroup>
                 </Col>
                 <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='mobileNumber'>Nombre Completo</Label>
-                    <Input
-                        type='text'
-                        id='state'
-                        defaultValue='John Doe'
-                        placeholder='Nombre Completo'
-                    />
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6' sm='12'>
-                <FormGroup>
-                    <Label for='role'>Rol</Label>
-                    <Input type='select' name='role' id='role' defaultValue="Admin">
-                    {rolArray.map((rolArray, index) => (
-                        <option value={rolArray} key={index}>{rolArray}</option>
-                    ))}
-                    </Input>
-                </FormGroup>
+                    <FormGroup>
+                        <Label for='Nombre'>Nombre</Label>
+                        <Input
+                            type='text'
+                            id='Nombre'
+                            defaultValue='John'
+                            placeholder='Nombre'
+                            readOnly
+                        />
+                    </FormGroup>
                 </Col>
                 <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='languages'>Fecha de Nacimiento</Label>
-                    <Controller
-                        id='dob'
-                        name='dob'
-                        as={Flatpickr}
-                        control={control}
-                        placeholder='DD-MM-YYYY'
-                        options={{ dateFormat: 'd-m-y' }}
-                        className={classnames('form-control', {
-                            'is-invalid': errors.dob
-                        })}
-                    />
-                </FormGroup>
+                    <FormGroup>
+                        <Label for='Apellido'>Apellido</Label>
+                        <Input
+                            type='text'
+                            id='Apellido'
+                            defaultValue='Doe'
+                            placeholder='Apellido'
+                            readOnly
+                        />
+                    </FormGroup>
+                </Col>
+                <Col lg='4' md='6'>
+                    <FormGroup>
+                        <Label for='nacionalidad'>Nacionalidad</Label>
+                        <Input type='select' name='nacionalidad' id='nacionalidad' defaultValue='Dominicana'>
+                        <option value='Dominicana'>Dominicana</option>
+                        </Input>
+                    </FormGroup>
                 </Col>
                 <Col lg='4' md='6'>
                 <FormGroup>
@@ -111,14 +106,6 @@ const UserCreate = () => {
                         defaultValue='johndoe@email.com'
                         placeholder='Correo Electrónico'
                     />
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='nacionalidad'>Nacionalidad</Label>
-                    <Input type='select' name='nacionalidad' id='nacionalidad' defaultValue='Dominicana'>
-                    <option value='Dominicana'>Dominicana</option>
-                    </Input>
                 </FormGroup>
                 </Col>
                 <Col lg='4' md='6'>
@@ -164,94 +151,21 @@ const UserCreate = () => {
                 </FormGroup>
                 </Col>
                 <Col lg='4' md='6'>
-                <FormGroup>
-                    <label className='d-block mb-1'>Opciones de Contacto</label>
                     <FormGroup>
-                    <CustomInput
-                        inline
-                        type='checkbox'
-                        name='terms'
-                        id='emailTerms'
-                        value='Correo'
-                        label='Correo'
-                        defaultChecked
-                    />
-                    <CustomInput
-                        inline
-                        type='checkbox'
-                        name='terms'
-                        id='msgTerms'
-                        value='Mensajes'
-                        label='Mensajes'
-                        defaultChecked
-                    />
-                    <CustomInput 
-                        inline 
-                        type='checkbox' 
-                        name='terms' 
-                        id='phoneTerms' 
-                        value='Teléfono' 
-                        label='Teléfono' 
-                    />
+                        <Label for='zonaid'>Zona ID</Label>
+                        <Input type='text' name='zonaid' id='zonaid' defaultValue='05' />
                     </FormGroup>
-                </FormGroup>
+                </Col>
+                <Col lg='4' md='6'>
+                    <FormGroup>
+                        <Label for='organizacion'>Organización</Label>
+                        <Input type='select' name='organizacion' id='organizacion' defaultValue='Organización'>
+                        <option value='Organización'>Organización</option>
+                        </Input>
+                    </FormGroup>
                 </Col>
             </Row>
             <Row>
-                <Col sm='12'>
-                <h4 className='mb-1 mt-2'>
-                    <MapPin size={20} className='mr-50' />
-                    <span className='align-middle'>Su Zona de Trabajo</span>
-                </h4>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='Provincia'>Provincia</Label>
-                    <Input type='select' name='Provincia' id='Provincia'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='Municipio'>Municipio</Label>
-                    <Input type='select' name='Municipio' id='Municipio'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='DistritoMunicipal'>Distrito Municipal</Label>
-                    <Input type='select' name='DistritoMunicipal' id='DistritoMunicipal'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='Sección'>Sección</Label>
-                    <Input type='select' name='Sección' id='Sección'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='BarrioParaje'>Barrio/Paraje</Label>
-                    <Input type='select' name='BarrioParaje' id='BarrioParaje'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                <FormGroup>
-                    <Label for='SubBarrio'>Sub Barrio</Label>
-                    <Input type='select' name='SubBarrio' id='SubBarrio'>
-                        <option value=''>Seleccione</option>
-                    </Input>
-                </FormGroup>
-                </Col>
                 <Col className='d-flex flex-sm-row flex-column mt-2'>
                 <Button type='submit' color='primary' className='mb-1 mb-sm-0 mr-0 mr-sm-1'>
                     Crear
