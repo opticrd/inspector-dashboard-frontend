@@ -16,30 +16,30 @@ const data = {
     chat: [
       {
         message: "How can we help? We're here for you!",
-        time: 'Mon Dec 10 2018 07:45:00 GMT+0000 (GMT)',
+        time: 'Julio 7 2021 07:45:00',
         senderId: 11
       },
       {
         message: 'Hey John, I am looking for the best admin template. Could you please help me to find it out?',
-        time: 'Mon Dec 10 2018 07:45:23 GMT+0000 (GMT)',
+        time: 'Julio 7 2021 07:45:00',
         senderId: 1
       },
       {
         message: 'It should be Bootstrap 4 compatible.',
-        time: 'Mon Dec 10 2018 07:45:55 GMT+0000 (GMT)',
+        time: 'Julio 7 2021 07:45:55 ',
         senderId: 1
       },
-      { message: 'Absolutely!', time: 'Mon Dec 10 2018 07:46:00 GMT+0000 (GMT)', senderId: 11 },
+      { message: 'Absolutely!', time: 'Julio 7 2021 07:46:00 ', senderId: 11 },
       {
         message: 'Modern admin is the responsive bootstrap 4 admin template.!',
-        time: 'Mon Dec 10 2018 07:46:05 GMT+0000 (GMT)',
+        time: 'Julio 7 2021 07:46:05 ',
         senderId: 11
       },
-      { message: 'Looks clean and fresh UI.', time: 'Mon Dec 10 2018 07:46:23 GMT+0000 (GMT)', senderId: 1 },
-      { message: "It's perfect for my next project.", time: 'Mon Dec 10 2018 07:46:33 GMT+0000 (GMT)', senderId: 1 },
-      { message: 'How can I purchase it?', time: 'Mon Dec 10 2018 07:46:43 GMT+0000 (GMT)', senderId: 1 },
-      { message: 'Thanks, from ThemeForest.', time: 'Mon Dec 10 2018 07:46:53 GMT+0000 (GMT)', senderId: 11 },
-      { message: 'I will purchase it for sure. 👍', time: '2020-12-08T13:52:38.013Z', senderId: 1 }
+      { message: 'Looks clean and fresh UI.', time: 'Julio 7 2021 07:46:23 ', senderId: 1 },
+      { message: "It's perfect for my next project.", time: ' Julio 7 2021 07:46:33', senderId: 1 },
+      { message: 'How can I purchase it?', time: 'Julio 7 2021 07:46:43', senderId: 1 },
+      { message: 'Thanks, from ThemeForest.', time: 'Julio 7 2021 07:46:53', senderId: 11 },
+      { message: 'I will purchase it for sure. 👍', time: 'Julio 7 2021 07:50:00', senderId: 1 }
     ]
   },
   contact: {
@@ -112,7 +112,7 @@ const CardChat = () => {
                    img={item.senderId !== 11 && chatData.contact.avatar}
                     />
                     <span className='font-weight-bolder align-text-top'>{item.senderId !== 11 && chatData.contact.rol}</span>.
-                    <span className='user-post'> {item.senderId !== 11 && chatData.contact.fullName}</span>
+                    <span className='align-text-top mr-3 user-post'> {item.senderId !== 11 && chatData.contact.fullName}</span>
                     </>
                  }  
                
@@ -124,7 +124,12 @@ const CardChat = () => {
 >
             {item.messages.map(chat => (
               <div key={chat.msg} className='chat-content'>
-                <p>{chat.msg}</p>
+                <p className='mb-1'>{chat.msg}</p>
+                <small
+                 className={classnames('', {
+                  'position-left': item.senderId !== 11
+                })}
+                 >{chat.time}</small>
               </div>
             ))}
           </div>
@@ -151,7 +156,7 @@ const CardChat = () => {
 
       newMsg.chat.chat.push({
         message: msg,
-        time: new Date(),
+        time: Date.now(),
         senderId: 11
       })
 
@@ -165,7 +170,7 @@ const CardChat = () => {
       <CardHeader>
         <div className='d-flex align-items-center'>
           <FileText/>
-          <h5 className='mb-0 ml-1'>Informacion del reporte</h5>
+          <h5 className='mb-0 ml-1'>Información del reporte</h5>
         </div>
       </CardHeader>
       <div className='chat-app-window'>

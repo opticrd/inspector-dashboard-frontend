@@ -71,7 +71,7 @@ const UserInfoCard = ({ selectedUser }) => {
                 <div className='user-info-title'>
                   <Globe className='mr-1' size={14} />
                   <CardText tag='span' className='user-info-title font-weight-bold mb-0'>
-                    Pagina web
+                    Página web
                   </CardText>
                 </div>
                 <CardText className='mb-0'>

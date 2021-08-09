@@ -19,11 +19,11 @@ const CardProfile = () => {
             <div className='d-flex flex-wrap align-items-center my-50'>
                         <div className='user-info-title'>
                     <User className='mr-1' size={14} />
-                    <CardText tag='span' className='user-info-title font-weight-bold mb-0'>
-                        Cedula
+                    <CardText tag='span' className='user-info-title font-weight-bold mb-0 mr-1'>
+                        Cédula 
                     </CardText>
                     </div>
-                    <CardText className='text-capitalize mb-0 ml-5'>000000000</CardText>
+                    <CardText className='text-capitalize text-right mb-0 ml-5 mr-1'>000000000</CardText>
               </div>
               <div className='d-flex flex-wrap align-items-center my-50'>
                 <div className='user-info-title'>
