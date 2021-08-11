@@ -12,32 +12,28 @@ export const dataInfoChart = () => {
             color: 'danger',
             colorHEX: colors.danger.main,
             quantity: 9876,
-            title: 'Total de Casos',
-            data: [28, 40, 36, 52, 38, 60, 55]
+            title: 'Total de Casos'
         },
         {
             icon: <BookOpen size={21} />,
             color: 'warning',
             colorHEX: colors.warning.main,
             quantity: 9876,
-            title: 'Casos Abiertos',
-            data: [28, 40, 36, 52, 38, 60, 55]
+            title: 'Casos Abiertos'
         },
         {
             icon: <CheckCircle size={21} />,
             color: 'secondary',
             colorHEX: colors.secondary.main,
             quantity: 9876,
-            title: 'Casos Finalizados',
-            data: [28, 40, 36, 52, 38, 60, 55]
+            title: 'Casos Finalizados'
         },
         {
             icon: <Users size={21} />,
             color: 'primary',
             colorHEX: colors.primary.main,
             quantity: 9876,
-            title: 'Reporteros Activos',
-            data: [28, 40, 36, 52, 38, 60, 55]
+            title: 'Reporteros Activos'
         }
     ]
 }

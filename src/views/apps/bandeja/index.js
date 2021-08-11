@@ -5,19 +5,21 @@ import { dataInfoChart } from './dataInfoChart'
 
 import SubscribersGained from './SubscribersGained'
 
-import { Row, Col } from 'reactstrap'
+import Avatar from '@components/avatar'
+
+import { Row, Col, Media } from 'reactstrap'
 import { kFormatter, selectThemeColors } from '@utils'
 
 import Select from 'react-select'
 
 import DataTableList from '../../../@core/components/table' 
 import CardGrid from '../../../@core/components/card-grid'
+import { ButtonRipple } from '../../../@core/components/button'
+import Url from '../../../constants/Url'
 
 // ** Styles
 import '@styles/react/libs/react-select/_react-select.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
-import { ButtonRipple } from '../../../@core/components/button'
-import Url from '../../../constants/Url'
 
 const Bandeja = ({history}) => {
 

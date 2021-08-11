@@ -41,22 +41,6 @@ export const columns = [
     cell: row => '809-220-1111'
   },
   {
-    name: 'Provincia',
-    minWidth: '235px',
-    selector: 'provincia',
-    sortable: true,
-    // cell: row => row.provincia
-    cell: row => 'Santo Domingo'
-  },
-  {
-    name: 'Municipio',
-    minWidth: '235px',
-    selector: 'municipio',
-    sortable: true,
-    // cell: row => row.municipio
-    cell: row => 'Los Alcarrizos'
-  },
-  {
     name: 'DIRECCIÓN',
     minWidth: '172px',
     selector: 'direccion',
