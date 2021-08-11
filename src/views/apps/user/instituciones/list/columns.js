@@ -74,7 +74,7 @@ export const columns = [
         <DropdownMenu right>
           <DropdownItem
             tag={Link}
-            to={`/apps/user/instituciones/${row.id}`}
+            to={`temporal`}
             className='w-100'
           >
             <FileText size={14} className='mr-50' />
