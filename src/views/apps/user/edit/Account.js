@@ -109,25 +109,25 @@ const UserAccountTab = ({ selectedUser }) => {
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label>Nombre Completo</Label>
-                <Input type='text' placeholder='Nombre Completo' defaultValue={userData && userData.fullName} readOnly />
+                <Label>Nombre</Label>
+                <Input type='text' placeholder='Nombre' defaultValue='John' readOnly />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label>Estado</Label>
-                <Input type='text' defaultValue={userData && userData.status} readOnly />
+                <Label>Apellido</Label>
+                <Input type='text' defaultValue='Doe' readOnly />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label>Rol</Label>
-                <Input type='text' defaultValue={userData && userData.role} readOnly />
+                <Label>Nacionalidad</Label>
+                <Input type='text' defaultValue='Dominicano' readOnly />
               </FormGroup>
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label>Teléfono</Label>
+                <Label>Teléfono Móvil</Label>
                 <Input type='text' defaultValue='809-220-1111' readOnly />
               </FormGroup>
             </Col>
@@ -143,34 +143,44 @@ const UserAccountTab = ({ selectedUser }) => {
             </Col>
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label>Provincia</Label>
+                <Label>Género</Label>
                 <Input
                   type='text'
-                  defaultValue='Santo Domingo'
+                  defaultValue='Femenino'
                   readOnly
                 />
               </FormGroup>
             </Col>  
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label>Municipio</Label>
+                <Label>Zona ID</Label>
                 <Input
                   type='text'
-                  defaultValue='Distrito Nacional'
+                  defaultValue='05'
                   readOnly
                 />
               </FormGroup>
             </Col>  
             <Col md='4' sm='12'>
               <FormGroup>
-                <Label>Sector</Label>
+                <Label>Organización</Label>
                 <Input
                   type='text'
-                  defaultValue='El millon'
+                  defaultValue='MOPC'
                   readOnly
                 />
               </FormGroup>
-            </Col>  
+            </Col>
+            <Col md='4' sm='12'>
+              <FormGroup>
+                <Label>Estado</Label>
+                <Input
+                  type='text'
+                  defaultValue='Activo'
+                  readOnly
+                />
+              </FormGroup>
+            </Col>
             <Col sm='12'>
               <div className='permissions border mt-1'>
                 <h6 className='py-1 mx-1 mb-0 font-medium-2'>

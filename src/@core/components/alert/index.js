@@ -12,3 +12,12 @@ export const UserNotFound = ({id = 0}) => (
         </div>
     </Alert>
 )
+
+export const InstitutionNotFound = ({id = 0}) => (
+    <Alert color='danger'>
+        <h4 className='alert-heading'>Institución no encontrada</h4>
+        <div className='alert-body'>
+            La institución con id: {id} no existe. <Link to={Url.institution}>Lista de institución</Link>
+        </div>
+    </Alert>
+)

@@ -6,7 +6,7 @@ const AppRoutes = [
   {
     path: Url.dashboardInbox,
     exact: true,
-    component: lazy(() => import('../../views/apps/bandeja'))
+    component: lazy(() => import('../../views/apps/bandeja/list'))
   },
   {
     path: Url.dashboardInboxCreate,
@@ -60,9 +60,12 @@ const AppRoutes = [
     }
   },
   {
-    // temporal route
-    path: '/apps/invoice/preview',
-    component: lazy(() => import('../../views/apps/invoice/preview'))
+    path: `${Url.dashboardInbox}/:id`,
+    exact: true,
+    component: lazy(() => import('../../views/apps/bandeja/details')),
+    meta: {
+      navLink: Url.dashboardInbox
+    }
   }
 ]
 
