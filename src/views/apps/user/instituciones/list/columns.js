@@ -10,19 +10,8 @@ import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from
 import { MoreVertical, FileText, Trash2, Archive } from 'react-feather'
 
 import { rowInstitution } from '../../../../../@core/components/table/commonColumns'
+import Url from '../../../../../constants/Url'
 
-// ** Renders Client Columns
-const renderClient = row => {
-  const stateNum = Math.floor(Math.random() * 6),
-    states = ['light-success', 'light-danger', 'light-warning', 'light-info', 'light-primary', 'light-secondary'],
-    color = states[stateNum]
-
-  if (row?.avatar?.length) {
-    return <Avatar className='mr-1' img={row.avatar} width='32' height='32' />
-  } else {
-    return <Avatar color={color || 'primary'} className='mr-1' content={row.fullName || 'M A P'} initials />
-  }
-}
 
 export const columns = [
   {
@@ -58,7 +47,7 @@ export const columns = [
         <DropdownMenu right>
           <DropdownItem
             tag={Link}
-            to={`temporal`}
+            to={`${Url.institution}/${row.id}`}
             className='w-100'
           >
             <FileText size={14} className='mr-50' />

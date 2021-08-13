@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 // ** Store & Actions
-import { getUser } from '../../../store/action'
+import { getUser } from '../../store/action'
 import { useSelector, useDispatch } from 'react-redux'
 
 // ** Reactstrap
@@ -14,14 +14,14 @@ import { Row, Col } from 'reactstrap'
 import { kFormatter } from '@utils'
 import SubscribersGained from './SubscribersGained'
 import UserInfoCard from './UserInfoCard'
-import InvoiceList from '../../../../invoice/list'
+import InvoiceList from '../../../invoice/list'
 import { dataInfoChart } from './dataInfoChart'
 
 // ** Styles
 import '@styles/react/apps/app-users.scss'
 
 // components
-import { UserNotFound } from '../../../../../../@core/components/alert'
+import { InstitutionNotFound } from '../../../../../@core/components/alert'
 
 const UserView = props => {
   // ** Vars
@@ -45,18 +45,18 @@ const UserView = props => {
         </Col>
       </Row>
       <Row className='match-height'>
-                {infoChart.map((dataInfoChart, index) => (
-                    <Col lg='3' sm='6' key={index}>
-                        <SubscribersGained kFormatter={kFormatter} dataInfoChart={dataInfoChart} />
-                    </Col>
-                ))}
-            </Row>
+          {infoChart.map((dataInfoChart, index) => (
+            <Col lg='3' sm='6' key={index}>
+              <SubscribersGained kFormatter={kFormatter} dataInfoChart={dataInfoChart} />
+            </Col>
+          ))}
+      </Row>
       <Row>
         <Col sm='12'>
           <InvoiceList />
         </Col>
       </Row>
     </div>
-  ) : <UserNotFound id={id} />
+  ) : <InstitutionNotFound id={id} />
 }
 export default UserView

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { ThemeColors } from '@src/utility/context/ThemeColors'
-import { Users, Box } from 'react-feather'
+import { CheckCircle, Users, FileText, BookOpen } from 'react-feather'
 
 export const dataInfoChart = () => {
 
@@ -8,7 +8,7 @@ export const dataInfoChart = () => {
     
     return [
         {
-            icon: <Users size={21} />,
+            icon: <FileText size={21} />,
             color: 'danger',
             colorHEX: colors.danger.main,
             quantity: 9876,
@@ -16,7 +16,7 @@ export const dataInfoChart = () => {
             data: [28, 40, 36, 52, 38, 60, 55]
         },
         {
-            icon: <Box size={21} />,
+            icon: <BookOpen size={21} />,
             color: 'warning',
             colorHEX: colors.warning.main,
             quantity: 9876,
@@ -24,7 +24,7 @@ export const dataInfoChart = () => {
             data: [28, 40, 36, 52, 38, 60, 55]
         },
         {
-            icon: <Box size={21} />,
+            icon: <CheckCircle size={21} />,
             color: 'secondary',
             colorHEX: colors.secondary.main,
             quantity: 9876,

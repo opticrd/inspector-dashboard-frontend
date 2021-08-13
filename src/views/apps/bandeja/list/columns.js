@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 // ** Custom Components
 import Avatar from '@components/avatar'
 import { StatusTickets } from '@components/status'
-import { rowClient, rowInstitution } from '../../../@core/components/table/commonColumns'
+import { rowClient, rowInstitution } from '../../../../@core/components/table/commonColumns'
+import Url from '../../../../constants/Url'
 
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Badge } from 'reactstrap'
@@ -80,7 +81,7 @@ export const columns = [
         <DropdownMenu right>
           <DropdownItem
             tag={Link}
-            to={`/apps/user/view/${row.id}`}
+            to={`${Url.dashboardInbox}/${row.id}`}
             className='w-100'
           >
             <FileText size={14} className='mr-50' />

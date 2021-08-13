@@ -119,26 +119,13 @@ const ReportCreate = () => {
                 </Col>
                 <Col lg='4' md='6'>
                     <FormGroup>
-                        <Label for='Sección'>Sección</Label>
-                        <Input type='select' name='Sección' id='Sección'>
-                            <option value=''>Seleccione</option>
-                        </Input>
-                    </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                    <FormGroup>
-                        <Label for='BarrioParaje'>Barrio/Paraje</Label>
-                        <Input type='select' name='BarrioParaje' id='BarrioParaje'>
-                            <option value=''>Seleccione</option>
-                        </Input>
-                    </FormGroup>
-                </Col>
-                <Col lg='4' md='6'>
-                    <FormGroup>
-                        <Label for='SubBarrio'>Sub Barrio</Label>
-                        <Input type='select' name='SubBarrio' id='SubBarrio'>
-                            <option value=''>Seleccione</option>
-                        </Input>
+                        <Label for='ZoneID'>Zona ID</Label>
+                        <Input
+                            type='text'
+                            id='ZoneID'
+                            defaultValue='05'
+                            placeholder='Zone ID'
+                        />
                     </FormGroup>
                 </Col>
                 <Col lg='4' md='6'>
