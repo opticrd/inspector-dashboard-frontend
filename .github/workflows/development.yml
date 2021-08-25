@@ -15,7 +15,7 @@ on:
       - '.github/workflows/development.yml'
   pull_request:
     branches:
-      - "staging"
+      - "main"
     paths:
       - '**.js*'
       - '**.ts*'
@@ -48,7 +48,7 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm test
+      # - run: npm test
 
   build:
     needs: ['test']

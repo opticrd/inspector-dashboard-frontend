@@ -3,7 +3,7 @@ name: QA deployment
 on:
   push:
     branches:
-      - "staging"
+      - "main"
     paths:
       - '**.js*'
       - '**.ts*'
