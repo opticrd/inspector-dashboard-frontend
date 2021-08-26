@@ -18,7 +18,7 @@ COPY package*.json ./
 
 # install node packages: clean obsolete files
 RUN npm config set depth 0
-RUN yarn install && \
+RUN yarn install --frozen-lockfile && \
     rm -rf /tmp/*
 
 # App specific build time variables (not always needed)
