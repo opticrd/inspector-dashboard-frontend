@@ -18,7 +18,7 @@ COPY package*.json ./
 
 # install node packages: clean obsolete files
 RUN npm config set depth 0
-RUN npm install && \
+RUN yarn install && \
     rm -rf /tmp/*
 
 # App specific build time variables (not always needed)
@@ -30,7 +30,7 @@ WORKDIR /app
 # build app for production with minification
 COPY . .
 
-RUN npm run build
+RUN yarn build
 
 #####################################
 ##               Release           ##
