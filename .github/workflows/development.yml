@@ -1,18 +1,6 @@
 name: Dev deployment
 
 on:
-  push:
-    branches:
-      - "*"
-      - "!staging"
-      - "!main"
-    paths:
-      - '**.js*'
-      - '**.ts*'
-      - 'package*.json'
-      - 'Dockerfile'
-      - 'entrypoint.sh'
-      - '.github/workflows/development.yml'
   pull_request:
     branches:
       - "main"
@@ -47,8 +35,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: yarn install --frozen-lockfile
-      - run: yarn build
-      # - run: npm test
+      # - run: yarn test
 
   build:
     needs: ['test']
