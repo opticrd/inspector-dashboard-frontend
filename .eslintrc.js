@@ -1,5 +1,6 @@
 module.exports = {
   extends: "@imaginary-cloud/react",
+  parser: "babel-eslint",
 
   env: {
     node: true,
@@ -7,9 +8,8 @@ module.exports = {
     browser: true
   },
 
-  parser: "babel-eslint",
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
