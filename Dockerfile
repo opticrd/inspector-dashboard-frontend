@@ -13,8 +13,9 @@ ENV SKIP_PREFLIGHT_CHECK ${SKIP_PREFLIGHT_CHECK:-false}
 ARG DISABLE_ESLINT_PLUGIN
 ENV DISABLE_ESLINT_PLUGIN ${DISABLE_ESLINT_PLUGIN:-false}
 
+WORKDIR /app
 # copy the package.json to install dependencies
-COPY package*.json ./
+COPY package*.json yarn.lock ./
 
 # install node packages: clean obsolete files
 RUN npm config set depth 0
@@ -25,11 +26,8 @@ RUN yarn install --frozen-lockfile && \
 ARG REACT_APP_API_URL
 ARG REACT_APP_API_URL ${REACT_APP_API_URL:-http://localhost}
 
-WORKDIR /app
-
 # build app for production with minification
 COPY . .
-
 RUN yarn build
 
 #####################################
