@@ -98,16 +98,6 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
-  "parser": "babel-eslint",
-  "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-          "jsx": true,
-          "modules": true,
-          "experimentalObjectRestSpread": true
-      }
-  },
   "eslintConfig": {
     "extends": [
       "@imaginary-cloud/react"
