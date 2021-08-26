@@ -40,6 +40,7 @@
     "nouislider": "14.6.2",
     "nouislider-react": "3.3.8",
     "postcss-rtl": "1.5.0",
+    "prettier": "^2.3.2",
     "prismjs": "1.19.0",
     "prop-types": "15.7.2",
     "react": "17.0.1",
@@ -93,17 +94,23 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
-    "lint": "eslint src/**/*.js src/**/*.jsx",
-    "lint:fix": "eslint src/**/*.js --fix"
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "@imaginary-cloud/react"
+    ]
   },
+  "prettier": "@imaginary-cloud/prettier-config",
   "devDependencies": {
+    "@imaginary-cloud/eslint-config-react": "^1.0.1",
     "@types/sortablejs": "^1.10.6",
     "eslint": "^7.8.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.20.6",
+    "install-peerdeps": "^3.0.3",
     "node-sass": "^4.13.1",
     "react-app-rewire-aliases": "^0.2.0",
     "react-app-rewire-postcss": "^3.0.2",
