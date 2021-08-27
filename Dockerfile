@@ -15,7 +15,7 @@ ENV DISABLE_ESLINT_PLUGIN ${DISABLE_ESLINT_PLUGIN:-false}
 
 WORKDIR /app
 # copy the package.json to install dependencies
-COPY package*.json yarn.lock ./
+COPY package*.json yarn* ./
 
 # install node packages: clean obsolete files
 RUN npm config set depth 0
