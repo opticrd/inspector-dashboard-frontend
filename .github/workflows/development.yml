@@ -34,8 +34,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
-      - run: yarn install --frozen-lockfile
-      # - run: yarn test
+      - run: npm ci
+      # - run: npm test #TODO: Fix tests
 
   build:
     needs: ['test']
