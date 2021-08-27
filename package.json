@@ -100,7 +100,6 @@
   "prettier": "@imaginary-cloud/prettier-config",
   "devDependencies": {
     "@imaginary-cloud/eslint-config-react": "^1.0.1",
-    "@imaginary-cloud/prettier-config": "^1.0.0",
     "@types/sortablejs": "^1.10.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",

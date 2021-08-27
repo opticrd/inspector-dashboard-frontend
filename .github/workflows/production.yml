@@ -9,6 +9,7 @@ env:
   # Deployment variables
   PROJECT_NAME: inspector-dashboard
   GAR_BASE: us-docker.pkg.dev/${{ secrets.GCP_PROJECT }}
+  NODE_ENV: development
 
 jobs:
   versioning:
@@ -63,7 +64,7 @@ jobs:
           target: release
           tags: ${{ env.GAR_BASE }}/${{env.PROJECT_NAME}}/${{ env.GITHUB_REPOSITORY_NAME_PART_SLUG }}:${{ env.GITHUB_HEAD_REF_SLUG || env.GITHUB_REF_SLUG }}
           build-args: |
-            NODE_ENV=production
+            NODE_ENV=${{ env.NODE_ENV }}
             REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}
             SKIP_PREFLIGHT_CHECK=true
             DISABLE_ESLINT_PLUGIN=false
@@ -90,7 +91,7 @@ jobs:
           credentials: ${{ secrets.GAR_JSON_KEY }}
           region: ${{ secrets.GCP_REGION }}
           env_vars: |
-            NODE_ENV=production,
+            NODE_ENV=${{ env.NODE_ENV }},
             REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}
 
       - name: Testing Service with curl

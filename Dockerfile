@@ -19,7 +19,7 @@ COPY package*.json yarn* ./
 
 # install node packages: clean obsolete files
 RUN npm config set depth 0
-RUN npm ci && \
+RUN yarn install --frozen-lockfile && \
     rm -rf /tmp/*
 
 # App specific build time variables (not always needed)
@@ -28,7 +28,7 @@ ARG REACT_APP_API_URL ${REACT_APP_API_URL:-http://localhost}
 
 # build app for production with minification
 COPY . .
-RUN npm run build
+RUN yarn build
 
 #####################################
 ##               Release           ##
