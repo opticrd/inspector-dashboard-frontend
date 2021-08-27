@@ -1,18 +1,21 @@
 module.exports = {
+  extends: '@imaginary-cloud/react',
+  parser: 'babel-eslint',
+
   env: {
     node: true,
     es6: true,
-    browser: true
+    browser: true,
   },
 
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
       modules: true,
-      experimentalObjectRestSpread: true
-    }
+      experimentalObjectRestSpread: true,
+    },
   },
   rules: {
     'no-console': 'off',
@@ -51,7 +54,10 @@ module.exports = {
     'no-unneeded-ternary': 'error',
     'no-whitespace-before-property': 'error',
     'nonblock-statement-body-position': 'error',
-    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+    'object-property-newline': [
+      'error',
+      { allowAllPropertiesOnSameLine: true },
+    ],
     'quote-props': ['error', 'as-needed'],
     // quotes: ['error', 'prefer-single'],
     semi: ['error', 'never'],
@@ -69,14 +75,6 @@ module.exports = {
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-const': 'error',
-    'prefer-template': 'error'
-  }
-
-  // rules: {
-  //   'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-  //   'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-  //   semi: ['error', 'never'],
-  //   'max-len': 'off',
-  //   camelcase: ['error', { properties: 'never', ignoreDestructuring: true, ignoreImports: true }]
-  // }
+    'prefer-template': 'error',
+  },
 }
