@@ -40,7 +40,6 @@
     "nouislider": "14.6.2",
     "nouislider-react": "3.3.8",
     "postcss-rtl": "1.5.0",
-    "prettier": "^2.3.2",
     "prismjs": "1.19.0",
     "prop-types": "15.7.2",
     "react": "17.0.1",
@@ -98,21 +97,23 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
-  "eslintConfig": {
-    "extends": [
-      "@imaginary-cloud/react"
-    ]
-  },
   "prettier": "@imaginary-cloud/prettier-config",
   "devDependencies": {
     "@imaginary-cloud/eslint-config-react": "^1.0.1",
+    "@imaginary-cloud/prettier-config": "^1.0.0",
     "@types/sortablejs": "^1.10.6",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.8.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-react": "^7.20.6",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "install-peerdeps": "^3.0.3",
     "node-sass": "^4.13.1",
+    "prettier": "^2.3.2",
     "react-app-rewire-aliases": "^0.2.0",
     "react-app-rewire-postcss": "^3.0.2",
     "react-app-rewire-sass-rule": "^2.1.1",

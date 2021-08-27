@@ -1,11 +1,11 @@
 module.exports = {
-  extends: "@imaginary-cloud/react",
-  parser: "babel-eslint",
+  extends: '@imaginary-cloud/react',
+  parser: 'babel-eslint',
 
   env: {
     node: true,
     es6: true,
-    browser: true
+    browser: true,
   },
 
   parserOptions: {
@@ -14,8 +14,8 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
       modules: true,
-      experimentalObjectRestSpread: true
-    }
+      experimentalObjectRestSpread: true,
+    },
   },
   rules: {
     'no-console': 'off',
@@ -54,7 +54,10 @@ module.exports = {
     'no-unneeded-ternary': 'error',
     'no-whitespace-before-property': 'error',
     'nonblock-statement-body-position': 'error',
-    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+    'object-property-newline': [
+      'error',
+      { allowAllPropertiesOnSameLine: true },
+    ],
     'quote-props': ['error', 'as-needed'],
     // quotes: ['error', 'prefer-single'],
     semi: ['error', 'never'],
@@ -72,6 +75,6 @@ module.exports = {
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-const': 'error',
-    'prefer-template': 'error'
-  }
+    'prefer-template': 'error',
+  },
 }
