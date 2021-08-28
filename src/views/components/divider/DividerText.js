@@ -1,8 +1,6 @@
-const DividerText = () => {
-  return (
-    <div className='divider'>
-      <div className='divider-text'>My Text</div>
-    </div>
-  )
-}
+const DividerText = () => (
+  <div className="divider">
+    <div className="divider-text">My Text</div>
+  </div>
+)
 export default DividerText

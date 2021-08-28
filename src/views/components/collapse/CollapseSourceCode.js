@@ -1,6 +1,6 @@
 export const defaultCollapse = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { CardText } from 'reactstrap'
@@ -61,7 +61,7 @@ export default CollapseDefault
 
 export const accordion = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { CardText } from 'reactstrap'
@@ -124,7 +124,7 @@ export default Accordion
 
 export const accordionShadow = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { CardText } from 'reactstrap'
@@ -186,7 +186,7 @@ export default AccordionShadow`}
 
 export const accordionBorder = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { CardText } from 'reactstrap'
@@ -248,7 +248,7 @@ export default AccordionBorder`}
 
 export const accordionMargin = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { CardText } from 'reactstrap'
@@ -311,7 +311,7 @@ export default AccordionMargin
 
 export const accordionHover = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { CardText } from 'reactstrap'

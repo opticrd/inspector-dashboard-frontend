@@ -2,7 +2,7 @@
 const initialState = {
   suggestions: [],
   bookmarks: [],
-  query: ''
+  query: '',
 }
 
 const navbarReducer = (state = initialState, action) => {
@@ -15,7 +15,7 @@ const navbarReducer = (state = initialState, action) => {
       let objectToUpdate
 
       // ** find & update object
-      state.suggestions.find(item => {
+      state.suggestions.find((item) => {
         if (item.id === action.id) {
           item.isBookmarked = !item.isBookmarked
           objectToUpdate = item
@@ -23,7 +23,7 @@ const navbarReducer = (state = initialState, action) => {
       })
 
       // ** Get index to add or remove bookmark from array
-      const bookmarkIndex = state.bookmarks.findIndex(x => x.id === action.id)
+      const bookmarkIndex = state.bookmarks.findIndex((x) => x.id === action.id)
 
       if (bookmarkIndex === -1) {
         state.bookmarks.push(objectToUpdate)

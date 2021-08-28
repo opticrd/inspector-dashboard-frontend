@@ -6,8 +6,8 @@ import alertImg from '@src/assets/images/slider/04.jpg'
 const MySwal = withReactContent(Swal)
 
 const SweetAlertOptions = () => {
-  const handleImageAlert = () => {
-    return MySwal.fire({
+  const handleImageAlert = () =>
+    MySwal.fire({
       title: 'Sweet!',
       text: 'Modal with a custom image.',
       imageUrl: alertImg,
@@ -15,9 +15,8 @@ const SweetAlertOptions = () => {
       imageHeight: 200,
       imageAlt: 'Custom image',
       customClass: { confirmButton: 'btn btn-primary' },
-      buttonsStyling: false
+      buttonsStyling: false,
     })
-  }
 
   const handleTimeoutAlert = () => {
     let timerInterval
@@ -28,12 +27,13 @@ const SweetAlertOptions = () => {
       onBeforeOpen() {
         Swal.showLoading()
         timerInterval = setInterval(function () {
-          Swal.getContent().querySelector('strong').textContent = Swal.getTimerLeft()
+          Swal.getContent().querySelector('strong').textContent =
+            Swal.getTimerLeft()
         }, 100)
       },
       onClose() {
         clearInterval(timerInterval)
-      }
+      },
     }).then(function (result) {
       if (result.dismiss === Swal.DismissReason.timer) {
         console.log('I was closed by the timer')
@@ -41,18 +41,17 @@ const SweetAlertOptions = () => {
     })
   }
 
-  const handleClickOutside = () => {
-    return MySwal.fire({
+  const handleClickOutside = () =>
+    MySwal.fire({
       title: 'Click outside to close!',
       text: 'This is a cool message!',
       allowOutsideClick: true,
       customClass: { confirmButton: 'btn btn-primary' },
-      buttonsStyling: false
+      buttonsStyling: false,
     })
-  }
 
-  const handleQuestions = () => {
-    return MySwal.mixin({
+  const handleQuestions = () =>
+    MySwal.mixin({
       input: 'text',
       confirmButtonText: 'Next &rarr;',
       showCancelButton: true,
@@ -60,21 +59,22 @@ const SweetAlertOptions = () => {
       buttonsStyling: false,
       customClass: {
         confirmButton: 'btn btn-primary',
-        cancelButton: 'btn btn-danger ml-1'
-      }
+        cancelButton: 'btn btn-danger ml-1',
+      },
     })
       .queue(['Question 1', 'Question 2', 'Question 3'])
       .then(function (result) {
         if (result.value) {
           MySwal.fire({
             title: 'All done!',
-            html: `Your answers: <pre><code>${JSON.stringify(result.value)}</code></pre>`,
+            html: `Your answers: <pre><code>${JSON.stringify(
+              result.value,
+            )}</code></pre>`,
             confirmButtonText: 'Lovely!',
-            customClass: { confirmButton: 'btn btn-primary' }
+            customClass: { confirmButton: 'btn btn-primary' },
           })
         }
       })
-  }
 
   const handleAjax = () => {
     MySwal.fire({
@@ -82,11 +82,11 @@ const SweetAlertOptions = () => {
       input: 'text',
       customClass: {
         confirmButton: 'btn btn-primary',
-        cancelButton: 'btn btn-danger ml-1'
+        cancelButton: 'btn btn-danger ml-1',
       },
       buttonsStyling: false,
       inputAttributes: {
-        autocapitalize: 'off'
+        autocapitalize: 'off',
       },
       showCancelButton: true,
       confirmButtonText: 'Look up',
@@ -102,15 +102,15 @@ const SweetAlertOptions = () => {
           .catch(function (error) {
             MySwal.showValidationMessage(`Request failed:  ${error}`)
           })
-      }
+      },
     }).then(function (result) {
       if (result.value) {
         MySwal.fire({
           title: `${result.value.login}'s avatar`,
           imageUrl: result.value.avatar_url,
           customClass: {
-            confirmButton: 'btn btn-primary'
-          }
+            confirmButton: 'btn btn-primary',
+          },
         })
       }
     })
@@ -119,23 +119,23 @@ const SweetAlertOptions = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Options</CardTitle>
+        <CardTitle tag="h4">Options</CardTitle>
       </CardHeader>
       <CardBody>
-        <div className='demo-inline-spacing'>
-          <Button color='primary' onClick={handleImageAlert} outline>
+        <div className="demo-inline-spacing">
+          <Button color="primary" onClick={handleImageAlert} outline>
             Image
           </Button>
-          <Button color='primary' onClick={handleTimeoutAlert} outline>
+          <Button color="primary" onClick={handleTimeoutAlert} outline>
             Timeout
           </Button>
-          <Button color='primary' onClick={handleClickOutside} outline>
+          <Button color="primary" onClick={handleClickOutside} outline>
             Click Outside
           </Button>
-          <Button color='primary' onClick={handleQuestions} outline>
+          <Button color="primary" onClick={handleQuestions} outline>
             Question
           </Button>
-          <Button color='primary' onClick={handleAjax} outline>
+          <Button color="primary" onClick={handleAjax} outline>
             Ajax
           </Button>
         </div>

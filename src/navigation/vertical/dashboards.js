@@ -11,14 +11,14 @@ export default [
         id: 'reports',
         title: 'Reportes',
         icon: <Circle size={12} />,
-        navLink: Url.dashboardReport
+        navLink: Url.dashboardReport,
       },
       {
         id: 'bandeja',
         title: 'Bandeja',
         icon: <Circle size={12} />,
-        navLink: Url.dashboardInbox
-      }
-    ]
-  }
+        navLink: Url.dashboardInbox,
+      },
+    ],
+  },
 ]

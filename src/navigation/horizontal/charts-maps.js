@@ -14,28 +14,28 @@ export default [
             id: 'apex',
             title: 'Apex',
             icon: <Circle />,
-            navLink: '/charts/apex'
+            navLink: '/charts/apex',
           },
           {
             id: 'chartJs',
             title: 'ChartJS',
             icon: <Circle />,
-            navLink: '/charts/chartjs'
+            navLink: '/charts/chartjs',
           },
           {
             id: 'recharts',
             title: 'Recharts',
             icon: <Circle />,
-            navLink: '/charts/recharts'
-          }
-        ]
+            navLink: '/charts/recharts',
+          },
+        ],
       },
       {
         id: 'leafletMaps',
         title: 'Leaflet Maps',
         icon: <Map />,
-        navLink: '/maps/leaflet'
-      }
-    ]
-  }
+        navLink: '/maps/leaflet',
+      },
+    ],
+  },
 ]

@@ -1,6 +1,6 @@
 export const breadcrumbsDefault = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap'
@@ -31,7 +31,7 @@ export default BreadcrumbsDefault
 
 export const breadcrumbsStyles = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap'
@@ -111,7 +111,7 @@ export default BreadcrumbsStyles
 
 export const breadcrumbsAlignment = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap'

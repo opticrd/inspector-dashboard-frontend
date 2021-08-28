@@ -1,98 +1,101 @@
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { Card, CardHeader, CardBody, CardTitle, Button, CardText } from 'reactstrap'
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardTitle,
+  Button,
+  CardText,
+} from 'reactstrap'
 
 const MySwal = withReactContent(Swal)
 
 const AnimatedSweetAlert = () => {
-  const handleBounceIn = () => {
-    return MySwal.fire({
+  const handleBounceIn = () =>
+    MySwal.fire({
       title: 'Bounce In Animation',
       customClass: {
-        confirmButton: 'btn btn-primary'
+        confirmButton: 'btn btn-primary',
       },
       showClass: {
-        popup: 'animate__animated animate__bounceIn'
+        popup: 'animate__animated animate__bounceIn',
       },
-      buttonsStyling: false
+      buttonsStyling: false,
     })
-  }
 
-  const handleFadeIn = () => {
-    return MySwal.fire({
+  const handleFadeIn = () =>
+    MySwal.fire({
       title: 'Fade In Animation',
       customClass: {
-        confirmButton: 'btn btn-primary'
+        confirmButton: 'btn btn-primary',
       },
       showClass: {
-        popup: 'animate__animated animate__fadeIn'
+        popup: 'animate__animated animate__fadeIn',
       },
-      buttonsStyling: false
+      buttonsStyling: false,
     })
-  }
 
-  const handleFlipIn = () => {
-    return MySwal.fire({
+  const handleFlipIn = () =>
+    MySwal.fire({
       title: 'Flip In Animation',
       customClass: {
-        confirmButton: 'btn btn-primary'
+        confirmButton: 'btn btn-primary',
       },
       showClass: {
-        popup: 'animate__animated animate__flipInX'
+        popup: 'animate__animated animate__flipInX',
       },
-      buttonsStyling: false
+      buttonsStyling: false,
     })
-  }
 
-  const handleTada = () => {
-    return MySwal.fire({
+  const handleTada = () =>
+    MySwal.fire({
       title: 'Tada Animation',
       customClass: {
-        confirmButton: 'btn btn-primary'
+        confirmButton: 'btn btn-primary',
       },
       showClass: {
-        popup: 'animate__animated animate__tada'
+        popup: 'animate__animated animate__tada',
       },
-      buttonsStyling: false
+      buttonsStyling: false,
     })
-  }
 
-  const handleShake = () => {
-    return MySwal.fire({
+  const handleShake = () =>
+    MySwal.fire({
       title: 'Shake Animation',
       customClass: {
-        confirmButton: 'btn btn-primary'
+        confirmButton: 'btn btn-primary',
       },
       showClass: {
-        popup: 'animate__animated animate__shakeX'
+        popup: 'animate__animated animate__shakeX',
       },
-      buttonsStyling: false
+      buttonsStyling: false,
     })
-  }
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Animations</CardTitle>
+        <CardTitle tag="h4">Animations</CardTitle>
       </CardHeader>
       <CardBody>
-        <CardText className='mb-0'>
-          Use <code>popup</code> inside <code>showClass</code> parameter to add animation to your alert.
+        <CardText className="mb-0">
+          Use <code>popup</code> inside <code>showClass</code> parameter to add
+          animation to your alert.
         </CardText>
-        <div className='demo-inline-spacing'>
-          <Button color='primary' onClick={handleBounceIn} outline>
+        <div className="demo-inline-spacing">
+          <Button color="primary" onClick={handleBounceIn} outline>
             Bounce In
           </Button>
-          <Button color='primary' onClick={handleFadeIn} outline>
+          <Button color="primary" onClick={handleFadeIn} outline>
             Fade In
           </Button>
-          <Button color='primary' onClick={handleFlipIn} outline>
+          <Button color="primary" onClick={handleFlipIn} outline>
             Flip In
           </Button>
-          <Button color='primary' onClick={handleTada} outline>
+          <Button color="primary" onClick={handleTada} outline>
             Tada
           </Button>
-          <Button color='primary' onClick={handleShake} outline>
+          <Button color="primary" onClick={handleShake} outline>
             Shake
           </Button>
         </div>

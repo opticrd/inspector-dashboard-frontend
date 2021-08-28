@@ -1,6 +1,6 @@
 // **  Initial State
 const initialState = {
-  userData: {}
+  userData: {},
 }
 
 const authReducer = (state = initialState, action) => {
@@ -9,8 +9,10 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         userData: action.data,
-        [action.config.storageTokenKeyName]: action[action.config.storageTokenKeyName],
-        [action.config.storageRefreshTokenKeyName]: action[action.config.storageRefreshTokenKeyName]
+        [action.config.storageTokenKeyName]:
+          action[action.config.storageTokenKeyName],
+        [action.config.storageRefreshTokenKeyName]:
+          action[action.config.storageRefreshTokenKeyName],
       }
     case 'LOGOUT':
       const obj = { ...action }

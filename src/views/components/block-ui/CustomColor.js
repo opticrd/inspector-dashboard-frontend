@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import UILoader from '@components/ui-loader'
-import { Card, CardHeader, CardTitle, CardText, CardBody, Button } from 'reactstrap'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardText,
+  CardBody,
+  Button,
+} from 'reactstrap'
 
 const CustomColorBlocking = () => {
   const [block, setBlock] = useState(false)
@@ -14,18 +21,19 @@ const CustomColorBlocking = () => {
   }
 
   return (
-    <UILoader blocking={block} overlayColor='rgba(115, 103, 240, .1)'>
+    <UILoader blocking={block} overlayColor="rgba(115, 103, 240, .1)">
       <Card>
         <CardHeader>
-          <CardTitle tag='h4'>Custom Color</CardTitle>
+          <CardTitle tag="h4">Custom Color</CardTitle>
         </CardHeader>
         <CardBody>
           <CardText>
-            Lorem ipsum dolor sit amet, an vel affert soleat possim. Usu meis neglegentur ut, oporteat salutandi
-            dignissim at mea. Pericula erroribus quaerendum ex duo, his autem accusamus ad, alienum detracto rationibus
-            vis et. No est volumus ocurreret vituperata.
+            Lorem ipsum dolor sit amet, an vel affert soleat possim. Usu meis
+            neglegentur ut, oporteat salutandi dignissim at mea. Pericula
+            erroribus quaerendum ex duo, his autem accusamus ad, alienum
+            detracto rationibus vis et. No est volumus ocurreret vituperata.
           </CardText>
-          <Button color='primary' outline onClick={handleBlock}>
+          <Button color="primary" outline onClick={handleBlock}>
             Block
           </Button>
         </CardBody>

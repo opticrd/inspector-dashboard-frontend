@@ -14,20 +14,22 @@ import TableAdvSearch from './TableAdvSearch'
 // ** Styles
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
-const Tables = () => {
-  return (
-    <Fragment>
-      <Breadcrumbs breadCrumbTitle='Datatables' breadCrumbParent='Home' breadCrumbActive='Datatables Advance' />
-      <Row>
-        <Col sm='12'>
-          <TableServerSide />
-        </Col>
-        <Col sm='12'>
-          <TableAdvSearch />
-        </Col>
-      </Row>
-    </Fragment>
-  )
-}
+const Tables = () => (
+  <>
+    <Breadcrumbs
+      breadCrumbTitle="Datatables"
+      breadCrumbParent="Home"
+      breadCrumbActive="Datatables Advance"
+    />
+    <Row>
+      <Col sm="12">
+        <TableServerSide />
+      </Col>
+      <Col sm="12">
+        <TableAdvSearch />
+      </Col>
+    </Row>
+  </>
+)
 
 export default Tables

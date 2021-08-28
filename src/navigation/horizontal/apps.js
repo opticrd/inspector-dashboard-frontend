@@ -1,4 +1,14 @@
-import { Box, Mail, MessageSquare, CheckSquare, Calendar, FileText, Circle, ShoppingCart, User } from 'react-feather'
+import {
+  Box,
+  Mail,
+  MessageSquare,
+  CheckSquare,
+  Calendar,
+  FileText,
+  Circle,
+  ShoppingCart,
+  User,
+} from 'react-feather'
 
 export default [
   {
@@ -10,25 +20,25 @@ export default [
         id: 'email',
         title: 'Email',
         icon: <Mail />,
-        navLink: '/apps/email'
+        navLink: '/apps/email',
       },
       {
         id: 'chat',
         title: 'Chat',
         icon: <MessageSquare />,
-        navLink: '/apps/chat'
+        navLink: '/apps/chat',
       },
       {
         id: 'todo',
         title: 'Todo',
         icon: <CheckSquare />,
-        navLink: '/apps/todo'
+        navLink: '/apps/todo',
       },
       {
         id: 'calendar',
         title: 'Calendar',
         icon: <Calendar />,
-        navLink: '/apps/calendar'
+        navLink: '/apps/calendar',
       },
       {
         id: 'invoiceApp',
@@ -39,27 +49,27 @@ export default [
             id: 'invoiceList',
             title: 'List',
             icon: <Circle />,
-            navLink: '/apps/invoice/list'
+            navLink: '/apps/invoice/list',
           },
           {
             id: 'invoicePreview',
             title: 'Preview',
             icon: <Circle />,
-            navLink: '/apps/invoice/preview'
+            navLink: '/apps/invoice/preview',
           },
           {
             id: 'invoiceEdit',
             title: 'Edit',
             icon: <Circle />,
-            navLink: '/apps/invoice/edit'
+            navLink: '/apps/invoice/edit',
           },
           {
             id: 'invoiceAdd',
             title: 'Add',
             icon: <Circle />,
-            navLink: '/apps/invoice/add'
-          }
-        ]
+            navLink: '/apps/invoice/add',
+          },
+        ],
       },
       {
         id: 'eCommerce',
@@ -70,27 +80,27 @@ export default [
             id: 'shop',
             title: 'Shop',
             icon: <Circle />,
-            navLink: '/apps/ecommerce/shop'
+            navLink: '/apps/ecommerce/shop',
           },
           {
             id: 'detail',
             title: 'Details',
             icon: <Circle />,
-            navLink: '/apps/ecommerce/product-detail'
+            navLink: '/apps/ecommerce/product-detail',
           },
           {
             id: 'wishList',
             title: 'Wish List',
             icon: <Circle />,
-            navLink: '/apps/ecommerce/wishlist'
+            navLink: '/apps/ecommerce/wishlist',
           },
           {
             id: 'checkout',
             title: 'Checkout',
             icon: <Circle />,
-            navLink: '/apps/ecommerce/checkout'
-          }
-        ]
+            navLink: '/apps/ecommerce/checkout',
+          },
+        ],
       },
       {
         id: 'users',
@@ -101,40 +111,40 @@ export default [
             id: 'list',
             title: 'List',
             icon: <Circle />,
-            navLink: '/apps/user/list'
+            navLink: '/apps/user/list',
           },
           {
             id: 'view',
             title: 'View',
             icon: <Circle />,
-            navLink: '/apps/user/view'
+            navLink: '/apps/user/view',
           },
           {
             id: 'edit',
             title: 'Edit',
             icon: <Circle />,
-            navLink: '/apps/user/edit'
+            navLink: '/apps/user/edit',
           },
           {
             id: 'reportero',
             title: 'Reportero',
             icon: <Circle />,
-            navLink: '/apps/user/reportero'
+            navLink: '/apps/user/reportero',
           },
           {
             id: 'instituciones',
             title: 'Instituciones',
             icon: <Circle />,
-            navLink: '/apps/user/instituciones'
+            navLink: '/apps/user/instituciones',
           },
           {
             id: 'oficiales',
             title: 'Oficiales',
             icon: <Circle />,
-            navLink: '/apps/user/oficiales'
-          }
-        ]
-      }
-    ]
-  }
+            navLink: '/apps/user/oficiales',
+          },
+        ],
+      },
+    ],
+  },
 ]

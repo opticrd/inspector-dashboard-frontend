@@ -1,10 +1,10 @@
 // You can customize the template with the help of this file
 
-//Template config options
+// Template config options
 const themeConfig = {
   app: {
     appName: 'Reportero',
-    appLogoImage: require('@src/assets/images/logo/icon.png').default
+    appLogoImage: require('@src/assets/images/logo/icon.png').default,
   },
   layout: {
     isRTL: false,
@@ -14,19 +14,19 @@ const themeConfig = {
     contentWidth: 'full', // full, boxed
     menu: {
       isHidden: false,
-      isCollapsed: false
+      isCollapsed: false,
     },
     navbar: {
       // ? For horizontal menu, navbar type will work for navMenu type
       type: 'floating', // static , sticky , floating, hidden
-      backgroundColor: 'white' // BS color options [primary, success, etc]
+      backgroundColor: 'white', // BS color options [primary, success, etc]
     },
     footer: {
-      type: 'static' // static, sticky, hidden
+      type: 'static', // static, sticky, hidden
     },
     customizer: true,
-    scrollTop: true // Enable scroll to top button
-  }
+    scrollTop: true, // Enable scroll to top button
+  },
 }
 
 export default themeConfig

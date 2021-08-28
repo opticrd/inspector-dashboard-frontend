@@ -5,19 +5,19 @@ const TooltipControlled = () => {
   const [tooltipOpen, setTooltipOpen] = useState(false)
 
   return (
-    <Fragment>
-      <Button.Ripple color='primary' id='ControlledExample'>
+    <>
+      <Button.Ripple color="primary" id="ControlledExample">
         Controlled
       </Button.Ripple>
       <Tooltip
-        placement='top'
+        placement="top"
         isOpen={tooltipOpen}
-        target='ControlledExample'
+        target="ControlledExample"
         toggle={() => setTooltipOpen(!tooltipOpen)}
       >
         Hello World !
       </Tooltip>
-    </Fragment>
+    </>
   )
 }
 export default TooltipControlled

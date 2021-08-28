@@ -6,31 +6,29 @@ import ToastrPositions from './ToastPositions'
 import ToastrAnimations from './ToastrAnimations'
 import ToastrOptions from './ToastifyOptions'
 
-const Toastr = () => {
-  return (
-    <Fragment>
-      <ExtensionsHeader
-        title='React Toastify'
-        subTitle='React Toastify makes notification easy 🚀 !'
-        link='https://github.com/fkhadra/react-toastify'
-      />
+const Toastr = () => (
+  <>
+    <ExtensionsHeader
+      title="React Toastify"
+      subTitle="React Toastify makes notification easy 🚀 !"
+      link="https://github.com/fkhadra/react-toastify"
+    />
 
-      <Row>
-        <Col sm='12'>
-          <ToastrTypes />
-        </Col>
-        <Col sm='12'>
-          <ToastrPositions />
-        </Col>
-        <Col sm='12'>
-          <ToastrAnimations />
-        </Col>
-        <Col sm='12'>
-          <ToastrOptions />
-        </Col>
-      </Row>
-    </Fragment>
-  )
-}
+    <Row>
+      <Col sm="12">
+        <ToastrTypes />
+      </Col>
+      <Col sm="12">
+        <ToastrPositions />
+      </Col>
+      <Col sm="12">
+        <ToastrAnimations />
+      </Col>
+      <Col sm="12">
+        <ToastrOptions />
+      </Col>
+    </Row>
+  </>
+)
 
 export default Toastr

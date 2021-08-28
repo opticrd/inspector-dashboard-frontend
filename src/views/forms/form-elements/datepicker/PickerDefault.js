@@ -5,10 +5,15 @@ import Flatpickr from 'react-flatpickr'
 const PickerDefault = () => {
   const [picker, setPicker] = useState(new Date())
   return (
-    <Fragment>
-      <Label for='default-picker'>Default</Label>
-      <Flatpickr className='form-control' value={picker} onChange={date => setPicker(date)} id='default-picker' />
-    </Fragment>
+    <>
+      <Label for="default-picker">Default</Label>
+      <Flatpickr
+        className="form-control"
+        value={picker}
+        onChange={(date) => setPicker(date)}
+        id="default-picker"
+      />
+    </>
   )
 }
 

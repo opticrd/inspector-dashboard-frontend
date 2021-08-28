@@ -4,13 +4,18 @@ const initialState = {
   cart: [],
   productDetail: {},
   params: {},
-  totalProducts: 0
+  totalProducts: 0,
 }
 
 const ecommerceReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_PRODUCTS':
-      return { ...state, products: action.data.products, params: action.params, totalProducts: action.data.total }
+      return {
+        ...state,
+        products: action.data.products,
+        params: action.params,
+        totalProducts: action.data.total,
+      }
     case 'GET_WISHLIST':
       return { ...state, wishlist: action.data.products }
     case 'DELETE_WISHLIST_ITEM':

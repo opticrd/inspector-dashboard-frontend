@@ -5,7 +5,7 @@ export default [
     id: 'tablesReactstrap',
     title: 'Table',
     icon: <Server size={20} />,
-    navLink: '/tables/reactstrap'
+    navLink: '/tables/reactstrap',
   },
   {
     id: 'dataTable',
@@ -16,14 +16,14 @@ export default [
         id: 'dtBasic',
         title: 'Basic',
         icon: <Circle size={12} />,
-        navLink: '/datatables/basic'
+        navLink: '/datatables/basic',
       },
       {
         id: 'dtAdvance',
         title: 'Advanced',
         icon: <Circle size={12} />,
-        navLink: '/datatables/advance'
-      }
-    ]
-  }
+        navLink: '/datatables/advance',
+      },
+    ],
+  },
 ]

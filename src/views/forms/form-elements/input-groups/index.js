@@ -15,7 +15,7 @@ import {
   inputGroupSizes,
   inputGroupCBRadio,
   inputGroupButtons,
-  inputGroupDropdowns
+  inputGroupDropdowns,
 } from './InputGroupSourceCode'
 
 const InputGroups = () => {
@@ -23,41 +23,45 @@ const InputGroups = () => {
     Prism.highlightAll()
   })
   return (
-    <Fragment>
-      <Breadcrumbs breadCrumbTitle='Input Groups' breadCrumbParent='Form Elements' breadCrumbActive='InputGroups' />
-      <Row className='match-height'>
-        <Col md='6' sm='12'>
-          <Card title='Basic' code={inputGroupBasic}>
+    <>
+      <Breadcrumbs
+        breadCrumbTitle="Input Groups"
+        breadCrumbParent="Form Elements"
+        breadCrumbActive="InputGroups"
+      />
+      <Row className="match-height">
+        <Col md="6" sm="12">
+          <Card title="Basic" code={inputGroupBasic}>
             <InputGroupBasic />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Merged' code={inputGroupMerged}>
+        <Col md="6" sm="12">
+          <Card title="Merged" code={inputGroupMerged}>
             <InputGroupMerged />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Sizing' code={inputGroupSizes}>
+        <Col md="6" sm="12">
+          <Card title="Sizing" code={inputGroupSizes}>
             <InputGroupSizes />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Checkbox & Radio' code={inputGroupCBRadio}>
+        <Col md="6" sm="12">
+          <Card title="Checkbox & Radio" code={inputGroupCBRadio}>
             <InputCbAndRadio />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Input Group with Buttons' code={inputGroupButtons}>
+        <Col sm="12">
+          <Card title="Input Group with Buttons" code={inputGroupButtons}>
             <InputGroupButtons />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Input Group Dropdowns' code={inputGroupDropdowns}>
+        <Col sm="12">
+          <Card title="Input Group Dropdowns" code={inputGroupDropdowns}>
             <InputGroupDropdown />
           </Card>
         </Col>
       </Row>
-    </Fragment>
+    </>
   )
 }
 export default InputGroups

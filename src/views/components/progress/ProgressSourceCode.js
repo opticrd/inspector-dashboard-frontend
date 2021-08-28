@@ -1,6 +1,6 @@
 export const progressBasic = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Progress } from 'reactstrap'
@@ -38,7 +38,7 @@ export default ProgressBasic
 
 export const progressColored = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Progress } from 'reactstrap'
@@ -64,7 +64,7 @@ export default ProgressColored
 
 export const progressMultipleStacked = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Progress } from 'reactstrap'
@@ -92,7 +92,7 @@ export default ProgressMultipleStacked
 
 export const progressLabeled = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Progress } from 'reactstrap'
@@ -130,7 +130,7 @@ export default ProgressLabeled
 
 export const progressStriped = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Progress } from 'reactstrap'
@@ -153,7 +153,7 @@ export default ProgressStriped
 
 export const progressAnimated = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Progress } from 'reactstrap'

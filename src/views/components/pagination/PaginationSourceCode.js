@@ -1,6 +1,6 @@
 export const paginationBasic = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
@@ -40,7 +40,7 @@ export default PaginationBasic
 
 export const paginationSeparated = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
@@ -91,7 +91,7 @@ export default PaginationSeparated
 
 export const paginationIconsAndText = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
@@ -137,7 +137,7 @@ export default PaginationIconsAndText
 
 export const paginationIcons = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
@@ -182,7 +182,7 @@ export default PaginationIcons
 
 export const paginationSuccess = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
@@ -234,7 +234,7 @@ export default PaginationSuccess
 
 export const paginationDanger = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
@@ -286,7 +286,7 @@ export default PaginationDanger
 
 export const paginationInfo = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
@@ -338,7 +338,7 @@ export default PaginationInfo
 
 export const paginationWarning = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
@@ -389,7 +389,7 @@ export default PaginationWarning
 
 export const paginationPositions = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import {
@@ -474,7 +474,7 @@ export default PaginationPositions
 
 export const paginationSizes = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import {

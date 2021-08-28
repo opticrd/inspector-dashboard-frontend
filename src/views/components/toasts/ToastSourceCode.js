@@ -1,6 +1,6 @@
 export const toastTranslucent = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Toast, ToastBody, ToastHeader, Row, Col } from 'reactstrap'
@@ -113,7 +113,7 @@ export default ToastTranslucent
 
 export const toastHeaderIcons = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Toast, ToastBody, ToastHeader, Spinner, Row, Col } from 'reactstrap'

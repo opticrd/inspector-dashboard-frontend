@@ -11,20 +11,20 @@ export default [
         id: 'list',
         title: 'Lista',
         icon: <Circle size={12} />,
-        navLink: Url.user
+        navLink: Url.user,
       },
       {
         id: 'reportero',
         title: 'Reportero',
         icon: <Circle size={12} />,
-        navLink: Url.userReporter
+        navLink: Url.userReporter,
       },
       {
         id: 'oficiales',
         title: 'Oficiales',
         icon: <Circle size={12} />,
-        navLink: Url.userOfficial
-      }
-    ]
-  }
+        navLink: Url.userOfficial,
+      },
+    ],
+  },
 ]

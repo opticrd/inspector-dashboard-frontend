@@ -9,7 +9,7 @@ const Icon1 = new L.Icon({
   popupAnchor: [10, -44],
   iconSize: [55, 55],
   shadowSize: [68, 95],
-  shadowAnchor: [20, 92]
+  shadowAnchor: [20, 92],
 })
 
 const Icon2 = new L.Icon({
@@ -19,7 +19,7 @@ const Icon2 = new L.Icon({
   popupAnchor: [0, -35],
   iconSize: [55, 55],
   shadowSize: [29, 40],
-  shadowAnchor: [7, 40]
+  shadowAnchor: [7, 40],
 })
 
 const MapCustomIcon = () => {
@@ -32,13 +32,13 @@ const MapCustomIcon = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Custom Icons</CardTitle>
+        <CardTitle tag="h4">Custom Icons</CardTitle>
       </CardHeader>
       <CardBody>
-        <MapContainer center={position} zoom={zoom} className='leaflet-map'>
+        <MapContainer center={position} zoom={zoom} className="leaflet-map">
           <TileLayer
             attribution='&ampcopy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={position} icon={Icon1}>
             <Popup>This is a popup</Popup>

@@ -4,7 +4,7 @@ const initialState = {
   params: {},
   currentMail: null,
   emailsMeta: {},
-  selectedMails: []
+  selectedMails: [],
 }
 
 const EmailReducer = (state = initialState, action) => {
@@ -13,28 +13,32 @@ const EmailReducer = (state = initialState, action) => {
       // ** If currentMail is not null / undefined then find and set currentMail
       let currMail = null
       if (state.currentMail !== null && state.currentMail !== undefined) {
-        currMail = action.data.emails.find(i => i.id === state.currentMail.id)
+        currMail = action.data.emails.find((i) => i.id === state.currentMail.id)
       }
       return {
         ...state,
         mails: action.data.emails,
         emailsMeta: action.data.emailsMeta,
         params: action.params,
-        currentMail: currMail
+        currentMail: currMail,
       }
     case 'PAGINATE_MAIL':
       // ** Find current mail & add hasNextMail & hasPreviousMail props to current mail object based on index
-      const data = action.data
-      const dataIndex = state.mails.findIndex(i => i.id === data.id)
-      dataIndex === 0 ? (data.hasPreviousMail = false) : (data.hasPreviousMail = true)
-      dataIndex === state.mails.length - 1 ? (data.hasNextMail = false) : (data.hasNextMail = true)
+      const { data } = action
+      const dataIndex = state.mails.findIndex((i) => i.id === data.id)
+      dataIndex === 0
+        ? (data.hasPreviousMail = false)
+        : (data.hasPreviousMail = true)
+      dataIndex === state.mails.length - 1
+        ? (data.hasNextMail = false)
+        : (data.hasNextMail = true)
       return { ...state, currentMail: data }
     case 'UPDATE_MAILS':
       // ** Find and updated mail
       function updateMailData(email) {
         Object.assign(email, action.dataToUpdate)
       }
-      state.mails.forEach(email => {
+      state.mails.forEach((email) => {
         if (action.emailIds.includes(email.id)) updateMailData(email)
       })
       return { ...state }
@@ -44,7 +48,7 @@ const EmailReducer = (state = initialState, action) => {
       return { ...state, currentMail: action.mail }
     case 'SELECT_MAIL':
       // ** Select mails
-      const selectedMails = state.selectedMails
+      const { selectedMails } = state
       if (!selectedMails.includes(action.id)) {
         selectedMails.push(action.id)
       } else {
@@ -56,7 +60,7 @@ const EmailReducer = (state = initialState, action) => {
       const selectAllMails = []
       if (action.val) {
         selectAllMails.length = 0
-        state.mails.forEach(mail => selectAllMails.push(mail.id))
+        state.mails.forEach((mail) => selectAllMails.push(mail.id))
       } else {
         selectAllMails.length = 0
       }
