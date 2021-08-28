@@ -14,10 +14,11 @@ on:
 
 env:
   # Deployment variables
-  PROJECT_NAME: inspector-dashboard
+  PROJECT_NAME: inspector-portal
   GAR_BASE: us-docker.pkg.dev/${{ secrets.GCP_PROJECT }}
   SKIP_PREFLIGHT_CHECK: true
   DISABLE_ESLINT_PLUGIN: true
+  NODE_ENV: development
 
 jobs:
   test:
@@ -33,8 +34,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
-      - run: npm ci
-      # - run: npm test #TODO: Fix tests
+      - run: yarn install --frozen-lockfile
+      # - run: yarn test # TODO: rewire aliases are not being detected
 
   build:
     needs: ['test']
@@ -71,7 +72,7 @@ jobs:
           target: release
           tags: ${{ env.GAR_BASE }}/${{env.PROJECT_NAME}}/${{ env.GITHUB_REPOSITORY_NAME_PART_SLUG }}:${{ env.GITHUB_HEAD_REF_SLUG || env.GITHUB_REF_SLUG }}
           build-args: |
-            NODE_ENV=dev
+            NODE_ENV=${{ env.NODE_ENV }}
             REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}
             SKIP_PREFLIGHT_CHECK=${{ env.SKIP_PREFLIGHT_CHECK }}
             DISABLE_ESLINT_PLUGIN=${{ env.DISABLE_ESLINT_PLUGIN }}
@@ -98,7 +99,7 @@ jobs:
           credentials: ${{ secrets.GAR_JSON_KEY }}
           region: ${{ secrets.GCP_REGION }}
           env_vars: |
-            NODE_ENV=dev,
+            NODE_ENV=${{ env.NODE_ENV }},
             REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}
 
       - name: Set up Cloud SDK
