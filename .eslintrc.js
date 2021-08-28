@@ -2,6 +2,7 @@ module.exports = {
   extends: '@imaginary-cloud/react',
   parser: 'babel-eslint',
 
+  ignorePatterns: ["**/@core/**"],
   env: {
     node: true,
     es6: true,
