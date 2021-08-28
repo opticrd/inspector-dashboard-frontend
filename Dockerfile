@@ -35,7 +35,7 @@ RUN yarn build
 #####################################
 FROM nginx:stable-alpine as release
 
-ENV PORT 3000
+ENV PORT 8080
 ENV HOST 0.0.0.0
 
 EXPOSE ${PORT}
