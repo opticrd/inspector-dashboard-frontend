@@ -5,10 +5,15 @@ const NumeralFormattingMask = () => {
   const options = { numeral: true, numeralThousandsGroupStyle: 'thousand' }
 
   return (
-    <Fragment>
-      <label htmlFor='numeral-formatting'>Numeral Formatting</label>
-      <Cleave className='form-control' placeholder='10,000' options={options} id='numeral-formatting' />
-    </Fragment>
+    <>
+      <label htmlFor="numeral-formatting">Numeral Formatting</label>
+      <Cleave
+        className="form-control"
+        placeholder="10,000"
+        options={options}
+        id="numeral-formatting"
+      />
+    </>
   )
 }
 

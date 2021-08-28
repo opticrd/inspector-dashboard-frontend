@@ -17,7 +17,7 @@ import {
   pillsFilled,
   pillsJustified,
   pillsVertical,
-  pillThemes
+  pillThemes,
 } from './TabPillsSourceCode'
 
 const PillTabs = () => {
@@ -25,46 +25,50 @@ const PillTabs = () => {
     Prism.highlightAll()
   }, [])
   return (
-    <Fragment>
-      <BreadCrumbs breadCrumbTitle='Pills' breadCrumbParent='Components' breadCrumbActive='Pills' />
-      <Row className='match-height'>
-        <Col xl='6' lg='12'>
-          <Card title='Basic' code={pillBasic}>
+    <>
+      <BreadCrumbs
+        breadCrumbTitle="Pills"
+        breadCrumbParent="Components"
+        breadCrumbActive="Pills"
+      />
+      <Row className="match-height">
+        <Col xl="6" lg="12">
+          <Card title="Basic" code={pillBasic}>
             <PillsBasic />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Vertical Stacked' code={pillsVertical}>
+        <Col xl="6" lg="12">
+          <Card title="Vertical Stacked" code={pillsVertical}>
             <PillsVertical />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Filled' code={pillsFilled}>
+        <Col xl="6" lg="12">
+          <Card title="Filled" code={pillsFilled}>
             <PillsFilled />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Justified' code={pillsJustified}>
+        <Col xl="6" lg="12">
+          <Card title="Justified" code={pillsJustified}>
             <PillsJustified />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Centered' code={pillsCentered}>
+        <Col xl="6" lg="12">
+          <Card title="Centered" code={pillsCentered}>
             <PillsCentered />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='End' code={pillsEnd}>
+        <Col xl="6" lg="12">
+          <Card title="End" code={pillsEnd}>
             <PillsEnd />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Themes' code={pillThemes}>
+        <Col sm="12">
+          <Card title="Themes" code={pillThemes}>
             <PillThemes />
           </Card>
         </Col>
       </Row>
-    </Fragment>
+    </>
   )
 }
 export default PillTabs

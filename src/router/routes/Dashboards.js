@@ -5,8 +5,8 @@ const DashboardRoutes = [
   {
     path: Url.dashboardReport,
     component: lazy(() => import('../../views/dashboard/analytics')),
-    exact: true
-  }
+    exact: true,
+  },
 ]
 
 export default DashboardRoutes

@@ -6,44 +6,46 @@ const ProfitLineChart = ({ info }) => {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    axios.get('/card/card-statistics/profit-line-chart').then(res => setData(res.data))
+    axios
+      .get('/card/card-statistics/profit-line-chart')
+      .then((res) => setData(res.data))
   }, [])
 
   const options = {
     chart: {
       toolbar: {
-        show: false
+        show: false,
       },
       zoom: {
-        enabled: false
-      }
+        enabled: false,
+      },
     },
     grid: {
       borderColor: '#EBEBEB',
       strokeDashArray: 5,
       xaxis: {
         lines: {
-          show: true
-        }
+          show: true,
+        },
       },
       yaxis: {
         lines: {
-          show: false
-        }
+          show: false,
+        },
       },
       padding: {
         top: -30,
-        bottom: -10
-      }
+        bottom: -10,
+      },
     },
     stroke: {
-      width: 3
+      width: 3,
     },
     colors: [info],
     series: [
       {
-        data: [0, 20, 5, 30, 15, 45]
-      }
+        data: [0, 20, 5, 30, 15, 45],
+      },
     ],
     markers: {
       size: 2,
@@ -59,45 +61,45 @@ const ProfitLineChart = ({ info }) => {
           dataPointIndex: 5,
           fillColor: '#ffffff',
           strokeColor: info,
-          size: 5
-        }
+          size: 5,
+        },
       ],
       shape: 'circle',
       radius: 2,
       hover: {
-        size: 3
-      }
+        size: 3,
+      },
     },
     xaxis: {
       labels: {
         show: true,
         style: {
-          fontSize: '0px'
-        }
+          fontSize: '0px',
+        },
       },
       axisBorder: {
-        show: false
+        show: false,
       },
       axisTicks: {
-        show: false
-      }
+        show: false,
+      },
     },
     yaxis: {
-      show: false
+      show: false,
     },
     tooltip: {
       x: {
-        show: false
-      }
-    }
+        show: false,
+      },
+    },
   }
 
   return data !== null ? (
     <TinyChartStats
       height={70}
-      type='line'
+      type="line"
       options={options}
-      title='Casos por Mes'
+      title="Casos por Mes"
       stats={data.statistics}
       series={data.series}
     />

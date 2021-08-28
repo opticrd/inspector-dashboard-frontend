@@ -1,20 +1,17 @@
 import { columns } from './columns'
 
-import DataTableList from '../../../../@core/components/table' 
+import DataTableList from '../../../../@core/components/table'
 
 import '@styles/react/libs/react-select/_react-select.scss'
 import '@styles/react/libs/tables/react-dataTable-component.scss'
 
-const Reportero = () => {
-
-  return (
-    <DataTableList 
-        columnsTable={columns}
-        dataTable={null}
-        dataTableTitle='Reportero'
-        showButtonAdd={true}
-    />
-  )
-}
+const Reportero = () => (
+  <DataTableList
+    columnsTable={columns}
+    dataTable={null}
+    dataTableTitle="Reportero"
+    showButtonAdd
+  />
+)
 
 export default Reportero

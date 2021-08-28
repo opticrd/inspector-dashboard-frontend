@@ -9,6 +9,8 @@ import { Row, Col } from 'reactstrap'
 import { Chart } from 'react-chartjs-2'
 
 // ** Charts
+import { useSkin } from '@hooks/useSkin'
+import { ThemeColors } from '@src/utility/context/ThemeColors'
 import BarChart from './ChartjsBarChart'
 import LineChart from './ChartjsLineChart'
 import AreaChart from './ChartjsAreaChart'
@@ -20,33 +22,31 @@ import PolarAreaChart from './ChartjsPolarAreaChart'
 import HorizontalBarChart from './ChartjsHorizontalBar'
 
 // ** Custom Hooks
-import { useSkin } from '@hooks/useSkin'
 
 // ** Context
-import { ThemeColors } from '@src/utility/context/ThemeColors'
 
 // ** Styles
 import '@styles/react/libs/flatpickr/flatpickr.scss'
 
 const ChartJS = () => {
   // ** Context, Hooks & Vars
-  const { colors } = useContext(ThemeColors),
-    [skin, setSkin] = useSkin(),
-    labelColor = skin === 'dark' ? '#b4b7bd' : '#6e6b7b',
-    tooltipShadow = 'rgba(0, 0, 0, 0.25)',
-    gridLineColor = 'rgba(200, 200, 200, 0.2)',
-    lineChartPrimary = '#666ee8',
-    lineChartDanger = '#ff4961',
-    warningColorShade = '#ffe802',
-    warningLightColor = '#FDAC34',
-    successColorShade = '#28dac6',
-    primaryColorShade = '#836AF9',
-    infoColorShade = '#299AFF',
-    yellowColor = '#ffe800',
-    greyColor = '#4F5D70',
-    blueColor = '#2c9aff',
-    blueLightColor = '#84D0FF',
-    greyLightColor = '#EDF1F4'
+  const { colors } = useContext(ThemeColors)
+  const [skin, setSkin] = useSkin()
+  const labelColor = skin === 'dark' ? '#b4b7bd' : '#6e6b7b'
+  const tooltipShadow = 'rgba(0, 0, 0, 0.25)'
+  const gridLineColor = 'rgba(200, 200, 200, 0.2)'
+  const lineChartPrimary = '#666ee8'
+  const lineChartDanger = '#ff4961'
+  const warningColorShade = '#ffe802'
+  const warningLightColor = '#FDAC34'
+  const successColorShade = '#28dac6'
+  const primaryColorShade = '#836AF9'
+  const infoColorShade = '#299AFF'
+  const yellowColor = '#ffe800'
+  const greyColor = '#4F5D70'
+  const blueColor = '#2c9aff'
+  const blueLightColor = '#84D0FF'
+  const greyLightColor = '#EDF1F4'
 
   // ** To Set Border Radius On Mount
   useEffect(() => {

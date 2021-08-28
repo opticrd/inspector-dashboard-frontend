@@ -3,7 +3,7 @@ const initialState = {
   data: [],
   total: 1,
   params: {},
-  allData: []
+  allData: [],
 }
 
 const DataTablesReducer = (state = initialState, action) => {
@@ -14,7 +14,7 @@ const DataTablesReducer = (state = initialState, action) => {
         allData: action.allData,
         data: action.data,
         total: action.totalPages,
-        params: action.params
+        params: action.params,
       }
     default:
       return state

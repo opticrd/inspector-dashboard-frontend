@@ -6,8 +6,8 @@ const initialState = {
     filter: '',
     q: '',
     sort: '',
-    tag: ''
-  }
+    tag: '',
+  },
 }
 
 const TodoReducer = (state = initialState, action) => {

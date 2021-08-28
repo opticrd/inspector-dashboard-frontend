@@ -1,4 +1,4 @@
-//** React Imports
+//* * React Imports
 import { useState } from 'react'
 
 // ** Configs
@@ -17,7 +17,7 @@ export const useNavbarType = () => {
   })
 
   // ** Return a wrapped version of useState's setter function
-  const setValue = value => {
+  const setValue = (value) => {
     try {
       // ** Allow value to be a function so we have same API as useState
       const valueToStore = value instanceof Function ? value(navbarType) : value

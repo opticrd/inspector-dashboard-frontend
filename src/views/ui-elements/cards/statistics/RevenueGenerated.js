@@ -10,22 +10,22 @@ const RevenueGenerated = ({ kFormatter, success }) => {
     chart: {
       id: 'revenue',
       toolbar: {
-        show: false
+        show: false,
       },
       sparkline: {
-        enabled: true
-      }
+        enabled: true,
+      },
     },
     grid: {
-      show: false
+      show: false,
     },
     colors: [success],
     dataLabels: {
-      enabled: false
+      enabled: false,
     },
     stroke: {
       curve: 'smooth',
-      width: 2.5
+      width: 2.5,
     },
     fill: {
       type: 'gradient',
@@ -33,41 +33,41 @@ const RevenueGenerated = ({ kFormatter, success }) => {
         shadeIntensity: 0.9,
         opacityFrom: 0.7,
         opacityTo: 0.5,
-        stops: [0, 80, 100]
-      }
+        stops: [0, 80, 100],
+      },
     },
 
     xaxis: {
       labels: {
-        show: false
+        show: false,
       },
       axisBorder: {
-        show: false
-      }
+        show: false,
+      },
     },
     yaxis: {
       labels: {
-        show: false
-      }
+        show: false,
+      },
     },
     tooltip: {
-      x: { show: false }
-    }
+      x: { show: false },
+    },
   }
 
   useEffect(() => {
-    axios.get('/card/card-statistics/revenue').then(res => setData(res.data))
+    axios.get('/card/card-statistics/revenue').then((res) => setData(res.data))
   }, [])
 
   return data !== null ? (
     <StatsWithAreaChart
       icon={<CreditCard size={21} />}
-      color='success'
+      color="success"
       stats={kFormatter(data.analyticsData.revenue)}
-      statTitle='Revenue Generated'
+      statTitle="Revenue Generated"
       options={options}
       series={data.series}
-      type='area'
+      type="area"
     />
   ) : null
 }

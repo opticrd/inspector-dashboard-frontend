@@ -769,30 +769,34 @@ mock.onGet('/apps/email/emails').reply(config => {
   // Email Meta
   // ------------------------------------------------
   const emailsMeta = {
-    inbox: data.emails.filter(email => !email.isDeleted && !email.isRead && email.folder === 'inbox').length,
-    draft: data.emails.filter(email => email.folder === 'draft').length,
-    spam: data.emails.filter(email => !email.isDeleted && !email.isRead && email.folder === 'spam').length
+    inbox: data.emails.filter(
+      (email) => !email.isDeleted && !email.isRead && email.folder === 'inbox',
+    ).length,
+    draft: data.emails.filter((email) => email.folder === 'draft').length,
+    spam: data.emails.filter(
+      (email) => !email.isDeleted && !email.isRead && email.folder === 'spam',
+    ).length,
   }
 
   return [
     200,
     {
       emails: filteredData.reverse(),
-      emailsMeta
-    }
+      emailsMeta,
+    },
   ]
 })
 
 // ------------------------------------------------
 // POST: Update Email
 // ------------------------------------------------
-mock.onPost('/apps/email/update-emails').reply(config => {
+mock.onPost('/apps/email/update-emails').reply((config) => {
   const { emailIds, dataToUpdate } = JSON.parse(config.data)
   function updateMailData(email) {
     Object.assign(email, dataToUpdate)
   }
 
-  data.emails.forEach(email => {
+  data.emails.forEach((email) => {
     if (emailIds.includes(email.id)) updateMailData(email)
   })
 
@@ -802,7 +806,7 @@ mock.onPost('/apps/email/update-emails').reply(config => {
 // ------------------------------------------------
 // POST: Update Emails Label
 // ------------------------------------------------
-mock.onPost('/apps/email/update-emails-label').reply(config => {
+mock.onPost('/apps/email/update-emails-label').reply((config) => {
   const { emailIds, label } = JSON.parse(config.data)
 
   function updateMailLabels(email) {
@@ -812,7 +816,7 @@ mock.onPost('/apps/email/update-emails-label').reply(config => {
     else email.labels.splice(labelIndex, 1)
   }
 
-  data.emails.forEach(email => {
+  data.emails.forEach((email) => {
     if (emailIds.includes(email.id)) updateMailLabels(email)
   })
 
@@ -822,15 +826,19 @@ mock.onPost('/apps/email/update-emails-label').reply(config => {
 // ------------------------------------------------
 // GET: GET Single Email
 // ------------------------------------------------
-mock.onGet('/apps/email/get-email').reply(config => {
+mock.onGet('/apps/email/get-email').reply((config) => {
   const { id } = config
 
   const emailId = Number(id)
 
-  const mail = data.emails.find(i => i.id === emailId)
-  const mailIndex = data.emails.findIndex(i => i.id === mail.id)
-  mailIndex === 0 ? (mail.hasPreviousMail = true) : (mail.hasPreviousMail = false)
-  mailIndex === data.emails.length - 1 ? (mail.hasNextMail = true) : (mail.hasNextMail = false)
+  const mail = data.emails.find((i) => i.id === emailId)
+  const mailIndex = data.emails.findIndex((i) => i.id === mail.id)
+  mailIndex === 0
+    ? (mail.hasPreviousMail = true)
+    : (mail.hasPreviousMail = false)
+  mailIndex === data.emails.length - 1
+    ? (mail.hasNextMail = true)
+    : (mail.hasNextMail = false)
 
   return mail ? [200, mail] : [404]
 })
@@ -838,12 +846,13 @@ mock.onGet('/apps/email/get-email').reply(config => {
 // ------------------------------------------------
 // GET: Paginate Existing Email
 // ------------------------------------------------
-mock.onGet('/apps/email/paginate-email').reply(config => {
+mock.onGet('/apps/email/paginate-email').reply((config) => {
   const { dir, emailId } = config.params
 
-  const currentEmailIndex = data.emails.findIndex(e => e.id === emailId)
+  const currentEmailIndex = data.emails.findIndex((e) => e.id === emailId)
 
-  const newEmailIndex = dir === 'previous' ? currentEmailIndex - 1 : currentEmailIndex + 1
+  const newEmailIndex =
+    dir === 'previous' ? currentEmailIndex - 1 : currentEmailIndex + 1
 
   const newEmail = data.emails[newEmailIndex]
 

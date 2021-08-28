@@ -1,6 +1,6 @@
 export const pillBasic = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import classnames from 'classnames'
@@ -143,7 +143,7 @@ export default PillBasic
 
 export const pillsFilled = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
@@ -228,7 +228,7 @@ export default PillFilled
 
 export const pillsJustified = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
@@ -313,7 +313,7 @@ export default PillsJustified
 
 export const pillsCentered = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
@@ -398,7 +398,7 @@ export default PillCentered
 
 export const pillsEnd = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
@@ -483,7 +483,7 @@ export default PillEnd
 
 export const pillsVertical = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
@@ -572,7 +572,7 @@ export default PillsVertical
 
 export const pillThemes = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'

@@ -15,65 +15,65 @@ export default [
             title: 'Login v1',
             permissions: ['admin', 'editor'],
             navLink: '/pages/login-v1',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'login-v2',
             title: 'Login v2',
             permissions: ['admin', 'editor'],
             navLink: '/pages/login-v2',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'register-v1',
             title: 'Register v1',
             permissions: ['admin', 'editor'],
             navLink: '/pages/register-v1',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'register-v2',
             title: 'Register v2',
             permissions: ['admin', 'editor'],
             navLink: '/pages/register-v2',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'forgotPassword-v1',
             title: 'Forgot Password v1',
             permissions: ['admin', 'editor'],
             navLink: '/pages/forgot-password-v1',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'forgotPassword-v2',
             title: 'Forgot Password v2',
             permissions: ['admin', 'editor'],
             navLink: '/pages/forgot-password-v2',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'resetPassword-v1',
             title: 'Reset Password v1',
             permissions: ['admin', 'editor'],
             navLink: '/pages/reset-password-v1',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'resetPassword-v2',
             title: 'Reset Password v2',
             permissions: ['admin', 'editor'],
             navLink: '/pages/reset-password-v2',
-            newTab: true
-          }
-        ]
+            newTab: true,
+          },
+        ],
       },
       {
         id: 'accountSettings',
         title: 'Account Settings',
         icon: <Circle size={12} />,
         permissions: ['admin', 'editor'],
-        navLink: '/pages/account-settings'
+        navLink: '/pages/account-settings',
       },
       {
         id: 'profile',
@@ -81,14 +81,14 @@ export default [
         icon: <Circle size={12} />,
         permissions: ['admin', 'editor'],
         navLink: '/pages/profile',
-        collapsed: true
+        collapsed: true,
       },
       {
         id: 'faq',
         title: 'FAQ',
         icon: <Circle size={12} />,
         permissions: ['admin', 'editor'],
-        navLink: '/pages/faq'
+        navLink: '/pages/faq',
       },
       {
         id: 'knowledgeBase',
@@ -96,14 +96,17 @@ export default [
         icon: <Circle size={12} />,
         permissions: ['admin', 'editor'],
         navLink: '/pages/knowledge-base',
-        parentOf: ['/pages/knowledge-base/category/questions', '/pages/knowledge-base/category']
+        parentOf: [
+          '/pages/knowledge-base/category/questions',
+          '/pages/knowledge-base/category',
+        ],
       },
       {
         id: 'pricing',
         title: 'Pricing',
         icon: <Circle size={12} />,
         permissions: ['admin', 'editor'],
-        navLink: '/pages/pricing'
+        navLink: '/pages/pricing',
       },
       {
         id: 'blog',
@@ -114,21 +117,21 @@ export default [
             id: 'blogList',
             title: 'List',
             permissions: ['admin', 'editor'],
-            navLink: '/pages/blog/list'
+            navLink: '/pages/blog/list',
           },
           {
             id: 'blogDetail',
             title: 'Detail',
             permissions: ['admin', 'editor'],
-            navLink: '/pages/blog/detail'
+            navLink: '/pages/blog/detail',
           },
           {
             id: 'blogEdit',
             title: 'Edit',
             permissions: ['admin', 'editor'],
-            navLink: '/pages/blog/edit'
-          }
-        ]
+            navLink: '/pages/blog/edit',
+          },
+        ],
       },
       {
         id: 'mailTemplate',
@@ -139,45 +142,51 @@ export default [
             id: 'welcomeTemp',
             title: 'Welcome',
             permissions: ['admin', 'editor'],
-            navLink: 'https://pixinvent.com/demo/vuexy-mail-template/mail-welcome.html',
-            externalLink: true
+            navLink:
+              'https://pixinvent.com/demo/vuexy-mail-template/mail-welcome.html',
+            externalLink: true,
           },
           {
             id: 'resetPassTemp',
             title: 'Reset Password',
             permissions: ['admin', 'editor'],
-            navLink: 'https://pixinvent.com/demo/vuexy-mail-template/mail-reset-password.html',
-            externalLink: true
+            navLink:
+              'https://pixinvent.com/demo/vuexy-mail-template/mail-reset-password.html',
+            externalLink: true,
           },
           {
             id: 'verifyEmailTemp',
             title: 'Verify Email',
             permissions: ['admin', 'editor'],
-            navLink: 'https://pixinvent.com/demo/vuexy-mail-template/mail-verify-email.html',
-            externalLink: true
+            navLink:
+              'https://pixinvent.com/demo/vuexy-mail-template/mail-verify-email.html',
+            externalLink: true,
           },
           {
             id: 'deactivateAccountTemp',
             title: 'Deactivate Account',
             permissions: ['admin', 'editor'],
-            navLink: 'https://pixinvent.com/demo/vuexy-mail-template/mail-deactivate-account.html',
-            externalLink: true
+            navLink:
+              'https://pixinvent.com/demo/vuexy-mail-template/mail-deactivate-account.html',
+            externalLink: true,
           },
           {
             id: 'invoiceMailTemp',
             title: 'Invoice',
             permissions: ['admin', 'editor'],
-            navLink: 'https://pixinvent.com/demo/vuexy-mail-template/mail-invoice.html',
-            externalLink: true
+            navLink:
+              'https://pixinvent.com/demo/vuexy-mail-template/mail-invoice.html',
+            externalLink: true,
           },
           {
             id: 'promotionalMailTemp',
             title: 'Promotional',
             permissions: ['admin', 'editor'],
-            navLink: 'https://pixinvent.com/demo/vuexy-mail-template/mail-promotional.html',
-            externalLink: true
-          }
-        ]
+            navLink:
+              'https://pixinvent.com/demo/vuexy-mail-template/mail-promotional.html',
+            externalLink: true,
+          },
+        ],
       },
       {
         id: 'miscellaneous',
@@ -189,7 +198,7 @@ export default [
             title: 'Coming Soon',
             permissions: ['admin', 'editor'],
             navLink: '/misc/coming-soon',
-            newTab: true
+            newTab: true,
           },
 
           {
@@ -197,24 +206,24 @@ export default [
             title: 'Not Authorized',
             permissions: ['admin', 'editor'],
             navLink: '/misc/not-authorized',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'maintenance',
             title: 'Maintenance',
             permissions: ['admin', 'editor'],
             navLink: '/misc/maintenance',
-            newTab: true
+            newTab: true,
           },
           {
             id: 'error',
             title: 'Error',
             permissions: ['admin', 'editor'],
             navLink: '/misc/error',
-            newTab: true
-          }
-        ]
-      }
-    ]
-  }
+            newTab: true,
+          },
+        ],
+      },
+    ],
+  },
 ]

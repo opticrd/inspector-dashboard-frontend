@@ -8,49 +8,52 @@ const ThemeContext = ({ children }) => {
   // ** State
   const [colors, setColors] = useState({})
 
-  //** ComponentDidMount
+  //* * ComponentDidMount
   useEffect(() => {
     if (window !== 'undefined') {
-      //** Get variable value
-      const getHex = color => window.getComputedStyle(document.body).getPropertyValue(color).trim()
+      //* * Get variable value
+      const getHex = (color) =>
+        window.getComputedStyle(document.body).getPropertyValue(color).trim()
 
-      //** Colors obj
+      //* * Colors obj
       const obj = {
         primary: {
           light: '#0443861a',
-          main: '#044386'
+          main: '#044386',
         },
         secondary: {
           light: getHex('--secondary').concat('1a'),
-          main: getHex('--secondary')
+          main: getHex('--secondary'),
         },
         success: {
           light: getHex('--success').concat('1a'),
-          main: getHex('--success')
+          main: getHex('--success'),
         },
         danger: {
           light: getHex('--danger').concat('1a'),
-          main: getHex('--danger')
+          main: getHex('--danger'),
         },
         warning: {
           light: getHex('--warning').concat('1a'),
-          main: getHex('--warning')
+          main: getHex('--warning'),
         },
         info: {
           light: getHex('--info').concat('1a'),
-          main: getHex('--info')
+          main: getHex('--info'),
         },
         dark: {
           light: getHex('--dark').concat('1a'),
-          main: getHex('--dark')
-        }
+          main: getHex('--dark'),
+        },
       }
 
       setColors({ ...obj })
     }
   }, [])
 
-  return <ThemeColors.Provider value={{ colors }}>{children}</ThemeColors.Provider>
+  return (
+    <ThemeColors.Provider value={{ colors }}>{children}</ThemeColors.Provider>
+  )
 }
 
 export { ThemeColors, ThemeContext }

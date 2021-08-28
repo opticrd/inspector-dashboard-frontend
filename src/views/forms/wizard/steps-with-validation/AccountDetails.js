@@ -15,11 +15,11 @@ const AccountDetails = ({ stepper, type }) => {
     'confirm-password-val': yup
       .string()
       .required()
-      .oneOf([yup.ref(`password-val-${type}`), null], 'Passwords must match')
+      .oneOf([yup.ref(`password-val-${type}`), null], 'Passwords must match'),
   })
 
   const { register, errors, handleSubmit, trigger } = useForm({
-    resolver: yupResolver(SignupSchema)
+    resolver: yupResolver(SignupSchema),
   })
 
   const onSubmit = () => {
@@ -30,77 +30,96 @@ const AccountDetails = ({ stepper, type }) => {
   }
 
   return (
-    <Fragment>
-      <div className='content-header'>
-        <h5 className='mb-0'>Account Details</h5>
-        <small className='text-muted'>Enter Your Account Details.</small>
+    <>
+      <div className="content-header">
+        <h5 className="mb-0">Account Details</h5>
+        <small className="text-muted">Enter Your Account Details.</small>
       </div>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Row>
-          <FormGroup tag={Col} md='6'>
-            <Label className='form-label' for={`username-${type}`}>
+          <FormGroup tag={Col} md="6">
+            <Label className="form-label" for={`username-${type}`}>
               Username
             </Label>
             <Input
               name={`username-${type}`}
               id={`username-${type}`}
-              placeholder='johndoe'
+              placeholder="johndoe"
               innerRef={register({ required: true })}
-              className={classnames({ 'is-invalid': errors[`username-${type}`] })}
+              className={classnames({
+                'is-invalid': errors[`username-${type}`],
+              })}
             />
           </FormGroup>
-          <FormGroup tag={Col} md='6'>
-            <Label className='form-label' for={`email-${type}`}>
+          <FormGroup tag={Col} md="6">
+            <Label className="form-label" for={`email-${type}`}>
               Email
             </Label>
             <Input
-              type='email'
+              type="email"
               name={`email-${type}`}
               id={`email-${type}`}
-              placeholder='john.doe@email.com'
+              placeholder="john.doe@email.com"
               innerRef={register({ required: true })}
               className={classnames({ 'is-invalid': errors[`email-${type}`] })}
             />
           </FormGroup>
         </Row>
         <Row>
-          <div className='form-group form-password-toggle col-md-6'>
-            <Label className='form-label' for={`password-val-${type}`}>
+          <div className="form-group form-password-toggle col-md-6">
+            <Label className="form-label" for={`password-val-${type}`}>
               Password
             </Label>
             <Input
-              type='password'
+              type="password"
               name={`password-val-${type}`}
               id={`password-val-${type}`}
               innerRef={register({ required: true })}
-              className={classnames({ 'is-invalid': errors[`password-val-${type}`] })}
+              className={classnames({
+                'is-invalid': errors[`password-val-${type}`],
+              })}
             />
           </div>
-          <div className='form-group form-password-toggle col-md-6'>
-            <Label className='form-label' for='confirm-password-val'>
+          <div className="form-group form-password-toggle col-md-6">
+            <Label className="form-label" for="confirm-password-val">
               Confirm Password
             </Label>
             <Input
-              type='password'
-              name='confirm-password-val'
-              id='confirm-password-val'
+              type="password"
+              name="confirm-password-val"
+              id="confirm-password-val"
               innerRef={register({ required: true })}
-              className={classnames({ 'is-invalid': errors['confirm-password-val'] })}
+              className={classnames({
+                'is-invalid': errors['confirm-password-val'],
+              })}
             />
           </div>
         </Row>
-        <div className='d-flex justify-content-between'>
-          <Button.Ripple color='secondary' className='btn-prev' outline disabled>
-            <ArrowLeft size={14} className='align-middle mr-sm-25 mr-0'></ArrowLeft>
-            <span className='align-middle d-sm-inline-block d-none'>Previous</span>
+        <div className="d-flex justify-content-between">
+          <Button.Ripple
+            color="secondary"
+            className="btn-prev"
+            outline
+            disabled
+          >
+            <ArrowLeft
+              size={14}
+              className="align-middle mr-sm-25 mr-0"
+            ></ArrowLeft>
+            <span className="align-middle d-sm-inline-block d-none">
+              Previous
+            </span>
           </Button.Ripple>
-          <Button.Ripple type='submit' color='primary' className='btn-next'>
-            <span className='align-middle d-sm-inline-block d-none'>Next</span>
-            <ArrowRight size={14} className='align-middle ml-sm-25 ml-0'></ArrowRight>
+          <Button.Ripple type="submit" color="primary" className="btn-next">
+            <span className="align-middle d-sm-inline-block d-none">Next</span>
+            <ArrowRight
+              size={14}
+              className="align-middle ml-sm-25 ml-0"
+            ></ArrowRight>
           </Button.Ripple>
         </div>
       </Form>
-    </Fragment>
+    </>
   )
 }
 

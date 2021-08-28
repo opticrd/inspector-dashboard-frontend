@@ -15,7 +15,7 @@ import {
   ajaxExample,
   customRenderExample,
   defaultSuggestionsExample,
-  searchLimitExample
+  searchLimitExample,
 } from './AutoCompleteSourceCode'
 
 const AutoComplete = () => {
@@ -23,45 +23,45 @@ const AutoComplete = () => {
     Prism.highlightAll()
   }, [])
   return (
-    <Fragment>
+    <>
       <BreadCrumbs
-        breadCrumbTitle='Auto Complete'
-        breadCrumbParent='Extra Components'
-        breadCrumbActive='Auto Complete'
+        breadCrumbTitle="Auto Complete"
+        breadCrumbParent="Extra Components"
+        breadCrumbActive="Auto Complete"
       />
       <Row>
-        <Col xl='6' lg='12'>
-          <Card title='Basic' code={basicExample}>
+        <Col xl="6" lg="12">
+          <Card title="Basic" code={basicExample}>
             <AutoCompleteBasic />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Sections' code={sectionExample}>
+        <Col xl="6" lg="12">
+          <Card title="Sections" code={sectionExample}>
             <AutoCompleteSections />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Ajax' code={ajaxExample}>
+        <Col xl="6" lg="12">
+          <Card title="Ajax" code={ajaxExample}>
             <AutoCompleteAjax />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Custom Render' code={customRenderExample}>
+        <Col xl="6" lg="12">
+          <Card title="Custom Render" code={customRenderExample}>
             <AutoCompleteRender />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Default Suggestions' code={defaultSuggestionsExample}>
+        <Col xl="6" lg="12">
+          <Card title="Default Suggestions" code={defaultSuggestionsExample}>
             <AutoCompleteSuggestions />
           </Card>
         </Col>
-        <Col xl='6' lg='12'>
-          <Card title='Search Limit' code={searchLimitExample}>
+        <Col xl="6" lg="12">
+          <Card title="Search Limit" code={searchLimitExample}>
             <AutoCompleteSearchLimit />
           </Card>
         </Col>
       </Row>
-    </Fragment>
+    </>
   )
 }
 export default AutoComplete

@@ -8,25 +8,25 @@ const TextareaCounter = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Counter</CardTitle>
+        <CardTitle tag="h4">Counter</CardTitle>
       </CardHeader>
 
       <CardBody>
-        <div className='form-label-group mb-0'>
+        <div className="form-label-group mb-0">
           <Input
-            type='textarea'
-            name='text'
-            id='exampleText'
-            rows='3'
+            type="textarea"
+            name="text"
+            id="exampleText"
+            rows="3"
             value={value}
-            placeholder='Counter'
-            onChange={e => setValue(e.target.value)}
+            placeholder="Counter"
+            onChange={(e) => setValue(e.target.value)}
           />
           <Label>Counter</Label>
         </div>
         <span
           className={classnames('textarea-counter-value float-right', {
-            'bg-danger': value.length > 20
+            'bg-danger': value.length > 20,
           })}
         >
           {`${value.length}/20`}

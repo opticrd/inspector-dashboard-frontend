@@ -9,7 +9,7 @@ import {
   UncontrolledDropdown,
   DropdownMenu,
   DropdownItem,
-  DropdownToggle
+  DropdownToggle,
 } from 'reactstrap'
 
 const CardBrowserState = ({ colors, trackBgColor }) => {
@@ -30,34 +30,34 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
               left: -15,
               right: -15,
               top: -12,
-              bottom: -15
-            }
+              bottom: -15,
+            },
           },
           colors: [colors.primary.main],
           plotOptions: {
             radialBar: {
               hollow: {
-                size: '22%'
+                size: '22%',
               },
               track: {
-                background: trackBgColor
+                background: trackBgColor,
               },
               dataLabels: {
                 showOn: 'always',
                 name: {
-                  show: false
+                  show: false,
                 },
                 value: {
-                  show: false
-                }
-              }
-            }
+                  show: false,
+                },
+              },
+            },
           },
           stroke: {
-            lineCap: 'round'
-          }
-        }
-      }
+            lineCap: 'round',
+          },
+        },
+      },
     },
     {
       avatar: require('@src/assets/images/icons/mozila-firefox.png').default,
@@ -75,34 +75,34 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
               left: -15,
               right: -15,
               top: -12,
-              bottom: -15
-            }
+              bottom: -15,
+            },
           },
           colors: [colors.warning.main],
           plotOptions: {
             radialBar: {
               hollow: {
-                size: '22%'
+                size: '22%',
               },
               track: {
-                background: trackBgColor
+                background: trackBgColor,
               },
               dataLabels: {
                 showOn: 'always',
                 name: {
-                  show: false
+                  show: false,
                 },
                 value: {
-                  show: false
-                }
-              }
-            }
+                  show: false,
+                },
+              },
+            },
           },
           stroke: {
-            lineCap: 'round'
-          }
-        }
-      }
+            lineCap: 'round',
+          },
+        },
+      },
     },
     {
       avatar: require('@src/assets/images/icons/apple-safari.png').default,
@@ -120,34 +120,34 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
               left: -15,
               right: -15,
               top: -12,
-              bottom: -15
-            }
+              bottom: -15,
+            },
           },
           colors: [colors.secondary.main],
           plotOptions: {
             radialBar: {
               hollow: {
-                size: '22%'
+                size: '22%',
               },
               track: {
-                background: trackBgColor
+                background: trackBgColor,
               },
               dataLabels: {
                 showOn: 'always',
                 name: {
-                  show: false
+                  show: false,
                 },
                 value: {
-                  show: false
-                }
-              }
-            }
+                  show: false,
+                },
+              },
+            },
           },
           stroke: {
-            lineCap: 'round'
-          }
-        }
-      }
+            lineCap: 'round',
+          },
+        },
+      },
     },
     {
       avatar: require('@src/assets/images/icons/internet-explorer.png').default,
@@ -165,34 +165,34 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
               left: -15,
               right: -15,
               top: -12,
-              bottom: -15
-            }
+              bottom: -15,
+            },
           },
           colors: [colors.info.main],
           plotOptions: {
             radialBar: {
               hollow: {
-                size: '22%'
+                size: '22%',
               },
               track: {
-                background: trackBgColor
+                background: trackBgColor,
               },
               dataLabels: {
                 showOn: 'always',
                 name: {
-                  show: false
+                  show: false,
                 },
                 value: {
-                  show: false
-                }
-              }
-            }
+                  show: false,
+                },
+              },
+            },
           },
           stroke: {
-            lineCap: 'round'
-          }
-        }
-      }
+            lineCap: 'round',
+          },
+        },
+      },
     },
     {
       avatar: require('@src/assets/images/icons/opera.png').default,
@@ -210,71 +210,77 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
               left: -15,
               right: -15,
               top: -12,
-              bottom: -15
-            }
+              bottom: -15,
+            },
           },
           colors: [colors.danger.main],
           plotOptions: {
             radialBar: {
               hollow: {
-                size: '22%'
+                size: '22%',
               },
               track: {
-                background: trackBgColor
+                background: trackBgColor,
               },
               dataLabels: {
                 showOn: 'always',
                 name: {
-                  show: false
+                  show: false,
                 },
                 value: {
-                  show: false
-                }
-              }
-            }
+                  show: false,
+                },
+              },
+            },
           },
           stroke: {
-            lineCap: 'round'
-          }
-        }
-      }
-    }
+            lineCap: 'round',
+          },
+        },
+      },
+    },
   ]
 
-  const renderStates = () => {
-    return statesArr.map(state => (
-        <div key={state.title} className='browser-states'>
-          <Media>
-            <img className='rounded mr-1' src={state.avatar} height='30' alt={state.title} />
-            <h6 className='align-self-center mb-0'>{state.title}</h6>
-          </Media>
-          <div className='d-flex align-items-center'>
-            <div className='font-weight-bold text-body-heading mr-1'>9,999</div>
-            <Chart
-              options={state.chart.options}
-              series={state.chart.series}
-              type={state.chart.type}
-              height={state.chart.height}
-              width={state.chart.width}
-            />
-          </div>
+  const renderStates = () =>
+    statesArr.map((state) => (
+      <div key={state.title} className="browser-states">
+        <Media>
+          <img
+            className="rounded mr-1"
+            src={state.avatar}
+            height="30"
+            alt={state.title}
+          />
+          <h6 className="align-self-center mb-0">{state.title}</h6>
+        </Media>
+        <div className="d-flex align-items-center">
+          <div className="font-weight-bold text-body-heading mr-1">9,999</div>
+          <Chart
+            options={state.chart.options}
+            series={state.chart.series}
+            type={state.chart.type}
+            height={state.chart.height}
+            width={state.chart.width}
+          />
         </div>
-      )
-    )
-  }
+      </div>
+    ))
 
   return (
-    <Card className='card-browser-states'>
+    <Card className="card-browser-states">
       <CardHeader className="pb-0">
         <div>
-          <CardTitle tag='h4'>Instituciones</CardTitle>
+          <CardTitle tag="h4">Instituciones</CardTitle>
         </div>
-        <UncontrolledDropdown className='chart-dropdown'>
-          <DropdownToggle color='' className='bg-transparent btn-sm border-0 p-50'>
-            <MoreVertical size={18} className='cursor-pointer' />
+        <UncontrolledDropdown className="chart-dropdown">
+          <DropdownToggle
+            color=""
+            className="bg-transparent btn-sm border-0 p-50"
+          >
+            <MoreVertical size={18} className="cursor-pointer" />
           </DropdownToggle>
           <DropdownMenu right>
-            <DropdownItem className='w-100'>Last 28 Days</DropdownItem>
+            <DropdownItem className="w-100">Last 28 Days</DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
       </CardHeader>

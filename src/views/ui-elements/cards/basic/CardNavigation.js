@@ -12,30 +12,30 @@ import {
   TabPane,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
 } from 'reactstrap'
 
 const CardNavigation = () => {
   const [activePill, setPillActive] = useState('1')
   const [activeTab, setTabActive] = useState('1')
 
-  const togglePills = tab => {
+  const togglePills = (tab) => {
     if (activePill !== tab) {
       setPillActive(tab)
     }
   }
 
-  const toggleTabs = tab => {
+  const toggleTabs = (tab) => {
     if (activeTab !== tab) {
       setTabActive(tab)
     }
   }
   return (
-    <Fragment>
-      <h5 className='mt-3 mb-2'>Navigation</h5>
+    <>
+      <h5 className="mt-3 mb-2">Navigation</h5>
       <Row>
-        <Col md='6'>
-          <Card className='text-center'>
+        <Col md="6">
+          <Card className="text-center">
             <CardHeader>
               <Nav pills>
                 <NavItem>
@@ -65,17 +65,23 @@ const CardNavigation = () => {
             </CardHeader>
             <CardBody>
               <TabContent activeTab={activePill}>
-                <TabPane tabId='1'>
-                  <CardTitle tag='h4'>Special title treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button.Ripple color='primary' outline>
+                <TabPane tabId="1">
+                  <CardTitle tag="h4">Special title treatment</CardTitle>
+                  <CardText>
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </CardText>
+                  <Button.Ripple color="primary" outline>
                     Go somewhere
                   </Button.Ripple>
                 </TabPane>
-                <TabPane tabId='2'>
-                  <CardTitle tag='h4'>Special title </CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button.Ripple color='primary' outline>
+                <TabPane tabId="2">
+                  <CardTitle tag="h4">Special title </CardTitle>
+                  <CardText>
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </CardText>
+                  <Button.Ripple color="primary" outline>
                     Go somewhere
                   </Button.Ripple>
                 </TabPane>
@@ -83,8 +89,8 @@ const CardNavigation = () => {
             </CardBody>
           </Card>
         </Col>
-        <Col md='6'>
-          <Card className='text-center'>
+        <Col md="6">
+          <Card className="text-center">
             <CardHeader>
               <Nav tabs>
                 <NavItem>
@@ -114,17 +120,23 @@ const CardNavigation = () => {
             </CardHeader>
             <CardBody>
               <TabContent activeTab={activeTab}>
-                <TabPane tabId='1'>
-                  <CardTitle tag='h4'>Special title treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button.Ripple color='primary' outline>
+                <TabPane tabId="1">
+                  <CardTitle tag="h4">Special title treatment</CardTitle>
+                  <CardText>
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </CardText>
+                  <Button.Ripple color="primary" outline>
                     Go somewhere
                   </Button.Ripple>
                 </TabPane>
-                <TabPane tabId='2'>
-                  <CardTitle tag='h4'>Special title </CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button.Ripple color='primary' outline>
+                <TabPane tabId="2">
+                  <CardTitle tag="h4">Special title </CardTitle>
+                  <CardText>
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </CardText>
+                  <Button.Ripple color="primary" outline>
                     Go somewhere
                   </Button.Ripple>
                 </TabPane>
@@ -133,7 +145,7 @@ const CardNavigation = () => {
           </Card>
         </Col>
       </Row>
-    </Fragment>
+    </>
   )
 }
 

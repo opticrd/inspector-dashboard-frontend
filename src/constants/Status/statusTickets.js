@@ -2,11 +2,7 @@ export const EnProgreso = 'En progreso'
 export const Abierto = 'Abierto'
 export const Finalizado = 'Finalizado'
 
-export const statusTicketsArray = [
-    EnProgreso,
-    Abierto,
-    Finalizado
-]
+export const statusTicketsArray = [EnProgreso, Abierto, Finalizado]
 
 // export const statusTicketsObj = {
 //     enProgreso: {

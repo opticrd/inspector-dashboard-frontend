@@ -3,19 +3,24 @@ import { useEffect, Fragment } from 'react'
 import { useParams } from 'react-router-dom'
 
 // ** Product detail components
+import BreadCrumbs from '@components/breadcrumbs'
+import { Card, CardBody } from 'reactstrap'
+import { useDispatch, useSelector } from 'react-redux'
 import ItemFeatures from './ItemFeatures'
 import ProductDetails from './ProductDetails'
 import RelatedProducts from './RelatedProducts'
 
 // ** Custom Components
-import BreadCrumbs from '@components/breadcrumbs'
 
 // ** Third Party Components
-import { Card, CardBody } from 'reactstrap'
 
 // ** Store & Actions
-import { useDispatch, useSelector } from 'react-redux'
-import { getProduct, deleteWishlistItem, addToWishlist, addToCart } from '../store/actions'
+import {
+  getProduct,
+  deleteWishlistItem,
+  addToWishlist,
+  addToCart,
+} from '../store/actions'
 
 import '@styles/base/pages/app-ecommerce-details.scss'
 
@@ -26,7 +31,7 @@ const Details = () => {
 
   // ** Store Vars
   const dispatch = useDispatch()
-  const store = useSelector(state => state.ecommerce)
+  const store = useSelector((state) => state.ecommerce)
 
   // ** ComponentDidMount : Get product
   useEffect(() => {
@@ -34,9 +39,13 @@ const Details = () => {
   }, [])
 
   return (
-    <Fragment>
-      <BreadCrumbs breadCrumbTitle='Product Details' breadCrumbParent='eCommerce' breadCrumbActive='Details' />
-      <div className='app-ecommerce-details'>
+    <>
+      <BreadCrumbs
+        breadCrumbTitle="Product Details"
+        breadCrumbParent="eCommerce"
+        breadCrumbActive="Details"
+      />
+      <div className="app-ecommerce-details">
         {Object.keys(store.productDetail).length ? (
           <Card>
             <CardBody>
@@ -57,7 +66,7 @@ const Details = () => {
           </Card>
         ) : null}
       </div>
-    </Fragment>
+    </>
   )
 }
 

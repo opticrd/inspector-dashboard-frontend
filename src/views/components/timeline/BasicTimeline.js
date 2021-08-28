@@ -1,18 +1,16 @@
 import Timeline from '@components/timeline'
-import { basicData } from './data'
 import { Card, CardBody, CardHeader, CardTitle } from 'reactstrap'
+import { basicData } from './data'
 
-const BasicTimeline = () => {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle tag='h4'>Basic</CardTitle>
-      </CardHeader>
-      <CardBody>
-        <Timeline data={basicData} />
-      </CardBody>
-    </Card>
-  )
-}
+const BasicTimeline = () => (
+  <Card>
+    <CardHeader>
+      <CardTitle tag="h4">Basic</CardTitle>
+    </CardHeader>
+    <CardBody>
+      <Timeline data={basicData} />
+    </CardBody>
+  </Card>
+)
 
 export default BasicTimeline

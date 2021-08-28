@@ -5,22 +5,24 @@ import BasicCheckbox from './CheckboxBasic'
 import CustomCheckbox from './CheckboxCustom'
 import ColoredCheckbox from './CheckboxColors'
 
-const Checkbox = () => {
-  return (
-    <Fragment>
-      <Breadcrumbs breadCrumbTitle='Checkbox' breadCrumbParent='Form Elements' breadCrumbActive='Checkbox' />
-      <Row>
-        <Col sm='12'>
-          <BasicCheckbox />
-        </Col>
-        <Col sm='12'>
-          <CustomCheckbox />
-        </Col>
-        <Col sm='12'>
-          <ColoredCheckbox />
-        </Col>
-      </Row>
-    </Fragment>
-  )
-}
+const Checkbox = () => (
+  <>
+    <Breadcrumbs
+      breadCrumbTitle="Checkbox"
+      breadCrumbParent="Form Elements"
+      breadCrumbActive="Checkbox"
+    />
+    <Row>
+      <Col sm="12">
+        <BasicCheckbox />
+      </Col>
+      <Col sm="12">
+        <CustomCheckbox />
+      </Col>
+      <Col sm="12">
+        <ColoredCheckbox />
+      </Col>
+    </Row>
+  </>
+)
 export default Checkbox

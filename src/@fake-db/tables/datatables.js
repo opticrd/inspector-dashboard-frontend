@@ -14,7 +14,7 @@ const data = [
     salary: '$23896.35',
     age: '61',
     experience: '1 Year',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -28,7 +28,7 @@ const data = [
     salary: '$13633.69',
     age: '63',
     experience: '3 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -42,7 +42,7 @@ const data = [
     salary: '$13076.28',
     age: '66',
     experience: '6 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -56,7 +56,7 @@ const data = [
     salary: '$12336.17',
     age: '22',
     experience: '2 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -70,7 +70,7 @@ const data = [
     salary: '$10909.52',
     age: '33',
     experience: '3 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -84,7 +84,7 @@ const data = [
     salary: '$17803.80',
     age: '61',
     experience: '1 Year',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -98,7 +98,7 @@ const data = [
     salary: '$18991.67',
     age: '59',
     experience: '9 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -112,7 +112,7 @@ const data = [
     salary: '$19230.13',
     age: '55',
     experience: '5 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -126,7 +126,7 @@ const data = [
     salary: '$11677.32',
     age: '39',
     experience: '9 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -140,7 +140,7 @@ const data = [
     salary: '$15939.52',
     age: '23',
     experience: '3 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -154,7 +154,7 @@ const data = [
     salary: '$19252.12',
     age: '30',
     experience: '0 Year',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -168,7 +168,7 @@ const data = [
     salary: '$16745.47',
     age: '22',
     experience: '2 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -182,7 +182,7 @@ const data = [
     salary: '$15488.53',
     age: '36',
     experience: '6 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -196,7 +196,7 @@ const data = [
     salary: '$18442.34',
     age: '43',
     experience: '3 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -210,7 +210,7 @@ const data = [
     salary: '$13304.45',
     age: '19',
     experience: '9 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -224,7 +224,7 @@ const data = [
     salary: '$11953.08',
     age: '66',
     experience: '6 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -238,7 +238,7 @@ const data = [
     salary: '$20484.44',
     age: '64',
     experience: '4 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -252,7 +252,7 @@ const data = [
     salary: '$16871.48',
     age: '59',
     experience: '9 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -266,7 +266,7 @@ const data = [
     salary: '$19653.56',
     age: '41',
     experience: '1 Year',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -280,7 +280,7 @@ const data = [
     salary: '$18303.87',
     age: '35',
     experience: '5 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -294,7 +294,7 @@ const data = [
     salary: '$15256.40',
     age: '30',
     experience: '0 Year',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -308,7 +308,7 @@ const data = [
     salary: '$11209.16',
     age: '40',
     experience: '0 Year',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -322,7 +322,7 @@ const data = [
     salary: '$13778.34',
     age: '21',
     experience: '1 Year',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -336,7 +336,7 @@ const data = [
     salary: '$23081.71',
     age: '23',
     experience: '3 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -350,7 +350,7 @@ const data = [
     salary: '$13602.24',
     age: '47',
     experience: '7 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -364,7 +364,7 @@ const data = [
     salary: '$16969.63',
     age: '42',
     experience: '2 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -378,7 +378,7 @@ const data = [
     salary: '$23796.62',
     age: '28',
     experience: '8 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -392,7 +392,7 @@ const data = [
     salary: '$24027.81',
     age: '28',
     experience: '8 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -406,7 +406,7 @@ const data = [
     salary: '$13508.15',
     age: '48',
     experience: '8 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -420,7 +420,7 @@ const data = [
     salary: '$21632.30',
     age: '20',
     experience: '0 Year',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -434,7 +434,7 @@ const data = [
     salary: '$24875.41',
     age: '37',
     experience: '7 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -448,7 +448,7 @@ const data = [
     salary: '$23888.98',
     age: '53',
     experience: '3 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -462,7 +462,7 @@ const data = [
     salary: '$14082.44',
     age: '27',
     experience: '7 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -476,7 +476,7 @@ const data = [
     salary: '$21386.52',
     age: '22',
     experience: '2 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -490,7 +490,7 @@ const data = [
     salary: '$13835.97',
     age: '46',
     experience: '6 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -504,7 +504,7 @@ const data = [
     salary: '$22093.91',
     age: '47',
     experience: '7 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -518,7 +518,7 @@ const data = [
     salary: '$24624.23',
     age: '51',
     experience: '1 Year',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -532,7 +532,7 @@ const data = [
     salary: '$21782.82',
     age: '41',
     experience: '1 Year',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -546,7 +546,7 @@ const data = [
     salary: '$22794.60',
     age: '62',
     experience: '2 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -560,7 +560,7 @@ const data = [
     salary: '$10872.83',
     age: '37',
     experience: '7 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -574,7 +574,7 @@ const data = [
     salary: '$17471.92',
     age: '65',
     experience: '5 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -588,7 +588,7 @@ const data = [
     salary: '$24719.51',
     age: '64',
     experience: '4 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -602,7 +602,7 @@ const data = [
     salary: '$11958.33',
     age: '38',
     experience: '8 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -616,7 +616,7 @@ const data = [
     salary: '$10552.43',
     age: '37',
     experience: '7 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -630,7 +630,7 @@ const data = [
     salary: '$23024.28',
     age: '61',
     experience: '1 Year',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -644,7 +644,7 @@ const data = [
     salary: '$10409.90',
     age: '47',
     experience: '7 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -658,7 +658,7 @@ const data = [
     salary: '$11446.30',
     age: '64',
     experience: '4 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -672,7 +672,7 @@ const data = [
     salary: '$14002.31',
     age: '63',
     experience: '3 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -686,7 +686,7 @@ const data = [
     salary: '$10704.29',
     age: '56',
     experience: '6 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -700,7 +700,7 @@ const data = [
     salary: '$21813.54',
     age: '43',
     experience: '3 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -714,7 +714,7 @@ const data = [
     salary: '$18053.11',
     age: '46',
     experience: '6 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -728,7 +728,7 @@ const data = [
     salary: '$17617.08',
     age: '47',
     experience: '7 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -742,7 +742,7 @@ const data = [
     salary: '$18866.55',
     age: '21',
     experience: '1 Year',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -756,7 +756,7 @@ const data = [
     salary: '$13722.18',
     age: '30',
     experience: '0 Year',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -770,7 +770,7 @@ const data = [
     salary: '$15228.80',
     age: '51',
     experience: '1 Year',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -784,7 +784,7 @@ const data = [
     salary: '$13951.96',
     age: '29',
     experience: '9 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -798,7 +798,7 @@ const data = [
     salary: '$15100.00',
     age: '27',
     experience: '7 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -812,7 +812,7 @@ const data = [
     salary: '$20023.52',
     age: '28',
     experience: '9 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -826,7 +826,7 @@ const data = [
     salary: '$12630.26',
     age: '28',
     experience: '1 Year',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -840,7 +840,7 @@ const data = [
     salary: '$13870.62',
     age: '48',
     experience: '5 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -854,7 +854,7 @@ const data = [
     salary: '$18220.51',
     age: '20',
     experience: '0 Year',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -868,7 +868,7 @@ const data = [
     salary: '$13999.88',
     age: '37',
     experience: '0 Year',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -882,7 +882,7 @@ const data = [
     salary: '$11049.79',
     age: '53',
     experience: '1 Year',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -896,7 +896,7 @@ const data = [
     salary: '$10745.32',
     age: '27',
     experience: '3 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -910,7 +910,7 @@ const data = [
     salary: '$24769.08',
     age: '22',
     experience: '7 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -924,7 +924,7 @@ const data = [
     salary: '$16053.15',
     age: '46',
     experience: '2 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -938,7 +938,7 @@ const data = [
     salary: '$23347.17',
     age: '47',
     experience: '8 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -952,7 +952,7 @@ const data = [
     salary: '$15658.40',
     age: '51',
     experience: '8 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -966,7 +966,7 @@ const data = [
     salary: '$15396.66',
     age: '41',
     experience: '8 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -980,7 +980,7 @@ const data = [
     salary: '$15823.40',
     age: '62',
     experience: '0 Year',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -994,7 +994,7 @@ const data = [
     salary: '$19051.25',
     age: '37',
     experience: '7 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -1008,7 +1008,7 @@ const data = [
     salary: '$11632.84',
     age: '65',
     experience: '3 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1022,7 +1022,7 @@ const data = [
     salary: '$16741.31',
     age: '64',
     experience: '7 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -1036,7 +1036,7 @@ const data = [
     salary: '$19387.76',
     age: '38',
     experience: '2 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -1050,7 +1050,7 @@ const data = [
     salary: '$24014.04',
     age: '59',
     experience: '6 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -1064,7 +1064,7 @@ const data = [
     salary: '$14493.51',
     age: '55',
     experience: '7 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -1078,7 +1078,7 @@ const data = [
     salary: '$24733.28',
     age: '39',
     experience: '1 Year',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1092,7 +1092,7 @@ const data = [
     salary: '$21922.17',
     age: '23',
     experience: '1 Year',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -1106,7 +1106,7 @@ const data = [
     salary: '$16944.42',
     age: '30',
     experience: '2 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -1120,7 +1120,7 @@ const data = [
     salary: '$21963.69',
     age: '22',
     experience: '7 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -1134,7 +1134,7 @@ const data = [
     salary: '$16049.93',
     age: '36',
     experience: '5 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -1148,7 +1148,7 @@ const data = [
     salary: '$24137.29',
     age: '43',
     experience: '4 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1162,7 +1162,7 @@ const data = [
     salary: '$10089.96',
     age: '19',
     experience: '8 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1176,7 +1176,7 @@ const data = [
     salary: '$14227.10',
     age: '21',
     experience: '7 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -1190,7 +1190,7 @@ const data = [
     salary: '$19562.59',
     age: '30',
     experience: '1 Year',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -1204,7 +1204,7 @@ const data = [
     salary: '$17178.86',
     age: '51',
     experience: '7 Years',
-    status: 5
+    status: 5,
   },
   {
     responsive_id: '',
@@ -1218,7 +1218,7 @@ const data = [
     salary: '$15089.83',
     age: '29',
     experience: '4 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -1232,7 +1232,7 @@ const data = [
     salary: '$18330.72',
     age: '27',
     experience: '3 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -1246,7 +1246,7 @@ const data = [
     salary: '$16284.64',
     age: '28',
     experience: '6 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -1260,7 +1260,7 @@ const data = [
     salary: '$18523.75',
     age: '28',
     experience: '3 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -1274,7 +1274,7 @@ const data = [
     salary: '$17607.66',
     age: '48',
     experience: '6 Years',
-    status: 3
+    status: 3,
   },
   {
     responsive_id: '',
@@ -1288,7 +1288,7 @@ const data = [
     salary: '$17550.18',
     age: '20',
     experience: '1 Year',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1302,7 +1302,7 @@ const data = [
     salary: '$18469.35',
     age: '37',
     experience: '3 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1316,7 +1316,7 @@ const data = [
     salary: '$24866.66',
     age: '53',
     experience: '7 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1330,7 +1330,7 @@ const data = [
     salary: '$19586.23',
     age: '27',
     experience: '2 Years',
-    status: 1
+    status: 1,
   },
   {
     responsive_id: '',
@@ -1344,7 +1344,7 @@ const data = [
     salary: '$19366.53',
     age: '22',
     experience: '8 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1358,7 +1358,7 @@ const data = [
     salary: '$16619.40',
     age: '46',
     experience: '8 Years',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1372,7 +1372,7 @@ const data = [
     salary: '$15211.60',
     age: '47',
     experience: '8 Years',
-    status: 2
+    status: 2,
   },
   {
     responsive_id: '',
@@ -1386,7 +1386,7 @@ const data = [
     salary: '$23704.82',
     age: '51',
     experience: '0 Year',
-    status: 4
+    status: 4,
   },
   {
     responsive_id: '',
@@ -1400,29 +1400,27 @@ const data = [
     salary: '$24973.48',
     age: '41',
     experience: '7 Years',
-    status: 2
-  }
+    status: 2,
+  },
 ]
 
-mock.onGet('/api/datatables/initial-data').reply(config => {
-  return [200, data]
-})
+mock.onGet('/api/datatables/initial-data').reply((config) => [200, data])
 
-mock.onGet('/api/datatables/data').reply(config => {
+mock.onGet('/api/datatables/data').reply((config) => {
   // eslint-disable-next-line object-curly-newline
   const { q = '', perPage = 10, page = 1 } = config
   /* eslint-enable */
 
   const queryLowered = q.toLowerCase()
   const filteredData = data.filter(
-    item =>
+    (item) =>
       /* eslint-disable operator-linebreak, implicit-arrow-linebreak */
       item.full_name.toLowerCase().includes(queryLowered) ||
       item.post.toLowerCase().includes(queryLowered) ||
       item.email.toLowerCase().includes(queryLowered) ||
       item.age.toLowerCase().includes(queryLowered) ||
       item.salary.toLowerCase().includes(queryLowered) ||
-      item.start_date.toLowerCase().includes(queryLowered)
+      item.start_date.toLowerCase().includes(queryLowered),
   )
   /* eslint-enable  */
 
@@ -1431,7 +1429,7 @@ mock.onGet('/api/datatables/data').reply(config => {
     {
       allData: data,
       invoices: paginateArray(filteredData, perPage, page),
-      total: filteredData.length
-    }
+      total: filteredData.length,
+    },
   ]
 })

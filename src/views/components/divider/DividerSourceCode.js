@@ -1,6 +1,6 @@
 export const dividerDefault = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 
@@ -30,7 +30,7 @@ export default DividerDefault
 
 export const dividerText = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 
@@ -49,7 +49,7 @@ export default DividerText
 
 export const dividerPosition = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 
@@ -86,7 +86,7 @@ export default DividerPosition
 
 export const dividerColors = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 
@@ -131,7 +131,7 @@ export default DividerColors
 
 export const dividerIcon = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ArrowDown, Star, Check, XCircle, Clock } from 'react-feather'
@@ -179,7 +179,7 @@ export default DividerIcon
 
 export const dividerStyle = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 

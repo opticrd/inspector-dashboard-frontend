@@ -1,6 +1,6 @@
 export const dropdownControlled = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
@@ -34,7 +34,7 @@ export default DropdownControlled`}
 
 export const dropdownUncontrolled = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
@@ -62,7 +62,7 @@ export default DropdownUncontrolled`}
 
 export const dropdownBasic = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
@@ -151,7 +151,7 @@ export default DropdownBasic`}
 
 export const dropdownSplit = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Button, UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
@@ -246,7 +246,7 @@ export default DropdownSplit`}
 
 export const dropdownOutline = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Button, UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
@@ -339,7 +339,7 @@ export default DropdownOutline`}
 
 export const dropdownFlat = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
@@ -429,7 +429,7 @@ export default DropdownFlat`}
 
 export const dropdownGradient = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
@@ -517,7 +517,7 @@ export default DropdownGradient`}
 
 export const dropdownSizes = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Button, UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle, Row, Col } from 'reactstrap'
@@ -606,7 +606,7 @@ export default DropdownSizes`}
 
 export const dropdownDirections = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
@@ -664,7 +664,7 @@ export default DropdownDirections`}
 
 export const dropdownVariations = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import {

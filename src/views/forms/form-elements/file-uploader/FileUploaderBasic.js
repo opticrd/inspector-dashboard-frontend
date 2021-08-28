@@ -10,7 +10,7 @@ const FileUploaderBasic = () => {
   const uppy = new Uppy({
     meta: { type: 'avatar' },
     restrictions: { maxNumberOfFiles: 1 },
-    autoProceed: true
+    autoProceed: true,
   })
 
   uppy.use(thumbnailGenerator)
@@ -21,11 +21,13 @@ const FileUploaderBasic = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'> Basic </CardTitle>
+        <CardTitle tag="h4"> Basic </CardTitle>
       </CardHeader>
       <CardBody>
         <DragDrop uppy={uppy} />
-        {img !== null ? <img className='rounded mt-2' src={img} alt='avatar' /> : null}
+        {img !== null ? (
+          <img className="rounded mt-2" src={img} alt="avatar" />
+        ) : null}
       </CardBody>
     </Card>
   )

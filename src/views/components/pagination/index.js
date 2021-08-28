@@ -23,7 +23,7 @@ import {
   paginationSuccess,
   paginationWarning,
   paginationPositions,
-  paginationSizes
+  paginationSizes,
 } from './PaginationSourceCode'
 
 const Pagination = () => {
@@ -32,38 +32,42 @@ const Pagination = () => {
   }, [])
 
   return (
-    <Fragment>
-      <BreadCrumbs breadCrumbTitle='Pagination' breadCrumbParent='Components' breadCrumbActive='Pagination' />
-      <Row className='match-height'>
-        <Col md='6' sm='12'>
-          <Card title='Basic Pagination' code={paginationBasic}>
+    <>
+      <BreadCrumbs
+        breadCrumbTitle="Pagination"
+        breadCrumbParent="Components"
+        breadCrumbActive="Pagination"
+      />
+      <Row className="match-height">
+        <Col md="6" sm="12">
+          <Card title="Basic Pagination" code={paginationBasic}>
             <CardText>A basic pagination with active item.</CardText>
             <PaginationBasic />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Separated Pagination' code={paginationSeparated}>
+        <Col md="6" sm="12">
+          <Card title="Separated Pagination" code={paginationSeparated}>
             <CardText>
-              To create separated pagination use <code>.prev-item</code> class for the first item and{' '}
-              <code>.next-item</code> for the last item.
+              To create separated pagination use <code>.prev-item</code> class
+              for the first item and <code>.next-item</code> for the last item.
             </CardText>
             <PaginationSeparated />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='With Icon & Text' code={paginationIconsAndText}>
+        <Col md="6" sm="12">
+          <Card title="With Icon & Text" code={paginationIconsAndText}>
             <CardText>Pagination with icon and text.</CardText>
             <PaginationIconText />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Icons Only' code={paginationIcons}>
+        <Col md="6" sm="12">
+          <Card title="Icons Only" code={paginationIcons}>
             <CardText>Pagination with only icons.</CardText>
             <PaginationIcon />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Success' code={paginationSuccess}>
+        <Col md="6" sm="12">
+          <Card title="Success" code={paginationSuccess}>
             <CardText>
               Use class <code>.pagination-success</code> with
               <code>pagination</code> tag.
@@ -71,8 +75,8 @@ const Pagination = () => {
             <PaginationSuccess />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Danger' code={paginationDanger}>
+        <Col md="6" sm="12">
+          <Card title="Danger" code={paginationDanger}>
             <CardText>
               Use class <code>.pagination-danger</code> with
               <code>pagination</code> tag.
@@ -80,8 +84,8 @@ const Pagination = () => {
             <PaginationDanger />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Info' code={paginationInfo}>
+        <Col md="6" sm="12">
+          <Card title="Info" code={paginationInfo}>
             <CardText>
               Use class <code>.pagination-info</code> with
               <code>pagination</code> tag.
@@ -89,8 +93,8 @@ const Pagination = () => {
             <PaginationInfo />
           </Card>
         </Col>
-        <Col md='6' sm='12'>
-          <Card title='Warning' code={paginationWarning}>
+        <Col md="6" sm="12">
+          <Card title="Warning" code={paginationWarning}>
             <CardText>
               Use class <code>.pagination-warning</code> with
               <code>pagination</code> tag.
@@ -100,8 +104,8 @@ const Pagination = () => {
         </Col>
       </Row>
       <Row>
-        <Col sm='12'>
-          <Card title='Positions' code={paginationPositions}>
+        <Col sm="12">
+          <Card title="Positions" code={paginationPositions}>
             <CardText>
               Use classes <code>.justify-content-[direction]</code> with
               <code>pagination</code> tag.
@@ -109,8 +113,8 @@ const Pagination = () => {
             <PaginationPositions />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Sizes' code={paginationSizes}>
+        <Col sm="12">
+          <Card title="Sizes" code={paginationSizes}>
             <CardText>
               Use prop <code>size="lg"</code> for large size pagination & use
               <code>size="sm"</code>
@@ -120,7 +124,7 @@ const Pagination = () => {
           </Card>
         </Col>
       </Row>
-    </Fragment>
+    </>
   )
 }
 export default Pagination

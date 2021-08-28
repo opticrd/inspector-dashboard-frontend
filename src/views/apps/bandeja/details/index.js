@@ -20,31 +20,30 @@ const InvoicePreview = () => {
 
   // ** States
   const [data, setData] = useState(null)
-  
+
   // ** Get invoice on mount based on id
   useEffect(() => {
-    axios.get(`/api/invoice/invoices/5036`).then(response => {
+    axios.get(`/api/invoice/invoices/5036`).then((response) => {
       setData(response.data)
     })
   }, [])
 
   return data !== null && data.invoice !== undefined ? (
-    <div className='invoice-preview-wrapper'>
-      <Row className='invoice-preview'>
+    <div className="invoice-preview-wrapper">
+      <Row className="invoice-preview">
         <Col xl={7} md={7} sm={12}>
-          <CardChat/>
+          <CardChat />
         </Col>
         <Col xl={5} md={5} sm={12}>
-          <CardProfile/>
-          <CardUserInfo/>
-          <CardContact/>
+          <CardProfile />
+          <CardUserInfo />
+          <CardContact />
         </Col>
       </Row>
     </div>
   ) : (
-    <Alert color='danger'>
-      <h4 className='alert-heading'>Institución no encontrada</h4>
-      
+    <Alert color="danger">
+      <h4 className="alert-heading">Institución no encontrada</h4>
     </Alert>
   )
 }

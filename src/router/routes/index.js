@@ -29,7 +29,7 @@ const Routes = [
   ...FormRoutes,
   ...TablesRoutes,
   ...ChartMapsRoutes,
-  ...Institution
+  ...Institution,
 ]
 
 export { DefaultRoute, TemplateTitle, Routes }
