@@ -3,7 +3,7 @@ import { Abierto, EnProgreso, Finalizado } from "../../../constants/Status/statu
 export const StatusTickets = (status) => {
 
     const changeColor = () => {
-        switch(status) {
+        switch (status) {
             case EnProgreso:
                 return "#3498DB"
 
