@@ -42,6 +42,14 @@ export const columns = [
     cell: row => '809-220-1111'
   },
   {
+    name: 'Localidad',
+    minWidth: '235px',
+    selector: 'Localidad',
+    sortable: true,
+    // cell: row => row.provincia
+    cell: row => 'Santo Domingo'
+  },
+  {
     name: 'Municipio',
     selector: 'total',
     sortable: true,

@@ -40,6 +40,26 @@ const AppRoutes = [
     component: lazy(() => import('../../views/apps/user/oficiales'))
   },
   {
+    path: Url.userRegional,
+    component: lazy(() => import('../../views/apps/user/regional'))
+  },
+  {
+    path: Url.userProvincial,
+    component: lazy(() => import('../../views/apps/user/provincial'))
+  },
+  {
+    path: Url.userMunicipal,
+    component: lazy(() => import('../../views/apps/user/municipal'))
+  },
+  {
+    path: Url.userMunicipalDistrict,
+    component: lazy(() => import('../../views/apps/user/distritoMunicipal'))
+  },
+  {
+    path: Url.userZonal,
+    component: lazy(() => import('../../views/apps/user/zonales'))
+  },
+  {
     path: Url.userEdit,
     exact: true,
     component: () => <Redirect to='/apps/user/edit/1' />
@@ -55,6 +75,7 @@ const AppRoutes = [
   {
     path: `${Url.user}/:id`,
     component: lazy(() => import('../../views/apps/user/view')),
+    exact: true,
     meta: {
       navLink: Url.user
     }

@@ -11,6 +11,11 @@ export const Url = {
     
     userReporter: '/usuario/reportero',
     userOfficial: '/usuario/oficial',
+    userRegional: '/usuario/regional',
+    userProvincial: '/usuario/provincial',
+    userMunicipal: '/usuario/municipal',
+    userMunicipalDistrict: '/usuario/distrito-municipal',
+    userZonal: '/usuario/zonales',
 
     institution: '/institucion',
     institutionCreate: '/institucion/crear',

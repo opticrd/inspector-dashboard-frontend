@@ -3,10 +3,19 @@ import { Abierto, EnProgreso, Finalizado } from "../../../constants/Status/statu
 export const StatusTickets = (status) => {
 
     const changeColor = () => {
-        if (status === EnProgreso) return "#3498DB"
-        else if (status === Abierto) return "#5ECB08"
-        else if (status === Finalizado) return "#CFCFCF"
-        else return null
+        switch(status) {
+            case EnProgreso:
+                return "#3498DB"
+
+            case Abierto:
+                return "#5ECB08"
+
+            case Finalizado:
+                return "#CFCFCF"
+
+            default: 
+                return null
+        }
     }
 
     const sytleStatus = {

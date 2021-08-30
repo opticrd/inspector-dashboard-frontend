@@ -24,6 +24,36 @@ export default [
         title: 'Oficiales',
         icon: <Circle size={12} />,
         navLink: Url.userOfficial
+      },
+      {
+        id: 'regional',
+        title: 'Regional',
+        icon: <Circle size={12} />,
+        navLink: Url.userRegional
+      },
+      {
+        id: 'provincial',
+        title: 'Provincial',
+        icon: <Circle size={12} />,
+        navLink: Url.userProvincial
+      },
+      {
+        id: 'municipal',
+        title: 'Municipal',
+        icon: <Circle size={12} />,
+        navLink: Url.userMunicipal
+      },
+      {
+        id: 'distrito-municipal',
+        title: 'Distrito Municipal',
+        icon: <Circle size={12} />,
+        navLink: Url.userMunicipalDistrict
+      },
+      {
+        id: 'zonales',
+        title: 'Zonales',
+        icon: <Circle size={12} />,
+        navLink: Url.userZonal
       }
     ]
   }
