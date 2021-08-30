@@ -8,35 +8,43 @@ const SwiperCenterSlidesStyle = ({ isRtl }) => {
     slidesPerView: 'auto',
     spaceBetween: 30,
     centeredSlides: true,
-    slideToClickedSlide: true
+    slideToClickedSlide: true,
   }
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Centered Slides option-2</CardTitle>
+        <CardTitle tag="h4">Centered Slides option-2</CardTitle>
       </CardHeader>
       <CardBody>
         <Swiper dir={isRtl ? 'rtl' : 'ltr'} {...params}>
-          <SwiperSlide className='rounded swiper-shadow py-1 px-3 d-flex align-items-center'>
+          <SwiperSlide className="rounded swiper-shadow py-1 px-3 d-flex align-items-center">
             <Play size={18} />
-            <span className='swiper-text align-middle ml-50'>Getting Started</span>
+            <span className="swiper-text align-middle ml-50">
+              Getting Started
+            </span>
           </SwiperSlide>
-          <SwiperSlide className='rounded swiper-shadow py-1 px-3 d-flex align-items-center'>
+          <SwiperSlide className="rounded swiper-shadow py-1 px-3 d-flex align-items-center">
             <DollarSign size={18} />
-            <span className='swiper-text align-middle ml-50'>Pricing & Plans</span>
+            <span className="swiper-text align-middle ml-50">
+              Pricing & Plans
+            </span>
           </SwiperSlide>
-          <SwiperSlide className='rounded swiper-shadow py-1 px-3 d-flex align-items-center'>
+          <SwiperSlide className="rounded swiper-shadow py-1 px-3 d-flex align-items-center">
             <HelpCircle size={18} />
-            <span className='swiper-text align-middle ml-50'>Sales Questions</span>
+            <span className="swiper-text align-middle ml-50">
+              Sales Questions
+            </span>
           </SwiperSlide>
-          <SwiperSlide className='rounded swiper-shadow py-1 px-3 d-flex align-items-center'>
+          <SwiperSlide className="rounded swiper-shadow py-1 px-3 d-flex align-items-center">
             <FileText size={18} />
-            <span className='swiper-text align-middle ml-50'>User Guides</span>
+            <span className="swiper-text align-middle ml-50">User Guides</span>
           </SwiperSlide>
-          <SwiperSlide className='rounded swiper-shadow py-1 px-3 d-flex align-items-center'>
+          <SwiperSlide className="rounded swiper-shadow py-1 px-3 d-flex align-items-center">
             <Archive size={18} />
-            <span className='swiper-text align-middle ml-50'>General Guides</span>
+            <span className="swiper-text align-middle ml-50">
+              General Guides
+            </span>
           </SwiperSlide>
         </Swiper>
       </CardBody>

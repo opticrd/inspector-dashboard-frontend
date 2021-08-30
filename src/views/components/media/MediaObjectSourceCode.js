@@ -1,6 +1,6 @@
 export const mediaLeft = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Media } from 'reactstrap'
@@ -76,7 +76,7 @@ export default MediaLeft
 
 export const mediaRight = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 const MediaRight = () => {
   return (
@@ -145,7 +145,7 @@ export default MediaRight
 
 export const mediaLeftBordered = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Media } from 'reactstrap'
@@ -220,7 +220,7 @@ export default MediaLeftBordered
 
 export const mediaRightBordered = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Media } from 'reactstrap'
@@ -295,7 +295,7 @@ export default MediaRightBordered
 
 export const mediaNested = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Media } from 'reactstrap'
@@ -352,7 +352,7 @@ export default MediaNested
 
 export const mediaAlignment = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Media } from 'reactstrap'

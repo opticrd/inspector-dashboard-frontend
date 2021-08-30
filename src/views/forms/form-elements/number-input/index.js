@@ -12,43 +12,45 @@ import NumberInputStates from './NumberInputStates'
 import NumberInputVertical from './NumberInputVertical'
 import NumberInputCustomIcons from './NumberInputCustomIcon'
 
-const NumberInput = () => {
-  return (
-    <Fragment>
-      <Breadcrumbs breadCrumbTitle='Number Input' breadCrumbParent='Form Elements' breadCrumbActive='Number Input' />
-      <Row className='match-height'>
-        <Col md='6' sm='12'>
-          <NumberInputBasic />
-        </Col>
-        <Col md='6' sm='12'>
-          <NumberInputSizes />
-        </Col>
-        <Col md='6' sm='12'>
-          <NumberInputMinMax />
-        </Col>
-        <Col md='6' sm='12'>
-          <NumberInputStep />
-        </Col>
-        <Col md='6' sm='12'>
-          <NumberInputWrap />
-        </Col>
-        <Col md='6' sm='12'>
-          <NumberInputVertical />
-        </Col>
-        <Col lg='6' sm='12'>
-          <NumberInputInline />
-        </Col>
-        <Col lg='6' sm='12'>
-          <NumberInputStates />
-        </Col>
-        <Col sm='12'>
-          <NumberInputCustomIcons />
-        </Col>
-        <Col sm='12'>
-          <NumberInputWidth />
-        </Col>
-      </Row>
-    </Fragment>
-  )
-}
+const NumberInput = () => (
+  <>
+    <Breadcrumbs
+      breadCrumbTitle="Number Input"
+      breadCrumbParent="Form Elements"
+      breadCrumbActive="Number Input"
+    />
+    <Row className="match-height">
+      <Col md="6" sm="12">
+        <NumberInputBasic />
+      </Col>
+      <Col md="6" sm="12">
+        <NumberInputSizes />
+      </Col>
+      <Col md="6" sm="12">
+        <NumberInputMinMax />
+      </Col>
+      <Col md="6" sm="12">
+        <NumberInputStep />
+      </Col>
+      <Col md="6" sm="12">
+        <NumberInputWrap />
+      </Col>
+      <Col md="6" sm="12">
+        <NumberInputVertical />
+      </Col>
+      <Col lg="6" sm="12">
+        <NumberInputInline />
+      </Col>
+      <Col lg="6" sm="12">
+        <NumberInputStates />
+      </Col>
+      <Col sm="12">
+        <NumberInputCustomIcons />
+      </Col>
+      <Col sm="12">
+        <NumberInputWidth />
+      </Col>
+    </Row>
+  </>
+)
 export default NumberInput

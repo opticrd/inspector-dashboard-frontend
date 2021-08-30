@@ -1,16 +1,12 @@
 import { lazy } from 'react'
+import Url from '../../constants/Url'
 
 const DashboardRoutes = [
-  // Dashboards
   {
-    path: '/dashboard/analytics',
-    component: lazy(() => import('../../views/dashboard/analytics'))
+    path: Url.dashboardReport,
+    component: lazy(() => import('../../views/dashboard/analytics')),
+    exact: true,
   },
-  {
-    path: '/dashboard/ecommerce',
-    component: lazy(() => import('../../views/dashboard/ecommerce')),
-    exact: true
-  }
 ]
 
 export default DashboardRoutes

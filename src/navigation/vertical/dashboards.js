@@ -1,25 +1,24 @@
 import { Home, Circle } from 'react-feather'
+import Url from '../../constants/Url'
 
 export default [
   {
     id: 'dashboards',
-    title: 'Dashboards',
+    title: 'Dashboard',
     icon: <Home size={20} />,
-    badge: 'light-warning',
-    badgeText: '2',
     children: [
       {
-        id: 'analyticsDash',
-        title: 'Analytics',
+        id: 'reports',
+        title: 'Reportes',
         icon: <Circle size={12} />,
-        navLink: '/dashboard/analytics'
+        navLink: Url.dashboardReport,
       },
       {
-        id: 'eCommerceDash',
-        title: 'eCommerce',
+        id: 'bandeja',
+        title: 'Bandeja',
         icon: <Circle size={12} />,
-        navLink: '/dashboard/ecommerce'
-      }
-    ]
-  }
+        navLink: Url.dashboardInbox,
+      },
+    ],
+  },
 ]

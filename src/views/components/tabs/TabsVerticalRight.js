@@ -4,15 +4,15 @@ import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 const TabsVerticalRight = () => {
   const [active, setActive] = useState('1')
 
-  const toggle = tab => {
+  const toggle = (tab) => {
     if (active !== tab) {
       setActive(tab)
     }
   }
 
   return (
-    <div className='nav-vertical'>
-      <Nav tabs className='nav-right'>
+    <div className="nav-vertical">
+      <Nav tabs className="nav-right">
         <NavItem>
           <NavLink
             active={active === '1'}
@@ -45,25 +45,31 @@ const TabsVerticalRight = () => {
         </NavItem>
       </Nav>
       <TabContent activeTab={active}>
-        <TabPane tabId='1'>
+        <TabPane tabId="1">
           <p>
-            Oat cake marzipan cake lollipop caramels wafer pie jelly beans. Icing halvah chocolate cake carrot cake.
-            Jelly beans carrot cake marshmallow gingerbread chocolate cake. Sweet fruitcake cheesecake biscuit cotton
-            candy. Cookie powder marshmallow donut. Gummies cupcake croissant.
+            Oat cake marzipan cake lollipop caramels wafer pie jelly beans.
+            Icing halvah chocolate cake carrot cake. Jelly beans carrot cake
+            marshmallow gingerbread chocolate cake. Sweet fruitcake cheesecake
+            biscuit cotton candy. Cookie powder marshmallow donut. Gummies
+            cupcake croissant.
           </p>
         </TabPane>
-        <TabPane tabId='2'>
+        <TabPane tabId="2">
           <p>
-            Sugar plum tootsie roll biscuit caramels. Liquorice brownie pastry cotton candy oat cake fruitcake jelly
-            chupa chups. Sweet fruitcake cheesecake biscuit cotton candy. Cookie powder marshmallow donut. Pudding
-            caramels pastry powder cake soufflé wafer caramels. Jelly-o pie cupcake.
+            Sugar plum tootsie roll biscuit caramels. Liquorice brownie pastry
+            cotton candy oat cake fruitcake jelly chupa chups. Sweet fruitcake
+            cheesecake biscuit cotton candy. Cookie powder marshmallow donut.
+            Pudding caramels pastry powder cake soufflé wafer caramels. Jelly-o
+            pie cupcake.
           </p>
         </TabPane>
-        <TabPane tabId='3'>
+        <TabPane tabId="3">
           <p>
-            Icing croissant powder jelly bonbon cake marzipan fruitcake. Tootsie roll marzipan tart marshmallow pastry
-            cupcake chupa chups cookie. Fruitcake dessert lollipop pudding jelly. Cookie dragée jujubes croissant lemon
-            drops cotton candy. Carrot cake candy canes powder donut toffee cookie.
+            Icing croissant powder jelly bonbon cake marzipan fruitcake. Tootsie
+            roll marzipan tart marshmallow pastry cupcake chupa chups cookie.
+            Fruitcake dessert lollipop pudding jelly. Cookie dragée jujubes
+            croissant lemon drops cotton candy. Carrot cake candy canes powder
+            donut toffee cookie.
           </p>
         </TabPane>
       </TabContent>

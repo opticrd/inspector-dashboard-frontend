@@ -1,172 +1,72 @@
 import { lazy } from 'react'
 import { Redirect } from 'react-router-dom'
+import Url from '../../constants/Url'
 
 const AppRoutes = [
   {
-    path: '/apps/email',
+    path: Url.dashboardInbox,
     exact: true,
-    appLayout: true,
-    className: 'email-application',
-    component: lazy(() => import('../../views/apps/email'))
+    component: lazy(() => import('../../views/apps/bandeja/list')),
   },
   {
-    path: '/apps/email/:folder',
+    path: Url.dashboardInboxCreate,
     exact: true,
-    appLayout: true,
-    className: 'email-application',
-    component: lazy(() => import('../../views/apps/email')),
+    component: lazy(() => import('../../views/apps/report/create')),
     meta: {
-      navLink: '/apps/email'
-    }
+      navLink: Url.dashboardInbox,
+    },
   },
   {
-    path: '/apps/email/label/:label',
+    path: Url.reportCreate,
     exact: true,
-    appLayout: true,
-    className: 'email-application',
-    component: lazy(() => import('../../views/apps/email')),
-    meta: {
-      navLink: '/apps/email'
-    }
+    component: lazy(() => import('../../views/apps/report/create')),
   },
   {
-    path: '/apps/email/:filter',
-    component: lazy(() => import('../../views/apps/email')),
-    meta: {
-      navLink: '/apps/email'
-    }
-  },
-  {
-    path: '/apps/chat',
-    appLayout: true,
-    className: 'chat-application',
-    component: lazy(() => import('../../views/apps/chat'))
-  },
-  {
-    path: '/apps/todo',
+    path: Url.user,
+    component: lazy(() => import('../../views/apps/user/list')),
     exact: true,
-    appLayout: true,
-    className: 'todo-application',
-    component: lazy(() => import('../../views/apps/todo'))
   },
   {
-    path: '/apps/todo/:filter',
-    appLayout: true,
+    path: Url.userCreate,
+    component: lazy(() => import('../../views/apps/user/create')),
     exact: true,
-    className: 'todo-application',
-    component: lazy(() => import('../../views/apps/todo')),
-    meta: {
-      navLink: '/apps/todo'
-    }
   },
   {
-    path: '/apps/todo/tag/:tag',
-    appLayout: true,
-    className: 'todo-application',
-    component: lazy(() => import('../../views/apps/todo')),
-    meta: {
-      navLink: '/apps/todo'
-    }
+    path: Url.userReporter,
+    component: lazy(() => import('../../views/apps/user/reportero')),
   },
   {
-    path: '/apps/calendar',
-    component: lazy(() => import('../../views/apps/calendar'))
+    path: Url.userOfficial,
+    component: lazy(() => import('../../views/apps/user/oficiales')),
   },
   {
-    path: '/apps/invoice/list',
-    component: lazy(() => import('../../views/apps/invoice/list'))
-  },
-  {
-    path: '/apps/invoice/preview/:id',
-    component: lazy(() => import('../../views/apps/invoice/preview')),
-    meta: {
-      navLink: '/apps/invoice/preview'
-    }
-  },
-  {
-    path: '/apps/invoice/preview',
+    path: Url.userEdit,
     exact: true,
-    component: () => <Redirect to='/apps/invoice/preview/4987' />
+    component: () => <Redirect to="/apps/user/edit/1" />,
   },
   {
-    path: '/apps/invoice/edit/:id',
-    component: lazy(() => import('../../views/apps/invoice/edit')),
-    meta: {
-      navLink: '/apps/invoice/edit'
-    }
-  },
-  {
-    path: '/apps/invoice/edit',
-    exact: true,
-    component: () => <Redirect to='/apps/invoice/edit/4987' />
-  },
-  {
-    path: '/apps/invoice/add',
-    component: lazy(() => import('../../views/apps/invoice/add'))
-  },
-  {
-    path: '/apps/invoice/print',
-    layout: 'BlankLayout',
-    component: lazy(() => import('../../views/apps/invoice/print'))
-  },
-  {
-    path: '/apps/ecommerce/shop',
-    className: 'ecommerce-application',
-    component: lazy(() => import('../../views/apps/ecommerce/shop'))
-  },
-  {
-    path: '/apps/ecommerce/wishlist',
-    className: 'ecommerce-application',
-    component: lazy(() => import('../../views/apps/ecommerce/wishlist'))
-  },
-  {
-    path: '/apps/ecommerce/product-detail',
-    exact: true,
-    className: 'ecommerce-application',
-    component: () => <Redirect to='/apps/ecommerce/product-detail/apple-i-phone-11-64-gb-black-26' />
-  },
-  {
-    path: '/apps/ecommerce/product-detail/:product',
-    exact: true,
-    className: 'ecommerce-application',
-    component: lazy(() => import('../../views/apps/ecommerce/detail')),
-    meta: {
-      navLink: '/apps/ecommerce/product-detail'
-    }
-  },
-  {
-    path: '/apps/ecommerce/checkout',
-    className: 'ecommerce-application',
-    component: lazy(() => import('../../views/apps/ecommerce/checkout'))
-  },
-  {
-    path: '/apps/user/list',
-    component: lazy(() => import('../../views/apps/user/list'))
-  },
-  {
-    path: '/apps/user/edit',
-    exact: true,
-    component: () => <Redirect to='/apps/user/edit/1' />
-  },
-  {
-    path: '/apps/user/edit/:id',
+    path: `${Url.userEdit}/:id`,
     component: lazy(() => import('../../views/apps/user/edit')),
-    meta: {
-      navLink: '/apps/user/edit'
-    }
-  },
-  {
-    path: '/apps/user/view',
     exact: true,
-    component: () => <Redirect to='/apps/user/view/1' />
+    meta: {
+      navLink: Url.userEdit,
+    },
   },
   {
-    path: '/apps/user/view/:id',
+    path: `${Url.user}/:id`,
     component: lazy(() => import('../../views/apps/user/view')),
     meta: {
-      navLink: '/apps/user/view'
-    }
-  }
+      navLink: Url.user,
+    },
+  },
+  {
+    path: `${Url.dashboardInbox}/:id`,
+    exact: true,
+    component: lazy(() => import('../../views/apps/bandeja/details')),
+    meta: {
+      navLink: Url.dashboardInbox,
+    },
+  },
 ]
 
 export default AppRoutes

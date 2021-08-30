@@ -1,26 +1,35 @@
-import { Type, Droplet, Eye, CreditCard, Circle, Briefcase, Box, Layout } from 'react-feather'
+import {
+  Type,
+  Droplet,
+  Eye,
+  CreditCard,
+  Circle,
+  Briefcase,
+  Box,
+  Layout,
+} from 'react-feather'
 
 export default [
   {
-    header: 'User Interface'
+    header: 'User Interface',
   },
   {
     id: 'typography',
     title: 'Typography',
     icon: <Type size={12} />,
-    navLink: '/ui-element/typography'
+    navLink: '/ui-element/typography',
   },
   {
     id: 'colors',
     title: 'Colors',
     icon: <Droplet size={20} />,
-    navLink: '/colors/colors'
+    navLink: '/colors/colors',
   },
   {
     id: 'feather',
     title: 'Feather',
     icon: <Eye size={20} />,
-    navLink: '/icons/reactfeather'
+    navLink: '/icons/reactfeather',
   },
   {
     id: 'cards',
@@ -33,33 +42,33 @@ export default [
         id: 'basic',
         title: 'Basic',
         icon: <Circle size={12} />,
-        navLink: '/cards/basic'
+        navLink: '/cards/basic',
       },
       {
         id: 'cardAdvance',
         title: 'Advance',
         icon: <Circle size={12} />,
-        navLink: '/cards/advance'
+        navLink: '/cards/advance',
       },
       {
         id: 'cardStatistics',
         title: 'Statistics',
         icon: <Circle size={12} />,
-        navLink: '/cards/statistics'
+        navLink: '/cards/statistics',
       },
       {
         id: 'CardAnalytics',
         title: 'Analytics',
         icon: <Circle size={12} />,
-        navLink: '/cards/analytics'
+        navLink: '/cards/analytics',
       },
       {
         id: 'cardActions',
         title: 'Actions',
         icon: <Circle size={12} />,
-        navLink: '/cards/action'
-      }
-    ]
+        navLink: '/cards/action',
+      },
+    ],
   },
   {
     id: 'components',
@@ -70,153 +79,153 @@ export default [
         id: 'alerts',
         title: 'Alerts',
         icon: <Circle size={12} />,
-        navLink: '/components/alerts'
+        navLink: '/components/alerts',
       },
       {
         id: 'autoComplete',
         title: 'Auto Complete',
         icon: <Circle size={12} />,
-        navLink: '/components/auto-complete'
+        navLink: '/components/auto-complete',
       },
       {
         id: 'avatar',
         title: 'Avatar',
         icon: <Circle size={12} />,
-        navLink: '/components/avatar'
+        navLink: '/components/avatar',
       },
       {
         id: 'badges',
         title: 'Badges',
         icon: <Circle size={12} />,
-        navLink: '/components/badges'
+        navLink: '/components/badges',
       },
       {
         id: 'blockui',
         title: 'BlockUI',
         icon: <Circle size={12} />,
-        navLink: '/components/blockui'
+        navLink: '/components/blockui',
       },
       {
         id: 'breadCrumbs',
         title: 'Breadcrumbs',
         icon: <Circle size={12} />,
-        navLink: '/components/breadcrumbs'
+        navLink: '/components/breadcrumbs',
       },
       {
         id: 'buttons',
         title: 'Buttons',
         icon: <Circle size={12} />,
-        navLink: '/components/buttons'
+        navLink: '/components/buttons',
       },
       {
         id: 'carousel',
         title: 'Carousel',
         icon: <Circle size={12} />,
-        navLink: '/components/carousel'
+        navLink: '/components/carousel',
       },
       {
         id: 'collapse',
         title: 'Collapse',
         icon: <Circle size={12} />,
-        navLink: '/components/collapse'
+        navLink: '/components/collapse',
       },
       {
         id: 'divider',
         title: 'Divider',
         icon: <Circle size={12} />,
-        navLink: '/components/divider'
+        navLink: '/components/divider',
       },
       {
         id: 'dropDowns',
         title: 'Dropdowns',
         icon: <Circle size={12} />,
-        navLink: '/components/dropdowns'
+        navLink: '/components/dropdowns',
       },
       {
         id: 'listGroup',
         title: 'List Group',
         icon: <Circle size={12} />,
-        navLink: '/components/list-group'
+        navLink: '/components/list-group',
       },
       {
         id: 'mediaObjects',
         title: 'Media Objects',
         icon: <Circle size={12} />,
-        navLink: '/components/media-objects'
+        navLink: '/components/media-objects',
       },
       {
         id: 'modals',
         title: 'Modals',
         icon: <Circle size={12} />,
-        navLink: '/components/modals'
+        navLink: '/components/modals',
       },
       {
         id: 'navsComponent',
         title: 'Navs Component',
         icon: <Circle size={12} />,
-        navLink: '/components/nav-component'
+        navLink: '/components/nav-component',
       },
       {
         id: 'pagination',
         title: 'Pagination',
         icon: <Circle size={12} />,
-        navLink: '/components/pagination'
+        navLink: '/components/pagination',
       },
       {
         id: 'pillBadges',
         title: 'Pill Badges',
         icon: <Circle size={12} />,
-        navLink: '/components/pill-badges'
+        navLink: '/components/pill-badges',
       },
       {
         id: 'pillsComponent',
         title: 'Pills Component',
         icon: <Circle size={12} />,
-        navLink: '/components/pills-component'
+        navLink: '/components/pills-component',
       },
       {
         id: 'popovers',
         title: 'Popovers',
         icon: <Circle size={12} />,
-        navLink: '/components/popovers'
+        navLink: '/components/popovers',
       },
       {
         id: 'progress',
         title: 'Progress',
         icon: <Circle size={12} />,
-        navLink: '/components/progress'
+        navLink: '/components/progress',
       },
       {
         id: 'spinners',
         title: 'Spinner',
         icon: <Circle size={12} />,
-        navLink: '/components/spinners'
+        navLink: '/components/spinners',
       },
       {
         id: 'tabsComponent',
         title: 'Tabs Component',
         icon: <Circle size={12} />,
-        navLink: '/components/tabs-component'
+        navLink: '/components/tabs-component',
       },
       {
         id: 'timeline',
         title: 'Timeline',
         icon: <Circle size={12} />,
-        navLink: '/components/timeline'
+        navLink: '/components/timeline',
       },
       {
         id: 'toasts',
         title: 'Toasts',
         icon: <Circle size={12} />,
-        navLink: '/components/toasts'
+        navLink: '/components/toasts',
       },
       {
         id: 'tooltips',
         title: 'Tooltips',
         icon: <Circle size={12} />,
-        navLink: '/components/tooltips'
-      }
-    ]
+        navLink: '/components/tooltips',
+      },
+    ],
   },
   {
     id: 'extensions',
@@ -227,93 +236,93 @@ export default [
         id: 'sweetAlert',
         title: 'Sweet Alert',
         icon: <Circle size={12} />,
-        navLink: '/extensions/sweet-alert'
+        navLink: '/extensions/sweet-alert',
       },
       {
         id: 'toastr',
         title: 'Toastr',
         icon: <Circle size={12} />,
-        navLink: '/extensions/toastr'
+        navLink: '/extensions/toastr',
       },
       {
         id: 'slider',
         title: 'Sliders',
         icon: <Circle size={12} />,
-        navLink: '/extensions/slider'
+        navLink: '/extensions/slider',
       },
       {
         id: 'drag_&_drop',
         title: 'Drag & Drop',
         icon: <Circle size={12} />,
-        navLink: '/extensions/drag-and-drop'
+        navLink: '/extensions/drag-and-drop',
       },
       {
         id: 'tour',
         title: 'Tour',
         icon: <Circle size={12} />,
-        navLink: '/extensions/tour'
+        navLink: '/extensions/tour',
       },
       {
         id: 'clipBoard',
         title: 'Clipboard',
         icon: <Circle size={12} />,
-        navLink: '/extensions/clipboard'
+        navLink: '/extensions/clipboard',
       },
       {
         id: 'reactPlayer',
         title: 'React Player',
         icon: <Circle size={12} />,
-        navLink: '/extensions/react-player'
+        navLink: '/extensions/react-player',
       },
       {
         id: 'contentMenu',
         title: 'Context Menu',
         icon: <Circle size={12} />,
-        navLink: '/extensions/context-menu'
+        navLink: '/extensions/context-menu',
       },
       {
         id: 'swiper',
         title: 'Swiper',
         icon: <Circle size={12} />,
-        navLink: '/extensions/swiper'
+        navLink: '/extensions/swiper',
       },
       {
         id: 'ratings',
         title: 'Ratings',
         icon: <Circle size={12} />,
-        navLink: '/extensions/ratings'
+        navLink: '/extensions/ratings',
       },
       {
         id: 'i18n',
         title: 'I18n',
         icon: <Circle size={12} />,
-        navLink: '/extensions/i18n'
+        navLink: '/extensions/i18n',
       },
       {
         id: 'extPagination',
         title: 'React Paginate',
         icon: <Circle size={12} />,
-        navLink: '/extensions/pagination'
+        navLink: '/extensions/pagination',
       },
       {
         id: 'extImport',
         title: 'Import',
         icon: <Circle size={12} />,
-        navLink: '/extensions/import'
+        navLink: '/extensions/import',
       },
       {
         id: 'extExport',
         title: 'Export',
         icon: <Circle size={12} />,
-        navLink: '/extensions/export'
+        navLink: '/extensions/export',
       },
       {
         id: 'extExportSelected',
         title: 'Export Selected',
         icon: <Circle size={12} />,
-        navLink: '/extensions/export-selected'
-      }
-    ]
+        navLink: '/extensions/export-selected',
+      },
+    ],
   },
   {
     id: 'pageLayouts',
@@ -324,32 +333,32 @@ export default [
         id: 'collapsedMenu',
         title: 'Collapsed Menu',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/collapse-menu'
+        navLink: '/page-layout/collapse-menu',
       },
       {
         id: 'layoutBoxed',
         title: 'Layout Boxed',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/layout-boxed'
+        navLink: '/page-layout/layout-boxed',
       },
       {
         id: 'withoutMenu',
         title: 'Without Menu',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/without-menu'
+        navLink: '/page-layout/without-menu',
       },
       {
         id: 'layoutEmpty',
         title: 'Layout Empty',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/layout-empty'
+        navLink: '/page-layout/layout-empty',
       },
       {
         id: 'layoutBlank',
         title: 'Layout Blank',
         icon: <Circle size={12} />,
-        navLink: '/page-layout/layout-blank'
-      }
-    ]
-  }
+        navLink: '/page-layout/layout-blank',
+      },
+    ],
+  },
 ]

@@ -12,14 +12,14 @@ const data = {
         companyEmail: 'don85@johnson.com',
         country: 'USA',
         contact: '(616) 865-4180',
-        name: 'Jordan Stevenson'
+        name: 'Jordan Stevenson',
       },
       service: 'Software Development',
       total: 3428,
       avatar: '',
       invoiceStatus: 'Paid',
       balance: '$724',
-      dueDate: '23 Apr 2019'
+      dueDate: '23 Apr 2019',
     },
     {
       id: 4988,
@@ -30,14 +30,14 @@ const data = {
         companyEmail: 'brenda49@taylor.info',
         country: 'Haiti',
         contact: '(226) 204-8287',
-        name: 'Stephanie Burns'
+        name: 'Stephanie Burns',
       },
       service: 'UI/UX Design & Development',
       total: 5219,
       avatar: require('@src/assets/images/avatars/10-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: 0,
-      dueDate: '15 Dec 2019'
+      dueDate: '15 Dec 2019',
     },
     {
       id: 4989,
@@ -48,14 +48,14 @@ const data = {
         companyEmail: 'smithtiffany@powers.com',
         country: 'Denmark',
         contact: '(955) 676-1076',
-        name: 'Tony Herrera'
+        name: 'Tony Herrera',
       },
       service: 'Unlimited Extended License',
       total: 3719,
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: '03 Nov 2019'
+      dueDate: '03 Nov 2019',
     },
     {
       id: 4990,
@@ -66,14 +66,14 @@ const data = {
         companyEmail: 'mejiageorge@lee-perez.com',
         country: 'Cambodia',
         contact: '(832) 323-6914',
-        name: 'Kevin Patton'
+        name: 'Kevin Patton',
       },
       service: 'Software Development',
       total: 4749,
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: '11 Feb 2020'
+      dueDate: '11 Feb 2020',
     },
     {
       id: 4991,
@@ -84,14 +84,14 @@ const data = {
         companyEmail: 'brandon07@pierce.com',
         country: 'Martinique',
         contact: '(970) 982-3353',
-        name: 'Mrs. Julie Donovan MD'
+        name: 'Mrs. Julie Donovan MD',
       },
       service: 'UI/UX Design & Development',
       total: 4056,
       avatar: require('@src/assets/images/avatars/10-small.png').default,
       invoiceStatus: 'Draft',
       balance: '$815',
-      dueDate: '30 Jun 2019'
+      dueDate: '30 Jun 2019',
     },
     {
       id: 4992,
@@ -102,14 +102,14 @@ const data = {
         companyEmail: 'guerrerobrandy@beasley-harper.com',
         country: 'Botswana',
         contact: '(511) 938-9617',
-        name: 'Amanda Phillips'
+        name: 'Amanda Phillips',
       },
       service: 'UI/UX Design & Development',
       total: 2771,
       avatar: '',
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: '24 Jun 2019'
+      dueDate: '24 Jun 2019',
     },
     {
       id: 4993,
@@ -120,14 +120,14 @@ const data = {
         companyEmail: 'williamshenry@moon-smith.com',
         country: 'Montserrat',
         contact: '(504) 859-2893',
-        name: 'Christina Collier'
+        name: 'Christina Collier',
       },
       service: 'UI/UX Design & Development',
       total: 2713,
       avatar: '',
       invoiceStatus: 'Draft',
       balance: '$407',
-      dueDate: '22 Nov 2019'
+      dueDate: '22 Nov 2019',
     },
     {
       id: 4994,
@@ -138,14 +138,14 @@ const data = {
         companyEmail: 'margaretharvey@russell-murray.com',
         country: 'Oman',
         contact: '(758) 403-7718',
-        name: 'David Flores'
+        name: 'David Flores',
       },
       service: 'Template Customization',
       total: 4309,
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Paid',
       balance: '-$205',
-      dueDate: '10 Feb 2020'
+      dueDate: '10 Feb 2020',
     },
     {
       id: 4995,
@@ -156,14 +156,14 @@ const data = {
         companyEmail: 'dianarodriguez@villegas.com',
         country: 'Cambodia',
         contact: '(292) 873-8254',
-        name: 'Valerie Perez'
+        name: 'Valerie Perez',
       },
       service: 'Software Development',
       total: 3367,
       avatar: require('@src/assets/images/avatars/2-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: 0,
-      dueDate: '24 Dec 2019'
+      dueDate: '24 Dec 2019',
     },
     {
       id: 4996,
@@ -174,14 +174,14 @@ const data = {
         companyEmail: 'bwilson@norris-brock.com',
         country: 'Guam',
         contact: '(956) 803-2008',
-        name: 'Susan Dickerson'
+        name: 'Susan Dickerson',
       },
       service: 'Software Development',
       total: 4776,
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: '$305',
-      dueDate: '02 Jun 2019'
+      dueDate: '02 Jun 2019',
     },
     {
       id: 4997,
@@ -192,14 +192,14 @@ const data = {
         companyEmail: 'markcampbell@bell.info',
         country: 'United States Virgin Islands',
         contact: '(716) 962-8635',
-        name: 'Kelly Smith'
+        name: 'Kelly Smith',
       },
       service: 'Unlimited Extended License',
       total: 3789,
       avatar: require('@src/assets/images/avatars/4-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '$666',
-      dueDate: '18 Mar 2020'
+      dueDate: '18 Mar 2020',
     },
     {
       id: 4998,
@@ -210,14 +210,14 @@ const data = {
         companyEmail: 'mary61@rosario.com',
         country: 'Syrian Arab Republic',
         contact: '(523) 449-0782',
-        name: 'Jamie Jones'
+        name: 'Jamie Jones',
       },
       service: 'Unlimited Extended License',
       total: 5200,
       avatar: require('@src/assets/images/avatars/5-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: '17 Jan 2020'
+      dueDate: '17 Jan 2020',
     },
     {
       id: 4999,
@@ -228,14 +228,14 @@ const data = {
         companyEmail: 'sean22@cook.com',
         country: 'Ukraine',
         contact: '(583) 470-8356',
-        name: 'Ruben Garcia'
+        name: 'Ruben Garcia',
       },
       service: 'Software Development',
       total: 4558,
       avatar: require('@src/assets/images/avatars/7-small.png').default,
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: '01 Oct 2019'
+      dueDate: '01 Oct 2019',
     },
     {
       id: 5000,
@@ -246,14 +246,14 @@ const data = {
         companyEmail: 'mccoymatthew@lopez-jenkins.net',
         country: 'Vanuatu',
         contact: '(366) 906-6467',
-        name: 'Ryan Meyer'
+        name: 'Ryan Meyer',
       },
       service: 'Template Customization',
       total: 3503,
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: '22 May 2019'
+      dueDate: '22 May 2019',
     },
     {
       id: 5001,
@@ -264,14 +264,14 @@ const data = {
         companyEmail: 'novakshannon@mccarty-murillo.com',
         country: 'Romania',
         contact: '(320) 616-3915',
-        name: 'Valerie Valdez'
+        name: 'Valerie Valdez',
       },
       service: 'Unlimited Extended License',
       total: 5285,
       avatar: require('@src/assets/images/avatars/2-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '-$202',
-      dueDate: '02 Aug 2019'
+      dueDate: '02 Aug 2019',
     },
     {
       id: 5002,
@@ -282,14 +282,14 @@ const data = {
         companyEmail: 'smithrachel@davis-rose.net',
         country: 'Costa Rica',
         contact: '(435) 899-1963',
-        name: 'Melissa Wheeler'
+        name: 'Melissa Wheeler',
       },
       service: 'UI/UX Design & Development',
       total: 3668,
       avatar: require('@src/assets/images/avatars/6-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: '$731',
-      dueDate: '15 Dec 2019'
+      dueDate: '15 Dec 2019',
     },
     {
       id: 5003,
@@ -300,14 +300,14 @@ const data = {
         companyEmail: 'scott96@mejia.net',
         country: 'Congo',
         contact: '(254) 399-4728',
-        name: 'Alan Jimenez'
+        name: 'Alan Jimenez',
       },
       service: 'Unlimited Extended License',
       total: 4372,
       avatar: '',
       invoiceStatus: 'Sent',
       balance: '-$344',
-      dueDate: '17 Sep 2019'
+      dueDate: '17 Sep 2019',
     },
     {
       id: 5004,
@@ -318,14 +318,14 @@ const data = {
         companyEmail: 'cramirez@ross-bass.biz',
         country: 'Saint Pierre and Miquelon',
         contact: '(648) 500-4338',
-        name: 'Jennifer Morris'
+        name: 'Jennifer Morris',
       },
       service: 'Template Customization',
       total: 3198,
       avatar: require('@src/assets/images/avatars/7-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '-$253',
-      dueDate: '16 Aug 2019'
+      dueDate: '16 Aug 2019',
     },
     {
       id: 5005,
@@ -336,14 +336,14 @@ const data = {
         companyEmail: 'arielberg@wolfe-smith.com',
         country: 'Uruguay',
         contact: '(896) 544-3796',
-        name: 'Timothy Stevenson'
+        name: 'Timothy Stevenson',
       },
       service: 'Unlimited Extended License',
       total: 5293,
       avatar: '',
       invoiceStatus: 'Past Due',
       balance: 0,
-      dueDate: '01 Aug 2019'
+      dueDate: '01 Aug 2019',
     },
     {
       id: 5006,
@@ -354,14 +354,14 @@ const data = {
         companyEmail: 'yrobinson@nichols.com',
         country: 'Israel',
         contact: '(236) 784-5142',
-        name: 'Erik Hayden'
+        name: 'Erik Hayden',
       },
       service: 'Template Customization',
       total: 5612,
       avatar: require('@src/assets/images/avatars/6-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: '$883',
-      dueDate: '12 Apr 2019'
+      dueDate: '12 Apr 2019',
     },
     {
       id: 5007,
@@ -372,14 +372,14 @@ const data = {
         companyEmail: 'tatejennifer@allen.net',
         country: 'Cook Islands',
         contact: '(436) 717-2419',
-        name: 'Katherine Kennedy'
+        name: 'Katherine Kennedy',
       },
       service: 'Software Development',
       total: 2230,
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: '19 Nov 2019'
+      dueDate: '19 Nov 2019',
     },
     {
       id: 5008,
@@ -390,14 +390,14 @@ const data = {
         companyEmail: 'gdurham@lee.com',
         country: 'Nepal',
         contact: '(489) 946-3041',
-        name: 'Monica Fuller'
+        name: 'Monica Fuller',
       },
       service: 'Unlimited Extended License',
       total: 2032,
       avatar: require('@src/assets/images/avatars/8-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: '30 Nov 2019'
+      dueDate: '30 Nov 2019',
     },
     {
       id: 5009,
@@ -408,14 +408,14 @@ const data = {
         companyEmail: 'jenny96@lawrence-thompson.com',
         country: 'Kiribati',
         contact: '(274) 246-3725',
-        name: 'Stacey Carter'
+        name: 'Stacey Carter',
       },
       service: 'UI/UX Design & Development',
       total: 3128,
       avatar: require('@src/assets/images/avatars/3-small.png').default,
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: '10 Sep 2019'
+      dueDate: '10 Sep 2019',
     },
     {
       id: 5010,
@@ -426,14 +426,14 @@ const data = {
         companyEmail: 'jgutierrez@jackson.com',
         country: 'Swaziland',
         contact: '(258) 211-5970',
-        name: 'Chad Davis'
+        name: 'Chad Davis',
       },
       service: 'Software Development',
       total: 2060,
       avatar: require('@src/assets/images/avatars/2-small.png').default,
       invoiceStatus: 'Downloaded',
       balance: 0,
-      dueDate: '08 Dec 2019'
+      dueDate: '08 Dec 2019',
     },
     {
       id: 5011,
@@ -444,14 +444,14 @@ const data = {
         companyEmail: 'hunter14@jones.com',
         country: 'Congo',
         contact: '(593) 965-4100',
-        name: 'Chris Reyes'
+        name: 'Chris Reyes',
       },
       service: 'UI/UX Design & Development',
       total: 4077,
       avatar: '',
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: '01 Feb 2020'
+      dueDate: '01 Feb 2020',
     },
     {
       id: 5012,
@@ -462,14 +462,14 @@ const data = {
         companyEmail: 'pricetodd@johnson-jenkins.com',
         country: 'Brazil',
         contact: '(585) 829-2603',
-        name: 'Laurie Summers'
+        name: 'Laurie Summers',
       },
       service: 'Template Customization',
       total: 2872,
       avatar: require('@src/assets/images/avatars/4-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: '18 Oct 2019'
+      dueDate: '18 Oct 2019',
     },
     {
       id: 5013,
@@ -480,14 +480,14 @@ const data = {
         companyEmail: 'perrydavid@chapman-rogers.com',
         country: 'Congo',
         contact: '(527) 351-5517',
-        name: 'Lindsay Wilson'
+        name: 'Lindsay Wilson',
       },
       service: 'Software Development',
       total: 3740,
       avatar: require('@src/assets/images/avatars/10-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: '01 Nov 2019'
+      dueDate: '01 Nov 2019',
     },
     {
       id: 5014,
@@ -498,14 +498,14 @@ const data = {
         companyEmail: 'leahgriffin@carpenter.com',
         country: 'Equatorial Guinea',
         contact: '(628) 903-0132',
-        name: 'Jenna Castro'
+        name: 'Jenna Castro',
       },
       service: 'Unlimited Extended License',
       total: 3623,
       avatar: '',
       invoiceStatus: 'Downloaded',
       balance: 0,
-      dueDate: '23 Sep 2019'
+      dueDate: '23 Sep 2019',
     },
     {
       id: 5015,
@@ -516,14 +516,14 @@ const data = {
         companyEmail: 'esparzadaniel@allen.com',
         country: 'Seychelles',
         contact: '(847) 396-9904',
-        name: 'Wendy Weber'
+        name: 'Wendy Weber',
       },
       service: 'Software Development',
       total: 2477,
       avatar: require('@src/assets/images/avatars/7-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: '01 Apr 2019'
+      dueDate: '01 Apr 2019',
     },
     {
       id: 5016,
@@ -534,14 +534,14 @@ const data = {
         companyEmail: 'todd34@owens-morgan.com',
         country: 'Ireland',
         contact: '(852) 249-4539',
-        name: 'April Yates'
+        name: 'April Yates',
       },
       service: 'Unlimited Extended License',
       total: 3904,
       avatar: '',
       invoiceStatus: 'Paid',
       balance: '$951',
-      dueDate: '30 Sep 2019'
+      dueDate: '30 Sep 2019',
     },
     {
       id: 5017,
@@ -552,14 +552,14 @@ const data = {
         companyEmail: 'roydavid@bailey.com',
         country: 'Netherlands',
         contact: '(917) 984-2232',
-        name: 'Daniel Marshall PhD'
+        name: 'Daniel Marshall PhD',
       },
       service: 'UI/UX Design & Development',
       total: 3102,
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '-$153',
-      dueDate: '25 Aug 2019'
+      dueDate: '25 Aug 2019',
     },
     {
       id: 5018,
@@ -570,14 +570,14 @@ const data = {
         companyEmail: 'baldwinjoel@washington.com',
         country: 'Cocos (Keeling) Islands',
         contact: '(670) 409-3703',
-        name: 'Randy Rich'
+        name: 'Randy Rich',
       },
       service: 'UI/UX Design & Development',
       total: 2483,
       avatar: require('@src/assets/images/avatars/5-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: '10 Jul 2019'
+      dueDate: '10 Jul 2019',
     },
     {
       id: 5019,
@@ -588,14 +588,14 @@ const data = {
         companyEmail: 'psmith@morris.info',
         country: 'Macao',
         contact: '(646) 263-0257',
-        name: 'Mrs. Jodi Chapman'
+        name: 'Mrs. Jodi Chapman',
       },
       service: 'Unlimited Extended License',
       total: 2825,
       avatar: require('@src/assets/images/avatars/8-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: '-$459',
-      dueDate: '14 Oct 2019'
+      dueDate: '14 Oct 2019',
     },
     {
       id: 5020,
@@ -606,14 +606,14 @@ const data = {
         companyEmail: 'lori06@morse.com',
         country: 'Somalia',
         contact: '(751) 213-4288',
-        name: 'Steven Myers'
+        name: 'Steven Myers',
       },
       service: 'Unlimited Extended License',
       total: 2029,
       avatar: require('@src/assets/images/avatars/4-small.png').default,
       invoiceStatus: 'Past Due',
       balance: 0,
-      dueDate: '28 Mar 2019'
+      dueDate: '28 Mar 2019',
     },
     {
       id: 5021,
@@ -624,14 +624,14 @@ const data = {
         companyEmail: 'zpearson@miller.com',
         country: 'Slovakia (Slovak Republic)',
         contact: '(655) 649-7872',
-        name: 'Charles Alexander'
+        name: 'Charles Alexander',
       },
       service: 'Software Development',
       total: 3208,
       avatar: '',
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: '06 Sep 2019'
+      dueDate: '06 Sep 2019',
     },
     {
       id: 5022,
@@ -642,14 +642,14 @@ const data = {
         companyEmail: 'strongpenny@young.net',
         country: 'Brazil',
         contact: '(402) 935-0735',
-        name: 'Elizabeth Jones'
+        name: 'Elizabeth Jones',
       },
       service: 'Software Development',
       total: 3077,
       avatar: '',
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: '09 May 2019'
+      dueDate: '09 May 2019',
     },
     {
       id: 5023,
@@ -660,14 +660,14 @@ const data = {
         companyEmail: 'carrietorres@acosta.com',
         country: 'Argentina',
         contact: '(915) 448-6271',
-        name: 'Heidi Walton'
+        name: 'Heidi Walton',
       },
       service: 'Software Development',
       total: 5578,
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: '23 Jul 2019'
+      dueDate: '23 Jul 2019',
     },
     {
       id: 5024,
@@ -678,14 +678,14 @@ const data = {
         companyEmail: 'zjohnson@nichols-powers.com',
         country: 'Philippines',
         contact: '(817) 700-2984',
-        name: 'Christopher Allen'
+        name: 'Christopher Allen',
       },
       service: 'Software Development',
       total: 2787,
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: '25 Sep 2019'
+      dueDate: '25 Sep 2019',
     },
     {
       id: 5025,
@@ -696,14 +696,14 @@ const data = {
         companyEmail: 'kayla09@thomas.com',
         country: 'Martinique',
         contact: '(266) 611-9482',
-        name: 'Joseph Oliver'
+        name: 'Joseph Oliver',
       },
       service: 'UI/UX Design & Development',
       total: 5591,
       avatar: '',
       invoiceStatus: 'Downloaded',
       balance: 0,
-      dueDate: '07 Jun 2019'
+      dueDate: '07 Jun 2019',
     },
     {
       id: 5026,
@@ -714,14 +714,14 @@ const data = {
         companyEmail: 'melvindavis@allen.info',
         country: 'Mexico',
         contact: '(739) 745-9728',
-        name: 'Megan Roberts'
+        name: 'Megan Roberts',
       },
       service: 'Template Customization',
       total: 2783,
       avatar: require('@src/assets/images/avatars/6-small.png').default,
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: '22 Oct 2019'
+      dueDate: '22 Oct 2019',
     },
     {
       id: 5027,
@@ -732,14 +732,14 @@ const data = {
         companyEmail: 'gjordan@fernandez-coleman.com',
         country: 'Costa Rica',
         contact: '(682) 804-6506',
-        name: 'Mary Garcia'
+        name: 'Mary Garcia',
       },
       service: 'Template Customization',
       total: 2719,
       avatar: '',
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: '04 Feb 2020'
+      dueDate: '04 Feb 2020',
     },
     {
       id: 5028,
@@ -750,14 +750,14 @@ const data = {
         companyEmail: 'robertscott@garcia.com',
         country: 'Cameroon',
         contact: '(775) 366-0411',
-        name: 'Crystal Mays'
+        name: 'Crystal Mays',
       },
       service: 'Template Customization',
       total: 3325,
       avatar: '',
       invoiceStatus: 'Paid',
       balance: '$361',
-      dueDate: '02 Mar 2020'
+      dueDate: '02 Mar 2020',
     },
     {
       id: 5029,
@@ -768,14 +768,14 @@ const data = {
         companyEmail: 'desiree61@kelly.com',
         country: 'Macedonia',
         contact: '(510) 536-6029',
-        name: 'Nicholas Tanner'
+        name: 'Nicholas Tanner',
       },
       service: 'Template Customization',
       total: 3851,
       avatar: '',
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: '25 Aug 2019'
+      dueDate: '25 Aug 2019',
     },
     {
       id: 5030,
@@ -786,14 +786,14 @@ const data = {
         companyEmail: 'jeffrey25@martinez-hodge.com',
         country: 'Congo',
         contact: '(253) 230-4657',
-        name: 'Mr. Justin Richardson'
+        name: 'Mr. Justin Richardson',
       },
       service: 'Template Customization',
       total: 5565,
       avatar: '',
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: '06 Mar 2020'
+      dueDate: '06 Mar 2020',
     },
     {
       id: 5031,
@@ -804,14 +804,14 @@ const data = {
         companyEmail: 'john77@anderson.net',
         country: 'Falkland Islands (Malvinas)',
         contact: '(612) 546-3485',
-        name: 'Jennifer Summers'
+        name: 'Jennifer Summers',
       },
       service: 'Template Customization',
       total: 3313,
       avatar: require('@src/assets/images/avatars/3-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: '09 Jun 2019'
+      dueDate: '09 Jun 2019',
     },
     {
       id: 5032,
@@ -822,14 +822,14 @@ const data = {
         companyEmail: 'ywagner@jones.com',
         country: 'Germany',
         contact: '(203) 601-8603',
-        name: 'Richard Payne'
+        name: 'Richard Payne',
       },
       service: 'Template Customization',
       total: 5181,
       avatar: '',
       invoiceStatus: 'Past Due',
       balance: 0,
-      dueDate: '22 Oct 2019'
+      dueDate: '22 Oct 2019',
     },
     {
       id: 5033,
@@ -840,14 +840,14 @@ const data = {
         companyEmail: 'calvin07@joseph-edwards.org',
         country: 'Colombia',
         contact: '(895) 401-4255',
-        name: 'Lori Wells'
+        name: 'Lori Wells',
       },
       service: 'Template Customization',
       total: 2869,
       avatar: require('@src/assets/images/avatars/1-small.png').default,
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: '22 Mar 2020'
+      dueDate: '22 Mar 2020',
     },
     {
       id: 5034,
@@ -858,14 +858,14 @@ const data = {
         companyEmail: 'eric47@george-castillo.com',
         country: 'Paraguay',
         contact: '(602) 336-9806',
-        name: 'Tammy Sanchez'
+        name: 'Tammy Sanchez',
       },
       service: 'Unlimited Extended License',
       total: 4836,
       avatar: '',
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: '22 Oct 2019'
+      dueDate: '22 Oct 2019',
     },
     {
       id: 5035,
@@ -876,14 +876,14 @@ const data = {
         companyEmail: 'jamesjoel@chapman.net',
         country: 'Western Sahara',
         contact: '(936) 550-1638',
-        name: 'Dana Carey'
+        name: 'Dana Carey',
       },
       service: 'UI/UX Design & Development',
       total: 4263,
       avatar: '',
       invoiceStatus: 'Draft',
       balance: '$762',
-      dueDate: '12 Jun 2019'
+      dueDate: '12 Jun 2019',
     },
     {
       id: 5036,
@@ -894,22 +894,22 @@ const data = {
         companyEmail: 'pwillis@cross.org',
         country: 'Bhutan',
         contact: '(687) 660-2473',
-        name: 'Andrew Burns'
+        name: 'Andrew Burns',
       },
       service: 'Unlimited Extended License',
       total: 3171,
       avatar: require('@src/assets/images/avatars/9-small.png').default,
       invoiceStatus: 'Paid',
       balance: '-$205',
-      dueDate: '25 Sep 2019'
-    }
-  ]
+      dueDate: '25 Sep 2019',
+    },
+  ],
 }
 
 // ------------------------------------------------
 // GET: Return Invoice List
 // ------------------------------------------------
-mock.onGet('/apps/invoice/invoices').reply(config => {
+mock.onGet('/apps/invoice/invoices').reply((config) => {
   // eslint-disable-next-line object-curly-newline
   const { q = '', perPage = 10, page = 1, status = null } = config
   /* eslint-enable */
@@ -917,11 +917,12 @@ mock.onGet('/apps/invoice/invoices').reply(config => {
   const queryLowered = q.toLowerCase()
   const filteredData = data.invoices
     .filter(
-      invoice =>
+      (invoice) =>
         /* eslint-disable operator-linebreak, implicit-arrow-linebreak */
         (invoice.client.companyEmail.toLowerCase().includes(queryLowered) ||
           invoice.client.name.toLowerCase().includes(queryLowered)) &&
-        invoice.invoiceStatus.toLowerCase() === (status.toLowerCase() || invoice.invoiceStatus.toLowerCase())
+        invoice.invoiceStatus.toLowerCase() ===
+          (status.toLowerCase() || invoice.invoiceStatus.toLowerCase()),
     )
     .sort(sortCompare('id'))
     .reverse()
@@ -932,19 +933,21 @@ mock.onGet('/apps/invoice/invoices').reply(config => {
     {
       allData: data.invoices,
       invoices: paginateArray(filteredData, perPage, page),
-      total: filteredData.length
-    }
+      total: filteredData.length,
+    },
   ]
 })
 
 // ------------------------------------------------
 // GET: Return Single Invoice
 // ------------------------------------------------
-mock.onGet(/\/api\/invoice\/invoices\/\d+/).reply(config => {
+mock.onGet(/\/api\/invoice\/invoices\/\d+/).reply((config) => {
   // // Get event id from URL
-  const invoiceId = Number(config.url.substring(config.url.lastIndexOf('/') + 1))
+  const invoiceId = Number(
+    config.url.substring(config.url.lastIndexOf('/') + 1),
+  )
 
-  const invoiceIndex = data.invoices.findIndex(e => e.id === invoiceId)
+  const invoiceIndex = data.invoices.findIndex((e) => e.id === invoiceId)
   const responseData = {
     invoice: data.invoices[invoiceIndex],
     paymentDetails: {
@@ -952,8 +955,8 @@ mock.onGet(/\/api\/invoice\/invoices\/\d+/).reply(config => {
       bankName: 'American Bank',
       country: 'United States',
       iban: 'ETD95476213874685',
-      swiftCode: 'BR91905'
-    }
+      swiftCode: 'BR91905',
+    },
   }
   return [200, responseData]
 })
@@ -961,14 +964,14 @@ mock.onGet(/\/api\/invoice\/invoices\/\d+/).reply(config => {
 // ------------------------------------------------
 // DELETE: Deletes Invoice
 // ------------------------------------------------
-mock.onDelete('/apps/invoice/delete').reply(config => {
+mock.onDelete('/apps/invoice/delete').reply((config) => {
   // Get invoice id from URL
   let invoiceId = config.id
 
   // Convert Id to number
   invoiceId = Number(invoiceId)
 
-  const invoiceIndex = data.invoices.findIndex(t => t.id === invoiceId)
+  const invoiceIndex = data.invoices.findIndex((t) => t.id === invoiceId)
   data.invoices.splice(invoiceIndex, 1)
 
   return [200]
@@ -978,6 +981,6 @@ mock.onDelete('/apps/invoice/delete').reply(config => {
 // GET: Return Clients
 // ------------------------------------------------
 mock.onGet('/api/invoice/clients').reply(() => {
-  const clients = data.invoices.map(invoice => invoice.client)
+  const clients = data.invoices.map((invoice) => invoice.client)
   return [200, clients.slice(0, 5)]
 })

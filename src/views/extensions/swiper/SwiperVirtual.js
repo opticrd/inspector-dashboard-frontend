@@ -11,7 +11,11 @@ const SwiperVirtual = ({ isRtl }) => {
 
   const appendSlide = () => {
     if (instance !== null) {
-      slides.push(<SwiperSlide key={`slide-${slides.length + 1}`}>Slide {slides.length + 1}</SwiperSlide>)
+      slides.push(
+        <SwiperSlide key={`slide-${slides.length + 1}`}>
+          Slide {slides.length + 1}
+        </SwiperSlide>,
+      )
       instance.update(true)
     }
   }
@@ -26,27 +30,32 @@ const SwiperVirtual = ({ isRtl }) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Virtual</CardTitle>
+        <CardTitle tag="h4">Virtual</CardTitle>
       </CardHeader>
       <CardBody>
         <Swiper
           dir={isRtl ? 'rtl' : 'ltr'}
-          className='swiper-virtual'
+          className="swiper-virtual"
           spaceBetween={50}
           slidesPerView={3}
           centeredSlides
           pagination={{ clickable: true }}
-          onSwiper={swiper => (instance = swiper.virtual)}
+          onSwiper={(swiper) => (instance = swiper.virtual)}
           virtual
         >
           {slides}
         </Swiper>
 
-        <div className='demo-inline-spacing'>
-          <Button color='primary' outline onClick={appendSlide}>
+        <div className="demo-inline-spacing">
+          <Button color="primary" outline onClick={appendSlide}>
             Append Slide
           </Button>
-          <Button className='mr-0' color='primary' outline onClick={removeSlide}>
+          <Button
+            className="mr-0"
+            color="primary"
+            outline
+            onClick={removeSlide}
+          >
             Remove All Slides
           </Button>
         </div>

@@ -6,13 +6,20 @@ import { useParams } from 'react-router-dom'
 import classnames from 'classnames'
 
 // ** Todo App Components
+import { useDispatch, useSelector } from 'react-redux'
 import Tasks from './Tasks'
 import Sidebar from './Sidebar'
 import TaskSidebar from './TaskSidebar'
 
 // ** Store & Actions
-import { useDispatch, useSelector } from 'react-redux'
-import { getTasks, updateTask, selectTask, addTask, deleteTask, reOrderTasks } from './store/actions'
+import {
+  getTasks,
+  updateTask,
+  selectTask,
+  addTask,
+  deleteTask,
+  reOrderTasks,
+} from './store/actions'
 
 // ** Styles
 import '@styles/react/apps/app-todo.scss'
@@ -26,7 +33,7 @@ const TODO = () => {
 
   // ** Store Vars
   const dispatch = useDispatch()
-  const store = useSelector(state => state.todo)
+  const store = useSelector((state) => state.todo)
 
   // ** URL Params
   const paramsURL = useParams()
@@ -34,7 +41,7 @@ const TODO = () => {
     filter: paramsURL.filter || '',
     q: query || '',
     sortBy: sort || '',
-    tag: paramsURL.tag || ''
+    tag: paramsURL.tag || '',
   }
 
   // ** Function to handle Left sidebar & Task sidebar
@@ -48,13 +55,13 @@ const TODO = () => {
         filter: paramsURL.filter || '',
         q: query || '',
         sortBy: sort || '',
-        tag: paramsURL.tag || ''
-      })
+        tag: paramsURL.tag || '',
+      }),
     )
   }, [store.tasks.length, paramsURL.filter, paramsURL.tag, query, sort])
 
   return (
-    <Fragment>
+    <>
       <Sidebar
         store={store}
         params={params}
@@ -65,12 +72,12 @@ const TODO = () => {
         setMainSidebar={setMainSidebar}
         handleTaskSidebar={handleTaskSidebar}
       />
-      <div className='content-right'>
-        <div className='content-wrapper'>
-          <div className='content-body'>
+      <div className="content-right">
+        <div className="content-wrapper">
+          <div className="content-body">
             <div
               className={classnames('body-content-overlay', {
-                show: mainSidebar === true
+                show: mainSidebar === true,
               })}
               onClick={handleMainSidebar}
             ></div>
@@ -109,7 +116,7 @@ const TODO = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   )
 }
 

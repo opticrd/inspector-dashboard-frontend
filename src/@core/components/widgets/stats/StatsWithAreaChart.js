@@ -13,6 +13,8 @@ import { areaChartOptions } from './ChartOptions'
 const StatsWithAreaChart = props => {
   // ** Props
   const { icon, color, stats, statTitle, series, options, type, height, className, ...rest } = props
+
+  console.log(series)
   return (
     <Card {...rest}>
       <CardBody
@@ -22,9 +24,11 @@ const StatsWithAreaChart = props => {
       >
         <Avatar className='avatar-stats p-50 m-0' color={`light-${color}`} icon={icon} />
         <h2 className='font-weight-bolder mt-1'>{stats}</h2>
-        <p className='card-text'>{statTitle}</p>
+        <p className='card-text mb-1'>{statTitle}</p>
       </CardBody>
-      <Chart options={options} series={series} type={type} height={height ? height : 100} />
+      {series[0].data &&
+        <Chart options={options} series={series} type={type} height={height ? height : 100} />
+      }
     </Card>
   )
 }

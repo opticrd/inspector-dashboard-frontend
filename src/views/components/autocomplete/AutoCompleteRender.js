@@ -12,48 +12,63 @@ const AutoCompleteRender = () => {
   const [suggestions] = useState([
     {
       name: 'Jake Shelton',
-      img: img1
+      img: img1,
     },
     {
       name: 'Edith Baldwin',
-      img: img2
+      img: img2,
     },
     {
       name: 'Jennifer Wolfe',
-      img: img3
+      img: img3,
     },
     {
       name: 'Emily Washington',
-      img: img4
+      img: img4,
     },
     {
       name: 'Heather Green',
-      img: img6
+      img: img6,
     },
     {
       name: 'Brian Moore',
-      img: img5
-    }
+      img: img5,
+    },
   ])
 
   return (
     <AutoComplete
       suggestions={suggestions}
-      className='form-control'
-      filterKey='name'
+      className="form-control"
+      filterKey="name"
       placeholder="Type 'a'"
-      customRender={(suggestion, i, filteredData, activeSuggestion, onSuggestionItemClick, onSuggestionItemHover) => (
+      customRender={(
+        suggestion,
+        i,
+        filteredData,
+        activeSuggestion,
+        onSuggestionItemClick,
+        onSuggestionItemHover,
+      ) => (
         <li
           className={classnames('suggestion-item', {
-            active: filteredData.indexOf(suggestion) === activeSuggestion
+            active: filteredData.indexOf(suggestion) === activeSuggestion,
           })}
           key={i}
-          onMouseEnter={() => onSuggestionItemHover(filteredData.indexOf(suggestion))}
-          onClick={e => {
+          onMouseEnter={() =>
+            onSuggestionItemHover(filteredData.indexOf(suggestion))
+          }
+          onClick={(e) => {
             onSuggestionItemClick(null, e)
           }}
         >
-          <img src={suggestion.img} alt={suggestion.name} height='32' width='32' className='mr-1' />
+          <img
+            src={suggestion.img}
+            alt={suggestion.name}
+            height="32"
+            width="32"
+            className="mr-1"
+          />
           <span>{suggestion.name}</span>
         </li>
       )}

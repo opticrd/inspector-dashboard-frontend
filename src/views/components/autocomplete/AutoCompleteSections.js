@@ -7,78 +7,78 @@ const AutoCompleteSections = () => {
       groupTitle: '1970s',
       data: [
         {
-          title: 'C'
-        }
-      ]
+          title: 'C',
+        },
+      ],
     },
     {
       groupTitle: '1980s',
       data: [
         {
-          title: 'C++'
+          title: 'C++',
         },
         {
-          title: 'Perl'
-        }
-      ]
+          title: 'Perl',
+        },
+      ],
     },
     {
       groupTitle: '1990s',
       data: [
         {
-          title: 'Haskell'
+          title: 'Haskell',
         },
         {
-          title: 'Python'
+          title: 'Python',
         },
         {
-          title: 'Java'
+          title: 'Java',
         },
         {
-          title: 'Javascript'
+          title: 'Javascript',
         },
         {
-          title: 'PHP'
+          title: 'PHP',
         },
         {
-          title: 'Ruby'
-        }
-      ]
+          title: 'Ruby',
+        },
+      ],
     },
     {
       groupTitle: '2000s',
       data: [
         {
-          title: 'C#'
+          title: 'C#',
         },
         {
-          title: 'Scala'
+          title: 'Scala',
         },
         {
-          title: 'Clojure'
+          title: 'Clojure',
         },
         {
-          title: 'Go'
-        }
-      ]
+          title: 'Go',
+        },
+      ],
     },
     {
       groupTitle: '2010s',
       data: [
         {
-          title: 'Elm'
-        }
-      ]
-    }
+          title: 'Elm',
+        },
+      ],
+    },
   ])
 
   return (
     <AutoComplete
       suggestions={suggestions}
-      className='form-control'
-      filterKey='title'
-      filterHeaderKey='groupTitle'
-      grouped={true}
+      className="form-control"
+      filterKey="title"
+      filterHeaderKey="groupTitle"
+      grouped
       placeholder="Type 'c'"
     />
   )

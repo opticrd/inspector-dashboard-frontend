@@ -1,6 +1,6 @@
 export const badgeContextual = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -40,7 +40,7 @@ export default BadgeContextual
 
 export const badgeGlow = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -80,7 +80,7 @@ export default BadgeGlow
 
 export const badgeLight = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -120,7 +120,7 @@ export default BadgeLight
 
 export const badgeIcons = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -168,7 +168,7 @@ export default BadgeIcons
 
 export const badgeLink = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -190,7 +190,7 @@ export default BadgeLink
 
 export const badgeBlock = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'

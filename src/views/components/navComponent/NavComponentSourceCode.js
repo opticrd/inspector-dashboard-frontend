@@ -1,6 +1,6 @@
 export const navBasic = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'
@@ -35,7 +35,7 @@ export default NavBasic
 
 export const navBorder = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'
@@ -70,7 +70,7 @@ export default NavBorder
 
 export const navCenter = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'
@@ -105,7 +105,7 @@ export default NavCenter
 
 export const navEnd = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'
@@ -140,7 +140,7 @@ export default NavEnd
 
 export const navVertical = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'
@@ -175,7 +175,7 @@ export default NavVertical
 
 export const navVerticalBorder = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'
@@ -210,7 +210,7 @@ export default NavVerticalBorder
 
 export const navSquareBorder = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'
@@ -245,7 +245,7 @@ export default NavSquareBorder
 
 export const navDivider = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Nav, NavItem, NavLink } from 'reactstrap'

@@ -5,7 +5,7 @@ import Avatar from '@components/avatar'
 import { Star, Paperclip } from 'react-feather'
 import { CustomInput, Media } from 'reactstrap'
 
-const MailCard = props => {
+const MailCard = (props) => {
   // ** Props
   const {
     mail,
@@ -16,14 +16,17 @@ const MailCard = props => {
     selectedMails,
     handleMailClick,
     handleMailReadUpdate,
-    formatDateToMonthShort
+    formatDateToMonthShort,
   } = props
 
   // ** Function to render labels
-  const renderLabels = arr => {
+  const renderLabels = (arr) => {
     if (arr && arr.length) {
-      return arr.map(label => (
-        <span key={label} className={`bullet bullet-${labelColors[label]} bullet-sm mx-50`}></span>
+      return arr.map((label) => (
+        <span
+          key={label}
+          className={`bullet bullet-${labelColors[label]} bullet-sm mx-50`}
+        ></span>
       ))
     }
   }
@@ -35,10 +38,14 @@ const MailCard = props => {
   }
 
   return (
-    <Media tag='li' onClick={() => onMailClick(mail.id)} className={classnames({ 'mail-read': mail.isRead })}>
-      <div className='media-left pr-50'>
+    <Media
+      tag="li"
+      onClick={() => onMailClick(mail.id)}
+      className={classnames({ 'mail-read': mail.isRead })}
+    >
+      <div className="media-left pr-50">
         <Avatar img={mail.from.avatar} />
-        <div className='user-action'>
+        <div className="user-action">
           {/* <CustomInput
             label=''
             type='checkbox'
@@ -50,29 +57,29 @@ const MailCard = props => {
               e.stopPropagation()
             }}
           /> */}
-          <div className='custom-control custom-checkbox'>
+          <div className="custom-control custom-checkbox">
             <input
-              className='custom-control-input'
-              type='checkbox'
+              className="custom-control-input"
+              type="checkbox"
               id={`${mail.from.name}-${mail.id}`}
               checked={selectedMails.includes(mail.id)}
-              onChange={e => e.stopPropagation()}
-              onClick={e => {
+              onChange={(e) => e.stopPropagation()}
+              onClick={(e) => {
                 dispatch(selectMail(mail.id))
                 e.stopPropagation()
               }}
             />
             <label
-              className='custom-control-label'
+              className="custom-control-label"
               htmlFor={`${mail.from.name}-${mail.id}`}
-              onClick={e => {
+              onClick={(e) => {
                 e.stopPropagation()
               }}
             ></label>
           </div>
           <div
-            className='email-favorite'
-            onClick={e => {
+            className="email-favorite"
+            onClick={(e) => {
               e.stopPropagation()
               dispatch(updateMails([mail.id], { isStarred: !mail.isStarred }))
             }}
@@ -80,26 +87,30 @@ const MailCard = props => {
             <Star
               size={14}
               className={classnames({
-                favorite: mail.isStarred
+                favorite: mail.isStarred,
               })}
             />
           </div>
         </div>
       </div>
       <Media body>
-        <div className='mail-details'>
-          <div className='mail-items'>
-            <h5 className='mb-25'>{mail.from.name}</h5>
-            <span className='text-truncate'>{mail.subject}</span>
+        <div className="mail-details">
+          <div className="mail-items">
+            <h5 className="mb-25">{mail.from.name}</h5>
+            <span className="text-truncate">{mail.subject}</span>
           </div>
-          <div className='mail-meta-item'>
-            {mail.attachments && mail.attachments.length ? <Paperclip size={14} /> : null}
+          <div className="mail-meta-item">
+            {mail.attachments && mail.attachments.length ? (
+              <Paperclip size={14} />
+            ) : null}
             {renderLabels(mail.labels)}
-            <span className='mail-date'>{formatDateToMonthShort(mail.time)}</span>
+            <span className="mail-date">
+              {formatDateToMonthShort(mail.time)}
+            </span>
           </div>
         </div>
-        <div className='mail-message'>
-          <p className='text-truncate mb-0'>{htmlToString(mail.message)}</p>
+        <div className="mail-message">
+          <p className="text-truncate mb-0">{htmlToString(mail.message)}</p>
         </div>
       </Media>
     </Media>

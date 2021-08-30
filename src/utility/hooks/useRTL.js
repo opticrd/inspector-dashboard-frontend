@@ -1,4 +1,4 @@
-//** React Imports
+//* * React Imports
 import { useEffect } from 'react'
 
 // ** Store & Actions
@@ -8,10 +8,10 @@ import { useDispatch, useSelector } from 'react-redux'
 export const useRTL = () => {
   // ** Store Vars
   const dispatch = useDispatch()
-  const isRtl = useSelector(state => state.layout.isRTL)
+  const isRtl = useSelector((state) => state.layout.isRTL)
 
   // ** Return a wrapped version of useState's setter function
-  const setValue = value => {
+  const setValue = (value) => {
     try {
       // ** Allow value to be a function so we have same API as useState
       const valueToStore = value instanceof Function ? value(isRtl) : value

@@ -4,7 +4,7 @@ import themeConfig from '@configs/themeConfig'
 // ** Returns Initial Menu Collapsed State
 const initialMenuCollapsed = () => {
   const item = window.localStorage.getItem('menuCollapsed')
-  //** Parse stored json or if none return initialValue
+  //* * Parse stored json or if none return initialValue
   return item ? JSON.parse(item) : themeConfig.layout.menu.isCollapsed
 }
 
@@ -13,7 +13,7 @@ const initialState = {
   isRTL: themeConfig.layout.isRTL,
   menuCollapsed: initialMenuCollapsed(),
   menuHidden: themeConfig.layout.menu.isHidden,
-  contentWidth: themeConfig.layout.contentWidth
+  contentWidth: themeConfig.layout.contentWidth,
 }
 
 const layoutReducer = (state = initialState, action) => {

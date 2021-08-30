@@ -8,23 +8,21 @@ const images = [
     src: sliderImage1,
     key: 1,
     caption: '',
-    altText: 'Slide 1'
+    altText: 'Slide 1',
   },
   {
     src: sliderImage2,
     key: 2,
     caption: '',
-    altText: 'Slide 2'
+    altText: 'Slide 2',
   },
   {
     src: sliderImage3,
     key: 3,
     caption: '',
-    altText: 'Slide 3'
-  }
+    altText: 'Slide 3',
+  },
 ]
 
-const CarouselKeyboard = () => {
-  return <UncontrolledCarousel items={images} keyboard={true} />
-}
+const CarouselKeyboard = () => <UncontrolledCarousel items={images} keyboard />
 export default CarouselKeyboard

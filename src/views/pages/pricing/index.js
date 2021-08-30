@@ -8,14 +8,14 @@ import PricingHeader from './PricingHeader'
 import '@styles/base/pages/page-pricing.scss'
 
 const Pricing = () => {
-  const [data, setData] = useState(null),
-    [faq, setFaq] = useState(null),
-    [duration, setDuration] = useState('monthly')
+  const [data, setData] = useState(null)
+  const [faq, setFaq] = useState(null)
+  const [duration, setDuration] = useState('monthly')
 
   useEffect(() => {
-    axios.get('/pricing/data').then(res => {
-      const dataArr = [],
-        faqArr = []
+    axios.get('/pricing/data').then((res) => {
+      const dataArr = []
+      const faqArr = []
 
       Object.entries(res.data).forEach(([key, val]) => {
         if (key !== 'qandA') {
@@ -30,14 +30,14 @@ const Pricing = () => {
   }, [])
 
   return (
-    <div id='pricing-table'>
+    <div id="pricing-table">
       <PricingHeader duration={duration} setDuration={setDuration} />
       {data !== null && faq !== null ? (
-        <Fragment>
+        <>
           <PricingCards data={data} duration={duration} />
           <PricingTrial />
           <PricingFaqs data={faq} />
-        </Fragment>
+        </>
       ) : null}
     </div>
   )
