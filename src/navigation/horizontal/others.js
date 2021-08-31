@@ -1,4 +1,12 @@
-import { Box, Menu, Circle, EyeOff, Folder, LifeBuoy, Shield } from 'react-feather'
+import {
+  Box,
+  Menu,
+  Circle,
+  EyeOff,
+  Folder,
+  LifeBuoy,
+  Shield,
+} from 'react-feather'
 export default [
   {
     id: 'misc',
@@ -11,7 +19,7 @@ export default [
         icon: <Shield size={20} />,
         action: 'read',
         resource: 'ACL',
-        navLink: '/access-control'
+        navLink: '/access-control',
       },
       {
         id: 'menuLevels',
@@ -22,7 +30,7 @@ export default [
             id: 'secondLevel',
             title: 'Second Level 2.1',
             icon: <Circle />,
-            navLink: '#'
+            navLink: '#',
           },
           {
             id: 'secondLevel1',
@@ -33,24 +41,24 @@ export default [
                 id: 'ThirdLevel',
                 title: 'Third Level 3.1',
                 icon: <Circle />,
-                navLink: '#'
+                navLink: '#',
               },
               {
                 id: 'ThirdLevel1',
                 title: 'Third Level 3.2',
                 icon: <Circle />,
-                navLink: '#'
-              }
-            ]
-          }
-        ]
+                navLink: '#',
+              },
+            ],
+          },
+        ],
       },
       {
         id: 'disabledMenu',
         title: 'Disabled Menu',
         icon: <EyeOff />,
         navLink: '#',
-        disabled: true
+        disabled: true,
       },
       {
         id: 'documentation',
@@ -58,7 +66,8 @@ export default [
         icon: <Folder />,
         externalLink: true,
         newTab: true,
-        navLink: 'https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/documentation'
+        navLink:
+          'https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/documentation',
       },
       {
         id: 'raiseSupport',
@@ -66,8 +75,8 @@ export default [
         icon: <LifeBuoy />,
         externalLink: true,
         newTab: true,
-        navLink: 'https://pixinvent.ticksy.com/'
-      }
-    ]
-  }
+        navLink: 'https://pixinvent.ticksy.com/',
+      },
+    ],
+  },
 ]

@@ -16,7 +16,7 @@ import {
   Label,
   InputGroup,
   InputGroupAddon,
-  InputGroupText
+  InputGroupText,
 } from 'reactstrap'
 
 import 'cleave.js/dist/addons/cleave-phone.us'
@@ -28,13 +28,13 @@ const colourOptions = [
   { value: 'blue', label: 'Blue' },
   { value: 'purple', label: 'Purple' },
   { value: 'red', label: 'Red' },
-  { value: 'orange', label: 'Orange' }
+  { value: 'orange', label: 'Orange' },
 ]
 
 const defaultValues = {
   phoneNumber: '',
   ReactSelect: null,
-  reactFlatpickr: null
+  reactFlatpickr: null,
 }
 
 const ValidationThirdPartyComponents = () => {
@@ -42,48 +42,52 @@ const ValidationThirdPartyComponents = () => {
 
   const { handleSubmit, control } = useForm({ defaultValues })
 
-  const onSubmit = data => setData(data)
+  const onSubmit = (data) => setData(data)
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Third Party Components</CardTitle>
+        <CardTitle tag="h4">Third Party Components</CardTitle>
       </CardHeader>
       <CardBody>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <FormGroup>
-            <Label for='react-select'>React Select</Label>
+            <Label for="react-select">React Select</Label>
             <Controller
               isClearable
               as={Select}
-              id='react-select'
+              id="react-select"
               control={control}
-              name='ReactSelect'
+              name="ReactSelect"
               options={colourOptions}
-              className={classnames('react-select', { 'is-invalid': data !== null && data.ReactSelect === null })}
-              classNamePrefix='select'
+              className={classnames('react-select', {
+                'is-invalid': data !== null && data.ReactSelect === null,
+              })}
+              classNamePrefix="select"
               theme={selectThemeColors}
             />
           </FormGroup>
           <FormGroup>
-            <Label for='react-flatpickr'>React Flatpickr</Label>
+            <Label for="react-flatpickr">React Flatpickr</Label>
             <Controller
               as={Flatpickr}
               control={control}
-              id='react-flatpickr'
-              name='reactFlatpickr'
+              id="react-flatpickr"
+              name="reactFlatpickr"
               className={classnames('form-control', {
-                'is-invalid': data !== null && data.reactFlatpickr === null
+                'is-invalid': data !== null && data.reactFlatpickr === null,
               })}
             />
           </FormGroup>
           <FormGroup>
-            <Label for='phone-number'>Input Mask</Label>
-            <InputGroup className='input-group-merge'>
-              <InputGroupAddon addonType='prepend'>
+            <Label for="phone-number">Input Mask</Label>
+            <InputGroup className="input-group-merge">
+              <InputGroupAddon addonType="prepend">
                 <InputGroupText
                   className={classnames({
-                    'border-danger': data !== null && (data.phoneNumber === null || !data.phoneNumber.length)
+                    'border-danger':
+                      data !== null &&
+                      (data.phoneNumber === null || !data.phoneNumber.length),
                   })}
                 >
                   US (+1)
@@ -91,22 +95,24 @@ const ValidationThirdPartyComponents = () => {
               </InputGroupAddon>
               <Controller
                 as={Cleave}
-                id='phone-number'
-                name='phoneNumber'
+                id="phone-number"
+                name="phoneNumber"
                 control={control}
                 className={classnames('form-control', {
-                  'is-invalid': data !== null && (data.phoneNumber === null || !data.phoneNumber.length)
+                  'is-invalid':
+                    data !== null &&
+                    (data.phoneNumber === null || !data.phoneNumber.length),
                 })}
-                placeholder='1 234 567 8900'
+                placeholder="1 234 567 8900"
                 options={{ phone: true, phoneRegionCode: 'US' }}
               />
             </InputGroup>
           </FormGroup>
-          <FormGroup className='d-flex mb-0'>
-            <Button.Ripple className='mr-1' color='primary' type='submit'>
+          <FormGroup className="d-flex mb-0">
+            <Button.Ripple className="mr-1" color="primary" type="submit">
               Submit
             </Button.Ripple>
-            <Button.Ripple outline color='secondary' type='reset'>
+            <Button.Ripple outline color="secondary" type="reset">
               Reset
             </Button.Ripple>
           </FormGroup>

@@ -1,7 +1,7 @@
 import { PieChart, Circle, Map } from 'react-feather'
 export default [
   {
-    header: 'Charts & Maps'
+    header: 'Charts & Maps',
   },
   {
     id: 'charts',
@@ -14,26 +14,26 @@ export default [
         id: 'apex',
         title: 'Apex',
         icon: <Circle size={12} />,
-        navLink: '/charts/apex'
+        navLink: '/charts/apex',
       },
       {
         id: 'chartJs',
         title: 'ChartJS',
         icon: <Circle size={12} />,
-        navLink: '/charts/chartjs'
+        navLink: '/charts/chartjs',
       },
       {
         id: 'recharts',
         title: 'Recharts',
         icon: <Circle size={12} />,
-        navLink: '/charts/recharts'
-      }
-    ]
+        navLink: '/charts/recharts',
+      },
+    ],
   },
   {
     id: 'leafletMaps',
     title: 'Leaflet Maps',
     icon: <Map size={20} />,
-    navLink: '/maps/leaflet'
-  }
+    navLink: '/maps/leaflet',
+  },
 ]

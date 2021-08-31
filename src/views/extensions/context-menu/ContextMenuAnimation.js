@@ -6,72 +6,69 @@ import { Card, CardHeader, CardBody, CardTitle, Button } from 'reactstrap'
 import { Menu, Item, useContextMenu, animation } from 'react-contexify'
 
 const ToastContent = ({ text }) => (
-  <Fragment>
-    <div className='toastify-header pb-0'>
-      <div className='title-wrapper'>
-        <Avatar size='sm' color='success' icon={<Check />} />
-        <h6 className='toast-title'>Clicked {text}</h6>
+  <>
+    <div className="toastify-header pb-0">
+      <div className="title-wrapper">
+        <Avatar size="sm" color="success" icon={<Check />} />
+        <h6 className="toast-title">Clicked {text}</h6>
       </div>
     </div>
-  </Fragment>
+  </>
 )
 
 const ContextMenuAnimations = () => {
   const { show: showFade } = useContextMenu({
-    id: 'fade'
+    id: 'fade',
   })
   const { show: showFlip } = useContextMenu({
-    id: 'flip'
+    id: 'flip',
   })
   const { show: showSlide } = useContextMenu({
-    id: 'pop'
+    id: 'pop',
   })
 
-  const handleClick = text => {
-    toast.success(<ToastContent text={text} />, { hideProgressBar: true, closeButton: false })
+  const handleClick = (text) => {
+    toast.success(<ToastContent text={text} />, {
+      hideProgressBar: true,
+      closeButton: false,
+    })
   }
 
-  const FadeMenu = () => {
-    return (
-      <Menu id='fade' animation={animation.fade}>
-        <Item onClick={() => handleClick('Option 1')}>Option 1</Item>
-        <Item onClick={() => handleClick('Option 2')}>Option 2</Item>
-      </Menu>
-    )
-  }
-  const FlipMenu = () => {
-    return (
-      <Menu id='flip' animation={animation.flip}>
-        <Item onClick={() => handleClick('Option 1')}>Option 1</Item>
-        <Item onClick={() => handleClick('Option 2')}>Option 2</Item>
-      </Menu>
-    )
-  }
-  const SlideMenu = () => {
-    return (
-      <Menu id='pop' animation={animation.slide}>
-        <Item onClick={() => handleClick('Option 1')}>Option 1</Item>
-        <Item onClick={() => handleClick('Option 2')}>Option 2</Item>
-      </Menu>
-    )
-  }
+  const FadeMenu = () => (
+    <Menu id="fade" animation={animation.fade}>
+      <Item onClick={() => handleClick('Option 1')}>Option 1</Item>
+      <Item onClick={() => handleClick('Option 2')}>Option 2</Item>
+    </Menu>
+  )
+  const FlipMenu = () => (
+    <Menu id="flip" animation={animation.flip}>
+      <Item onClick={() => handleClick('Option 1')}>Option 1</Item>
+      <Item onClick={() => handleClick('Option 2')}>Option 2</Item>
+    </Menu>
+  )
+  const SlideMenu = () => (
+    <Menu id="pop" animation={animation.slide}>
+      <Item onClick={() => handleClick('Option 1')}>Option 1</Item>
+      <Item onClick={() => handleClick('Option 2')}>Option 2</Item>
+    </Menu>
+  )
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Animations</CardTitle>
+        <CardTitle tag="h4">Animations</CardTitle>
       </CardHeader>
       <CardBody>
-        <div className='demo-inline-spacing'>
-          <Button color='primary' onContextMenu={showFade} outline>
+        <div className="demo-inline-spacing">
+          <Button color="primary" onContextMenu={showFade} outline>
             Fade
           </Button>
 
-          <Button color='primary' onContextMenu={showFlip} outline>
+          <Button color="primary" onContextMenu={showFlip} outline>
             Flip
           </Button>
 
-          <Button color='primary' onContextMenu={showSlide} outline>
+          <Button color="primary" onContextMenu={showSlide} outline>
             Slide
           </Button>
         </div>

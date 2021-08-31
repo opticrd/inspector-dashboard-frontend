@@ -5,22 +5,24 @@ import RadioBasic from './RadioBasic'
 import RadioCustom from './RadioCustom'
 import RadioColors from './RadioColors'
 
-const Radio = () => {
-  return (
-    <Fragment>
-      <Breadcrumbs breadCrumbTitle='Radio' breadCrumbParent='Form Elements' breadCrumbActive='Radio' />
-      <Row>
-        <Col sm='12'>
-          <RadioBasic />
-        </Col>
-        <Col sm='12'>
-          <RadioCustom />
-        </Col>
-        <Col sm='12'>
-          <RadioColors />
-        </Col>
-      </Row>
-    </Fragment>
-  )
-}
+const Radio = () => (
+  <>
+    <Breadcrumbs
+      breadCrumbTitle="Radio"
+      breadCrumbParent="Form Elements"
+      breadCrumbActive="Radio"
+    />
+    <Row>
+      <Col sm="12">
+        <RadioBasic />
+      </Col>
+      <Col sm="12">
+        <RadioCustom />
+      </Col>
+      <Col sm="12">
+        <RadioColors />
+      </Col>
+    </Row>
+  </>
+)
 export default Radio

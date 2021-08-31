@@ -9,11 +9,11 @@ import chartsAndMaps from './charts-maps'
 
 // ** Merge & Export
 export default [
-    ...dashboards, 
-    ...apps, 
-    ...uiElements, 
-    ...formsAndTables, 
-    ...pages, 
-    ...chartsAndMaps, 
-    ...others
+  ...dashboards,
+  ...apps,
+  ...uiElements,
+  ...formsAndTables,
+  ...pages,
+  ...chartsAndMaps,
+  ...others,
 ]

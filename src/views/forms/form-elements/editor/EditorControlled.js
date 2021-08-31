@@ -9,10 +9,13 @@ const EditorControlled = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Controlled Editor</CardTitle>
+        <CardTitle tag="h4">Controlled Editor</CardTitle>
       </CardHeader>
       <CardBody>
-        <Editor editorState={value} onEditorStateChange={data => setValue(data)} />
+        <Editor
+          editorState={value}
+          onEditorStateChange={(data) => setValue(data)}
+        />
       </CardBody>
     </Card>
   )

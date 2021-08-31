@@ -15,11 +15,11 @@ const data = [
     content: 'Luis F Thomen #1442, El Millón',
     meta: '12 min atrás',
     customContent: (
-      <Media className='align-items-center'>
-        <img className='mr-1' src={pdf} alt='pdf' height='23' />
+      <Media className="align-items-center">
+        <img className="mr-1" src={pdf} alt="pdf" height="23" />
         <Media body>Pruebas.pdf</Media>
       </Media>
-    )
+    ),
   },
   {
     title: 'Creó Caso: Reparación Calle',
@@ -27,34 +27,32 @@ const data = [
     meta: '45 min atrás',
     color: 'warning',
     customContent: (
-      <Media className='align-items-center'>
-        <img className='mr-1' src={pdf} alt='pdf' height='23' />
+      <Media className="align-items-center">
+        <img className="mr-1" src={pdf} alt="pdf" height="23" />
         <Media body>Pruebas.pdf</Media>
       </Media>
-    )
+    ),
   },
   {
     title: 'Creó Caso: Reparación Calle',
     content: 'Luis F Thomen #1442, El Millón',
     meta: '2 dias atrás',
-    color: 'info'
-  }
+    color: 'info',
+  },
 ]
 
-const UserTimeline = () => {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle tag='h4' className="mb-1">
-          <List className="mr-1" />
-          Línea de Tiempo
-        </CardTitle>
-      </CardHeader>
-      <CardBody>
-        <Timeline data={data} />
-      </CardBody>
-    </Card>
-  )
-}
+const UserTimeline = () => (
+  <Card>
+    <CardHeader>
+      <CardTitle tag="h4" className="mb-1">
+        <List className="mr-1" />
+        Línea de Tiempo
+      </CardTitle>
+    </CardHeader>
+    <CardBody>
+      <Timeline data={data} />
+    </CardBody>
+  </Card>
+)
 
 export default UserTimeline

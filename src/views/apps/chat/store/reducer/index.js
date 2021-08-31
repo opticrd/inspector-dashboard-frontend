@@ -2,7 +2,7 @@ const initialState = {
   chats: [],
   contacts: [],
   userProfile: {},
-  selectedUser: {}
+  selectedUser: {},
 }
 
 const chatReducer = (state = initialState, action) => {
@@ -10,7 +10,11 @@ const chatReducer = (state = initialState, action) => {
     case 'GET_USER_PROFILE':
       return { ...state, userProfile: action.userProfile }
     case 'GET_CHAT_CONTACTS':
-      return { ...state, chats: action.data.chatsContacts, contacts: action.data.contacts }
+      return {
+        ...state,
+        chats: action.data.chatsContacts,
+        contacts: action.data.contacts,
+      }
     case 'SELECT_CHAT':
       return { ...state, selectedUser: action.data }
     case 'SEND_MSG':

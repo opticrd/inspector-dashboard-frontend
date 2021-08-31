@@ -18,9 +18,9 @@ const SwiperGallery = ({ isRtl }) => {
     spaceBetween: 10,
     navigation: true,
     pagination: {
-      clickable: true
+      clickable: true,
     },
-    thumbs: { swiper: thumbsSwiper }
+    thumbs: { swiper: thumbsSwiper },
   }
 
   const paramsThumbs = {
@@ -30,48 +30,48 @@ const SwiperGallery = ({ isRtl }) => {
     freeMode: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    onSwiper: setThumbsSwiper
+    onSwiper: setThumbsSwiper,
   }
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Gallery</CardTitle>
+        <CardTitle tag="h4">Gallery</CardTitle>
       </CardHeader>
       <CardBody>
-        <div className='swiper-gallery'>
+        <div className="swiper-gallery">
           <Swiper dir={isRtl ? 'rtl' : 'ltr'} {...params}>
             <SwiperSlide>
-              <img src={img1} alt='swiper 1' className='img-fluid' />
+              <img src={img1} alt="swiper 1" className="img-fluid" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={img2} alt='swiper 2' className='img-fluid' />
+              <img src={img2} alt="swiper 2" className="img-fluid" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={img3} alt='swiper 3' className='img-fluid' />
+              <img src={img3} alt="swiper 3" className="img-fluid" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={img4} alt='swiper 4' className='img-fluid' />
+              <img src={img4} alt="swiper 4" className="img-fluid" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={img5} alt='swiper 5' className='img-fluid' />
+              <img src={img5} alt="swiper 5" className="img-fluid" />
             </SwiperSlide>
           </Swiper>
           <Swiper {...paramsThumbs}>
             <SwiperSlide>
-              <img src={img1} alt='swiper 1' className='img-fluid' />
+              <img src={img1} alt="swiper 1" className="img-fluid" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={img2} alt='swiper 2' className='img-fluid' />
+              <img src={img2} alt="swiper 2" className="img-fluid" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={img3} alt='swiper 3' className='img-fluid' />
+              <img src={img3} alt="swiper 3" className="img-fluid" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={img4} alt='swiper 4' className='img-fluid' />
+              <img src={img4} alt="swiper 4" className="img-fluid" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={img5} alt='swiper 5' className='img-fluid' />
+              <img src={img5} alt="swiper 5" className="img-fluid" />
             </SwiperSlide>
           </Swiper>
         </div>

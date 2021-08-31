@@ -1,6 +1,6 @@
 export const defaultAlert = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>
+  <pre className="language-jsx">
+    <code className="language-jsx">
       {`
 
 import { Alert } from 'reactstrap'
@@ -25,7 +25,7 @@ export default DefaultAlert
 
 export const alertTitle = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Alert } from 'reactstrap'
@@ -46,7 +46,7 @@ export default AlertTitle
 
 export const alertColors = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Alert } from 'reactstrap'
@@ -114,7 +114,7 @@ export default AlertColors
 
 export const alertDismissable = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import { Alert } from 'reactstrap'
@@ -140,7 +140,7 @@ export default AlertDismissable
 
 export const alertUncontrolled = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { UncontrolledAlert } from 'reactstrap'
@@ -164,7 +164,7 @@ export default AlertUncontrolled
 
 export const alertIcon = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Alert } from 'reactstrap'
@@ -192,7 +192,7 @@ export default AlertIcon
 
 export const alertExample = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import { Alert, FormGroup, Label, Input } from 'reactstrap'

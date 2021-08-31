@@ -7,17 +7,19 @@ const SiteTraffic = () => {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    axios.get('/card/card-statistics/site-traffic').then(res => setData(res.data))
+    axios
+      .get('/card/card-statistics/site-traffic')
+      .then((res) => setData(res.data))
   }, [])
 
   return data !== null ? (
     <StatsWithLineChart
       icon={<Monitor size={21} />}
-      color='primary'
-      stats='78.9k'
-      statTitle='Site Traffic'
+      color="primary"
+      stats="78.9k"
+      statTitle="Site Traffic"
       series={data.series}
-      type='line'
+      type="line"
     />
   ) : null
 }

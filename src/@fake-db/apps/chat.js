@@ -204,23 +204,30 @@ const data = {
     }
   ]
 }
-/*eslint-enable */
+/* eslint-enable */
 // ------------------------------------------------
 // GET: Return Chats Contacts and Contacts
 // ------------------------------------------------
 mock.onGet('/apps/chat/chats-and-contacts').reply(() => {
-  const chatsContacts = data.chats.map(chat => {
-    const contact = data.contacts.find(c => c.id === chat.userId)
-    contact.chat = { id: chat.id, unseenMsgs: chat.unseenMsgs, lastMessage: chat.chat[chat.chat.length - 1] }
+  const chatsContacts = data.chats.map((chat) => {
+    const contact = data.contacts.find((c) => c.id === chat.userId)
+    contact.chat = {
+      id: chat.id,
+      unseenMsgs: chat.unseenMsgs,
+      lastMessage: chat.chat[chat.chat.length - 1],
+    }
     return contact
   })
   const profileUserData = {
     id: data.profileUser.id,
     avatar: data.profileUser.avatar,
     fullName: data.profileUser.fullName,
-    status: data.profileUser.status
+    status: data.profileUser.status,
   }
-  return [200, { chatsContacts, contacts: data.contacts, profileUser: profileUserData }]
+  return [
+    200,
+    { chatsContacts, contacts: data.contacts, profileUser: profileUserData },
+  ]
 })
 
 // ------------------------------------------------
@@ -231,7 +238,7 @@ mock.onGet('/apps/chat/users/profile-user').reply(() => [200, data.profileUser])
 // ------------------------------------------------
 // GET: Return Single Chat
 // ------------------------------------------------
-mock.onGet('/apps/chat/get-chat').reply(config => {
+mock.onGet('/apps/chat/get-chat').reply((config) => {
   // Get event id from URL
 
   let userId = config.id
@@ -239,9 +246,9 @@ mock.onGet('/apps/chat/get-chat').reply(config => {
   //  Convert Id to number
   userId = Number(userId)
 
-  const chat = data.chats.find(c => c.id === userId)
+  const chat = data.chats.find((c) => c.id === userId)
   if (chat) chat.unseenMsgs = 0
-  const contact = data.contacts.find(c => c.id === userId)
+  const contact = data.contacts.find((c) => c.id === userId)
   if (contact.chat) contact.chat.unseenMsgs = 0
   return [200, { chat, contact }]
 })
@@ -249,16 +256,16 @@ mock.onGet('/apps/chat/get-chat').reply(config => {
 // ------------------------------------------------
 // POST: Add new chat message
 // ------------------------------------------------
-mock.onPost('/apps/chat/send-msg').reply(config => {
+mock.onPost('/apps/chat/send-msg').reply((config) => {
   // Get event from post data
   const { obj } = JSON.parse(config.data)
 
-  let activeChat = data.chats.find(chat => chat.userId === obj.contact.id)
+  let activeChat = data.chats.find((chat) => chat.userId === obj.contact.id)
 
   const newMessageData = {
     message: obj.message,
     time: new Date(),
-    senderId: 11
+    senderId: 11,
   }
   // If there's new chat for user create one
   let isNewChat = false
@@ -272,7 +279,7 @@ mock.onPost('/apps/chat/send-msg').reply(config => {
       id: obj.contact.id,
       userId: obj.contact.id,
       unseenMsgs: 0,
-      chat: [newMessageData]
+      chat: [newMessageData],
     })
     activeChat = data.chats[data.chats.length - 1]
   } else {

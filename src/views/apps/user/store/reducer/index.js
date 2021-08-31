@@ -4,7 +4,7 @@ const initialState = {
   data: [],
   total: 1,
   params: {},
-  selectedUser: null
+  selectedUser: null,
 }
 
 const users = (state = initialState, action) => {
@@ -16,7 +16,7 @@ const users = (state = initialState, action) => {
         ...state,
         data: action.data,
         total: action.totalPages,
-        params: action.params
+        params: action.params,
       }
     case 'GET_USER':
       return { ...state, selectedUser: action.selectedUser }

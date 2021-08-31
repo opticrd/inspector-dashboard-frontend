@@ -15,7 +15,7 @@ import {
   dividerIcon,
   dividerPosition,
   dividerStyle,
-  dividerText
+  dividerText,
 } from './DividerSourceCode'
 
 const Divider = () => {
@@ -23,11 +23,15 @@ const Divider = () => {
     Prism.highlightAll()
   }, [])
   return (
-    <Fragment>
-      <BreadCrumbs breadCrumbTitle='Divider' breadCrumbParent='Extra Components' breadCrumbActive='Divider' />
+    <>
+      <BreadCrumbs
+        breadCrumbTitle="Divider"
+        breadCrumbParent="Extra Components"
+        breadCrumbActive="Divider"
+      />
       <Row>
-        <Col sm='12'>
-          <Card title='Default' code={dividerDefault}>
+        <Col sm="12">
+          <Card title="Default" code={dividerDefault}>
             <CardText>
               You can add a line to divide your section using
               <code>&lt;hr /&gt;</code> tag.
@@ -35,8 +39,8 @@ const Divider = () => {
             <DividerDefault />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Text' code={dividerText}>
+        <Col sm="12">
+          <Card title="Text" code={dividerText}>
             <CardText>
               Use class <code>.divider</code> as wrapper for
               <code>.divider-text</code> to create a divider text
@@ -44,8 +48,8 @@ const Divider = () => {
             <DividerText />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Position' code={dividerPosition}>
+        <Col sm="12">
+          <Card title="Position" code={dividerPosition}>
             <CardText>
               Use class
               <code>.divider-[left | left-center | right | right-center]</code>
@@ -54,8 +58,8 @@ const Divider = () => {
             <DividerPosition />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Colors' code={dividerColors}>
+        <Col sm="12">
+          <Card title="Colors" code={dividerColors}>
             <CardText>
               Use class
               <code>.divider-[left | left-center | right | right-center]</code>
@@ -64,22 +68,23 @@ const Divider = () => {
             <DividerColors />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Icons' code={dividerIcon}>
+        <Col sm="12">
+          <Card title="Icons" code={dividerIcon}>
             <DividerIcons />
           </Card>
         </Col>
-        <Col sm='12'>
-          <Card title='Style' code={dividerStyle}>
+        <Col sm="12">
+          <Card title="Style" code={dividerStyle}>
             <CardText>
-              use class <code>.divider-[dotted | dashed]</code> to change divider style. solid is default style you
-              don't have to add any class for it.
+              use class <code>.divider-[dotted | dashed]</code> to change
+              divider style. solid is default style you don't have to add any
+              class for it.
             </CardText>
             <DividerStyle />
           </Card>
         </Col>
       </Row>
-    </Fragment>
+    </>
   )
 }
 export default Divider

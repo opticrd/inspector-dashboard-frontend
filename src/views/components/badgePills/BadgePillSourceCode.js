@@ -1,6 +1,6 @@
 export const badgePillLight = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -37,7 +37,7 @@ export default BadgePillLight
 
 export const badgePillGlow = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -77,7 +77,7 @@ export default BadgePillGlow
 
 export const badgePillContextual = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -117,7 +117,7 @@ export default BadgePillContextual
 
 export const badgePillNotification = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -156,7 +156,7 @@ export default BadgePillNotification
 
 export const badgePillLink = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'
@@ -178,7 +178,7 @@ export default BadgePillLink
 
 export const badgePillBlock = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { Badge } from 'reactstrap'

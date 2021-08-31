@@ -15,7 +15,7 @@ import {
   progressColored,
   progressMultipleStacked,
   progressLabeled,
-  progressStriped
+  progressStriped,
 } from './ProgressSourceCode'
 
 const Progress = () => {
@@ -23,54 +23,64 @@ const Progress = () => {
     Prism.highlightAll()
   }, [])
   return (
-    <Fragment>
-      <BreadCrumbs breadCrumbTitle='Progress' breadCrumbParent='Components' breadCrumbActive='Progress' />
+    <>
+      <BreadCrumbs
+        breadCrumbTitle="Progress"
+        breadCrumbParent="Components"
+        breadCrumbActive="Progress"
+      />
       <Row>
-        <Col lg='12'>
-          <Card title='Basic Progress' code={progressBasic}>
+        <Col lg="12">
+          <Card title="Basic Progress" code={progressBasic}>
             <ProgressBasic />
           </Card>
         </Col>
-        <Col lg='12'>
-          <Card title='Colored Progress' code={progressColored}>
+        <Col lg="12">
+          <Card title="Colored Progress" code={progressColored}>
             <CardText>
-              Use <code>progress-bar-[color]</code> class with progress to change progress color.
+              Use <code>progress-bar-[color]</code> class with progress to
+              change progress color.
             </CardText>
             <ProgressColored />
           </Card>
         </Col>
-        <Col lg='12'>
-          <Card title='Labeled Progress' code={progressLabeled}>
-            <CardText>Add text between progress tag to create a labeled progress bar.</CardText>
+        <Col lg="12">
+          <Card title="Labeled Progress" code={progressLabeled}>
+            <CardText>
+              Add text between progress tag to create a labeled progress bar.
+            </CardText>
             <ProgressLabeled />
           </Card>
         </Col>
-        <Col lg='12'>
-          <Card title='Multiple Stacked' code={progressMultipleStacked}>
+        <Col lg="12">
+          <Card title="Multiple Stacked" code={progressMultipleStacked}>
             <CardText>
-              To create a multi colored progress wrap all of your progresses in with <code>multi</code> prop.
+              To create a multi colored progress wrap all of your progresses in
+              with <code>multi</code> prop.
             </CardText>
             <ProgressMultipleStacked />
           </Card>
         </Col>
-        <Col lg='12'>
-          <Card title='Striped Progress' code={progressStriped}>
+        <Col lg="12">
+          <Card title="Striped Progress" code={progressStriped}>
             <CardText>
-              Use <code>striped</code> prop with progress to create a striped progress bar.
+              Use <code>striped</code> prop with progress to create a striped
+              progress bar.
             </CardText>
             <ProgressStriped />
           </Card>
         </Col>
-        <Col lg='12'>
-          <Card title='Animated Progress' code={progressAnimated}>
+        <Col lg="12">
+          <Card title="Animated Progress" code={progressAnimated}>
             <CardText>
-              Use <code>animated</code> prop with progress to animate progress bar.
+              Use <code>animated</code> prop with progress to animate progress
+              bar.
             </CardText>
             <ProgressAnimated />
           </Card>
         </Col>
       </Row>
-    </Fragment>
+    </>
   )
 }
 export default Progress

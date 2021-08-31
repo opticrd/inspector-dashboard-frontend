@@ -10,7 +10,7 @@ const FileUploader = () => {
   const uppy = new Uppy({
     meta: { type: 'avatar' },
     restrictions: { maxNumberOfFiles: 1 },
-    autoProceed: true
+    autoProceed: true,
   })
 
   uppy.use(thumbnailGenerator)
@@ -18,16 +18,18 @@ const FileUploader = () => {
   uppy.on('thumbnail:generated', (file, preview) => {
     setImg(preview)
   })
-  
+
   return (
     <div className="mb-2">
       <Label>Cargar Prueba</Label>
-      <DragDrop 
-        uppy={uppy} 
+      <DragDrop
+        uppy={uppy}
         // note= 'asd'
       />
 
-      {img !== null ? <img className='rounded mt-2' src={img} alt='avatar' /> : null}
+      {img !== null ? (
+        <img className="rounded mt-2" src={img} alt="avatar" />
+      ) : null}
     </div>
   )
 }

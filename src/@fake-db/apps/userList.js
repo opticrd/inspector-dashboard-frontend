@@ -14,7 +14,7 @@ const data = {
       email: 'gslixby0@abc.net.au',
       currentPlan: 'enterprise',
       status: 'inactive',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const data = {
       email: 'hredmore1@imgur.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/10.png').default
+      avatar: require('@src/assets/images/avatars/10.png').default,
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const data = {
       email: 'msicely2@who.int',
       currentPlan: 'enterprise',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('@src/assets/images/avatars/1.png').default,
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ const data = {
       email: 'crisby3@wordpress.com',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('@src/assets/images/avatars/9.png').default,
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ const data = {
       email: 'mhurran4@yahoo.co.jp',
       currentPlan: 'enterprise',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/10.png').default
+      avatar: require('@src/assets/images/avatars/10.png').default,
     },
     {
       id: 6,
@@ -79,7 +79,7 @@ const data = {
       email: 'shalstead5@shinystat.com',
       currentPlan: 'company',
       status: 'active',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 7,
@@ -92,7 +92,7 @@ const data = {
       email: 'bgallemore6@boston.com',
       currentPlan: 'company',
       status: 'pending',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 8,
@@ -105,7 +105,7 @@ const data = {
       email: 'kliger7@vinaora.com',
       currentPlan: 'enterprise',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('@src/assets/images/avatars/9.png').default,
     },
     {
       id: 9,
@@ -118,7 +118,7 @@ const data = {
       email: 'fscotfurth8@dailymotion.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/2.png').default
+      avatar: require('@src/assets/images/avatars/2.png').default,
     },
     {
       id: 10,
@@ -131,7 +131,7 @@ const data = {
       email: 'jbellany9@kickstarter.com',
       currentPlan: 'company',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('@src/assets/images/avatars/9.png').default,
     },
     {
       id: 11,
@@ -144,7 +144,7 @@ const data = {
       email: 'jwharltona@oakley.com',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/4.png').default
+      avatar: require('@src/assets/images/avatars/4.png').default,
     },
     {
       id: 12,
@@ -157,7 +157,7 @@ const data = {
       email: 'shallamb@hugedomains.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/5.png').default
+      avatar: require('@src/assets/images/avatars/5.png').default,
     },
     {
       id: 13,
@@ -170,7 +170,7 @@ const data = {
       email: 'ypottiec@privacy.gov.au',
       currentPlan: 'basic',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/7.png').default
+      avatar: require('@src/assets/images/avatars/7.png').default,
     },
     {
       id: 14,
@@ -183,7 +183,7 @@ const data = {
       email: 'mkraused@stanford.edu',
       currentPlan: 'team',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('@src/assets/images/avatars/9.png').default,
     },
     {
       id: 15,
@@ -196,7 +196,7 @@ const data = {
       email: 'zmcclevertye@soundcloud.com',
       currentPlan: 'enterprise',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/2.png').default
+      avatar: require('@src/assets/images/avatars/2.png').default,
     },
     {
       id: 16,
@@ -209,7 +209,7 @@ const data = {
       email: 'bemblinf@wired.com',
       currentPlan: 'company',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/6.png').default
+      avatar: require('@src/assets/images/avatars/6.png').default,
     },
     {
       id: 17,
@@ -222,7 +222,7 @@ const data = {
       email: 'bmylesg@amazon.com',
       currentPlan: 'basic',
       status: 'active',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 18,
@@ -235,7 +235,7 @@ const data = {
       email: 'bbinerh@mozilla.com',
       currentPlan: 'team',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/7.png').default
+      avatar: require('@src/assets/images/avatars/7.png').default,
     },
     {
       id: 19,
@@ -248,7 +248,7 @@ const data = {
       email: 'tbruntjeni@sitemeter.com',
       currentPlan: 'enterprise',
       status: 'active',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 20,
@@ -261,7 +261,7 @@ const data = {
       email: 'wburlandj@uiuc.edu',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/6.png').default
+      avatar: require('@src/assets/images/avatars/6.png').default,
     },
     {
       id: 21,
@@ -274,7 +274,7 @@ const data = {
       email: 'irena.dubrovna@wayne.com',
       currentPlan: 'team',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('@src/assets/images/avatars/1.png').default,
     },
     {
       id: 22,
@@ -287,7 +287,7 @@ const data = {
       email: 'jlysterl@guardian.co.uk',
       currentPlan: 'company',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/8.png').default
+      avatar: require('@src/assets/images/avatars/8.png').default,
     },
     {
       id: 23,
@@ -300,7 +300,7 @@ const data = {
       email: 'kskitterelm@washingtonpost.com',
       currentPlan: 'basic',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/3.png').default
+      avatar: require('@src/assets/images/avatars/3.png').default,
     },
     {
       id: 24,
@@ -313,7 +313,7 @@ const data = {
       email: 'chatherleighn@washington.edu',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/2.png').default
+      avatar: require('@src/assets/images/avatars/2.png').default,
     },
     {
       id: 25,
@@ -326,7 +326,7 @@ const data = {
       email: 'amiccoo@whitehouse.gov',
       currentPlan: 'enterprise',
       status: 'pending',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 26,
@@ -339,7 +339,7 @@ const data = {
       email: 'hhassonp@bizjournals.com',
       currentPlan: 'basic',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/4.png').default
+      avatar: require('@src/assets/images/avatars/4.png').default,
     },
     {
       id: 27,
@@ -352,7 +352,7 @@ const data = {
       email: 'gjacombsq@jigsy.com',
       currentPlan: 'enterprise',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/10.png').default
+      avatar: require('@src/assets/images/avatars/10.png').default,
     },
     {
       id: 28,
@@ -365,7 +365,7 @@ const data = {
       email: 'bkildayr@mashable.com',
       currentPlan: 'team',
       status: 'active',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 29,
@@ -378,7 +378,7 @@ const data = {
       email: 'cpinyons@behance.net',
       currentPlan: 'team',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/7.png').default
+      avatar: require('@src/assets/images/avatars/7.png').default,
     },
     {
       id: 30,
@@ -391,7 +391,7 @@ const data = {
       email: 'imallindinet@shinystat.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 31,
@@ -404,7 +404,7 @@ const data = {
       email: 'gmeinekenu@hc360.com',
       currentPlan: 'basic',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('@src/assets/images/avatars/1.png').default,
     },
     {
       id: 32,
@@ -417,7 +417,7 @@ const data = {
       email: 'rsnowballv@indiegogo.com',
       currentPlan: 'basic',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/5.png').default
+      avatar: require('@src/assets/images/avatars/5.png').default,
     },
     {
       id: 33,
@@ -430,7 +430,7 @@ const data = {
       email: 'remerw@blogtalkradio.com',
       currentPlan: 'basic',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/8.png').default
+      avatar: require('@src/assets/images/avatars/8.png').default,
     },
     {
       id: 34,
@@ -443,7 +443,7 @@ const data = {
       email: 'ofibbensx@booking.com',
       currentPlan: 'company',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/4.png').default
+      avatar: require('@src/assets/images/avatars/4.png').default,
     },
     {
       id: 35,
@@ -456,7 +456,7 @@ const data = {
       email: 'smacgilfoyley@bigcartel.com',
       currentPlan: 'company',
       status: 'pending',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 36,
@@ -469,7 +469,7 @@ const data = {
       email: 'brosebothamz@tripadvisor.com',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 37,
@@ -482,7 +482,7 @@ const data = {
       email: 'shebblethwaite10@arizona.edu',
       currentPlan: 'company',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('@src/assets/images/avatars/9.png').default,
     },
     {
       id: 38,
@@ -495,7 +495,7 @@ const data = {
       email: 'mpiccard11@vimeo.com',
       currentPlan: 'enterprise',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('@src/assets/images/avatars/1.png').default,
     },
     {
       id: 39,
@@ -508,7 +508,7 @@ const data = {
       email: 'twidmore12@bravesites.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 40,
@@ -521,7 +521,7 @@ const data = {
       email: 'fdesporte13@omniture.com',
       currentPlan: 'company',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/6.png').default
+      avatar: require('@src/assets/images/avatars/6.png').default,
     },
     {
       id: 41,
@@ -534,7 +534,7 @@ const data = {
       email: 'ebaldetti14@theguardian.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 42,
@@ -547,7 +547,7 @@ const data = {
       email: 'brossiter15@craigslist.org',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 43,
@@ -560,7 +560,7 @@ const data = {
       email: 'mmcnirlan16@hc360.com',
       currentPlan: 'basic',
       status: 'inactive',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 44,
@@ -573,7 +573,7 @@ const data = {
       email: 'vkoschek17@abc.net.au',
       currentPlan: 'team',
       status: 'active',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 45,
@@ -586,7 +586,7 @@ const data = {
       email: 'cperot18@goo.ne.jp',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/3.png').default
+      avatar: require('@src/assets/images/avatars/3.png').default,
     },
     {
       id: 46,
@@ -599,7 +599,7 @@ const data = {
       email: 'soffner19@mac.com',
       currentPlan: 'enterprise',
       status: 'pending',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 47,
@@ -612,7 +612,7 @@ const data = {
       email: 'kcourtliff1a@bbc.co.uk',
       currentPlan: 'basic',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('@src/assets/images/avatars/1.png').default,
     },
     {
       id: 48,
@@ -625,7 +625,7 @@ const data = {
       email: 'owind1b@yandex.ru',
       currentPlan: 'basic',
       status: 'pending',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 49,
@@ -638,7 +638,7 @@ const data = {
       email: 'pdurber1c@gov.uk',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: ''
+      avatar: '',
     },
     {
       id: 50,
@@ -651,16 +651,16 @@ const data = {
       email: 'bkrabbe1d@home.pl',
       currentPlan: 'company',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/9.png').default
-    }
-  ]
+      avatar: require('@src/assets/images/avatars/9.png').default,
+    },
+  ],
 }
 
 // GET ALL DATA
 mock.onGet('/api/users/list/all-data').reply(200, data.users)
 
 // POST: Add new user
-mock.onPost('/apps/users/add-user').reply(config => {
+mock.onPost('/apps/users/add-user').reply((config) => {
   // Get event from post data
   const user = JSON.parse(config.data)
 
@@ -677,8 +677,15 @@ mock.onPost('/apps/users/add-user').reply(config => {
 })
 
 // GET Updated DATA
-mock.onGet('/api/users/list/data').reply(config => {
-  const { q = '', perPage = 10, page = 1, role = null, currentPlan = null, status = null } = config
+mock.onGet('/api/users/list/data').reply((config) => {
+  const {
+    q = '',
+    perPage = 10,
+    page = 1,
+    role = null,
+    currentPlan = null,
+    status = null,
+  } = config
 
   /* eslint-disable  */
   const queryLowered = q.toLowerCase()
@@ -695,27 +702,27 @@ mock.onGet('/api/users/list/data').reply(config => {
     200,
     {
       users: paginateArray(filteredData, perPage, page),
-      total: filteredData.length
-    }
+      total: filteredData.length,
+    },
   ]
 })
 
 // GET USER
-mock.onGet('/api/users/user').reply(config => {
+mock.onGet('/api/users/user').reply((config) => {
   const { id } = config
-  const user = data.users.find(i => i.id === id)
+  const user = data.users.find((i) => i.id === id)
   return [200, { user }]
 })
 
 // DELETE: Deletes User
-mock.onDelete('/apps/users/delete').reply(config => {
+mock.onDelete('/apps/users/delete').reply((config) => {
   // Get user id from URL
   let userId = config.id
 
   // Convert Id to number
   userId = Number(userId)
 
-  const userIndex = data.users.findIndex(t => t.id === userId)
+  const userIndex = data.users.findIndex((t) => t.id === userId)
   data.users.splice(userIndex, 1)
 
   return [200]

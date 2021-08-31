@@ -1,6 +1,6 @@
 export const avatarSizes = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import Avatar from '@components/avatar'
@@ -24,7 +24,7 @@ export default AvatarSizes
 
 export const avatarInitials = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import Avatar from '@components/avatar'
@@ -47,7 +47,7 @@ export default AvatarInitials
 
 export const avatarColors = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import Avatar from '@components/avatar'
@@ -72,7 +72,7 @@ export default AvatarColors
 
 export const avatarLightColors = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import Avatar from '@components/avatar'
@@ -97,7 +97,7 @@ export default AvatarLightColors
 
 export const avatarIcons = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import Avatar from '@components/avatar'
@@ -123,7 +123,7 @@ export default AvatarIcons
 
 export const avatarStatus = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import Avatar from '@components/avatar'
@@ -148,7 +148,7 @@ export default AvatarStatus
 
 export const avatarGroup = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import AvatarGroup from '@components/avatar-group'
@@ -183,7 +183,7 @@ export default AvatarGroupComponent
 
 export const avatarGroupTooltip = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import AvatarGroup from '@components/avatar-group'

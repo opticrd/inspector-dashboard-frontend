@@ -1,5 +1,10 @@
 import { useState } from 'react'
-import { Carousel, CarouselItem, CarouselControl, CarouselIndicators } from 'reactstrap'
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+} from 'reactstrap'
 import sliderImage1 from '@src/assets/images/slider/01.jpg'
 import sliderImage2 from '@src/assets/images/slider/02.jpg'
 import sliderImage3 from '@src/assets/images/slider/03.jpg'
@@ -7,16 +12,16 @@ import sliderImage3 from '@src/assets/images/slider/03.jpg'
 const images = [
   {
     src: sliderImage2,
-    id: 1
+    id: 1,
   },
   {
     src: sliderImage3,
-    id: 2
+    id: 2,
   },
   {
     src: sliderImage1,
-    id: 3
-  }
+    id: 3,
+  },
 ]
 
 const CarouselBasic = () => {
@@ -43,24 +48,39 @@ const CarouselBasic = () => {
     setActiveIndex(nextIndex)
   }
 
-  const goToIndex = newIndex => {
+  const goToIndex = (newIndex) => {
     if (animating) return
     setActiveIndex(newIndex)
   }
 
-  const slides = images.map(item => {
-    return (
-      <CarouselItem onExiting={onExiting} onExited={onExited} key={item.id}>
-        <img src={item.src} className='img-fluid' alt={item.id} />
-      </CarouselItem>
-    )
-  })
+  const slides = images.map((item) => (
+    <CarouselItem onExiting={onExiting} onExited={onExited} key={item.id}>
+      <img src={item.src} className="img-fluid" alt={item.id} />
+    </CarouselItem>
+  ))
   return (
-    <Carousel activeIndex={activeIndex} next={next} previous={previous} keyboard={false}>
-      <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={goToIndex} />
+    <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+      keyboard={false}
+    >
+      <CarouselIndicators
+        items={images}
+        activeIndex={activeIndex}
+        onClickHandler={goToIndex}
+      />
       {slides}
-      <CarouselControl direction='prev' directionText='Previous' onClickHandler={previous} />
-      <CarouselControl direction='next' directionText='Next' onClickHandler={next} />
+      <CarouselControl
+        direction="prev"
+        directionText="Previous"
+        onClickHandler={previous}
+      />
+      <CarouselControl
+        direction="next"
+        directionText="Next"
+        onClickHandler={next}
+      />
     </Carousel>
   )
 }

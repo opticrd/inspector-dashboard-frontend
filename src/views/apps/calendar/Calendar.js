@@ -18,17 +18,17 @@ import { Menu, Check } from 'react-feather'
 
 // ** Toast Component
 const ToastComponent = ({ title, icon, color }) => (
-  <Fragment>
-    <div className='toastify-header pb-0'>
-      <div className='title-wrapper'>
-        <Avatar size='sm' color={color} icon={icon} />
-        <h6 className='toast-title'>{title}</h6>
+  <>
+    <div className="toastify-header pb-0">
+      <div className="title-wrapper">
+        <Avatar size="sm" color={color} icon={icon} />
+        <h6 className="toast-title">{title}</h6>
       </div>
     </div>
-  </Fragment>
+  </>
 )
 
-const Calendar = props => {
+const Calendar = (props) => {
   // ** Refs
   const calendarRef = useRef(null)
 
@@ -44,7 +44,7 @@ const Calendar = props => {
     blankEvent,
     toggleSidebar,
     selectEvent,
-    updateEvent
+    updateEvent,
   } = props
 
   // ** UseEffect checks for CalendarAPI Update
@@ -61,7 +61,7 @@ const Calendar = props => {
     initialView: 'dayGridMonth',
     headerToolbar: {
       start: 'sidebarToggle, prev,next, title',
-      end: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      end: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
     },
     /*
       Enable dragging and resizing event
@@ -95,11 +95,12 @@ const Calendar = props => {
 
     eventClassNames({ event: calendarEvent }) {
       // eslint-disable-next-line no-underscore-dangle
-      const colorName = calendarsColor[calendarEvent._def.extendedProps.calendar]
+      const colorName =
+        calendarsColor[calendarEvent._def.extendedProps.calendar]
 
       return [
         // Background Color
-        `bg-light-${colorName}`
+        `bg-light-${colorName}`,
       ]
     },
 
@@ -117,11 +118,11 @@ const Calendar = props => {
 
     customButtons: {
       sidebarToggle: {
-        text: <Menu className='d-xl-none d-block' />,
+        text: <Menu className="d-xl-none d-block" />,
         click() {
           toggleSidebar(true)
-        }
-      }
+        },
+      },
     },
 
     dateClick(info) {
@@ -139,11 +140,18 @@ const Calendar = props => {
     */
     eventDrop({ event: droppedEvent }) {
       dispatch(updateEvent(droppedEvent))
-      toast.success(<ToastComponent title='Event Updated' color='success' icon={<Check />} />, {
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeButton: false
-      })
+      toast.success(
+        <ToastComponent
+          title="Event Updated"
+          color="success"
+          icon={<Check />}
+        />,
+        {
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeButton: false,
+        },
+      )
     },
 
     /*
@@ -152,22 +160,29 @@ const Calendar = props => {
     */
     eventResize({ event: resizedEvent }) {
       dispatch(updateEvent(resizedEvent))
-      toast.success(<ToastComponent title='Event Updated' color='success' icon={<Check />} />, {
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeButton: false
-      })
+      toast.success(
+        <ToastComponent
+          title="Event Updated"
+          color="success"
+          icon={<Check />}
+        />,
+        {
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeButton: false,
+        },
+      )
     },
 
     ref: calendarRef,
 
     // Get direction from app state (store)
-    direction: isRtl ? 'rtl' : 'ltr'
+    direction: isRtl ? 'rtl' : 'ltr',
   }
 
   return (
-    <Card className='shadow-none border-0 mb-0 rounded-0'>
-      <CardBody className='pb-0'>
+    <Card className="shadow-none border-0 mb-0 rounded-0">
+      <CardBody className="pb-0">
         <FullCalendar {...calendarOptions} />{' '}
       </CardBody>
     </Card>

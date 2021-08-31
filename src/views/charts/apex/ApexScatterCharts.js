@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import Chart from 'react-apexcharts'
-import { Card, CardHeader, CardTitle, CardBody, ButtonGroup, Button } from 'reactstrap'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardBody,
+  ButtonGroup,
+  Button,
+} from 'reactstrap'
 
 const ApexScatterCharts = ({ direction, warning, primary, success }) => {
   const [active, setActive] = useState('daily')
@@ -9,23 +16,23 @@ const ApexScatterCharts = ({ direction, warning, primary, success }) => {
     chart: {
       zoom: {
         enabled: true,
-        type: 'xy'
+        type: 'xy',
       },
       parentHeightOffset: 0,
       toolbar: {
-        show: false
-      }
+        show: false,
+      },
     },
     grid: {
       xaxis: {
         lines: {
-          show: true
-        }
-      }
+          show: true,
+        },
+      },
     },
     legend: {
       position: 'top',
-      horizontalAlign: 'start'
+      horizontalAlign: 'start',
     },
     colors: [warning, primary, success],
 
@@ -34,12 +41,12 @@ const ApexScatterCharts = ({ direction, warning, primary, success }) => {
       labels: {
         formatter(val) {
           return parseFloat(val).toFixed(1)
-        }
-      }
+        },
+      },
     },
     yaxis: {
-      opposite: direction === 'rtl'
-    }
+      opposite: direction === 'rtl',
+    },
   }
 
   const series = [
@@ -57,8 +64,8 @@ const ApexScatterCharts = ({ direction, warning, primary, success }) => {
         [10.0, 190],
         [11.0, 220],
         [12.0, 170],
-        [13.0, 230]
-      ]
+        [13.0, 230],
+      ],
     },
     {
       name: 'Vue',
@@ -75,8 +82,8 @@ const ApexScatterCharts = ({ direction, warning, primary, success }) => {
         [19.0, 280],
         [17.0, 280],
         [22.0, 300],
-        [18.0, 120]
-      ]
+        [18.0, 120],
+      ],
     },
     {
       name: 'React',
@@ -91,29 +98,44 @@ const ApexScatterCharts = ({ direction, warning, primary, success }) => {
         [19.0, 400],
         [20.0, 200],
         [22.0, 90],
-        [20.0, 120]
-      ]
-    }
+        [20.0, 120],
+      ],
+    },
   ]
 
   return (
     <Card>
-      <CardHeader className='d-flex flex-md-row flex-column justify-content-md-between justify-content-start align-items-md-center align-items-start'>
-        <CardTitle tag='h4'>New Technologies Data</CardTitle>
-        <ButtonGroup className='mt-md-0 mt-1'>
-          <Button active={active === 'daily'} color='primary' outline onClick={() => setActive('daily')}>
+      <CardHeader className="d-flex flex-md-row flex-column justify-content-md-between justify-content-start align-items-md-center align-items-start">
+        <CardTitle tag="h4">New Technologies Data</CardTitle>
+        <ButtonGroup className="mt-md-0 mt-1">
+          <Button
+            active={active === 'daily'}
+            color="primary"
+            outline
+            onClick={() => setActive('daily')}
+          >
             Daily
           </Button>
-          <Button active={active === 'monthly'} color='primary' outline onClick={() => setActive('monthly')}>
+          <Button
+            active={active === 'monthly'}
+            color="primary"
+            outline
+            onClick={() => setActive('monthly')}
+          >
             Monthly
           </Button>
-          <Button active={active === 'yearly'} color='primary' outline onClick={() => setActive('yearly')}>
+          <Button
+            active={active === 'yearly'}
+            color="primary"
+            outline
+            onClick={() => setActive('yearly')}
+          >
             Yearly
           </Button>
         </ButtonGroup>
       </CardHeader>
       <CardBody>
-        <Chart options={options} series={series} type='scatter' height={400} />
+        <Chart options={options} series={series} type="scatter" height={400} />
       </CardBody>
     </Card>
   )

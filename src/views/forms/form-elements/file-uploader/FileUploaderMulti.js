@@ -9,7 +9,7 @@ const FileUploaderMulti = () => {
 
   const uppy = new Uppy({
     meta: { type: 'avatar' },
-    autoProceed: true
+    autoProceed: true,
   })
 
   uppy.use(thumbnailGenerator)
@@ -22,16 +22,17 @@ const FileUploaderMulti = () => {
 
   const renderPreview = () => {
     if (previewArr.length) {
-      return previewArr.map((src, index) => <img key={index} className='rounded mt-2 mr-1' src={src} alt='avatar' />)
-    } else {
-      return null
+      return previewArr.map((src, index) => (
+        <img key={index} className="rounded mt-2 mr-1" src={src} alt="avatar" />
+      ))
     }
+    return null
   }
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'> Multiple Files Upload</CardTitle>
+        <CardTitle tag="h4"> Multiple Files Upload</CardTitle>
       </CardHeader>
       <CardBody>
         <DragDrop uppy={uppy} />

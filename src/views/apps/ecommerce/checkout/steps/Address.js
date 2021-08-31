@@ -16,10 +16,10 @@ import {
   CardText,
   Button,
   Row,
-  Col
+  Col,
 } from 'reactstrap'
 
-const Address = props => {
+const Address = (props) => {
   // ** Props
   const { stepper } = props
 
@@ -35,136 +35,159 @@ const Address = props => {
   }
 
   return (
-    <Form className='list-view product-checkout' onSubmit={handleSubmit(onSubmit)}>
+    <Form
+      className="list-view product-checkout"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Card>
-        <CardHeader className='flex-column align-items-start'>
-          <CardTitle tag='h4'>Add New Address</CardTitle>
-          <CardText className='text-muted mt-25'>
+        <CardHeader className="flex-column align-items-start">
+          <CardTitle tag="h4">Add New Address</CardTitle>
+          <CardText className="text-muted mt-25">
             Be sure to check "Deliver to this address" when you have finished
           </CardText>
         </CardHeader>
         <CardBody>
           <Row>
-            <Col md='6' sm='12'>
-              <FormGroup className='mb-2'>
-                <Label for='checkout-name'>Full Name:</Label>
+            <Col md="6" sm="12">
+              <FormGroup className="mb-2">
+                <Label for="checkout-name">Full Name:</Label>
                 <Input
-                  name='checkout-name'
-                  id='checkout-name'
-                  placeholder='John Doe'
+                  name="checkout-name"
+                  id="checkout-name"
+                  placeholder="John Doe"
                   innerRef={register({ required: true })}
-                  className={classnames({ 'is-invalid': errors['checkout-name'] })}
+                  className={classnames({
+                    'is-invalid': errors['checkout-name'],
+                  })}
                 />
               </FormGroup>
             </Col>
-            <Col md='6' sm='12'>
-              <FormGroup className='mb-2'>
-                <Label for='checkout-number'>Number:</Label>
+            <Col md="6" sm="12">
+              <FormGroup className="mb-2">
+                <Label for="checkout-number">Number:</Label>
                 <Input
-                  type='number'
-                  name='checkout-number'
-                  id='checkout-number'
-                  placeholder='0123456789'
+                  type="number"
+                  name="checkout-number"
+                  id="checkout-number"
+                  placeholder="0123456789"
                   innerRef={register({ required: true })}
-                  className={classnames({ 'is-invalid': errors['checkout-number'] })}
+                  className={classnames({
+                    'is-invalid': errors['checkout-number'],
+                  })}
                 />
               </FormGroup>
             </Col>
-            <Col md='6' sm='12'>
-              <FormGroup className='mb-2'>
-                <Label for='checkout-apt-number'>Flat, House No:</Label>
+            <Col md="6" sm="12">
+              <FormGroup className="mb-2">
+                <Label for="checkout-apt-number">Flat, House No:</Label>
                 <Input
-                  type='number'
-                  name='checkout-apt-number'
-                  id='checkout-apt-number'
-                  placeholder='9447 Glen Eagles Drive'
+                  type="number"
+                  name="checkout-apt-number"
+                  id="checkout-apt-number"
+                  placeholder="9447 Glen Eagles Drive"
                   innerRef={register({ required: true })}
-                  className={classnames({ 'is-invalid': errors['checkout-apt-number'] })}
+                  className={classnames({
+                    'is-invalid': errors['checkout-apt-number'],
+                  })}
                 />
               </FormGroup>
             </Col>
-            <Col md='6' sm='12'>
-              <FormGroup className='mb-2'>
-                <Label for='checkout-landmark'>Landmark e.g. near apollo hospital:</Label>
+            <Col md="6" sm="12">
+              <FormGroup className="mb-2">
+                <Label for="checkout-landmark">
+                  Landmark e.g. near apollo hospital:
+                </Label>
                 <Input
-                  name='checkout-landmark'
-                  id='checkout-landmark'
-                  placeholder='Near Apollo Hospital'
+                  name="checkout-landmark"
+                  id="checkout-landmark"
+                  placeholder="Near Apollo Hospital"
                   innerRef={register({ required: true })}
-                  className={classnames({ 'is-invalid': errors['checkout-landmark'] })}
+                  className={classnames({
+                    'is-invalid': errors['checkout-landmark'],
+                  })}
                 />
               </FormGroup>
             </Col>
-            <Col md='6' sm='12'>
-              <FormGroup className='mb-2'>
-                <Label for='checkout-city'>Town/City:</Label>
+            <Col md="6" sm="12">
+              <FormGroup className="mb-2">
+                <Label for="checkout-city">Town/City:</Label>
                 <Input
-                  name='checkout-city'
-                  id='checkout-city'
-                  placeholder='Tokyo'
+                  name="checkout-city"
+                  id="checkout-city"
+                  placeholder="Tokyo"
                   innerRef={register({ required: true })}
-                  className={classnames({ 'is-invalid': errors['checkout-city'] })}
+                  className={classnames({
+                    'is-invalid': errors['checkout-city'],
+                  })}
                 />
               </FormGroup>
             </Col>
-            <Col md='6' sm='12'>
-              <FormGroup className='mb-2'>
-                <Label for='checkout-pincode'>Pincode:</Label>
+            <Col md="6" sm="12">
+              <FormGroup className="mb-2">
+                <Label for="checkout-pincode">Pincode:</Label>
                 <Input
-                  type='number'
-                  name='checkout-pincode'
-                  id='checkout-pincode'
-                  placeholder='201301'
+                  type="number"
+                  name="checkout-pincode"
+                  id="checkout-pincode"
+                  placeholder="201301"
                   innerRef={register({ required: true })}
-                  className={classnames({ 'is-invalid': errors['checkout-pincode'] })}
+                  className={classnames({
+                    'is-invalid': errors['checkout-pincode'],
+                  })}
                 />
               </FormGroup>
             </Col>
-            <Col md='6' sm='12'>
-              <FormGroup className='mb-2'>
-                <Label for='checkout-state'>State:</Label>
+            <Col md="6" sm="12">
+              <FormGroup className="mb-2">
+                <Label for="checkout-state">State:</Label>
                 <Input
-                  name='checkout-state'
-                  id='checkout-state'
-                  placeholder='California'
+                  name="checkout-state"
+                  id="checkout-state"
+                  placeholder="California"
                   innerRef={register({ required: true })}
-                  className={classnames({ 'is-invalid': errors['checkout-state'] })}
+                  className={classnames({
+                    'is-invalid': errors['checkout-state'],
+                  })}
                 />
               </FormGroup>
             </Col>
-            <Col md='6' sm='12'>
-              <FormGroup className='mb-2'>
-                <Label for='add-type'>Address Type:</Label>
-                <Input type='select' name='add-type' id='add-type'>
-                  <option value='home'>Home</option>
-                  <option value='work'>Work</option>
+            <Col md="6" sm="12">
+              <FormGroup className="mb-2">
+                <Label for="add-type">Address Type:</Label>
+                <Input type="select" name="add-type" id="add-type">
+                  <option value="home">Home</option>
+                  <option value="work">Work</option>
                 </Input>
               </FormGroup>
             </Col>
-            <Col sm='12'>
-              <Button.Ripple type='submit' className='btn-next delivery-address' color='primary'>
+            <Col sm="12">
+              <Button.Ripple
+                type="submit"
+                className="btn-next delivery-address"
+                color="primary"
+              >
                 Save And Deliver Here
               </Button.Ripple>
             </Col>
           </Row>
         </CardBody>
       </Card>
-      <div className='customer-card'>
+      <div className="customer-card">
         <Card>
           <CardHeader>
-            <CardTitle tag='h4'>John Doe</CardTitle>
+            <CardTitle tag="h4">John Doe</CardTitle>
           </CardHeader>
           <CardBody>
-            <CardText className='mb-0'>9447 Glen Eagles Drive</CardText>
+            <CardText className="mb-0">9447 Glen Eagles Drive</CardText>
             <CardText>Lewis Center, OH 43035</CardText>
             <CardText>UTC-5: Eastern Standard Time (EST)</CardText>
             <CardText>202-555-0140</CardText>
             <Button.Ripple
               block
-              type='button'
-              color='primary'
+              type="button"
+              color="primary"
               onClick={() => stepper.next()}
-              className='btn-next delivery-address mt-2'
+              className="btn-next delivery-address mt-2"
             >
               Deliver To This Address
             </Button.Ripple>

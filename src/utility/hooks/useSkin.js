@@ -1,4 +1,4 @@
-//** React Imports
+//* * React Imports
 import { useState, useEffect } from 'react'
 
 // ** Configs
@@ -20,7 +20,7 @@ export const useSkin = () => {
   })
 
   // ** Return a wrapped version of useState's setter function
-  const setValue = value => {
+  const setValue = (value) => {
     try {
       // ** Allow value to be a function so we have same API as useState
       const valueToStore = value instanceof Function ? value(skin) : value
@@ -42,7 +42,7 @@ export const useSkin = () => {
     const classNames = {
       dark: 'dark-layout',
       bordered: 'bordered-layout',
-      'semi-dark': 'semi-dark-layout'
+      'semi-dark': 'semi-dark-layout',
     }
 
     // ** Remove all classes from Body on mount

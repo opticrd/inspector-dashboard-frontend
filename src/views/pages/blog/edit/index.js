@@ -19,7 +19,7 @@ import {
   Input,
   FormGroup,
   CustomInput,
-  Button
+  Button,
 } from 'reactstrap'
 
 import '@styles/react/libs/editor/editor.scss'
@@ -34,20 +34,22 @@ const BlogEdit = () => {
   `
 
   const contentBlock = htmlToDraft(initialContent)
-  const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks)
+  const contentState = ContentState.createFromBlockArray(
+    contentBlock.contentBlocks,
+  )
   const editorState = EditorState.createWithContent(contentState)
 
-  const [data, setData] = useState(null),
-    [title, setTitle] = useState(''),
-    [slug, setSlug] = useState(''),
-    [status, setStatus] = useState(''),
-    [content, setContent] = useState(editorState),
-    [blogCategories, setBlogCategories] = useState([]),
-    [featuredImg, setFeaturedImg] = useState(null),
-    [imgPath, setImgPath] = useState('banner.jpg')
+  const [data, setData] = useState(null)
+  const [title, setTitle] = useState('')
+  const [slug, setSlug] = useState('')
+  const [status, setStatus] = useState('')
+  const [content, setContent] = useState(editorState)
+  const [blogCategories, setBlogCategories] = useState([])
+  const [featuredImg, setFeaturedImg] = useState(null)
+  const [imgPath, setImgPath] = useState('banner.jpg')
 
   useEffect(() => {
-    axios.get('/blog/list/data/edit').then(res => {
+    axios.get('/blog/list/data/edit').then((res) => {
       setData(res.data)
       setTitle(res.data.blogTitle)
       setSlug(res.data.slug)
@@ -62,12 +64,12 @@ const BlogEdit = () => {
     { value: 'gaming', label: 'Gaming' },
     { value: 'quote', label: 'Quote' },
     { value: 'video', label: 'Video' },
-    { value: 'food', label: 'Food' }
+    { value: 'food', label: 'Food' },
   ]
 
-  const onChange = e => {
-    const reader = new FileReader(),
-      files = e.target.files
+  const onChange = (e) => {
+    const reader = new FileReader()
+    const { files } = e.target
     setImgPath(files[0].name)
     reader.onload = function () {
       setFeaturedImg(reader.result)
@@ -76,104 +78,123 @@ const BlogEdit = () => {
   }
 
   return (
-    <div className='blog-edit-wrapper'>
+    <div className="blog-edit-wrapper">
       <Breadcrumbs
-        breadCrumbTitle='Blog Edit'
-        breadCrumbParent='Pages'
-        breadCrumbParent2='Blog'
-        breadCrumbActive='Edit'
+        breadCrumbTitle="Blog Edit"
+        breadCrumbParent="Pages"
+        breadCrumbParent2="Blog"
+        breadCrumbActive="Edit"
       />
       {data !== null ? (
         <Row>
-          <Col sm='12'>
+          <Col sm="12">
             <Card>
               <CardBody>
                 <Media>
-                  <Avatar className='mr-75' img={data.avatar} width='38' height='38' />
+                  <Avatar
+                    className="mr-75"
+                    img={data.avatar}
+                    width="38"
+                    height="38"
+                  />
                   <Media body>
-                    <h6 className='mb-25'>{data.userFullName}</h6>
+                    <h6 className="mb-25">{data.userFullName}</h6>
                     <CardText>{data.createdTime}</CardText>
                   </Media>
                 </Media>
-                <Form className='mt-2' onSubmit={e => e.preventDefault()}>
+                <Form className="mt-2" onSubmit={(e) => e.preventDefault()}>
                   <Row>
-                    <Col md='6'>
-                      <FormGroup className='mb-2'>
-                        <Label for='blog-edit-title'>Title</Label>
-                        <Input id='blog-edit-title' value={title} onChange={e => setTitle(e.target.value)} />
+                    <Col md="6">
+                      <FormGroup className="mb-2">
+                        <Label for="blog-edit-title">Title</Label>
+                        <Input
+                          id="blog-edit-title"
+                          value={title}
+                          onChange={(e) => setTitle(e.target.value)}
+                        />
                       </FormGroup>
                     </Col>
-                    <Col md='6'>
-                      <FormGroup className='mb-2'>
-                        <Label for='blog-edit-category'>Category</Label>
+                    <Col md="6">
+                      <FormGroup className="mb-2">
+                        <Label for="blog-edit-category">Category</Label>
                         <Select
-                          id='blog-edit-category'
+                          id="blog-edit-category"
                           isClearable={false}
                           theme={selectThemeColors}
                           value={blogCategories}
                           isMulti
-                          name='colors'
+                          name="colors"
                           options={categories}
-                          className='react-select'
-                          classNamePrefix='select'
-                          onChange={data => setBlogCategories(data)}
+                          className="react-select"
+                          classNamePrefix="select"
+                          onChange={(data) => setBlogCategories(data)}
                         />
                       </FormGroup>
                     </Col>
-                    <Col md='6'>
-                      <FormGroup className='mb-2'>
-                        <Label for='blog-edit-slug'>Slug</Label>
-                        <Input id='blog-edit-slug' value={slug} onChange={e => setSlug(e.target.value)} />
+                    <Col md="6">
+                      <FormGroup className="mb-2">
+                        <Label for="blog-edit-slug">Slug</Label>
+                        <Input
+                          id="blog-edit-slug"
+                          value={slug}
+                          onChange={(e) => setSlug(e.target.value)}
+                        />
                       </FormGroup>
                     </Col>
-                    <Col md='6'>
-                      <FormGroup className='mb-2'>
-                        <Label for='blog-edit-status'>Status</Label>
+                    <Col md="6">
+                      <FormGroup className="mb-2">
+                        <Label for="blog-edit-status">Status</Label>
                         <Input
-                          type='select'
-                          id='blog-edit-status'
+                          type="select"
+                          id="blog-edit-status"
                           value={status}
-                          onChange={e => setStatus(e.target.value)}
+                          onChange={(e) => setStatus(e.target.value)}
                         >
-                          <option value='Published'>Published</option>
-                          <option value='Pending'>Pending</option>
-                          <option value='Draft'>Draft</option>
+                          <option value="Published">Published</option>
+                          <option value="Pending">Pending</option>
+                          <option value="Draft">Draft</option>
                         </Input>
                       </FormGroup>
                     </Col>
-                    <Col sm='12'>
-                      <FormGroup className='mb-2'>
+                    <Col sm="12">
+                      <FormGroup className="mb-2">
                         <Label>Content</Label>
-                        <Editor editorState={content} onEditorStateChange={data => setContent(data)} />
+                        <Editor
+                          editorState={content}
+                          onEditorStateChange={(data) => setContent(data)}
+                        />
                       </FormGroup>
                     </Col>
-                    <Col className='mb-2' sm='12'>
-                      <div className='border rounded p-2'>
-                        <h4 className='mb-1'>Featured Image</h4>
-                        <Media className='flex-column flex-md-row'>
+                    <Col className="mb-2" sm="12">
+                      <div className="border rounded p-2">
+                        <h4 className="mb-1">Featured Image</h4>
+                        <Media className="flex-column flex-md-row">
                           <img
-                            className='rounded mr-2 mb-1 mb-md-0'
+                            className="rounded mr-2 mb-1 mb-md-0"
                             src={featuredImg}
-                            alt='featured img'
-                            width='170'
-                            height='110'
+                            alt="featured img"
+                            width="170"
+                            height="110"
                           />
                           <Media body>
-                            <small className='text-muted'>Required image resolution 800x400, image size 10mb.</small>
+                            <small className="text-muted">
+                              Required image resolution 800x400, image size
+                              10mb.
+                            </small>
 
-                            <p className='my-50'>
-                              <a href='/' onClick={e => e.preventDefault()}>
+                            <p className="my-50">
+                              <a href="/" onClick={(e) => e.preventDefault()}>
                                 {`C:/fakepath/${imgPath}`}
                               </a>
                             </p>
-                            <div className='d-inline-block'>
-                              <FormGroup className='mb-0'>
+                            <div className="d-inline-block">
+                              <FormGroup className="mb-0">
                                 <CustomInput
-                                  type='file'
-                                  id='exampleCustomFileBrowser'
-                                  name='customFile'
+                                  type="file"
+                                  id="exampleCustomFileBrowser"
+                                  name="customFile"
                                   onChange={onChange}
-                                  accept='.jpg, .png, .gif'
+                                  accept=".jpg, .png, .gif"
                                 />
                               </FormGroup>
                             </div>
@@ -181,11 +202,11 @@ const BlogEdit = () => {
                         </Media>
                       </div>
                     </Col>
-                    <Col className='mt-50'>
-                      <Button.Ripple color='primary' className='mr-1'>
+                    <Col className="mt-50">
+                      <Button.Ripple color="primary" className="mr-1">
                         Save Changes
                       </Button.Ripple>
-                      <Button.Ripple color='secondary' outline>
+                      <Button.Ripple color="secondary" outline>
                         Cancel
                       </Button.Ripple>
                     </Col>

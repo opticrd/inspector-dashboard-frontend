@@ -1,6 +1,6 @@
 export const tableBasic = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -240,8 +240,8 @@ export default TableBasic
 )
 
 export const tableDark = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -481,8 +481,8 @@ export default TableDark
 )
 
 export const tableTheadOptions = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -721,8 +721,8 @@ export default TableTheadDark`}</code>
 )
 
 export const tableStriped = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -962,8 +962,8 @@ export default TableStriped
 )
 
 export const tableStripedDark = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -1202,8 +1202,8 @@ export default TableStripedDark
 )
 
 export const tableBorderless = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -1443,8 +1443,8 @@ export default TableBorderless
 )
 
 export const tableBordered = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -1684,8 +1684,8 @@ export default TableBordered
 )
 
 export const tableHover = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -1925,8 +1925,8 @@ export default TableHover
 )
 
 export const tableSmall = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'
@@ -2166,8 +2166,8 @@ export default TableSmall
 )
 
 export const tableContextual = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import figma from '@src/assets/images/icons/figma.svg'
@@ -2714,8 +2714,8 @@ export default TableContextual
 )
 
 export const tableResponsive = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import { Table } from 'reactstrap'
 
 const TableResponsive = () => {
@@ -2843,8 +2843,8 @@ export default TableResponsive
 )
 
 export const tableHoverAnimation = (
-  <pre className='language-jsx'>
-    <code className='language-jsx'>{`
+  <pre className="language-jsx">
+    <code className="language-jsx">{`
 import AvatarGroup from '@components/avatar-group'
 import react from '@src/assets/images/icons/react.svg'
 import vuejs from '@src/assets/images/icons/vuejs.svg'

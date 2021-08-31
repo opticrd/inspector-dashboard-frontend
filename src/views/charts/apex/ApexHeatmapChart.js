@@ -7,11 +7,12 @@ function generateDataHeat(count, yrange) {
   const series = []
   while (i < count) {
     const x = `w${(i + 1).toString()}`
-    const y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min
+    const y =
+      Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min
 
     series.push({
       x,
-      y
+      y,
     })
     i++
   }
@@ -23,8 +24,8 @@ const ApexHeatmapChart = () => {
     chart: {
       parentHeightOffset: 0,
       toolbar: {
-        show: false
-      }
+        show: false,
+      },
     },
     plotOptions: {
       heatmap: {
@@ -36,65 +37,65 @@ const ApexHeatmapChart = () => {
               from: 0,
               to: 10,
               name: '0-10',
-              color: '#b9b3f8'
+              color: '#b9b3f8',
             },
             {
               from: 11,
               to: 20,
               name: '10-20',
-              color: '#aba4f6'
+              color: '#aba4f6',
             },
             {
               from: 21,
               to: 30,
               name: '20-30',
-              color: '#9d95f5'
+              color: '#9d95f5',
             },
             {
               from: 31,
               to: 40,
               name: '30-40',
-              color: '#8f85f3'
+              color: '#8f85f3',
             },
             {
               from: 41,
               to: 50,
               name: '40-50',
-              color: '#8176f2'
+              color: '#8176f2',
             },
             {
               from: 51,
               to: 60,
               name: '50-60',
-              color: '#044386'
-            }
-          ]
-        }
-      }
+              color: '#044386',
+            },
+          ],
+        },
+      },
     },
     dataLabels: {
-      enabled: false
+      enabled: false,
     },
     legend: {
-      position: 'bottom'
+      position: 'bottom',
     },
     grid: {
       padding: {
-        top: -20
-      }
+        top: -20,
+      },
     },
 
     xaxis: {
       labels: {
-        show: false
+        show: false,
       },
       axisBorder: {
-        show: false
+        show: false,
       },
       axisTicks: {
-        show: false
-      }
-    }
+        show: false,
+      },
+    },
   }
 
   const series = [
@@ -102,60 +103,60 @@ const ApexHeatmapChart = () => {
       name: 'SUN',
       data: generateDataHeat(24, {
         min: 0,
-        max: 60
-      })
+        max: 60,
+      }),
     },
     {
       name: 'MON',
       data: generateDataHeat(24, {
         min: 0,
-        max: 60
-      })
+        max: 60,
+      }),
     },
     {
       name: 'TUE',
       data: generateDataHeat(24, {
         min: 0,
-        max: 60
-      })
+        max: 60,
+      }),
     },
     {
       name: 'WED',
       data: generateDataHeat(24, {
         min: 0,
-        max: 60
-      })
+        max: 60,
+      }),
     },
     {
       name: 'THU',
       data: generateDataHeat(24, {
         min: 0,
-        max: 60
-      })
+        max: 60,
+      }),
     },
     {
       name: 'FRI',
       data: generateDataHeat(24, {
         min: 0,
-        max: 60
-      })
+        max: 60,
+      }),
     },
     {
       name: 'SAT',
       data: generateDataHeat(24, {
         min: 0,
-        max: 60
-      })
-    }
+        max: 60,
+      }),
+    },
   ]
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Daily Sales States</CardTitle>
+        <CardTitle tag="h4">Daily Sales States</CardTitle>
       </CardHeader>
       <CardBody>
-        <Chart options={options} series={series} type='heatmap' height={350} />
+        <Chart options={options} series={series} type="heatmap" height={350} />
       </CardBody>
     </Card>
   )

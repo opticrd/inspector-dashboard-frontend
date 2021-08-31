@@ -1,6 +1,6 @@
 export const listGroupSimple = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem } from 'reactstrap'
@@ -24,7 +24,7 @@ export default ListGroupSimple
 
 export const listGroupDisabled = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem } from 'reactstrap'
@@ -48,7 +48,7 @@ export default ListGroupDisabled
 
 export const listGroupIcons = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem } from 'reactstrap'
@@ -86,7 +86,7 @@ export default ListGroupIcons
 
 export const listGroupBadges = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem, Badge } from 'reactstrap'
@@ -123,7 +123,7 @@ export default ListGroupBadges
 
 export const listGroupTag = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem } from 'reactstrap'
@@ -160,7 +160,7 @@ export default ListGroupTag
 
 export const listGroupContextual = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem } from 'reactstrap'
@@ -196,7 +196,7 @@ export default ListGroupContextual
 
 export const listGroupCustom = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem } from 'reactstrap'
@@ -249,7 +249,7 @@ export default ListGroupCustom
 
 export const listGroupFlush = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem } from 'reactstrap'
@@ -277,7 +277,7 @@ export default ListGroupFlush
 
 export const listGroupHorizontal = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 
 import { ListGroup, ListGroupItem } from 'reactstrap'
@@ -300,7 +300,7 @@ export default ListGroupHorizontal
 
 export const listGroupNavigation = (
   <pre>
-    <code className='language-jsx'>
+    <code className="language-jsx">
       {`
 import React, { useState } from 'react'
 import classnames from 'classnames'

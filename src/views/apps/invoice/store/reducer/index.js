@@ -2,7 +2,7 @@ const initialState = {
   data: [],
   total: 1,
   params: {},
-  allData: []
+  allData: [],
 }
 
 const invoiceReducer = (state = initialState, action) => {
@@ -13,7 +13,7 @@ const invoiceReducer = (state = initialState, action) => {
         allData: action.allData,
         data: action.data,
         total: action.totalPages,
-        params: action.params
+        params: action.params,
       }
     case 'DELETE_INVOICE':
       return { ...state }

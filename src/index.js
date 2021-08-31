@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom'
 
 // ** Redux Imports
 import { Provider } from 'react-redux'
+import { ToastContainer } from 'react-toastify'
 import { store } from './redux/storeConfig/store'
 
 // ** Intl, CASL & ThemeColors Context
 import ability from './configs/acl/ability'
-import { ToastContainer } from 'react-toastify'
 import { AbilityContext } from './utility/context/Can'
 import { ThemeContext } from './utility/context/ThemeColors'
 import { IntlProviderWrapper } from './utility/context/Internationalization'
@@ -57,7 +57,7 @@ ReactDOM.render(
       </AbilityContext.Provider>
     </Suspense>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 )
 
 // If you want your app to work offline and load faster, you can change
