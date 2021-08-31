@@ -41,23 +41,23 @@ const AppRoutes = [
   },
   {
     path: Url.userRegional,
-    component: lazy(() => import('../../views/apps/user/regional'))
+    component: lazy(() => import('../../views/apps/user/regional')),
   },
   {
     path: Url.userProvincial,
-    component: lazy(() => import('../../views/apps/user/provincial'))
+    component: lazy(() => import('../../views/apps/user/provincial')),
   },
   {
     path: Url.userMunicipal,
-    component: lazy(() => import('../../views/apps/user/municipal'))
+    component: lazy(() => import('../../views/apps/user/municipal')),
   },
   {
     path: Url.userMunicipalDistrict,
-    component: lazy(() => import('../../views/apps/user/distritoMunicipal'))
+    component: lazy(() => import('../../views/apps/user/distritoMunicipal')),
   },
   {
     path: Url.userZonal,
-    component: lazy(() => import('../../views/apps/user/zonales'))
+    component: lazy(() => import('../../views/apps/user/zonales')),
   },
   {
     path: Url.userEdit,

@@ -47,7 +47,7 @@ export const columns = [
     selector: 'Localidad',
     sortable: true,
     // cell: row => row.provincia
-    cell: row => 'Santo Domingo'
+    cell: (row) => 'Santo Domingo',
   },
   {
     name: 'Municipio',
