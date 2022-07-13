@@ -1,40 +1,27 @@
-import { zammadAxios } from "../../../configs/axios";
-import { zammadApi } from "../../../constants/api/zammadApi";
 import { addAllGroupsToUser } from "../../../utility/Utils";
 import { getInfoCedula } from "../../cedula";
 import { getGroups, postGroup } from "../group";
-import { getOrganizationByAcronym, getOrganizations, postOrganization } from "../organization";
-import { postTicketArrTags } from "../ticketTags";
-import { getUserByCedula, postUser, putUser } from "../user";
+import { getOrganizations, postOrganization } from "../organization";
+import { getUserByCedula, postUser, putUser} from "../user";
 
-export const postTicketImportOG = async (dataOG) => {
-
-    await postOrganization({name: dataOG, acronimo: dataOG})
-    await postGroup({name: dataOG, acronimo: dataOG})
-}
-
-export const postTicket = async (dataObj) => await zammadAxios.post(zammadApi.tickets, dataObj)
-
-export const postTicketImport = async (dataCsv, objAddCsv) => {
+export const postUserImport = async (dataCsv) => {
     
-    let dataCreateTicket = {}
     let groupData = {}
     let organizationData = {}
-    let idUserCiudadano = null
     let idInstitucion = null
-    const arrIncidente = dataCsv?.incidente?.split(',') || ""
-    const lengthIncidente = arrIncidente.length - 1
+
+    console.log('groupData', groupData)
 
     const findGroup = (nameInstitucion) => groupData.find(group => group.acronimo.toUpperCase() === nameInstitucion.toUpperCase())
     const findOrganization = (nameInstitucion) => organizationData.find(organization => organization.acronimo.toUpperCase() === nameInstitucion.toUpperCase())
 
     try {
         // organization and group
-        // const organizationDataAsync = await getOrganizationByAcronym(dataCsv.institucion)
         organizationData = await (await getOrganizations()).data
         groupData = await (await getGroups()).data
         const findedGroup = findGroup(dataCsv.institucion)
         const findedOrganization = findOrganization(dataCsv.institucion)
+        console.log("findedOrganization", findedOrganization)
         if(findedOrganization && findedGroup) {
             idInstitucion = findedGroup.id
 
@@ -60,59 +47,44 @@ export const postTicketImport = async (dataCsv, objAddCsv) => {
         }
 
         // user
-        const userCedula = await getUserByCedula(dataCsv.ciudadano_id)
+        const userCedula = await getUserByCedula(dataCsv.cedula)
         if(userCedula.data[0]) {
             const newRols = [...new Set(userCedula.data[0].role_ids, 2, 3)]
             const requestUpdateUser = await putUser({
                 id: userCedula.data[0].id, 
                 group_ids: addAllGroupsToUser(groupData),
-                organization_id: findedOrganization.id,
                 organization: findedOrganization.id,
-                role_ids: newRols
+                organization_id: findedOrganization.id,
+                role_ids: newRols,
+                phone: dataCsv.telefono || '',
+                zone: dataCsv.zona_id,
             })
-            idUserCiudadano = requestUpdateUser.data.id
-            await putUser({
-                id: parseInt(objAddCsv.owner_id), 
-                group_ids: addAllGroupsToUser(groupData),
-            })
-        }else {
-            const infoCedulaCiudadano = await getInfoCedula(dataCsv.ciudadano_id)
+        
+            console.log('requestUpdateUser', requestUpdateUser)
+            return requestUpdateUser
+
+        }
+            const infoCedulaCiudadano = await getInfoCedula(dataCsv.cedula)
             const objZammad = {
                 cedula: infoCedulaCiudadano.data.payload.id,
                 firstname: infoCedulaCiudadano.data.payload.names,
                 lastname: `${infoCedulaCiudadano.data.payload.firstSurname} ${infoCedulaCiudadano.data.payload.secondSurname}`,
-                zone: dataCsv.reporte_zona_id,
-                organization_id: findedOrganization.id,
+                email: dataCsv.correo,
+                login: dataCsv.correo,
+                password: dataCsv.cedula,
+                zone: dataCsv.zona_id,
                 organization: findedOrganization.id,
-                phone: dataCsv.ciudadano_telefono || '',
+                organization_id: findedOrganization.id,
+                phone: dataCsv.telefono || '',
                 role_ids: [2, 3],
-                note: 'User created from the BackOffice (Ticket Import)',
+                note: 'User created from the BackOffice (User Import)',
                 group_ids: addAllGroupsToUser(groupData)
             }
             const requestUser = await postUser(objZammad)
-            idUserCiudadano = requestUser.data.id
-        }
+
+            console.log('requestUser', requestUser)
+            return requestUser
         
-        // ticket
-        dataCreateTicket = {
-            customer_id: idUserCiudadano,
-            title: `${arrIncidente[lengthIncidente] || ''} en ${dataCsv.reporte_direccion}`,
-            group_id: idInstitucion,
-            owner_id: parseInt(objAddCsv.owner_id),
-            address: dataCsv.reporte_direccion,
-            state_id: parseInt(objAddCsv.state_id),
-            priority_id: parseInt(objAddCsv.priority_id),
-            zone: dataCsv.reporte_zona_id,
-            article: {
-                subject: '',
-                body: dataCsv.comentario || "",
-                type: 'note',
-                attachments: []
-            }
-        }
-        const postTicketAsy = await postTicket(dataCreateTicket)
-        
-        return postTicketAsy
         
     } catch (error) {
         console.log('error: ', error.message)
